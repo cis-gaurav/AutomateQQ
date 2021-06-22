@@ -45,39 +45,39 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 
-//	@Test(priority=2)
-//	public void verifyGetQuoteButtonIsDisable () throws InterruptedException {
-//		boolean flag = QuickQuotes.QQDisbaleButton();
-//		Assert.assertFalse(flag);
-//	}
-//	
-//	@Test(priority=3)
-//	public void verifyToasterMessage () throws InterruptedException {
-//		boolean flag=QuickQuotes.toastermsg();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=4)
-//	public void createQuotebyName() throws Throwable {
-//		boolean flag= QuickQuotes.createQQByName();
-//		Assert.assertTrue(flag);	
-//	}
-//	
-//
-//	@Test (priority=5)
-//	public void verfiyQQEventWithAllDetails() throws InterruptedException {
-//		boolean flag=QuickQuotes.createQQEvent();
-//		Assert.assertTrue(flag);
-//	}
+	@Test(priority=2)
+	public void verifyGetQuoteButtonIsDisable () throws InterruptedException {
+		boolean flag = QuickQuotes.QQDisbaleButton();
+		Assert.assertFalse(flag);
+	}
 	
-//	@Test(priority=6)
-//	public void verifySandpitEventWithQuestionnaire () throws InterruptedException {
-//		QuickQuotes.createSandpitEventWithQuestionnaire();
-//	}
+	@Test(priority=3)
+	public void verifyToasterMessage () throws InterruptedException {
+		boolean flag=QuickQuotes.toastermsg();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=4)
+	public void createQuotebyName() throws Throwable {
+		boolean flag= QuickQuotes.createQQByName();
+		Assert.assertTrue(flag);	
+	}
+	
 
-//	@AfterTest
-//	public void Teardown() throws Exception {
-//		driver.close();
-//		driver.quit();
-//	}
+	@Test (priority=5)
+	public void verfiyQQEventWithAllDetails() throws InterruptedException {
+		boolean flag=QuickQuotes.createQQEvent();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=6)
+	public void verifySandpitEventWithQuestionnaire () throws InterruptedException {
+		QuickQuotes.createSandpitEventWithQuestionnaire();
+	}
+
+	@AfterTest
+	public void Teardown() throws Exception {
+		driver.close();
+		driver.quit();
+	}
 }
