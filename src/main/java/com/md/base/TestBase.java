@@ -65,6 +65,7 @@ public class TestBase extends ExtentReporterNG {
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("/usr/bin/google-chrome");
 			options.addArguments("--headless");
+			options.addArguments("--window-size=1980,1080");
 			options.addArguments("start-maximized"); // open Browser in maximized mode
 			options.addArguments("disable-infobars"); // disabling infobars
 			options.addArguments("--disable-extensions"); // disabling extensions
