@@ -30,7 +30,6 @@ public  void startReport()
 	Contract.createReport();	
 }
 
- 
 	
 	@BeforeTest
 	public void setUp() throws MalformedURLException, InterruptedException 

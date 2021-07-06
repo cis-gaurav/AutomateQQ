@@ -40,24 +40,28 @@ public class QuickQuotesTest extends TestBase {
 
 	@Test(priority = 1)
 	public void verifyValidationMessageOnNamefield() throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
 		boolean flag = QuickQuotes.verfiyNameFieldValidaions();
 		Assert.assertTrue(flag);
 	}
 
 	@Test(priority=2)
 	public void verifyGetQuoteButtonIsDisable () throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
 		boolean flag = QuickQuotes.QQDisbaleButton();
 		Assert.assertFalse(flag);
 	}
 	
 	@Test(priority=3)
 	public void verifyToasterMessage () throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
 		boolean flag=QuickQuotes.toastermsg();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=4)
 	public void createQuotebyName() throws Throwable {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
 		boolean flag= QuickQuotes.createQQByName();
 		Assert.assertTrue(flag);	
 	}
@@ -65,12 +69,14 @@ public class QuickQuotesTest extends TestBase {
 
 	@Test (priority=5)
 	public void verfiyQQEventWithAllDetails() throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
 		boolean flag=QuickQuotes.createQQEvent();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=6)
 	public void verifySandpitEventWithQuestionnaire () throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
 		QuickQuotes.createSandpitEventWithQuestionnaire();
 	}
 
