@@ -3,12 +3,13 @@
 <suite name="Suite">
 
 	<listners>
-		<listners class-name="com.md.util.ExtentReportListener"/>
+		<listners class-name="com.md.util.ExtentReportListener" />
 	</listners>
-	
-		<test thread-count="5" name="Test">
-			<classes>
-				<class name="com.md.testcases.QuickQuotesTest" />
-			</classes>
-		</test> <!-- Test -->
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.md.testcases.QuickQuotesTest" />
+			<class name="com.md.testcases.ContractTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
