@@ -5,11 +5,10 @@
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
+          <include name="verifyGetQuoteButtonIsDisable"/>
           <include name="createReport"/>
-          <include name="verfiyQQEventWithAllDetails"/>
           <include name="setUp"/>
           <include name="startReport"/>
-          <include name="verifyValidationMessageOnNamefield"/>
           <include name="Teardown"/>
           <include name="reportTeardown"/>
           <include name="tearDown"/>
