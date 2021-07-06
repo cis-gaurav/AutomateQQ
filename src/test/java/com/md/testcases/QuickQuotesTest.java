@@ -19,7 +19,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.md.base.TestBase;
-import com.md.pages.Contract;
 import com.md.pages.QuickQuotes;
 
 public class QuickQuotesTest extends TestBase {

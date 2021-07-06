@@ -29,7 +29,7 @@ public class ExtentReporterNG {
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 
-		extent.setSystemInfo("Machine Name", "CIS-772G");
+		extent.setSystemInfo("Machine Name", "CISM-I-458");
 		extent.setSystemInfo("OS", "Windows 10");
 		extent.setSystemInfo("Build", "Integration");
 		extent.setSystemInfo("Browser", "Chrome");

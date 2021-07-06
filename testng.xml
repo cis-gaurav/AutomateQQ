@@ -5,8 +5,7 @@
 	<listners>
 		<listners class-name="com.md.util.ExtentReportListener"/>
 	</listners>
-
-
+	
 		<test thread-count="5" name="Test">
 			<classes>
 				<class name="com.md.testcases.QuickQuotesTest" />
