@@ -264,30 +264,18 @@ public class QuickQuotes extends TestBase {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
-
-// Scripts 
+	
+	//Unused  script of new user license check  
 	public boolean verifyQQLiscence() throws InterruptedException {
 		redirectFromMDDashboardtoQQCreate();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(alertLiscenceMsg));
 		return alertLiscenceMsg.isDisplayed();
 	}
+	
 
-	public boolean QQDisbaleButton() throws InterruptedException {
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(AdviceText));
-		name.clear();
-		// Scroll to bottom of page
-		scrollTillBottom();
-		Thread.sleep(3000);
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
-		// verify get quote button is disabled
-		return getQuoteButton.isEnabled();
-	}
-
-	public boolean verfiyNameFieldValidaions() throws InterruptedException {
+// Scripts 
+	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -300,7 +288,36 @@ public class QuickQuotes extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
-
+	
+	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
+		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		name.clear();
+		// Scroll to bottom of page
+		scrollTillBottom();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
+		// verify get quote button is disabled
+		return getQuoteButton.isEnabled();
+	}
+	
+	public boolean createToasterMessage() throws InterruptedException {
+		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(4000);
+		WebDriverWait wait = new WebDriverWait(driver, 300);
+		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		name.clear();
+		name.sendKeys("Verify Toaster message");
+		deadline.sendKeys("2019-04-14 19:35");
+		scrollTillBottom();
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
+		getQuoteButton.click();
+		Thread.sleep(4000);
+		return pastDeadlineToaster.isDisplayed();
+	}
+	
 	public boolean createQQByName() throws Throwable   {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(7000);
@@ -317,22 +334,7 @@ public class QuickQuotes extends TestBase {
 		return quoteName.isDisplayed();
 	}
 
-	public boolean toastermsg() throws InterruptedException {
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(driver, 300);
-		wait.until(ExpectedConditions.visibilityOf(AdviceText));
-		name.clear();
-		name.sendKeys("Verify Toaster message");
-		deadline.sendKeys("2019-04-14 19:35");
-		scrollTillBottom();
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
-		getQuoteButton.click();
-		Thread.sleep(4000);
-		return pastDeadlineToaster.isDisplayed();
-	}
-
-	public boolean createQQEvent() throws InterruptedException {
+	public boolean createQQEventWithAllDetails() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(4000);
 		name.clear();
