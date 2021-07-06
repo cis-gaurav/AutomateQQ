@@ -89,16 +89,12 @@ public class TestBase extends ExtentReporterNG {
 	// Page factory
 	@FindBy(name = "user[login]")
 	static WebElement username;
-
 	@FindBy(name = "user[password]")
 	static WebElement password;
-
 	@FindBy(name = "commit")
 	static WebElement loginBtn;
-
 	@FindBy(xpath = "//a[contains(text(),'Dashboard')]")
 	static WebElement AdminDashboard;
-
 	// Actions
 	public static void login() throws InterruptedException {
 		username.sendKeys(prop.getProperty("username"));

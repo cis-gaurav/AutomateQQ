@@ -28,7 +28,6 @@ public class ExtentReporterNG {
 				System.getProperty("user.dir") + "/test-output/AutomationReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
-
 		extent.setSystemInfo("Machine Name", "CISM-I-458");
 		extent.setSystemInfo("OS", "Windows 10");
 		extent.setSystemInfo("Build", "Integration");

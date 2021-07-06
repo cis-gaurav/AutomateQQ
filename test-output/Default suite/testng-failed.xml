@@ -7,10 +7,11 @@
         <methods>
           <include name="createReport"/>
           <include name="verfiyQQEventWithAllDetails"/>
-          <include name="verifySandpitEventWithQuestionnaire"/>
           <include name="setUp"/>
-          <include name="reportTeardown"/>
+          <include name="startReport"/>
+          <include name="verifyValidationMessageOnNamefield"/>
           <include name="Teardown"/>
+          <include name="reportTeardown"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
