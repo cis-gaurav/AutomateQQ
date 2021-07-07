@@ -1,51 +1,45 @@
-//package com.md.testcases;
-//
-//import org.testng.annotations.Test;
-//import com.md.base.TestBase;
-//import com.md.pages.Contract;
-//import org.testng.annotations.BeforeTest;
-//import java.net.MalformedURLException;
-//import org.testng.Assert;
-//import org.testng.annotations.AfterSuite;
-//import org.testng.annotations.AfterTest;
-//import org.testng.annotations.BeforeSuite;
-//
-//
-//public class ContractTest extends TestBase{
-//	Contract contractPage;
-//	/*static ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/AutomationReport.html");    
-//	static ExtentReports extent = new ExtentReports();
-//	public static ExtentTest test;
-//	public static ExtentTest logger;*/
-//
-//public ContractTest() {
-//	super(); // Need to create constructor to intilaze properties file
-//}
-//
-////This code will run before executing any testcase
-//@BeforeSuite
-//public  void startReport()
-//{	
-//	contractPage = new Contract();
-//	Contract.createReport();	
-//}
-//
-//	
-//	@BeforeTest
-//	public void setUp() throws MalformedURLException, InterruptedException 
-//	{	
-//		initialization();
-//		 contractPage = new Contract();
-//		 Contract.login();		 
-//	}
-//	
-//	@Test(priority=1)
-//	public void VerifyUserIsAbleToAddContract() throws InterruptedException{		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
-//		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
-//		Assert.assertTrue(flag);
-//	}
-//	
+package com.md.testcases;
+
+import org.testng.annotations.Test;
+import com.md.base.TestBase;
+import com.md.pages.Contract;
+import org.testng.annotations.BeforeTest;
+import java.net.MalformedURLException;
+import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+
+
+public class ContractTest extends TestBase{
+	Contract contractPage;
+	/*static ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/AutomationReport.html");    
+	static ExtentReports extent = new ExtentReports();
+	public static ExtentTest test;
+	public static ExtentTest logger;*/
+
+public ContractTest() {
+	super(); // Need to create constructor to intilaze properties file
+}
+
+
+
+	
+	@BeforeTest
+	public void setUp() throws MalformedURLException, InterruptedException 
+	{	
+		initialization();
+		 contractPage = new Contract();
+		 Contract.login();		 
+	}
+	
+	@Test(priority=1)
+	public void VerifyUserIsAbleToAddContract() throws InterruptedException{		
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
+		Assert.assertTrue(flag);
+	}
+	
 //	@Test(priority=2)
 //	public void VerifyHeadingOnContractListingPage() throws InterruptedException{
 //		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
@@ -143,7 +137,6 @@
 //		boolean flag = contractPage.VerifyContractValidationMsg();
 //		Assert.assertTrue(flag);
 //	}
-//	
 //	
 //	@Test(priority=16)
 //	public void VerifyOneMonthNoticePeriodIsSelectedByDefault() throws InterruptedException{		
@@ -327,25 +320,19 @@
 //		boolean flag = contractPage.VerifyCustomFieldDisplayInContractForm();
 //		Assert.assertFalse(flag);
 //	}
-//	
-//	/*@Test(priority=42)
-//	public void VerifyUserIsAbleToAddCustomNotitication() throws InterruptedException{		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
-//		boolean flag = contractPage.VerifyUserIsAbleToAddCustomNotitication();
-//		Assert.assertTrue(flag);
-//	}*/
-//	
-//	
-//	@AfterTest
-//	public void Teardown() throws Exception{	
-//		
-//	//driver.close();		
-//	}
-//
-//	@AfterSuite
-//	public static void reportTeardown()  
-//	{
-//	extent.flush();
-//	}
-//
-//}
+	
+	/*@Test(priority=42)
+	public void VerifyUserIsAbleToAddCustomNotitication() throws InterruptedException{		
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+		boolean flag = contractPage.VerifyUserIsAbleToAddCustomNotitication();
+		Assert.assertTrue(flag);
+	}*/
+	
+	
+	@AfterTest
+	public void Teardown() throws Exception{	
+		
+	//driver.close();		
+	}
+
+}
