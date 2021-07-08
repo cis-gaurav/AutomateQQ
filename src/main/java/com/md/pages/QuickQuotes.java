@@ -243,11 +243,11 @@ public class QuickQuotes extends TestBase {
 
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
-		username.sendKeys(prop.getProperty("username"));
-		password.sendKeys(prop.getProperty("password"));
-		loginBtn.click();// logged in to MD Home page
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(AdminDashboard));
+//		username.sendKeys(prop.getProperty("username"));
+//		password.sendKeys(prop.getProperty("password"));
+//		loginBtn.click();// logged in to MD Home page
+//		WebDriverWait wait = new WebDriverWait(driver, 60);
+//		wait.until(ExpectedConditions.visibilityOf(AdminDashboard));
 		quickquoteDashbaord.click();// click on Quote from MDDashbaord
 		Thread.sleep(4000);
 	}

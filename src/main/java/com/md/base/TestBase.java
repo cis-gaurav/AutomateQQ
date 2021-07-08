@@ -23,9 +23,11 @@ public class TestBase extends ExtentReporterNG {
 
 	public TestBase() {
 		try {
-			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/MD.properties");
-			prop.load(ip);
+			//how to read data from properties file below 3 lines will do 
+			prop = new Properties(); //Need to create object of properties class 
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/config.properties"); //check file at bottom config.
+			prop.load(ip); // loading data of property file 
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -82,11 +84,11 @@ public class TestBase extends ExtentReporterNG {
 		// WebDriverWait wait = new WebDriverWait(driver, 60);
 		// wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[contains(text(),'Close')]"))));
 
-		// Clcik on Close popup button
+		// Click on Close popup button
 		// driver.findElement(By.xpath("//span[contains(text(),'Close')]")).click();
 	}
 
-	// Page factory
+	// Page factory for Gloabl Login to MD 
 	@FindBy(name = "user[login]")
 	static WebElement username;
 	@FindBy(name = "user[password]")
@@ -95,9 +97,10 @@ public class TestBase extends ExtentReporterNG {
 	static WebElement loginBtn;
 	@FindBy(xpath = "//a[contains(text(),'Dashboard')]")
 	static WebElement AdminDashboard;
-	// Actions
+	
+	// Actions for Global Login Method 
 	public static void login() throws InterruptedException {
-		username.sendKeys(prop.getProperty("username"));
+		username.sendKeys(prop.getProperty("username")); //reading data from properties file 
 		password.sendKeys(prop.getProperty("password"));
 		loginBtn.click();
 		WebDriverWait wait = new WebDriverWait(driver, 60);

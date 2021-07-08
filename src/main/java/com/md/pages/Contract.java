@@ -18,25 +18,9 @@ import java.util.concurrent.TimeUnit;
 import com.md.base.TestBase;
 
 		public class Contract extends TestBase {
-	
-			
+		
 		// Page factory 
-		@FindBy(name = "user[login]")
-		static
-		WebElement username;
-
-		@FindBy(name = "//input[@name='user[password]']")
-		static
-		WebElement password;
-
-		@FindBy(name = "commit")
-		static
-		WebElement loginBtn;
-		
-		@FindBy(xpath="//a[contains(text(),'Dashboard')]")
-		static
-		WebElement AdminDashboard;
-		
+			
 		@FindBy(xpath="//a[contains(text(),'Analytics')]")
 		static
 		WebElement AnalyticsButton;
@@ -590,17 +574,17 @@ import com.md.base.TestBase;
 		
 		
 
-		// Intialize page factory 
+		// Initialize page factory 
 			public Contract() 
 			{
 			PageFactory.initElements(driver, this);
 			}
 
-			//Login
-			public static void Login() throws InterruptedException
-			{
-				TestBase.login();
-			}			
+//			//Login
+//			public static void Login() throws InterruptedException
+//			{
+//				TestBase.login();
+//			}			
 		
 			//Scripts
 			public boolean VerifyUserIsAbleToAddContract() throws InterruptedException {

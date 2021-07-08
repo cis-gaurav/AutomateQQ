@@ -5,64 +5,14 @@
     <classes>
       <class name="com.md.testcases.ContractTest">
         <methods>
-          <include name="VerifyActiveHeadingsDisplayInContractListingPage"/>
           <include name="VerifyUserIsAbleToAddContract"/>
           <include name="createReport"/>
-          <include name="VerifyAutoSuggestionForSupplierContact"/>
-          <include name="VerifyUserIsAbleToSearchContract"/>
-          <include name="VerifyAlertMsgIfHostAddedToSupplierContact"/>
-          <include name="VerifySearchContractUsingSupplier"/>
-          <include name="VerifyDisplayOfDropbox"/>
-          <include name="Teardown"/>
-          <include name="startReport"/>
-          <include name="VerifySelectedParentNotDisplayInChildDropdown"/>
-          <include name="VerifySearchContractUsingStakeHolder"/>
-          <include name="VerifyContractValidationMsg"/>
-          <include name="VerifyDisplayOfArchivedContracts"/>
-          <include name="VerifySearchContractUsingOwner"/>
-          <include name="VerifyHeadingOnContractListingPage"/>
-          <include name="VerifyContractListingOnLanguageChange"/>
-          <include name="VerifyCustomFieldDisplayInContractForm"/>
-          <include name="setUp"/>
           <include name="reportTeardown"/>
-          <include name="VerifySelectedChildNotDisplayInParentDropdown"/>
-          <include name="VerifySupplierAndStakeHolderInRecipientPopup"/>
-          <include name="VerifyDisplayOfCustomNotiticationLink"/>
-          <include name="VerifyDisplayOfSupplierContactDetails"/>
-          <include name="VerifyDisplayOfCategoryInContractForm"/>
-          <include name="VerifyDisplayOfParentHeirarchyDropdown"/>
-          <include name="VerifyAlertMsgIfParticipantAddedToStakeHolder"/>
-          <include name="VerifyAlertMsgOnSearchingContracts"/>
-          <include name="VerifyActiveHeadingsDisplayInContractForm"/>
-          <include name="VerifyAtleastOneValueInSupplierContact"/>
-          <include name="VerifySearchContractUsingStartDate"/>
-          <include name="VerifyUserNavigationToContractForm"/>
-          <include name="VerifyLanguageChange"/>
-          <include name="VerifyNoticePeriodChangeAccordingToPeriodSelected"/>
-          <include name="VerifyAutoSuggestionForStakeHolder"/>
-          <include name="VerifySearchContractUsingCategory"/>
-          <include name="VerifyUserIsAbleToEditContract"/>
-          <include name="VerifySearchContractUsingState"/>
-          <include name="VerifyOneMonthNoticePeriodIsSelectedByDefault"/>
-          <include name="VerifySearchContractUsingValue"/>
-          <include name="VerifyDisplayOfExpiryNotiticationLink"/>
-          <include name="VerifySearchContractUsingExpiryDate"/>
-          <include name="VerifyRemovalOfSupplierContact"/>
-          <include name="VerifySearchContractUsingTitle"/>
+          <include name="setUp"/>
+          <include name="Teardown"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.md.testcases.ContractTest -->
-      <class name="com.md.testcases.QuickQuotesTest">
-        <methods>
-          <include name="createReport"/>
-          <include name="verfiyQQEventWithAllDetails"/>
-          <include name="verifySandpitEventWithQuestionnaire"/>
-          <include name="setUp"/>
-          <include name="reportTeardown"/>
-          <include name="Teardown"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
   </test> <!-- Functional Test(failed) -->
 </suite> <!-- Failed suite [MD_Automation] -->

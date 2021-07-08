@@ -22,15 +22,13 @@ public ContractTest() {
 	super(); // Need to create constructor to intilaze properties file
 }
 
-
-
-	
 	@BeforeTest
 	public void setUp() throws MalformedURLException, InterruptedException 
 	{	
 		initialization();
 		 contractPage = new Contract();
-		 Contract.login();		 
+//		 Contract.login();	
+		 TestBase.login();
 	}
 	
 	@Test(priority=1)
@@ -320,14 +318,7 @@ public ContractTest() {
 //		boolean flag = contractPage.VerifyCustomFieldDisplayInContractForm();
 //		Assert.assertFalse(flag);
 //	}
-	
-	/*@Test(priority=42)
-	public void VerifyUserIsAbleToAddCustomNotitication() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
-		boolean flag = contractPage.VerifyUserIsAbleToAddCustomNotitication();
-		Assert.assertTrue(flag);
-	}*/
-	
+//	
 	
 	@AfterTest
 	public void Teardown() throws Exception{	
