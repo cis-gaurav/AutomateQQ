@@ -19,7 +19,7 @@ public class ContractTest extends TestBase{
 	public static ExtentTest logger;*/
 
 public ContractTest() {
-	super(); // Need to create constructor to intilaze properties file
+	super(); // Need to create constructor to initialize properties file
 }
 
 	@BeforeTest
@@ -30,125 +30,117 @@ public ContractTest() {
 //		 Contract.login();	
 		 TestBase.login();
 	}
-	
 	@Test(priority=1)
-	public void VerifyUserIsAbleToAddContract() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
-		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
+	public void VerifyHeadingOnContractListingPage() throws InterruptedException{
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
+		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
 		Assert.assertTrue(flag);
 	}
 	
-//	@Test(priority=2)
-//	public void VerifyHeadingOnContractListingPage() throws InterruptedException{
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
-//		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=3)
-//	public void VerifyUserIsAbleToSearchContract() throws InterruptedException {	
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifyUserIsAbleToSearchContract();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=4)
-//	public void VerifyDisplayOfArchivedContracts() throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifyDisplayOfArchivedContracts();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=5)
-//	public void VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifyAlertMsgOnSearchingContracts();
-//		Assert.assertTrue(flag);
-//	}
-//			
-//	@Test(priority=6)
-//	public void VerifySearchContractUsingOwner() throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifySearchContractUsingOwner();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=7)
-//	public void VerifySearchContractUsingTitle() throws InterruptedException {		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifySearchContractUsingTitle();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=8)
-//	public void VerifySearchContractUsingCategory() throws InterruptedException {				
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
-//		boolean flag = contractPage.VerifySearchContractUsingCategory();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=9)
-//	public void VerifySearchContractUsingSupplier() throws InterruptedException {	
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifySearchContractUsingSupplier();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=10)
-//	public void VerifySearchContractUsingStartDate() throws InterruptedException {	
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  		
-//		boolean flag = contractPage.VerifySearchContractUsingStartDate();
-//		Assert.assertTrue(flag);
-//	}
-//	
+	@Test(priority=2)
+	public void VerifyUserIsAbleToSearchContract() throws InterruptedException {	
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+		boolean flag = contractPage.VerifyUserIsAbleToSearchContract();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=3)
+	public void VerifyDisplayOfArchivedContracts() throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+		boolean flag = contractPage.VerifyDisplayOfArchivedContracts();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=4)
+	public void VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+		boolean flag = contractPage.VerifyAlertMsgOnSearchingContracts();
+		Assert.assertTrue(flag);
+	}
+			
+	@Test(priority=5)
+	public void VerifySearchContractUsingTitle() throws InterruptedException {		
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+		boolean flag = contractPage.VerifySearchContractUsingTitle();
+		Assert.assertTrue(flag);
+	}
+			
+	@Test(priority=6)
+	public void VerifySearchContractUsingStartDate() throws InterruptedException {	
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  		
+		boolean flag = contractPage.VerifySearchContractUsingStartDate();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=7)
+	public void VerifySearchContractUsingExpiryDate() throws InterruptedException {		
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+		boolean flag = contractPage.VerifySearchContractUsingExpiryDate();
+		Assert.assertTrue(flag);
+	}	
+	@Test(priority=8)
+	public void VerifySearchContractUsingCategory() throws InterruptedException {				
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
+		boolean flag = contractPage.VerifySearchContractUsingCategory();
+		Assert.assertTrue(flag);
+	}
+	@Test(priority=9)
+	public void VerifySearchContractUsingSupplier() throws InterruptedException {	
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+		boolean flag = contractPage.VerifySearchContractUsingSupplier();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=10)
+	public void VerifySearchContractUsingValue() throws InterruptedException {		
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+		boolean flag = contractPage.VerifySearchContractUsingValue();
+		Assert.assertTrue(flag);
+	}
 //	@Test(priority=11)
-//	public void VerifySearchContractUsingExpiryDate() throws InterruptedException {		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifySearchContractUsingExpiryDate();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=12)
-//	public void VerifySearchContractUsingValue() throws InterruptedException {		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifySearchContractUsingValue();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=13)
 //	public void VerifySearchContractUsingStakeHolder() throws InterruptedException {	
 //		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
 //		boolean flag = contractPage.VerifySearchContractUsingStakeHolder();
 //		Assert.assertTrue(flag);
 //	}
-//	
-//	@Test(priority=14)
-//	public void VerifySearchContractUsingState() throws InterruptedException {	
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifySearchContractUsingState();		
-//		Assert.assertTrue(flag);
-//	}
-//
-//	@Test(priority=15)
+//	@Test(priority=12)
 //	public void VerifyContractValidationMsg() throws InterruptedException{		
 //		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
 //		boolean flag = contractPage.VerifyContractValidationMsg();
 //		Assert.assertTrue(flag);
 //	}
-//	
-//	@Test(priority=16)
-//	public void VerifyOneMonthNoticePeriodIsSelectedByDefault() throws InterruptedException{		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
-//		boolean flag = contractPage.VerifyOneMonthNoticePeriodIsSelectedByDefault();
-//		Assert.assertTrue(flag);
-//	}
-//	
 //	@Test(priority=17)
 //	public void VerifyUserNavigationToContractForm() throws InterruptedException{		
 //		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
 //		boolean flag = contractPage.VerifyUserNavigationToContractForm();
 //		Assert.assertTrue(flag);
 //	}
+	
+//	@Test(priority=0)
+//	public void VerifyUserIsAbleToAddContract() throws InterruptedException{		
+//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+//		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
+//		Assert.assertTrue(flag);
+//	}	
+//	@Test(priority=0)
+//	public void VerifySearchContractUsingOwner() throws InterruptedException {
+//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+//		boolean flag = contractPage.VerifySearchContractUsingOwner();
+//		Assert.assertTrue(flag);
+//	}	
+//	@Test(priority=0)
+//	public void VerifySearchContractUsingState() throws InterruptedException {	
+//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+//		boolean flag = contractPage.VerifySearchContractUsingState();		
+//		Assert.assertTrue(flag);
+//	}
+//	@Test(priority=0)
+//	public void VerifyOneMonthNoticePeriodIsSelectedByDefault() throws InterruptedException{		
+//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+//		boolean flag = contractPage.VerifyOneMonthNoticePeriodIsSelectedByDefault();
+//		Assert.assertTrue(flag);
+//	}
+	
 //	
 //	@Test(priority=18)
 //	public void VerifyUserIsAbleToEditContract() throws InterruptedException{		

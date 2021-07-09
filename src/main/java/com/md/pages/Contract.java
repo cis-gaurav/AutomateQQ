@@ -85,11 +85,11 @@ import com.md.base.TestBase;
 		static
 		WebElement ContractTypeDropdownValue;
 		
-		@FindBy(xpath="//select[@name='legal_entity']")
+		@FindBy(xpath="//select[@name='Legal Entity']")
 		static
 		WebElement ContractLegalEntityTextbox;	
 
-		@FindBy(xpath="//select[@name='legal_entity']//option[contains(text(),'IE Legal Entity')]")
+		@FindBy(xpath="//select[@name='Legal Entity']//option[contains(text(),'IE Legal Entity')]")
 		static
 		WebElement ContractLegalEntityValue;	
 				
