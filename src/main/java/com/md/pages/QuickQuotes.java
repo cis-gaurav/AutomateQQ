@@ -244,7 +244,7 @@ public class QuickQuotes extends TestBase {
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
 		quickquoteDashbaord.click();// click on Quote from MDDashbaord
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 	}
 
 	// Global things
