@@ -1,51 +1,51 @@
-//package com.md.testcases;
-//
-//import org.testng.annotations.Test;
-//import com.md.base.TestBase;
-//import com.md.pages.Contract;
-//import org.testng.annotations.BeforeTest;
-//import java.net.MalformedURLException;
-//import org.testng.Assert;
-//import org.testng.annotations.AfterSuite;
-//import org.testng.annotations.AfterTest;
-//import org.testng.annotations.BeforeSuite;
-//
-//public class ContractTest extends TestBase {
-//	Contract contractPage;
-//	/*
-//	 * static ExtentHtmlReporter htmlReporter = new
-//	 * ExtentHtmlReporter(System.getProperty("user.dir")+
-//	 * "/test-output/AutomationReport.html"); static ExtentReports extent = new
-//	 * ExtentReports(); public static ExtentTest test; public static ExtentTest
-//	 * logger;
-//	 */
-//
-//	public ContractTest() {
-//		super(); // Need to create constructor to initialize properties file
-//	}
-//
-//	@BeforeTest
-//	public void setUp() throws MalformedURLException, InterruptedException {
-//		initialization();
-//		contractPage = new Contract();
-////		 Contract.login();	
-//		TestBase.login();
-//	}
-//
-//	@Test(priority=0)
-//	public void VerifyUserIsAbleToAddContract() throws InterruptedException{		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
-//		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
-//		Assert.assertTrue(flag);
-//	}	
-//	
-//	@Test(priority=1)
-//	public void VerifyHeadingOnContractListingPage() throws InterruptedException{
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
-//		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
-//		Assert.assertTrue(flag);
-//	}
-//	
+package com.md.testcases;
+
+import org.testng.annotations.Test;
+import com.md.base.TestBase;
+import com.md.pages.Contract;
+import org.testng.annotations.BeforeTest;
+import java.net.MalformedURLException;
+import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+
+public class ContractTest extends TestBase {
+	Contract contractPage;
+	/*
+	 * static ExtentHtmlReporter htmlReporter = new
+	 * ExtentHtmlReporter(System.getProperty("user.dir")+
+	 * "/test-output/AutomationReport.html"); static ExtentReports extent = new
+	 * ExtentReports(); public static ExtentTest test; public static ExtentTest
+	 * logger;
+	 */
+
+	public ContractTest() {
+		super(); // Need to create constructor to initialize properties file
+	}
+
+	@BeforeTest
+	public void setUp() throws MalformedURLException, InterruptedException {
+		initialization();
+		contractPage = new Contract();
+//		 Contract.login();	
+		TestBase.login();
+	}
+
+	@Test(priority=0)
+	public void VerifyUserIsAbleToAddContract() throws InterruptedException{		
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
+		Assert.assertTrue(flag);
+	}	
+	
+	@Test(priority=1)
+	public void VerifyHeadingOnContractListingPage() throws InterruptedException{
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
+		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 //	@Test(priority=2)
 //	public void VerifyUserIsAbleToSearchContract() throws InterruptedException {	
 //		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
@@ -293,11 +293,10 @@
 //		boolean flag = contractPage.VerifyCustomFieldDisplayInContractForm();
 //		Assert.assertFalse(flag);
 //	}
-//
-//	@AfterTest
-//	public void Teardown() throws Exception {
-//
-//		// driver.close();
-//	}
-//
-//}
+
+	@AfterTest
+	public void Teardown() throws Exception {
+    driver.close();
+	}
+
+}
