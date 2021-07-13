@@ -38,7 +38,7 @@ public class TestBase extends ExtentReporterNG {
 	public static void initialization() throws MalformedURLException, InterruptedException {
 
 		// Define Execution Environment here i.e. Local/server
-		String ExecutionLocation = "local";
+		String ExecutionLocation = "server";
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;
