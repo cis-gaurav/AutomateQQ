@@ -100,6 +100,7 @@ public class TestBase extends ExtentReporterNG {
 	
 	// Actions for Global Login Method 
 	public static void login() throws InterruptedException {
+		Thread.sleep(2000);
 		username.sendKeys(prop.getProperty("username")); //reading data from properties file 
 		password.sendKeys(prop.getProperty("password"));
 		loginBtn.click();
