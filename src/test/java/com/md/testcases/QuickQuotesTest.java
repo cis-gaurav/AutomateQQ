@@ -36,6 +36,7 @@ public class QuickQuotesTest extends TestBase {
 		initialization();
 		QuickQuotesPage = new QuickQuotes();
 		TestBase.login();
+		Thread.sleep(2000);
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 		Thread.sleep(3000);
 	}
