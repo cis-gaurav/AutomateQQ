@@ -77,11 +77,11 @@ import com.md.base.TestBase;
 		static
 		WebElement ContractReferenceTextbox;	
 		
-		@FindBy(xpath="//select[@name='contract_type']")
+		@FindBy(xpath="//select[@name='Contract Type']")
 		static
 		WebElement ContractTypeDropdown;	
 		
-		@FindBy(xpath="//select[@name='contract_type']//option[contains(text(),'Software')]")
+		@FindBy(xpath="//select[@name='Contract Type']//option[contains(text(),'Software')]")
 		static
 		WebElement ContractTypeDropdownValue;
 		
@@ -590,44 +590,32 @@ import com.md.base.TestBase;
 			public boolean VerifyUserIsAbleToAddContract() throws InterruptedException {
 			driver.navigate().to(prop.getProperty("ContractHomepage"));
 			WebDriverWait wait = new WebDriverWait(driver,60);
-
-	        System.out.println(" execution started");
-	        
+	        System.out.println(" execution started");	   
 	        //Wait for Contract Page to Load
-	        wait.until(ExpectedConditions.visibilityOf(AddNewContractButton ));
-	        
+	        wait.until(ExpectedConditions.visibilityOf(AddNewContractButton ));        
 	        //Click on Add New Contract Button
-	        AddNewContractButton.click();
-	        
+	        AddNewContractButton.click();	  
 	        //Click on Create Button
-	        CreateContractButton.click();
-	        
+	        CreateContractButton.click();	     
 	        //Wait for Contract Form to load.
-	        wait.until(ExpectedConditions.visibilityOf(NewContractFormHeading));
-	        
+	        wait.until(ExpectedConditions.visibilityOf(NewContractFormHeading));	     
 	        //Enter Contract Name
-	        ContractNameTextbox.sendKeys("Automation Contract");
-	       	        
+	        ContractNameTextbox.sendKeys("Automation Contract");	              
 	        //Select Legal Entity
 	        ContractLegalEntityTextbox.click();
-	        ContractLegalEntityValue.click();
-	                
+	        ContractLegalEntityValue.click();	              
 	        //Select Jurisdiction
 	        ContractJurisdictionTextbox.click();
-	        ContractJurisdictionValue.click();
-	        	 	       
+	        ContractJurisdictionValue.click();	      	 	       
 	        //Select Contract Type	  
 	        ContractTypeDropdown.click();
-	        ContractTypeDropdownValue.click();
-	        
+	        ContractTypeDropdownValue.click();	       
 	        //Enter Custom Field Data
-	        ContractCustomField.sendKeys("Test");
-	        
+	        ContractCustomField.sendKeys("Test");	      
 	        //Select Currency INR
 	        ContractCurrency.click();
 	        Thread.sleep(1000);
-	        INRCurrency.click();
-	        
+	        INRCurrency.click();	        
 	        //Enter Annual Value
 	        ContractAnnualValue.sendKeys("250000");
 	        Thread.sleep(1000);
@@ -637,48 +625,38 @@ import com.md.base.TestBase;
 	        //Enter Supplier contact
 	        SupplierContact.sendKeys("d1@mailinator.com");
 	        //Click on Add Button
-	        SupplierContactAddButton.click();
-	        
+	        SupplierContactAddButton.click();  
 	        //Enter Stake holder Email
 	        StakeHolderEmail.sendKeys("tarique@mailinator.com");
 	        //Click on Add Button
-	        StakeHolderEmailAddButton.click();
-	        
+	        StakeHolderEmailAddButton.click(); 
 	        //Enter Start Date
 	        ContractStartDate.clear();
-	       	ContractStartDate.sendKeys("2021-06-01");
-	        
+	       	ContractStartDate.sendKeys("2021-06-01"); 
 	        //Enter Expiry Date	
 	       	ContractExpiryDate.clear();
 	        ContractExpiryDate.sendKeys("2021-12-31");
 	        ContractExpiryDate.sendKeys(Keys.ENTER);
 	        Thread.sleep(8000);
 	        Actions a =new Actions(driver);	        
-	        a.sendKeys(Keys.TAB).build().perform();
-	        
+	        a.sendKeys(Keys.TAB).build().perform(); 
 	        //Select Notice Period
 	        Select s = new Select(CNoticePeriod);
 	        s.selectByVisibleText("Other");
-	      
 	        //Enter Notice Period Date
 	        NoticePeriod.clear();
 	        NoticePeriod.sendKeys("2021-11-30");
-	        NoticePeriod.sendKeys(Keys.ENTER);	        	    
-	        
+	        NoticePeriod.sendKeys(Keys.ENTER);	        	     
 	        //Click on Notes
-	        NotesEditor.click();
-	        	        
+	        NotesEditor.click();	        
 	        a.sendKeys(Keys.TAB).build().perform();
 	        a.sendKeys(Keys.TAB).build().perform();
 	        a.sendKeys(Keys.TAB).build().perform();
-	      
 	        //Click on Save Button       
 	        a.sendKeys(Keys.ENTER).build().perform();
 	        Thread.sleep(4000);
-	        
 	        //verify Contract is Displayed in Listing Page
 	        wait.until(ExpectedConditions.elementToBeClickable(ContractTitleInHomepage));
-	        
 			return ContractTitleInHomepage.isDisplayed();
 		}	
 		

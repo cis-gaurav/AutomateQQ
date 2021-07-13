@@ -7,29 +7,21 @@
         <methods>
           <include name="createReport"/>
           <include name="VerifyUserIsAbleToSearchContract"/>
-          <include name="VerifyDisplayOfArchivedContracts"/>
+          <include name="VerifySearchContractUsingSupplier"/>
           <include name="reportTeardown"/>
-          <include name="VerifyHeadingOnContractListingPage"/>
-          <include name="setUp"/>
+          <include name="VerifyAlertMsgOnSearchingContracts"/>
           <include name="Teardown"/>
+          <include name="VerifySearchContractUsingStartDate"/>
+          <include name="VerifySearchContractUsingCategory"/>
+          <include name="VerifySearchContractUsingValue"/>
+          <include name="VerifyDisplayOfArchivedContracts"/>
+          <include name="VerifyHeadingOnContractListingPage"/>
+          <include name="VerifySearchContractUsingExpiryDate"/>
+          <include name="setUp"/>
+          <include name="VerifySearchContractUsingTitle"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.md.testcases.ContractTest -->
-      <class name="com.md.testcases.QuickQuotesTest">
-        <methods>
-          <include name="verifyGetQuoteButtonIsDisable"/>
-          <include name="createReport"/>
-          <include name="verfiyQQEventWithAllDetails"/>
-          <include name="verifySandpitEventWithQuestionnaire"/>
-          <include name="setUp"/>
-          <include name="verifyValidationMessageOnNamefield"/>
-          <include name="reportTeardown"/>
-          <include name="Teardown"/>
-          <include name="verifyToasterMessage"/>
-          <include name="verifyQuotebyName"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
   </test> <!-- Functional Test(failed) -->
 </suite> <!-- Failed suite [MD_Automation] -->
