@@ -131,7 +131,7 @@ public class QuickQuotes extends TestBase {
 	@FindBy(xpath = "//h4[contains(text(),'Advice from procurement team')]")
 	WebElement AdviceText;
 
-	@FindBy(xpath = "//div[@class=\"form-item-block\"]/div[3]/label")
+	@FindBy(xpath = "//label[text()='Who to invite']")
 	WebElement whoToInviteText;
 
 	@FindBy(xpath = "//*[contains (text(), 'createQQByName')]")
@@ -248,9 +248,7 @@ public class QuickQuotes extends TestBase {
 
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
-		Thread.sleep(3000);
 		quickquoteDashbaord.click();// click on Quote from MDDashbaord
-		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 	}
@@ -279,19 +277,15 @@ public class QuickQuotes extends TestBase {
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		newQuoteBtn.click();
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		Thread.sleep(7000);
+//		Thread.sleep(9000); // Need to remove this 
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-//		wait.until(ExpectedConditions.visibilityOf(AdviceText));
-		wait.until(ExpectedConditions.elementToBeClickable(AdviceText));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
-		wait.until(ExpectedConditions.elementToBeClickable(AdviceText));
-//		wait.until(ExpectedConditions.visibilityOf(AdviceText));
-		AdviceText.click();
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		deadline.click();
+//		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
