@@ -1,6 +1,7 @@
 package com.md.testcases;
 
 import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,10 +36,9 @@ public class QuickQuotesTest extends TestBase {
 	public void setUp() throws MalformedURLException, InterruptedException {
 		initialization();
 		QuickQuotesPage = new QuickQuotes();
-		TestBase.login();
-		Thread.sleep(4000);
+		TestBase.login();//User get logged in 
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
 	}
 
 	@Test(priority = 1)

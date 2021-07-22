@@ -1,5 +1,7 @@
 package com.md.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -28,9 +30,12 @@ public class QuickQuotes extends TestBase {
 
 	@FindBy(xpath = "//ul[@class='nav-header']/li[6]/a")
 	WebElement quickquoteDashbaord;
-
+	
+	@FindBy(xpath="//h4[text()='YOUR QUOTES']")
+	WebElement yourQuoteText;
+	
 	@FindBy(xpath = "//a[@class='btn btn-primary btn-fixed pull-right']")
-	WebElement newQuote;
+	WebElement newQuoteBtn;
 
 	@FindBy(xpath = "//button[@class='btn btn-lg btn-primary m-t20 btn-sizebig']")
 	WebElement getQuoteButton;
@@ -244,7 +249,8 @@ public class QuickQuotes extends TestBase {
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
 		quickquoteDashbaord.click();// click on Quote from MDDashbaord
-		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 	}
 
 	// Global things
@@ -271,16 +277,20 @@ public class QuickQuotes extends TestBase {
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		newQuoteBtn.click();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 //		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		wait.until(ExpectedConditions.elementToBeClickable(AdviceText));
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
-		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		wait.until(ExpectedConditions.elementToBeClickable(AdviceText));
+//		wait.until(ExpectedConditions.visibilityOf(AdviceText));
 		AdviceText.click();
 		Thread.sleep(4000);
-		wait.until(ExpectedConditions.visibilityOf(longNameValidation));
+		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
 	
@@ -395,8 +405,8 @@ public class QuickQuotes extends TestBase {
 		Thread.sleep(6000);
 		sandpitHeader.click();
 		WebDriverWait wait = new WebDriverWait(driver, 6000);
-		wait.until(ExpectedConditions.visibilityOf(newQuote));
-		newQuote.click();// click on new quote button on quote listing page
+		wait.until(ExpectedConditions.visibilityOf(newQuoteBtn));
+		newQuoteBtn.click();// click on new quote button on quote listing page
 		wait.until(ExpectedConditions.visibilityOf(name));
 		name.sendKeys("Create QuickQuote Event with Particpant Answers");
 		Thread.sleep(4000);

@@ -3,17 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.md.testcases.ContractTest">
+      <class name="com.md.testcases.QuickQuotesTest">
         <methods>
-          <include name="VerifyUserIsAbleToAddContract"/>
           <include name="createReport"/>
-          <include name="reportTeardown"/>
-          <include name="VerifyHeadingOnContractListingPage"/>
           <include name="setUp"/>
+          <include name="verifyValidationMessageOnNamefield"/>
+          <include name="reportTeardown"/>
           <include name="Teardown"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.md.testcases.ContractTest -->
+      </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

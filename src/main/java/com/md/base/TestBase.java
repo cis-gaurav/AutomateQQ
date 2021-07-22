@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -78,6 +80,7 @@ public class TestBase extends ExtentReporterNG {
 		// Navigate to URL
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		
 		//Promotion Popup Close
@@ -102,10 +105,9 @@ public class TestBase extends ExtentReporterNG {
 	public static void login() throws InterruptedException {
 		username.sendKeys(prop.getProperty("username")); //reading data from properties file 
 		password.sendKeys(prop.getProperty("password"));
-		loginBtn.click();
+		loginBtn.click(); // User get loggedin 
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(AdminDashboard));
-		Thread.sleep(2000);
 	}
 
 }
