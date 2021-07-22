@@ -38,7 +38,6 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage = new QuickQuotes();
 		TestBase.login();//User get logged in 
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
-//		Thread.sleep(4000);
 	}
 
 	@Test(priority = 1)

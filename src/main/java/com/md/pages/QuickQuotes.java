@@ -278,7 +278,7 @@ public class QuickQuotes extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		newQuoteBtn.click();
-//		Thread.sleep(9000); // Need to remove this 
+		Thread.sleep(9000); // Need to remove this 
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		// Enter long name in quoteName field
