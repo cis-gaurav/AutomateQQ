@@ -63,8 +63,8 @@ public class TestBase extends ExtentReporterNG {
 			options.setBinary("/usr/bin/google-chrome");
 			options.addArguments("--headless");
 			options.addArguments("start-maximized"); // open Browser in maximized mode	
-//			options.addArguments("--window-size=1980,1080");
-			options.addArguments("--window-size=1400,600");
+			options.addArguments("--window-size=1980,1080");
+//			options.addArguments("--window-size=1400,600");
 //			options.addArguments("start-maximized"); // open Browser in maximized mode														 
 			options.addArguments("disable-infobars"); // disabling infobars
 			options.addArguments("--disable-extensions"); // disabling extensions														
@@ -81,8 +81,9 @@ public class TestBase extends ExtentReporterNG {
 
 		// Navigate to URL
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		
 		
 		//Promotion Popup Close
