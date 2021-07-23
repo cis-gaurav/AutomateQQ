@@ -280,12 +280,14 @@ public class QuickQuotes extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
-		deadline.click();
+		AdviceText.click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
