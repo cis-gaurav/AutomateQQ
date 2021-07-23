@@ -61,12 +61,12 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 	
-//	@Test(priority=4)
-//	public void verifyQuotebyName() throws Throwable {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-//		boolean flag= QuickQuotesPage.createQQByName();
-//		Assert.assertTrue(flag);	
-//	}
+	@Test(priority=4)
+	public void verifyQuotebyName() throws Throwable {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
+		boolean flag= QuickQuotesPage.createQQByName();
+		Assert.assertTrue(flag);	
+	}
 //	
 //	@Test (priority=5)
 //	public void verfiyQQEventWithAllDetails() throws InterruptedException {
