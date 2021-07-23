@@ -280,44 +280,40 @@ public class QuickQuotes extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		newQuoteBtn.click();
-		Thread.sleep(9000); // Need to remove this 
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		deadline.click();
-//		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
 	
 	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		name.clear();
 		// Scroll to bottom of page
 		scrollTillBottom();
-		Thread.sleep(3000);
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// verify get quote button is disabled
 		return getQuoteButton.isEnabled();
 	}
 	
 	public boolean createToasterMessage() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(driver, 300);
-		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		name.clear();
 		name.sendKeys("Verify Toaster message");
 		deadline.sendKeys("2019-04-14 19:35");
 		scrollTillBottom();
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
+		wait.until(ExpectedConditions.elementToBeClickable(pastDeadlineToaster));
 		return pastDeadlineToaster.isDisplayed();
 	}
 	
