@@ -338,7 +338,7 @@ public class QuickQuotes extends TestBase {
 
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
+		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
