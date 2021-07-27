@@ -306,8 +306,9 @@ public class QuickQuotes extends TestBase {
 	
 	public boolean createToasterMessage() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
+//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		name.clear();
 		name.sendKeys("Verify Toaster message");
 		deadline.sendKeys("2019-04-14 19:35");
