@@ -338,7 +338,9 @@ public class QuickQuotes extends TestBase {
 
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
 		name.sendKeys("Create QuickQuote Event with all Details");
 		deadline.clear();
@@ -349,15 +351,14 @@ public class QuickQuotes extends TestBase {
 		driver.switchTo().defaultContent();
 		scroll();
 		fromLibraryBtn.click();
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(SelectDocPopup));
+		wait.until(ExpectedConditions.elementToBeClickable(SelectDocPopup));
 		SelectDocPopup.click();
-		wait.until(ExpectedConditions.visibilityOf(clickBtnFromPopup));
+		wait.until(ExpectedConditions.elementToBeClickable(clickBtnFromPopup));
 		clickBtnFromPopup.click();
 		Thread.sleep(2000);
 		scroll();
 		lotCheckbox.click();
-		wait.until(ExpectedConditions.visibilityOf(lotName));
+		wait.until(ExpectedConditions.elementToBeClickable(lotName));
 		lotName.sendKeys("Metal Scrap");
 		lotUom.sendKeys("tonnes");
 		lotQuantity.sendKeys("5");
