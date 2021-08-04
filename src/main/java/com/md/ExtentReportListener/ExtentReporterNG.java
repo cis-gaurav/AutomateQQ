@@ -1,7 +1,12 @@
 
 package com.md.ExtentReportListener;
 
+import java.io.File;
 import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -9,7 +14,18 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -19,7 +35,8 @@ public class ExtentReporterNG {
 	public static ExtentReports extent = new ExtentReports();
 	// public static ExtentTest test;
 	public static ExtentTest logger;
-	static WebDriver driver;
+	public static WebDriver driver;
+//	WebDriver driver;
 
 	// This code will run before executing any testcase
 	@BeforeSuite
@@ -28,6 +45,7 @@ public class ExtentReporterNG {
 				System.getProperty("user.dir") + "/test-output/AutomationReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
+
 		extent.setSystemInfo("Machine Name", "CISM-I-458");
 		extent.setSystemInfo("OS", "Windows 10");
 		extent.setSystemInfo("Build", "Integration");
@@ -44,12 +62,17 @@ public class ExtentReporterNG {
 
 	@SuppressWarnings("unused")
 	@AfterMethod
-	public static void tearDown(ITestResult result) throws IOException {
+	public void tearDown(ITestResult result) throws IOException {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
-			// String temp=Utility.getScreenshot(driver);
+//			 String temp= Utility.getScreenshot(driver);
 			logger.fail(result.getThrowable().getMessage());
 
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			logger.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " PASSED ", ExtentColor.GREEN));
+		} else {
+			logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
+			logger.skip(result.getThrowable());
 		}
 	}
 
@@ -58,3 +81,4 @@ public class ExtentReporterNG {
 		extent.flush();
 	}
 }
+

@@ -137,7 +137,7 @@ public class QuickQuotes extends TestBase {
 	@FindBy(xpath = "//*[contains (text(), 'createQQByName')]")
 	WebElement quoteName;
 	
-// QQ summary page Elements 
+///////////////// QQ summary page Elements /////////////////////////////////////////////////////////////////////////////////////////////
 	@FindBy(xpath = "//h2[text()='Create QuickQuote Event with all Details']")
 	WebElement nameVerify;
 
@@ -165,7 +165,7 @@ public class QuickQuotes extends TestBase {
 	@FindBy(xpath="//*[contains (text(),  'This is the Automated Answer of Questionnaire')]")
 	WebElement questionnaireAnswerVerify;
 	
-//Sandpit Elements 
+///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
 	
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 1 sandpit1@marketdojo.com\")]")
 	WebElement sandpitco1Checkbox;
@@ -280,7 +280,7 @@ public class QuickQuotes extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		// Enter long name in quoteName field
@@ -399,77 +399,62 @@ public class QuickQuotes extends TestBase {
 	}
 	
 	
-	public void createSandpitEventWithQuestionnaire () throws InterruptedException {
+	public boolean createSandpitEventWithQuestionnaire () throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(6000);
 		sandpitHeader.click();
-		WebDriverWait wait = new WebDriverWait(driver, 6000);
-		wait.until(ExpectedConditions.visibilityOf(newQuoteBtn));
+		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();// click on new quote button on quote listing page
-		wait.until(ExpectedConditions.visibilityOf(name));
+		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.sendKeys("Create QuickQuote Event with Particpant Answers");
 		Thread.sleep(4000);
 		scroll();
-//		lotCheckbox.click();
-//		wait.until(ExpectedConditions.visibilityOf(lotName));
-//		lotName.sendKeys("Metal Scrap");
-//		lotUom.sendKeys("tonnes");
-//		lotQuantity.sendKeys("5");
 		scroll();
 		questionnaireCheckbox.click();
-		wait.until(ExpectedConditions.visibilityOf(questionName));
+		wait.until(ExpectedConditions.elementToBeClickable(questionName));
 		questionName.sendKeys("Automation");
 		questionDropdown.click();
-		wait.until(ExpectedConditions.visibilityOf(oneLineText));
+		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
 		oneLineText.click();
-//		Thread.sleep(4000);
-		wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
+		Thread.sleep(2000);
+//		wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
 		sandpitco1Checkbox.click();
 //		sandpitco2Checkbox.click();
 //		sandpitco3Checkbox.click();	
 		getQuoteButton.click();
-		wait.until(ExpectedConditions.visibilityOf(actAsHost));
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
 		dropdownSandpitco1.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		eventHeader.click();
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 		eventInvitation.click();
-		wait.until(ExpectedConditions.visibilityOf(eventAccept));
+		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
 		//Participant End Questionnaire Tab
-		wait.until(ExpectedConditions.visibilityOf(questionnaireTab));
+		wait.until(ExpectedConditions.elementToBeClickable(questionnaireTab));
 		questionnaireTab.click();
-		wait.until(ExpectedConditions.visibilityOf(questionnaireAnwer1));
+		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.sendKeys("This is the Automated Answer of Questionnaire");
 		submitAnswer.click();
-		wait.until(ExpectedConditions.visibilityOf(submitAnswerFinalConfirmation));
-		submitAnswerFinalConfirmation.click();
-		//Participant End RFq Tab
-//		wait.until(ExpectedConditions.visibilityOf(RfqTab));
-//		RfqTab.click();
-//		enterBidBtn.click();
-//		wait.until(ExpectedConditions.visibilityOf(enterBid));
-//		enterBid.sendKeys("10");
-//		submitBid.click();
-//		wait.until(ExpectedConditions.visibilityOf(confirmSubmitBid));
-//		confirmSubmitBid.click();
-//		wait.until(ExpectedConditions.visibilityOf(confirmBidReceivedPoupup));
-//		confirmBidReceivedPoupup.click();
-		//Act as Host 
-		Thread.sleep(3000);
-//		wait.until(ExpectedConditions.visibilityOf(dropdownSandpitco1));
-//		dropdownSandpitco1.click();
-		wait.until(ExpectedConditions.visibilityOf(actAsHost));
-		actAsHost.click();
-//		Thread.sleep(7000);
-		wait.until(ExpectedConditions.elementToBeSelected(particpantToggel));
-//		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
-		particpantToggel.click();
-		scroll();
+		wait.until(ExpectedConditions.elementToBeClickable(submitAnswerFinalConfirmation));
+		submitAnswerFinalConfirmation.click(); 
 //		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
+		actAsHost.click();
+		Thread.sleep(5000);
+//		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
+//		JavascriptExecutor executor = (JavascriptExecutor)driver;
+//		executor.executeScript("arguments[0].click();", particpantToggel);
+		particpantToggel.click();
+//		Thread.sleep(2000);
+        scroll();
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
-		String text= questionnaireAnswerVerify.getText();
-		Assert.assertEquals(text, "This is the Automated Answer of Questionnaire123");
+//		String text= questionnaireAnswerVerify.getText();
+//		Assert.assertEquals(text, "This is the Automated Answer of Questionnaire");
+		return questionnaireAnswerVerify.isDisplayed();
 	}
 }

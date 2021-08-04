@@ -6,10 +6,9 @@
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
           <include name="createReport"/>
+          <include name="verifySandpitEventWithQuestionnaire"/>
           <include name="setUp"/>
-          <include name="verifyValidationMessageOnNamefield"/>
           <include name="reportTeardown"/>
-          <include name="Teardown"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->

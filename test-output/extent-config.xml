@@ -3,7 +3,7 @@
   <configuration>
     <!-- report theme -->
     <!-- standard, dark -->
-    <theme>standard</theme>
+    <theme>dark</theme>
   
     <!-- document encoding -->
     <!-- defaults to UTF-8 -->
@@ -16,7 +16,7 @@
     <documentTitle>ExtentReports 2.0</documentTitle>
     
     <!-- report name - displayed at top-nav -->
-    <reportName></reportName>
+    <reportName>Automation Report</reportName>
     
     <!-- report headline - displayed at top-nav, after reportHeadline -->
     <reportHeadline>Automation Report</reportHeadline>
