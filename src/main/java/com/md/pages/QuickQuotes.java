@@ -162,7 +162,8 @@ public class QuickQuotes extends TestBase {
 	@FindBy(xpath="//a[@class='collapsed' and text()= 'Participant List']")
 	WebElement messageToggel; 
 	
-	@FindBy(xpath="//*[contains (text(),  'This is the Automated Answer of Questionnaire')]")
+//	@FindBy(xpath="//tbody/tr[3]/td[2]")
+	@FindBy(xpath="//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
 	WebElement questionnaireAnswerVerify;
 	
 ///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
@@ -398,16 +399,20 @@ public class QuickQuotes extends TestBase {
 		return nameVerify.isDisplayed();
 	}
 	
+	@FindBy(xpath = "//*[@id=\"flash_messages\"]/div/p/text()")
+	WebElement Verify1;
 	
-	public boolean createSandpitEventWithQuestionnaire () throws InterruptedException {
+	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(6000);
+//		JavascriptExecutor executor = (JavascriptExecutor)driver;
+//		executor.executeScript("arguments[0].click();", sandpitHeader);
 		sandpitHeader.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();// click on new quote button on quote listing page
-		wait.until(ExpectedConditions.elementToBeClickable(name));
+		wait.until(ExpectedConditions.elementToBeClickable(name));	
 		name.sendKeys("Create QuickQuote Event with Particpant Answers");
 		Thread.sleep(4000);
 		scroll();
@@ -419,29 +424,28 @@ public class QuickQuotes extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
 		oneLineText.click();
 		Thread.sleep(2000);
-//		wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
 		sandpitco1Checkbox.click();
-//		sandpitco2Checkbox.click();
-//		sandpitco3Checkbox.click();	
 		getQuoteButton.click();
 		Thread.sleep(2000);
+ /////////////////Create questionnaire event at Host End 
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
 		dropdownSandpitco1.click();
 		Thread.sleep(3000);
 		eventHeader.click();
-//		Thread.sleep(2000);
+		Thread.sleep(2000);
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
-		//Participant End Questionnaire Tab
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireTab));
 		questionnaireTab.click();
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.sendKeys("This is the Automated Answer of Questionnaire");
+		System.out.println(questionnaireAnwer1.getText());
 		submitAnswer.click();
 		wait.until(ExpectedConditions.elementToBeClickable(submitAnswerFinalConfirmation));
 		submitAnswerFinalConfirmation.click(); 
+///////////////////////////Submit answer at Participant End 
 //		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
@@ -453,8 +457,27 @@ public class QuickQuotes extends TestBase {
 //		Thread.sleep(2000);
         scroll();
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
+		AllowResubmissionBtn.click();
+		Thread.sleep(2000);
+	/////////////Allow Resubmisson at Host end 
+		actAsHost.click();
+		dropdownSandpitco1.click();
+		questionnaireTab.click();
+		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
+		questionnaireAnwer1.clear();
+		questionnaireAnwer1.sendKeys("2222This is the Automated Answer of Questionnaire");
+		submitAnswer.click();
+		wait.until(ExpectedConditions.elementToBeClickable(submitAnswerFinalConfirmation));
+		submitAnswerFinalConfirmation.click();
+		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
+		actAsHost.click();
+		Thread.sleep(5000);
+		particpantToggel.click();
+		Thread.sleep(2000);
+		scrollTillBottom();
 //		String text= questionnaireAnswerVerify.getText();
 //		Assert.assertEquals(text, "This is the Automated Answer of Questionnaire");
+		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
 		return questionnaireAnswerVerify.isDisplayed();
 	}
 }

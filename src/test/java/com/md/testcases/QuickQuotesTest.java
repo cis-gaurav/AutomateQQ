@@ -76,11 +76,10 @@ public class QuickQuotesTest extends TestBase {
 //	}
 //	
 	@Test(priority=6)	
-	public void verifySandpitEventWithQuestionnaire () throws InterruptedException {
+	public void verifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaire();
-//		Assert.assertTrue(flag);
-		Assert.assertTrue(flag, "Hi GJ its failed");
+		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
+		Assert.assertTrue(flag);
 	}
 
 //	@AfterTest
