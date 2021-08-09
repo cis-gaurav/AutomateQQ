@@ -40,48 +40,48 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
 
-//	@Test(priority = 1)
-//	public void verifyValidationMessageOnNamefield() throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-//		boolean flag = QuickQuotesPage.createNameFieldValidaions();
-//		Assert.assertTrue(flag);
-//	}
-//	
-//	@Test(priority=2)
-//	public void verifyGetQuoteButtonIsDisable () throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-//		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
-//		Assert.assertFalse(flag);
-//	}
-//	
-//	@Test(priority=3)
-//	public void verifyToasterMessage () throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-//		boolean flag=QuickQuotesPage.createToasterMessage();
-//		Assert.assertTrue(flag,"verifyToasterMessage is failed ask developer to fix");
-//	}
-//	
-//	@Test(priority=4)
-//	public void verifyQuotebyName() throws Throwable {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-//		boolean flag= QuickQuotesPage.createQQByName();
-//		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask devloper to fix ");	
-//	}
-//	
-//	@Test (priority=5)
-//	public void verfiyQQEventWithAllDetails() throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-//		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
-//		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is fialed ask devloper to fix");
-//	}
-//	
-//	@Test(priority=6)	
-//	public void verifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
-//		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
-//		Assert.assertTrue(flag,"verifySandpitEventWithQuestionnaireAndAllowResubmission is failed ask devloper to fix ");
-//	}
-//	
+	@Test(priority = 1)
+	public void verifyValidationMessageOnNamefield() throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
+		boolean flag = QuickQuotesPage.createNameFieldValidaions();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=2)
+	public void verifyGetQuoteButtonIsDisable () throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
+		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
+		Assert.assertFalse(flag);
+	}
+	
+	@Test(priority=3)
+	public void verifyToasterMessage () throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
+		boolean flag=QuickQuotesPage.createToasterMessage();
+		Assert.assertTrue(flag,"verifyToasterMessage is failed ask developer to fix");
+	}
+	
+	@Test(priority=4)
+	public void verifyQuotebyName() throws Throwable {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
+		boolean flag= QuickQuotesPage.createQQByName();
+		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask devloper to fix ");	
+	}
+	
+	@Test (priority=5)
+	public void verfiyQQEventWithAllDetails() throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
+		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
+		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is fialed ask devloper to fix");
+	}
+	
+	@Test(priority=6)	
+	public void verifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
+		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
+		Assert.assertTrue(flag,"verifySandpitEventWithQuestionnaireAndAllowResubmission is failed ask devloper to fix ");
+	}
+	
 	@Test
 	public void verifyEditContent() throws InterruptedException {
 		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString()); 
