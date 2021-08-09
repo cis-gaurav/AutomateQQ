@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 05 18:33:33 IST 2021</td>
+<td>Started on:</td><td>Mon Aug 09 15:58:25 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>42 seconds (42579 ms)</td>
+<tr><td>Total time:</td><td>107 seconds (107486 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.md.testcases.QuickQuotesTest.verifySandpitEventWithQuestionnaireAndAllowResubmission()'><b>verifySandpitEventWithQuestionnaireAndAllowResubmission</b><br>Test class: com.md.testcases.QuickQuotesTest</td>
-<td><div><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: The result of the xpath expression &quot;//*[@id=&quot;flash_messages&quot;]/div/p/text()&quot; is: [object Text]. It should be an element.
+<td title='com.md.testcases.QuickQuotesTest.verifyEditContent()'><b>verifyEditContent</b><br>Test class: com.md.testcases.QuickQuotesTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body[@class=&apos;cke_editable cke_editable_themed cke_contents_ltr cke_show_borders&apos;]&quot;}
   (Session info: chrome=92.0.4515.107)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:53480}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4e11570bd57d6eb4f9e0262df53de112
-*** Element info: {Using=xpath, value=//*[@id=&quot;flash_messages&quot;]/div/p/text()}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58284}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b66455d8366bc723046a30c7d6053297
+*** Element info: {Using=xpath, value=//body[@class=&apos;cke_editable cke_editable_themed cke_contents_ltr cke_show_borders&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -101,9 +101,9 @@ Session ID: 4e11570bd57d6eb4f9e0262df53de112
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy11.getText(Unknown Source)
-	at com.md.pages.QuickQuotes.createSandpitEventWithQuestionnaireAndAllowResubmission(QuickQuotes.java:418)
-	at com.md.testcases.QuickQuotesTest.verifySandpitEventWithQuestionnaireAndAllowResubmission(QuickQuotesTest.java:83)
+	at com.sun.proxy.$Proxy11.clear(Unknown Source)
+	at com.md.pages.QuickQuotes.createEditContent(QuickQuotes.java:522)
+	at com.md.testcases.QuickQuotesTest.verifyEditContent(QuickQuotesTest.java:88)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,16 +132,16 @@ Session ID: 4e11570bd57d6eb4f9e0262df53de112
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1711185459", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1711185459'><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: The result of the xpath expression &quot;//*[@id=&quot;flash_messages&quot;]/div/p/text()&quot; is: [object Text]. It should be an element.
+</pre></div><a href='#' onClick='toggleBox("stack-trace1839168128", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1839168128'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body[@class=&apos;cke_editable cke_editable_themed cke_contents_ltr cke_show_borders&apos;]&quot;}
   (Session info: chrome=92.0.4515.107)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:53480}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4e11570bd57d6eb4f9e0262df53de112
-*** Element info: {Using=xpath, value=//*[@id=&quot;flash_messages&quot;]/div/p/text()}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58284}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b66455d8366bc723046a30c7d6053297
+*** Element info: {Using=xpath, value=//body[@class=&apos;cke_editable cke_editable_themed cke_contents_ltr cke_show_borders&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -158,9 +158,9 @@ Session ID: 4e11570bd57d6eb4f9e0262df53de112
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy11.getText(Unknown Source)
-	at com.md.pages.QuickQuotes.createSandpitEventWithQuestionnaireAndAllowResubmission(QuickQuotes.java:418)
-	at com.md.testcases.QuickQuotesTest.verifySandpitEventWithQuestionnaireAndAllowResubmission(QuickQuotesTest.java:83)
+	at com.sun.proxy.$Proxy11.clear(Unknown Source)
+	at com.md.pages.QuickQuotes.createEditContent(QuickQuotes.java:522)
+	at com.md.testcases.QuickQuotesTest.verifyEditContent(QuickQuotesTest.java:88)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -190,7 +190,7 @@ Session ID: 4e11570bd57d6eb4f9e0262df53de112
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>15</td>
+<td>48</td>
 <td>com.md.testcases.QuickQuotesTest@34cd072c</td></tr>
 </table><p>
 </body>

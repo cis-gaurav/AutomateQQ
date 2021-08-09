@@ -15,7 +15,8 @@ import com.md.base.TestBase;
 
 public class QuickQuotes extends TestBase {
 
-	// Page Factory == OR
+///////////////// Page Factory == OR
+	
 	@FindBy(name = "user[login]")
 	static WebElement username;
 
@@ -30,13 +31,15 @@ public class QuickQuotes extends TestBase {
 
 	@FindBy(xpath = "//ul[@class='nav-header']/li[6]/a")
 	WebElement quickquoteDashbaord;
-	
-	@FindBy(xpath="//h4[text()='YOUR QUOTES']")
+
+	@FindBy(xpath = "//h4[text()='YOUR QUOTES']")
 	WebElement yourQuoteText;
-	
+
 	@FindBy(xpath = "//a[@class='btn btn-primary btn-fixed pull-right']")
 	WebElement newQuoteBtn;
 
+///////////Create QQ Page Element /////////////////
+	
 	@FindBy(xpath = "//button[@class='btn btn-lg btn-primary m-t20 btn-sizebig']")
 	WebElement getQuoteButton;
 
@@ -127,7 +130,6 @@ public class QuickQuotes extends TestBase {
 	@FindBy(xpath = "//input[@id='react-select-2-input']")
 	WebElement addParticpantManually;
 
-
 	@FindBy(xpath = "//h4[contains(text(),'Advice from procurement team')]")
 	WebElement AdviceText;
 
@@ -136,38 +138,64 @@ public class QuickQuotes extends TestBase {
 
 	@FindBy(xpath = "//*[contains (text(), 'createQQByName')]")
 	WebElement quoteName;
+
+////////////////////Left panel Element /////////////////	
+
+	@FindBy(xpath = "//*[@id=\"app\"]//div[2]/div[2]/div/div/div/div[1]/a/i")
+	WebElement editcontentToolTip;
+	
+	@FindBy(xpath = "//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
+	WebElement editContentPopup;
+	
+	@FindBy(xpath = "//button[text()='Delete']")
+	WebElement delteButton;
+	
+	@FindBy(xpath = "//div[contains(text(),'Deleted')]")
+	WebElement delteToaster;
+	
+	@FindBy(xpath = "//button[text()='Submit']")
+	WebElement submitButton;
+	
+	@FindBy(xpath = "//button[text()='Close']")
+	WebElement closeButton;
+	
+	@FindBy(xpath = "//div[@class='list']/p[1]")
+	WebElement AutomateText;
+	
+	@FindBy(xpath = "//div[@class='list']/h4")
+	WebElement AutomateText1;
 	
 ///////////////// QQ summary page Elements /////////////////////////////////////////////////////////////////////////////////////////////
 	@FindBy(xpath = "//h2[text()='Create QuickQuote Event with all Details']")
 	WebElement nameVerify;
 
-	@FindBy (xpath="//a[@class='collapsed' and text()='Brief']")
+	@FindBy(xpath = "//a[@class='collapsed' and text()='Brief']")
 	WebElement briefToggel;
-	
+
 	@FindBy(xpath = "//div[@class='table-box list']/p")
 	WebElement descriptionVerify;
-	
-	@FindBy(xpath="//a[@class='collapsed' and text()= 'Summary']")
-	WebElement summaryToggel ;
-	
-	@FindBy(xpath="//div[@class='summary-table table-scroll']/table/tbody/tr/td/span")
-	WebElement lotNameVerify ;
-	
-	@FindBy(xpath="//a[@class='collapsed' and text()= 'Participant List']")
-	WebElement particpantToggel; 
-	
-	@FindBy(xpath="//table[@class='participant-table common-table']/thead/tr/th[2]")
+
+	@FindBy(xpath = "//a[@class='collapsed' and text()= 'Summary']")
+	WebElement summaryToggel;
+
+	@FindBy(xpath = "//div[@class='summary-table table-scroll']/table/tbody/tr/td/span")
+	WebElement lotNameVerify;
+
+	@FindBy(xpath = "//a[@class='collapsed' and text()= 'Participant List']")
+	WebElement particpantToggel;
+
+	@FindBy(xpath = "//table[@class='participant-table common-table']/thead/tr/th[2]")
 	WebElement particpantName;
-	
-	@FindBy(xpath="//a[@class='collapsed' and text()= 'Participant List']")
-	WebElement messageToggel; 
-	
+
+	@FindBy(xpath = "//a[@class='collapsed' and text()= 'Participant List']")
+	WebElement messageToggel;
+
 //	@FindBy(xpath="//tbody/tr[3]/td[2]")
-	@FindBy(xpath="//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
+	@FindBy(xpath = "//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
 	WebElement questionnaireAnswerVerify;
-	
+
 ///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
-	
+
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 1 sandpit1@marketdojo.com\")]")
 	WebElement sandpitco1Checkbox;
 
@@ -176,72 +204,72 @@ public class QuickQuotes extends TestBase {
 
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 3 sandpit3@marketdojo.com\")]")
 	WebElement sandpitco3Checkbox;
-	
-	@FindBy(xpath="//*[contains (@class ,'navbar-nav collapse navbar-collapse navbar-module-right pull-left')]/ul/li[3]")
+
+	@FindBy(xpath = "//*[contains (@class ,'navbar-nav collapse navbar-collapse navbar-module-right pull-left')]/ul/li[3]")
 	WebElement sandpitHeader;
-	
-	@FindBy(xpath="//*[contains (text(),  'Act as Host')]")
+
+	@FindBy(xpath = "//*[contains (text(),  'Act as Host')]")
 	WebElement actAsHost;
-	
-	@FindBy(xpath="//*[contains (text(),  'Act as Sandpit Co 1')]")
+
+	@FindBy(xpath = "//*[contains (text(),  'Act as Sandpit Co 1')]")
 	WebElement dropdownSandpitco1;
-	
-	@FindBy(xpath="//*[@id='header-navbar']/div/div[2]/ul/li/a")
+
+	@FindBy(xpath = "//*[@id='header-navbar']/div/div[2]/ul/li/a")
 	WebElement eventHeader;
-	
-	//Participant end Sandpit Elements 
-	
-	@FindBy(xpath="//*[@id=\"main-container\"]/div[3]/div/div/div[1]/div/form/table/tbody/tr[1]/td[2]/div[2]/div/div/div/div/button")
+
+	// Participant end Sandpit Elements
+
+	@FindBy(xpath = "//*[@id=\"main-container\"]/div[3]/div/div/div[1]/div/form/table/tbody/tr[1]/td[2]/div[2]/div/div/div/div/button")
 	WebElement eventInvitation;
-	
-	@FindBy(xpath="//*[@id=\"main-container\"]/div[3]/div/div/div[1]/div/form/table/tbody/tr[1]/td[2]/div[2]/div/div/div/div/ul/li[1]/a")
+
+	@FindBy(xpath = "//*[@id=\"main-container\"]/div[3]/div/div/div[1]/div/form/table/tbody/tr[1]/td[2]/div[2]/div/div/div/div/ul/li[1]/a")
 	WebElement eventAccept;
-	
-	@FindBy(xpath="//*[contains(@title, 'Questionnaire')]")
+
+	@FindBy(xpath = "//*[contains(@title, 'Questionnaire')]")
 	WebElement questionnaireTab;
-	
-	@FindBy(xpath="//div[@class='form-item-block qqa-block']/div/div/div/div[2]/div/input")
+
+	@FindBy(xpath = "//div[@class='form-item-block qqa-block']/div/div/div/div[2]/div/input")
 	WebElement questionnaireAnwer1;
-	
-	@FindBy(xpath="//*[contains(text(), 'Submit answers')]")
+
+	@FindBy(xpath = "//*[contains(text(), 'Submit answers')]")
 	WebElement submitAnswer;
-	
-	@FindBy(xpath="//*[contains(@id, 'confirmOk')]")
+
+	@FindBy(xpath = "//*[contains(@id, 'confirmOk')]")
 	WebElement submitAnswerFinalConfirmation;
-	
-	@FindBy(xpath="//*[contains(text(), 'RFQs')]")
+
+	@FindBy(xpath = "//*[contains(text(), 'RFQs')]")
 	WebElement RfqTab;
-	
-	@FindBy(xpath="//*[contains(text(), 'Enter Bid')]")
+
+	@FindBy(xpath = "//*[contains(text(), 'Enter Bid')]")
 	WebElement enterBidBtn;
-	
-	@FindBy(xpath="//*[contains(@name, 'bid[price]')]")
+
+	@FindBy(xpath = "//*[contains(@name, 'bid[price]')]")
 	WebElement enterBid;
-	
-	@FindBy(xpath="//*[contains(@class, 'btn btn-default light-gray-color push-5-r br-green-color')]")
+
+	@FindBy(xpath = "//*[contains(@class, 'btn btn-default light-gray-color push-5-r br-green-color')]")
 	WebElement submitBid;
-	
-	@FindBy(xpath="//*[contains(@class, 'btn btn-primary ok-btn')]")
+
+	@FindBy(xpath = "//*[contains(@class, 'btn btn-primary ok-btn')]")
 	WebElement confirmSubmitBid;
-	
-	@FindBy(xpath="//*[contains(@class,'modal-dialog modal-dialog-popout custom-modal modal-lg')]/div/div[3]/button")
+
+	@FindBy(xpath = "//*[contains(@class,'modal-dialog modal-dialog-popout custom-modal modal-lg')]/div/div[3]/button")
 	WebElement confirmBidReceivedPoupup;
-	
-	@FindBy(xpath="//*[contains (text(), 'Allow resubmission')]")
+
+	@FindBy(xpath = "//*[contains (text(), 'Allow resubmission')]")
 	WebElement AllowResubmissionBtn;
-	
-	@FindBy(xpath="//*[contains (text(), 'Waiting for resubmission')]")
+
+	@FindBy(xpath = "//*[contains (text(), 'Waiting for resubmission')]")
 	WebElement WaitingForResubmissionText;
-	
-	@FindBy (xpath="//*[contains (@class, 'participant-table common-table')]/tbody/tr[2]/td[2]/a")
+
+	@FindBy(xpath = "//*[contains (@class, 'participant-table common-table')]/tbody/tr[2]/td[2]/a")
 	WebElement particpantBid;
-	
-	@FindBy (xpath="//*[contains (@class, 'icon-link')]")
+
+	@FindBy(xpath = "//*[contains (@class, 'icon-link')]")
 	WebElement deleteBid;
-	
-	@FindBy (xpath="//*[contains (@class, 'button-l btn btn-primary')]")
+
+	@FindBy(xpath = "//*[contains (@class, 'button-l btn btn-primary')]")
 	WebElement deleteBidConfirm;
-	
+
 	// Initialize the Page Object
 	public QuickQuotes() {
 		PageFactory.initElements(driver, this);
@@ -249,7 +277,7 @@ public class QuickQuotes extends TestBase {
 
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
 //		quickquoteDashbaord.click();// click on Quote from MDDashbaord
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -268,35 +296,34 @@ public class QuickQuotes extends TestBase {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
-	
-	//Unused  script of new user license check  
+
+	// Unused script of new user license check
 	public boolean verifyQQLiscence() throws InterruptedException {
 		redirectFromMDDashboardtoQQCreate();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(alertLiscenceMsg));
 		return alertLiscenceMsg.isDisplayed();
 	}
-	
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(6000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		AdviceText.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
-	
+
 	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		// Scroll to bottom of page
 		scrollTillBottom();
@@ -304,7 +331,7 @@ public class QuickQuotes extends TestBase {
 		// verify get quote button is disabled
 		return getQuoteButton.isEnabled();
 	}
-	
+
 	public boolean createToasterMessage() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(5000);
@@ -320,8 +347,8 @@ public class QuickQuotes extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(pastDeadlineToaster));
 		return pastDeadlineToaster.isDisplayed();
 	}
-	
-	public boolean createQQByName() throws Throwable   {
+
+	public boolean createQQByName() throws Throwable {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -377,7 +404,7 @@ public class QuickQuotes extends TestBase {
 		Thread.sleep(4000);
 		getQuoteButton.click();
 		// Verify on create page
-        //description Verify
+		// description Verify
 //		Thread.sleep(8000);
 		wait.until(ExpectedConditions.visibilityOf(particpantToggel));
 		briefToggel.click();
@@ -385,23 +412,23 @@ public class QuickQuotes extends TestBase {
 		String descrption = descriptionVerify.getText();
 		Assert.assertEquals(descrption, "This is my description");
 //		briefToggel.click();
-		//lotName Verify 
+		// lotName Verify
 		Thread.sleep(2000);
 		summaryToggel.click();
 		wait.until(ExpectedConditions.visibilityOf(lotNameVerify));
-		String LotName =  lotNameVerify.getText();
+		String LotName = lotNameVerify.getText();
 		Assert.assertEquals(LotName, "Metal Scrap");
 		scroll();
-		//ParticpantVerify 
+		// ParticpantVerify
 		particpantToggel.click();
-		//verifyEventName 
+		// verifyEventName
 		wait.until(ExpectedConditions.visibilityOf(nameVerify));
 		return nameVerify.isDisplayed();
 	}
-	
+
 	@FindBy(xpath = "//*[@id=\"flash_messages\"]/div/p/text()")
 	WebElement Verify1;
-	
+
 	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(6000);
@@ -412,7 +439,7 @@ public class QuickQuotes extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();// click on new quote button on quote listing page
-		wait.until(ExpectedConditions.elementToBeClickable(name));	
+		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.sendKeys("Create QuickQuote Event with Particpant Answers");
 		Thread.sleep(4000);
 		scroll();
@@ -427,7 +454,7 @@ public class QuickQuotes extends TestBase {
 		sandpitco1Checkbox.click();
 		getQuoteButton.click();
 		Thread.sleep(2000);
- /////////////////Create questionnaire event at Host End 
+		///////////////// Create questionnaire event at Host End
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
 		dropdownSandpitco1.click();
@@ -444,7 +471,7 @@ public class QuickQuotes extends TestBase {
 		System.out.println(questionnaireAnwer1.getText());
 		submitAnswer.click();
 		wait.until(ExpectedConditions.elementToBeClickable(submitAnswerFinalConfirmation));
-		submitAnswerFinalConfirmation.click(); 
+		submitAnswerFinalConfirmation.click();
 ///////////////////////////Submit answer at Participant End 
 //		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
@@ -455,11 +482,11 @@ public class QuickQuotes extends TestBase {
 //		executor.executeScript("arguments[0].click();", particpantToggel);
 		particpantToggel.click();
 //		Thread.sleep(2000);
-        scroll();
+		scroll();
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
 		AllowResubmissionBtn.click();
 		Thread.sleep(2000);
-	/////////////Allow Resubmisson at Host end 
+		///////////// Allow Resubmisson at Host end
 		actAsHost.click();
 		dropdownSandpitco1.click();
 		questionnaireTab.click();
@@ -479,5 +506,29 @@ public class QuickQuotes extends TestBase {
 //		Assert.assertEquals(text, "This is the Automated Answer of Questionnaire");
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
 		return questionnaireAnswerVerify.isDisplayed();
+	}
+
+	@FindBy(xpath = "//div[contains (@class, 'alert alert-fixed alert-info fade in')]/p")
+	WebElement Verify2;
+
+	public boolean createEditContent() throws InterruptedException {
+		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(7000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(AutomateText1));
+//		JavascriptExecutor executor = (JavascriptExecutor)driver;
+//		executor.executeScript("arguments[0].click();", editcontentToolTip);
+		editcontentToolTip.click();
+		driver.switchTo().frame(1);
+        editContentPopup.clear();
+        editContentPopup.sendKeys("Automate test");
+        driver.switchTo().defaultContent();
+        submitButton.click();
+        Assert.assertEquals(AutomateText.getText(), "Automate test");
+        editcontentToolTip.click();
+        delteButton.click();
+		wait.until(ExpectedConditions.visibilityOf(AutomateText1));
+        Assert.assertEquals(AutomateText1.getText(), "ADVICE FROM PROCUREMENT TEAM");
+        return AutomateText1.isDisplayed();
 	}
 }
