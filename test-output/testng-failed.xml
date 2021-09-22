@@ -50,6 +50,17 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.md.testcases.ContractTest -->
+      <class name="com.md.testcases.QuickQuotesTest">
+        <methods>
+          <include name="verifyEditContent"/>
+          <include name="createReport"/>
+          <include name="setUp"/>
+          <include name="verifyValidationMessageOnNamefield"/>
+          <include name="reportTeardown"/>
+          <include name="Teardown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
   </test> <!-- Functional Test(failed) -->
 </suite> <!-- Failed suite [MD_Automation] -->

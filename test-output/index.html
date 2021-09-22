@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 38 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 40 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">39 methods, 38 failed,   1 passed</span>
+                    <span class="method-stats">45 methods, 40 failed,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -292,6 +292,16 @@
                         <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.ContractTest" hash-for-method="VerifyUserNavigationToContractForm">VerifyUserNavigationToContractForm</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="verifyEditContent">verifyEditContent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="verifyValidationMessageOnNamefield">verifyValidationMessageOnNamefield</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content failed suite-MD_Automation -->
                   </li>
                   <li>
@@ -303,7 +313,27 @@
                     <div class="method-list-content passed suite-MD_Automation">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="Rough">Rough</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="verfiyQQEventWithAllDetails">verfiyQQEventWithAllDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="verifyGetQuoteButtonIsDisable">verifyGetQuoteButtonIsDisable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="verifyQuotebyName">verifyQuotebyName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="verifySandpitEventWithQuestionnaireAndAllowResubmission">verifySandpitEventWithQuestionnaireAndAllowResubmission</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MD_Automation" title="com.md.testcases.QuickQuotesTest" hash-for-method="verifyToasterMessage">verifyToasterMessage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MD_Automation -->
@@ -329,14 +359,13 @@
                   <a name="VerifyActiveHeadingsDisplayInContractForm">
                   </a> <!-- VerifyActiveHeadingsDisplayInContractForm -->
                   <span class="method-name">VerifyActiveHeadingsDisplayInContractForm</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -357,14 +386,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyActiveHeadingsDisplayInContractListingPage">
                   </a> <!-- VerifyActiveHeadingsDisplayInContractListingPage -->
                   <span class="method-name">VerifyActiveHeadingsDisplayInContractListingPage</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -385,14 +413,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyAlertMsgIfHostAddedToSupplierContact">
                   </a> <!-- VerifyAlertMsgIfHostAddedToSupplierContact -->
                   <span class="method-name">VerifyAlertMsgIfHostAddedToSupplierContact</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -413,14 +440,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyAlertMsgIfParticipantAddedToStakeHolder">
                   </a> <!-- VerifyAlertMsgIfParticipantAddedToStakeHolder -->
                   <span class="method-name">VerifyAlertMsgIfParticipantAddedToStakeHolder</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -441,14 +467,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyAlertMsgOnSearchingContracts">
                   </a> <!-- VerifyAlertMsgOnSearchingContracts -->
                   <span class="method-name">VerifyAlertMsgOnSearchingContracts</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -460,7 +485,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyAlertMsgOnSearchingContracts(Contract.java:717)
 	at com.md.testcases.ContractTest.VerifyAlertMsgOnSearchingContracts(ContractTest.java:58)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -469,14 +494,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyAtleastOneValueInSupplierContact">
                   </a> <!-- VerifyAtleastOneValueInSupplierContact -->
                   <span class="method-name">VerifyAtleastOneValueInSupplierContact</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -497,14 +521,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyAutoSuggestionForStakeHolder">
                   </a> <!-- VerifyAutoSuggestionForStakeHolder -->
                   <span class="method-name">VerifyAutoSuggestionForStakeHolder</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -525,14 +548,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyAutoSuggestionForSupplierContact">
                   </a> <!-- VerifyAutoSuggestionForSupplierContact -->
                   <span class="method-name">VerifyAutoSuggestionForSupplierContact</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -553,14 +575,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyContractListingOnLanguageChange">
                   </a> <!-- VerifyContractListingOnLanguageChange -->
                   <span class="method-name">VerifyContractListingOnLanguageChange</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -581,14 +602,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyContractValidationMsg">
                   </a> <!-- VerifyContractValidationMsg -->
                   <span class="method-name">VerifyContractValidationMsg</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -600,7 +620,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyContractValidationMsg(Contract.java:958)
 	at com.md.testcases.ContractTest.VerifyContractValidationMsg(ContractTest.java:110)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -609,14 +629,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyCustomFieldDisplayInContractForm">
                   </a> <!-- VerifyCustomFieldDisplayInContractForm -->
                   <span class="method-name">VerifyCustomFieldDisplayInContractForm</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -637,14 +656,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyDisplayOfArchivedContracts">
                   </a> <!-- VerifyDisplayOfArchivedContracts -->
                   <span class="method-name">VerifyDisplayOfArchivedContracts</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -656,7 +674,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyDisplayOfArchivedContracts(Contract.java:691)
 	at com.md.testcases.ContractTest.VerifyDisplayOfArchivedContracts(ContractTest.java:51)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -665,14 +683,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyDisplayOfCategoryInContractForm">
                   </a> <!-- VerifyDisplayOfCategoryInContractForm -->
                   <span class="method-name">VerifyDisplayOfCategoryInContractForm</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -693,14 +710,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyDisplayOfCustomNotiticationLink">
                   </a> <!-- VerifyDisplayOfCustomNotiticationLink -->
                   <span class="method-name">VerifyDisplayOfCustomNotiticationLink</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -721,14 +737,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyDisplayOfDropbox">
                   </a> <!-- VerifyDisplayOfDropbox -->
                   <span class="method-name">VerifyDisplayOfDropbox</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -749,14 +764,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyDisplayOfExpiryNotiticationLink">
                   </a> <!-- VerifyDisplayOfExpiryNotiticationLink -->
                   <span class="method-name">VerifyDisplayOfExpiryNotiticationLink</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -777,14 +791,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyDisplayOfParentHeirarchyDropdown">
                   </a> <!-- VerifyDisplayOfParentHeirarchyDropdown -->
                   <span class="method-name">VerifyDisplayOfParentHeirarchyDropdown</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -805,14 +818,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyDisplayOfSupplierContactDetails">
                   </a> <!-- VerifyDisplayOfSupplierContactDetails -->
                   <span class="method-name">VerifyDisplayOfSupplierContactDetails</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -833,14 +845,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyHeadingOnContractListingPage">
                   </a> <!-- VerifyHeadingOnContractListingPage -->
                   <span class="method-name">VerifyHeadingOnContractListingPage</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -852,7 +863,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyHeadingOnContractListingPage(Contract.java:664)
 	at com.md.testcases.ContractTest.VerifyHeadingOnContractListingPage(ContractTest.java:37)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -861,14 +872,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyLanguageChange">
                   </a> <!-- VerifyLanguageChange -->
                   <span class="method-name">VerifyLanguageChange</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -889,14 +899,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyNoticePeriodChangeAccordingToPeriodSelected">
                   </a> <!-- VerifyNoticePeriodChangeAccordingToPeriodSelected -->
                   <span class="method-name">VerifyNoticePeriodChangeAccordingToPeriodSelected</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -917,14 +926,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyOneMonthNoticePeriodIsSelectedByDefault">
                   </a> <!-- VerifyOneMonthNoticePeriodIsSelectedByDefault -->
                   <span class="method-name">VerifyOneMonthNoticePeriodIsSelectedByDefault</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -936,7 +944,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyOneMonthNoticePeriodIsSelectedByDefault(Contract.java:1002)
 	at com.md.testcases.ContractTest.VerifyOneMonthNoticePeriodIsSelectedByDefault(ContractTest.java:129)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -945,14 +953,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyRemovalOfSupplierContact">
                   </a> <!-- VerifyRemovalOfSupplierContact -->
                   <span class="method-name">VerifyRemovalOfSupplierContact</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -973,14 +980,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingCategory">
                   </a> <!-- VerifySearchContractUsingCategory -->
                   <span class="method-name">VerifySearchContractUsingCategory</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -992,7 +998,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingCategory(Contract.java:778)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingCategory(ContractTest.java:85)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1001,14 +1007,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingExpiryDate">
                   </a> <!-- VerifySearchContractUsingExpiryDate -->
                   <span class="method-name">VerifySearchContractUsingExpiryDate</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1020,7 +1025,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingExpiryDate(Contract.java:844)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingExpiryDate(ContractTest.java:79)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1029,14 +1034,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingOwner">
                   </a> <!-- VerifySearchContractUsingOwner -->
                   <span class="method-name">VerifySearchContractUsingOwner</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1048,7 +1052,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingOwner(Contract.java:734)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingOwner(ContractTest.java:123)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1057,14 +1061,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingStakeHolder">
                   </a> <!-- VerifySearchContractUsingStakeHolder -->
                   <span class="method-name">VerifySearchContractUsingStakeHolder</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1076,7 +1079,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingStakeHolder(Contract.java:887)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingStakeHolder(ContractTest.java:104)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1085,14 +1088,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingStartDate">
                   </a> <!-- VerifySearchContractUsingStartDate -->
                   <span class="method-name">VerifySearchContractUsingStartDate</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1104,7 +1106,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingStartDate(Contract.java:826)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingStartDate(ContractTest.java:72)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1113,14 +1115,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingSupplier">
                   </a> <!-- VerifySearchContractUsingSupplier -->
                   <span class="method-name">VerifySearchContractUsingSupplier</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1132,7 +1133,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingSupplier(Contract.java:799)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingSupplier(ContractTest.java:91)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1141,14 +1142,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingTitle">
                   </a> <!-- VerifySearchContractUsingTitle -->
                   <span class="method-name">VerifySearchContractUsingTitle</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1160,7 +1160,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingTitle(Contract.java:757)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingTitle(ContractTest.java:65)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1169,14 +1169,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySearchContractUsingValue">
                   </a> <!-- VerifySearchContractUsingValue -->
                   <span class="method-name">VerifySearchContractUsingValue</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1188,7 +1187,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifySearchContractUsingValue(Contract.java:862)
 	at com.md.testcases.ContractTest.VerifySearchContractUsingValue(ContractTest.java:98)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1197,14 +1196,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySelectedChildNotDisplayInParentDropdown">
                   </a> <!-- VerifySelectedChildNotDisplayInParentDropdown -->
                   <span class="method-name">VerifySelectedChildNotDisplayInParentDropdown</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1225,14 +1223,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySelectedParentNotDisplayInChildDropdown">
                   </a> <!-- VerifySelectedParentNotDisplayInChildDropdown -->
                   <span class="method-name">VerifySelectedParentNotDisplayInChildDropdown</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1253,14 +1250,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifySupplierAndStakeHolderInRecipientPopup">
                   </a> <!-- VerifySupplierAndStakeHolderInRecipientPopup -->
                   <span class="method-name">VerifySupplierAndStakeHolderInRecipientPopup</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1281,14 +1277,20 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyUserIsAbleToAddContract">
                   </a> <!-- VerifyUserIsAbleToAddContract -->
                   <span class="method-name">VerifyUserIsAbleToAddContract</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //button[contains(text(),&apos;Add New Contract&apos;)]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.md.pages.Contract.VerifyUserIsAbleToAddContract(Contract.java:595)
+	at com.md.testcases.ContractTest.VerifyUserIsAbleToAddContract(ContractTest.java:30)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Add New Contract&apos;)]&quot;}
   (Session info: chrome=92.0.4515.159)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60826}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 7778ed19252668402900a2d9347bf5d5
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 626d36dcf711b13f13cb574c26f3f387
 *** Element info: {Using=xpath, value=//button[contains(text(),&apos;Add New Contract&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -1302,17 +1304,14 @@ Session ID: 7778ed19252668402900a2d9347bf5d5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy12.toString(Unknown Source)
-	at java.lang.String.valueOf(String.java:2994)
-	at java.lang.StringBuilder.append(StringBuilder.java:131)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:305)
-	at java.lang.String.valueOf(String.java:2994)
-	at java.lang.StringBuilder.append(StringBuilder.java:131)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:268)
-	at com.md.pages.Contract.VerifyUserIsAbleToAddContract(Contract.java:595)
-	at com.md.testcases.ContractTest.VerifyUserIsAbleToAddContract(ContractTest.java:30)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+	at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1321,14 +1320,13 @@ Session ID: 7778ed19252668402900a2d9347bf5d5
                   <a name="VerifyUserIsAbleToEditContract">
                   </a> <!-- VerifyUserIsAbleToEditContract -->
                   <span class="method-name">VerifyUserIsAbleToEditContract</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1340,7 +1338,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyUserIsAbleToEditContract(Contract.java:1102)
 	at com.md.testcases.ContractTest.VerifyUserIsAbleToEditContract(ContractTest.java:136)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1349,14 +1347,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyUserIsAbleToSearchContract">
                   </a> <!-- VerifyUserIsAbleToSearchContract -->
                   <span class="method-name">VerifyUserIsAbleToSearchContract</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1368,7 +1365,7 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyUserIsAbleToSearchContract(Contract.java:674)
 	at com.md.testcases.ContractTest.VerifyUserIsAbleToSearchContract(ContractTest.java:44)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1377,14 +1374,13 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
                   <a name="VerifyUserNavigationToContractForm">
                   </a> <!-- VerifyUserNavigationToContractForm -->
                   <span class="method-name">VerifyUserNavigationToContractForm</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=92.0.4515.159)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:64081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2cc53679ba2fc309859ca10d3df76904
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1396,7 +1392,94 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
 	at com.md.pages.Contract.VerifyUserNavigationToContractForm(Contract.java:1084)
 	at com.md.testcases.ContractTest.VerifyUserNavigationToContractForm(ContractTest.java:116)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 30 stack frames
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MD_Automation-class-failed -->
+          <div class="suite-MD_Automation-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.md.testcases.QuickQuotesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEditContent">
+                  </a> <!-- verifyEditContent -->
+                  <span class="method-name">verifyEditContent</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;list&apos;]/h4&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.md.pages.QuickQuotes.createEditContent(QuickQuotes.java:546)
+	at com.md.testcases.QuickQuotesTest.verifyEditContent(QuickQuotesTest.java:90)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;list&apos;]/h4&quot;}
+  (Session info: chrome=92.0.4515.159)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
+*** Element info: {Using=xpath, value=//div[@class=&apos;list&apos;]/h4}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyValidationMessageOnNamefield">
+                  </a> <!-- verifyValidationMessageOnNamefield -->
+                  <span class="method-name">verifyValidationMessageOnNamefield</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h4[contains(text(),&apos;Advice from procurement team&apos;)]&quot;}
+  (Session info: chrome=92.0.4515.159)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:58161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df6823481a7245bb59e96c6c033066fa
+*** Element info: {Using=xpath, value=//h4[contains(text(),&apos;Advice from procurement team&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.md.pages.QuickQuotes.createNameFieldValidaions(QuickQuotes.java:348)
+	at com.md.testcases.QuickQuotesTest.verifyValidationMessageOnNamefield(QuickQuotesTest.java:48)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -1410,9 +1493,37 @@ Session ID: 2cc53679ba2fc309859ca10d3df76904
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Rough">
-                  </a> <!-- Rough -->
-                  <span class="method-name">Rough</span>
+                  <a name="verfiyQQEventWithAllDetails">
+                  </a> <!-- verfiyQQEventWithAllDetails -->
+                  <span class="method-name">verfiyQQEventWithAllDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGetQuoteButtonIsDisable">
+                  </a> <!-- verifyGetQuoteButtonIsDisable -->
+                  <span class="method-name">verifyGetQuoteButtonIsDisable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyQuotebyName">
+                  </a> <!-- verifyQuotebyName -->
+                  <span class="method-name">verifyQuotebyName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySandpitEventWithQuestionnaireAndAllowResubmission">
+                  </a> <!-- verifySandpitEventWithQuestionnaireAndAllowResubmission -->
+                  <span class="method-name">verifySandpitEventWithQuestionnaireAndAllowResubmission</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyToasterMessage">
+                  </a> <!-- verifyToasterMessage -->
+                  <span class="method-name">verifyToasterMessage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1470,168 +1581,192 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(39);
+data.addRows(45);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyUserIsAbleToAddContract')
-data.setCell(0, 2, 'com.md.testcases.ContractTest')
-data.setCell(0, 3, 103641);
+data.setCell(0, 1, 'verifySandpitEventWithQuestionnaireAndAllowResubmission')
+data.setCell(0, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(0, 3, 231777);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Rough')
-data.setCell(1, 2, 'com.md.testcases.QuickQuotesTest')
-data.setCell(1, 3, 16805);
+data.setCell(1, 1, 'VerifyUserIsAbleToAddContract')
+data.setCell(1, 2, 'com.md.testcases.ContractTest')
+data.setCell(1, 3, 99833);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'VerifyHeadingOnContractListingPage')
-data.setCell(2, 2, 'com.md.testcases.ContractTest')
-data.setCell(2, 3, 12);
+data.setCell(2, 1, 'verifyEditContent')
+data.setCell(2, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(2, 3, 98785);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'VerifySearchContractUsingTitle')
-data.setCell(3, 2, 'com.md.testcases.ContractTest')
-data.setCell(3, 3, 7);
+data.setCell(3, 1, 'verifyValidationMessageOnNamefield')
+data.setCell(3, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(3, 3, 38302);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'VerifyContractValidationMsg')
-data.setCell(4, 2, 'com.md.testcases.ContractTest')
-data.setCell(4, 3, 7);
+data.setCell(4, 1, 'verfiyQQEventWithAllDetails')
+data.setCell(4, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(4, 3, 27508);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'VerifyActiveHeadingsDisplayInContractForm')
+data.setCell(5, 1, 'VerifyHeadingOnContractListingPage')
 data.setCell(5, 2, 'com.md.testcases.ContractTest')
-data.setCell(5, 3, 7);
+data.setCell(5, 3, 12219);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'VerifyDisplayOfCategoryInContractForm')
+data.setCell(6, 1, 'VerifySearchContractUsingTitle')
 data.setCell(6, 2, 'com.md.testcases.ContractTest')
-data.setCell(6, 3, 6);
+data.setCell(6, 3, 12186);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'VerifySearchContractUsingStartDate')
+data.setCell(7, 1, 'VerifyAlertMsgOnSearchingContracts')
 data.setCell(7, 2, 'com.md.testcases.ContractTest')
-data.setCell(7, 3, 6);
+data.setCell(7, 3, 12182);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'VerifyUserIsAbleToEditContract')
+data.setCell(8, 1, 'VerifyActiveHeadingsDisplayInContractForm')
 data.setCell(8, 2, 'com.md.testcases.ContractTest')
-data.setCell(8, 3, 6);
+data.setCell(8, 3, 12179);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'VerifyAlertMsgIfHostAddedToSupplierContact')
+data.setCell(9, 1, 'VerifyUserIsAbleToSearchContract')
 data.setCell(9, 2, 'com.md.testcases.ContractTest')
-data.setCell(9, 3, 6);
+data.setCell(9, 3, 12170);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'VerifyDisplayOfParentHeirarchyDropdown')
+data.setCell(10, 1, 'VerifyDisplayOfArchivedContracts')
 data.setCell(10, 2, 'com.md.testcases.ContractTest')
-data.setCell(10, 3, 6);
+data.setCell(10, 3, 12158);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'VerifyUserNavigationToContractForm')
+data.setCell(11, 1, 'VerifyLanguageChange')
 data.setCell(11, 2, 'com.md.testcases.ContractTest')
-data.setCell(11, 3, 6);
+data.setCell(11, 3, 12154);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'VerifySelectedParentNotDisplayInChildDropdown')
+data.setCell(12, 1, 'VerifySearchContractUsingStartDate')
 data.setCell(12, 2, 'com.md.testcases.ContractTest')
-data.setCell(12, 3, 6);
+data.setCell(12, 3, 12137);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'VerifySupplierAndStakeHolderInRecipientPopup')
+data.setCell(13, 1, 'VerifyUserNavigationToContractForm')
 data.setCell(13, 2, 'com.md.testcases.ContractTest')
-data.setCell(13, 3, 5);
+data.setCell(13, 3, 12094);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'VerifyLanguageChange')
+data.setCell(14, 1, 'VerifySearchContractUsingSupplier')
 data.setCell(14, 2, 'com.md.testcases.ContractTest')
-data.setCell(14, 3, 5);
+data.setCell(14, 3, 12090);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'VerifySearchContractUsingSupplier')
+data.setCell(15, 1, 'VerifyDisplayOfCustomNotiticationLink')
 data.setCell(15, 2, 'com.md.testcases.ContractTest')
-data.setCell(15, 3, 5);
+data.setCell(15, 3, 12090);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'VerifyAutoSuggestionForStakeHolder')
+data.setCell(16, 1, 'VerifyUserIsAbleToEditContract')
 data.setCell(16, 2, 'com.md.testcases.ContractTest')
-data.setCell(16, 3, 5);
+data.setCell(16, 3, 12090);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'VerifyDisplayOfDropbox')
+data.setCell(17, 1, 'VerifyNoticePeriodChangeAccordingToPeriodSelected')
 data.setCell(17, 2, 'com.md.testcases.ContractTest')
-data.setCell(17, 3, 5);
+data.setCell(17, 3, 12084);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'VerifySearchContractUsingOwner')
+data.setCell(18, 1, 'VerifyDisplayOfParentHeirarchyDropdown')
 data.setCell(18, 2, 'com.md.testcases.ContractTest')
-data.setCell(18, 3, 5);
+data.setCell(18, 3, 12082);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'VerifySearchContractUsingValue')
+data.setCell(19, 1, 'VerifyCustomFieldDisplayInContractForm')
 data.setCell(19, 2, 'com.md.testcases.ContractTest')
-data.setCell(19, 3, 5);
+data.setCell(19, 3, 12080);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'VerifyOneMonthNoticePeriodIsSelectedByDefault')
+data.setCell(20, 1, 'VerifySearchContractUsingOwner')
 data.setCell(20, 2, 'com.md.testcases.ContractTest')
-data.setCell(20, 3, 5);
+data.setCell(20, 3, 12079);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'VerifyRemovalOfSupplierContact')
+data.setCell(21, 1, 'VerifySearchContractUsingExpiryDate')
 data.setCell(21, 2, 'com.md.testcases.ContractTest')
-data.setCell(21, 3, 5);
+data.setCell(21, 3, 12079);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'VerifyDisplayOfSupplierContactDetails')
+data.setCell(22, 1, 'VerifySelectedChildNotDisplayInParentDropdown')
 data.setCell(22, 2, 'com.md.testcases.ContractTest')
-data.setCell(22, 3, 5);
+data.setCell(22, 3, 12071);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'VerifyAtleastOneValueInSupplierContact')
+data.setCell(23, 1, 'VerifyAlertMsgIfHostAddedToSupplierContact')
 data.setCell(23, 2, 'com.md.testcases.ContractTest')
-data.setCell(23, 3, 5);
+data.setCell(23, 3, 12069);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'VerifyAutoSuggestionForSupplierContact')
+data.setCell(24, 1, 'VerifyDisplayOfExpiryNotiticationLink')
 data.setCell(24, 2, 'com.md.testcases.ContractTest')
-data.setCell(24, 3, 5);
+data.setCell(24, 3, 12066);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'VerifySearchContractUsingStakeHolder')
+data.setCell(25, 1, 'VerifySupplierAndStakeHolderInRecipientPopup')
 data.setCell(25, 2, 'com.md.testcases.ContractTest')
-data.setCell(25, 3, 5);
+data.setCell(25, 3, 12065);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'VerifyNoticePeriodChangeAccordingToPeriodSelected')
+data.setCell(26, 1, 'VerifyAutoSuggestionForStakeHolder')
 data.setCell(26, 2, 'com.md.testcases.ContractTest')
-data.setCell(26, 3, 5);
+data.setCell(26, 3, 12060);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'VerifyDisplayOfCustomNotiticationLink')
+data.setCell(27, 1, 'VerifyOneMonthNoticePeriodIsSelectedByDefault')
 data.setCell(27, 2, 'com.md.testcases.ContractTest')
-data.setCell(27, 3, 5);
+data.setCell(27, 3, 12059);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'VerifyDisplayOfArchivedContracts')
+data.setCell(28, 1, 'VerifySearchContractUsingCategory')
 data.setCell(28, 2, 'com.md.testcases.ContractTest')
-data.setCell(28, 3, 4);
+data.setCell(28, 3, 12058);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'VerifyUserIsAbleToSearchContract')
+data.setCell(29, 1, 'VerifyActiveHeadingsDisplayInContractListingPage')
 data.setCell(29, 2, 'com.md.testcases.ContractTest')
-data.setCell(29, 3, 4);
+data.setCell(29, 3, 12055);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'VerifyAlertMsgIfParticipantAddedToStakeHolder')
+data.setCell(30, 1, 'VerifyAutoSuggestionForSupplierContact')
 data.setCell(30, 2, 'com.md.testcases.ContractTest')
-data.setCell(30, 3, 4);
+data.setCell(30, 3, 12055);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'VerifyCustomFieldDisplayInContractForm')
+data.setCell(31, 1, 'VerifyDisplayOfSupplierContactDetails')
 data.setCell(31, 2, 'com.md.testcases.ContractTest')
-data.setCell(31, 3, 4);
+data.setCell(31, 3, 12054);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'VerifySearchContractUsingCategory')
+data.setCell(32, 1, 'VerifyAtleastOneValueInSupplierContact')
 data.setCell(32, 2, 'com.md.testcases.ContractTest')
-data.setCell(32, 3, 4);
+data.setCell(32, 3, 12050);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'VerifyActiveHeadingsDisplayInContractListingPage')
+data.setCell(33, 1, 'VerifyContractListingOnLanguageChange')
 data.setCell(33, 2, 'com.md.testcases.ContractTest')
-data.setCell(33, 3, 4);
+data.setCell(33, 3, 12048);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'VerifySelectedChildNotDisplayInParentDropdown')
+data.setCell(34, 1, 'VerifyDisplayOfDropbox')
 data.setCell(34, 2, 'com.md.testcases.ContractTest')
-data.setCell(34, 3, 4);
+data.setCell(34, 3, 12047);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'VerifyAlertMsgOnSearchingContracts')
+data.setCell(35, 1, 'VerifyDisplayOfCategoryInContractForm')
 data.setCell(35, 2, 'com.md.testcases.ContractTest')
-data.setCell(35, 3, 4);
+data.setCell(35, 3, 12046);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'VerifyContractListingOnLanguageChange')
+data.setCell(36, 1, 'VerifyAlertMsgIfParticipantAddedToStakeHolder')
 data.setCell(36, 2, 'com.md.testcases.ContractTest')
-data.setCell(36, 3, 4);
+data.setCell(36, 3, 12046);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'VerifySearchContractUsingExpiryDate')
+data.setCell(37, 1, 'VerifySearchContractUsingStakeHolder')
 data.setCell(37, 2, 'com.md.testcases.ContractTest')
-data.setCell(37, 3, 4);
+data.setCell(37, 3, 12040);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'VerifyDisplayOfExpiryNotiticationLink')
+data.setCell(38, 1, 'VerifySearchContractUsingValue')
 data.setCell(38, 2, 'com.md.testcases.ContractTest')
-data.setCell(38, 3, 3);
+data.setCell(38, 3, 12038);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'VerifyContractValidationMsg')
+data.setCell(39, 2, 'com.md.testcases.ContractTest')
+data.setCell(39, 3, 12038);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'VerifyRemovalOfSupplierContact')
+data.setCell(40, 2, 'com.md.testcases.ContractTest')
+data.setCell(40, 3, 12030);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'verifyQuotebyName')
+data.setCell(41, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(41, 3, 10309);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'VerifySelectedParentNotDisplayInChildDropdown')
+data.setCell(42, 2, 'com.md.testcases.ContractTest')
+data.setCell(42, 3, 8062);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'verifyToasterMessage')
+data.setCell(43, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(43, 3, 7905);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'verifyGetQuoteButtonIsDisable')
+data.setCell(44, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(44, 3, 1734);
 window.suiteTableData['MD_Automation']= { tableData: data, tableDiv: 'times-div-MD_Automation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 15 minutes</span>
               <div id="times-div-MD_Automation">
               </div> <!-- times-div-MD_Automation -->
             </div> <!-- times-div -->
@@ -1676,22 +1811,74 @@ return data;
               <div class="chronological-class-name">com.md.testcases.ContractTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">109 ms</span>
+                <span class="method-start">95 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.md.testcases.QuickQuotesTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">37795 ms</span>
+                <span class="method-start">24263 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">Rough</span>
-                <span class="method-start">87085 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyValidationMessageOnNamefield</span>
+                <span class="method-start">50832 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=Rough status=SUCCESS method=QuickQuotesTest.Rough()[pri:8, instance:com.md.testcase...)</span>
-                <span class="method-start">103900 ms</span>
+                <span class="method-name">tearDown([TestResult name=verifyValidationMessageOnNamefield status=FAILURE method=QuickQuotesTest.verifyVali...)</span>
+                <span class="method-start">89143 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyGetQuoteButtonIsDisable</span>
+                <span class="method-start">89158 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=verifyGetQuoteButtonIsDisable status=SUCCESS method=QuickQuotesTest.verifyGetQuoteB...)</span>
+                <span class="method-start">90893 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyToasterMessage</span>
+                <span class="method-start">90896 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=verifyToasterMessage status=SUCCESS method=QuickQuotesTest.verifyToasterMessage()[p...)</span>
+                <span class="method-start">98802 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyQuotebyName</span>
+                <span class="method-start">98803 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=verifyQuotebyName status=SUCCESS method=QuickQuotesTest.verifyQuotebyName()[pri:4, ...)</span>
+                <span class="method-start">109113 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verfiyQQEventWithAllDetails</span>
+                <span class="method-start">109114 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=verfiyQQEventWithAllDetails status=SUCCESS method=QuickQuotesTest.verfiyQQEventWith...)</span>
+                <span class="method-start">136623 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifySandpitEventWithQuestionnaireAndAllowResubmission</span>
+                <span class="method-start">136624 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=verifySandpitEventWithQuestionnaireAndAllowResubmission status=SUCCESS method=Quick...)</span>
+                <span class="method-start">368402 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyEditContent</span>
+                <span class="method-start">368403 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=verifyEditContent status=FAILURE method=QuickQuotesTest.verifyEditContent()[pri:7, ...)</span>
+                <span class="method-start">467194 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -1700,394 +1887,398 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyUserIsAbleToAddContract</span>
-                <span class="method-start">103914 ms</span>
+                <span class="method-start">467199 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyUserIsAbleToAddContract status=FAILURE method=ContractTest.VerifyUserIsAbleTo...)</span>
-                <span class="method-start">207565 ms</span>
+                <span class="method-start">567032 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyHeadingOnContractListingPage</span>
-                <span class="method-start">207568 ms</span>
+                <span class="method-start">567032 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyHeadingOnContractListingPage status=FAILURE method=ContractTest.VerifyHeading...)</span>
-                <span class="method-start">207585 ms</span>
+                <span class="method-start">579251 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyUserIsAbleToSearchContract</span>
-                <span class="method-start">207586 ms</span>
+                <span class="method-start">579251 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyUserIsAbleToSearchContract status=FAILURE method=ContractTest.VerifyUserIsAbl...)</span>
-                <span class="method-start">207592 ms</span>
+                <span class="method-start">591421 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyDisplayOfArchivedContracts</span>
-                <span class="method-start">207593 ms</span>
+                <span class="method-start">591436 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyDisplayOfArchivedContracts status=FAILURE method=ContractTest.VerifyDisplayOf...)</span>
-                <span class="method-start">207598 ms</span>
+                <span class="method-start">603594 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyAlertMsgOnSearchingContracts</span>
-                <span class="method-start">207599 ms</span>
+                <span class="method-start">603594 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyAlertMsgOnSearchingContracts status=FAILURE method=ContractTest.VerifyAlertMs...)</span>
-                <span class="method-start">207604 ms</span>
+                <span class="method-start">615780 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingTitle</span>
-                <span class="method-start">207605 ms</span>
+                <span class="method-start">615783 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingTitle status=FAILURE method=ContractTest.VerifySearchContr...)</span>
-                <span class="method-start">207614 ms</span>
+                <span class="method-start">627969 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingStartDate</span>
-                <span class="method-start">207615 ms</span>
+                <span class="method-start">627969 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingStartDate status=FAILURE method=ContractTest.VerifySearchC...)</span>
-                <span class="method-start">207622 ms</span>
+                <span class="method-start">640111 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingExpiryDate</span>
-                <span class="method-start">207623 ms</span>
+                <span class="method-start">640114 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingExpiryDate status=FAILURE method=ContractTest.VerifySearch...)</span>
-                <span class="method-start">207628 ms</span>
+                <span class="method-start">652198 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingCategory</span>
-                <span class="method-start">207629 ms</span>
+                <span class="method-start">652208 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingCategory status=FAILURE method=ContractTest.VerifySearchCo...)</span>
-                <span class="method-start">207634 ms</span>
+                <span class="method-start">664266 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingSupplier</span>
-                <span class="method-start">207635 ms</span>
+                <span class="method-start">664266 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingSupplier status=FAILURE method=ContractTest.VerifySearchCo...)</span>
-                <span class="method-start">207642 ms</span>
+                <span class="method-start">676360 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingValue</span>
-                <span class="method-start">207643 ms</span>
+                <span class="method-start">676364 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingValue status=FAILURE method=ContractTest.VerifySearchContr...)</span>
-                <span class="method-start">207649 ms</span>
+                <span class="method-start">688406 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingStakeHolder</span>
-                <span class="method-start">207650 ms</span>
+                <span class="method-start">688410 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingStakeHolder status=FAILURE method=ContractTest.VerifySearc...)</span>
-                <span class="method-start">207656 ms</span>
+                <span class="method-start">700452 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyContractValidationMsg</span>
-                <span class="method-start">207657 ms</span>
+                <span class="method-start">700453 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyContractValidationMsg status=FAILURE method=ContractTest.VerifyContractValida...)</span>
-                <span class="method-start">207666 ms</span>
+                <span class="method-start">712494 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyUserNavigationToContractForm</span>
-                <span class="method-start">207667 ms</span>
+                <span class="method-start">712500 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyUserNavigationToContractForm status=FAILURE method=ContractTest.VerifyUserNav...)</span>
-                <span class="method-start">207675 ms</span>
+                <span class="method-start">724594 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySearchContractUsingOwner</span>
-                <span class="method-start">207676 ms</span>
+                <span class="method-start">724594 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySearchContractUsingOwner status=FAILURE method=ContractTest.VerifySearchContr...)</span>
-                <span class="method-start">207682 ms</span>
+                <span class="method-start">736677 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyOneMonthNoticePeriodIsSelectedByDefault</span>
-                <span class="method-start">207684 ms</span>
+                <span class="method-start">736681 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyOneMonthNoticePeriodIsSelectedByDefault status=FAILURE method=ContractTest.Ve...)</span>
-                <span class="method-start">207690 ms</span>
+                <span class="method-start">748740 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyUserIsAbleToEditContract</span>
-                <span class="method-start">207691 ms</span>
+                <span class="method-start">748740 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyUserIsAbleToEditContract status=FAILURE method=ContractTest.VerifyUserIsAbleT...)</span>
-                <span class="method-start">207699 ms</span>
+                <span class="method-start">760832 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyDisplayOfCategoryInContractForm</span>
-                <span class="method-start">207700 ms</span>
+                <span class="method-start">760833 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyDisplayOfCategoryInContractForm status=FAILURE method=ContractTest.VerifyDisp...)</span>
-                <span class="method-start">207707 ms</span>
+                <span class="method-start">772882 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyAutoSuggestionForSupplierContact</span>
-                <span class="method-start">207708 ms</span>
+                <span class="method-start">772885 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyAutoSuggestionForSupplierContact status=FAILURE method=ContractTest.VerifyAut...)</span>
-                <span class="method-start">207715 ms</span>
+                <span class="method-start">784940 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyAutoSuggestionForStakeHolder</span>
-                <span class="method-start">207716 ms</span>
+                <span class="method-start">784946 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyAutoSuggestionForStakeHolder status=FAILURE method=ContractTest.VerifyAutoSug...)</span>
-                <span class="method-start">207722 ms</span>
+                <span class="method-start">797009 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyDisplayOfSupplierContactDetails</span>
-                <span class="method-start">207725 ms</span>
+                <span class="method-start">797012 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyDisplayOfSupplierContactDetails status=FAILURE method=ContractTest.VerifyDisp...)</span>
-                <span class="method-start">207731 ms</span>
+                <span class="method-start">809066 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyAlertMsgIfHostAddedToSupplierContact</span>
-                <span class="method-start">207733 ms</span>
+                <span class="method-start">809066 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyAlertMsgIfHostAddedToSupplierContact status=FAILURE method=ContractTest.Verif...)</span>
-                <span class="method-start">207740 ms</span>
+                <span class="method-start">821136 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyRemovalOfSupplierContact</span>
-                <span class="method-start">207741 ms</span>
+                <span class="method-start">821137 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyRemovalOfSupplierContact status=FAILURE method=ContractTest.VerifyRemovalOfSu...)</span>
-                <span class="method-start">207747 ms</span>
+                <span class="method-start">833171 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyAtleastOneValueInSupplierContact</span>
-                <span class="method-start">207747 ms</span>
+                <span class="method-start">833173 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyAtleastOneValueInSupplierContact status=FAILURE method=ContractTest.VerifyAtl...)</span>
-                <span class="method-start">207753 ms</span>
+                <span class="method-start">845225 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyAlertMsgIfParticipantAddedToStakeHolder</span>
-                <span class="method-start">207754 ms</span>
+                <span class="method-start">845226 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyAlertMsgIfParticipantAddedToStakeHolder status=FAILURE method=ContractTest.Ve...)</span>
-                <span class="method-start">207758 ms</span>
+                <span class="method-start">857275 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyDisplayOfDropbox</span>
-                <span class="method-start">207759 ms</span>
+                <span class="method-start">857278 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyDisplayOfDropbox status=FAILURE method=ContractTest.VerifyDisplayOfDropbox()[...)</span>
-                <span class="method-start">207765 ms</span>
+                <span class="method-start">869327 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyNoticePeriodChangeAccordingToPeriodSelected</span>
-                <span class="method-start">207768 ms</span>
+                <span class="method-start">869330 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyNoticePeriodChangeAccordingToPeriodSelected status=FAILURE method=ContractTes...)</span>
-                <span class="method-start">207774 ms</span>
+                <span class="method-start">881416 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyDisplayOfExpiryNotiticationLink</span>
-                <span class="method-start">207775 ms</span>
+                <span class="method-start">881417 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyDisplayOfExpiryNotiticationLink status=FAILURE method=ContractTest.VerifyDisp...)</span>
-                <span class="method-start">207780 ms</span>
+                <span class="method-start">893486 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySupplierAndStakeHolderInRecipientPopup</span>
-                <span class="method-start">207781 ms</span>
+                <span class="method-start">893488 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySupplierAndStakeHolderInRecipientPopup status=FAILURE method=ContractTest.Ver...)</span>
-                <span class="method-start">207787 ms</span>
+                <span class="method-start">905555 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyDisplayOfCustomNotiticationLink</span>
-                <span class="method-start">207788 ms</span>
+                <span class="method-start">905557 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyDisplayOfCustomNotiticationLink status=FAILURE method=ContractTest.VerifyDisp...)</span>
-                <span class="method-start">207794 ms</span>
+                <span class="method-start">917647 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyDisplayOfParentHeirarchyDropdown</span>
-                <span class="method-start">207795 ms</span>
+                <span class="method-start">917647 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyDisplayOfParentHeirarchyDropdown status=FAILURE method=ContractTest.VerifyDis...)</span>
-                <span class="method-start">207803 ms</span>
+                <span class="method-start">929729 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySelectedParentNotDisplayInChildDropdown</span>
-                <span class="method-start">207804 ms</span>
+                <span class="method-start">929729 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySelectedParentNotDisplayInChildDropdown status=FAILURE method=ContractTest.Ve...)</span>
-                <span class="method-start">207813 ms</span>
+                <span class="method-start">937791 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifySelectedChildNotDisplayInParentDropdown</span>
-                <span class="method-start">207814 ms</span>
+                <span class="method-start">937791 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifySelectedChildNotDisplayInParentDropdown status=FAILURE method=ContractTest.Ve...)</span>
-                <span class="method-start">207819 ms</span>
+                <span class="method-start">949862 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyLanguageChange</span>
-                <span class="method-start">207820 ms</span>
+                <span class="method-start">949862 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyLanguageChange status=FAILURE method=ContractTest.VerifyLanguageChange()[pri:...)</span>
-                <span class="method-start">207827 ms</span>
+                <span class="method-start">962016 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyActiveHeadingsDisplayInContractForm</span>
-                <span class="method-start">207828 ms</span>
+                <span class="method-start">962016 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyActiveHeadingsDisplayInContractForm status=FAILURE method=ContractTest.Verify...)</span>
-                <span class="method-start">207836 ms</span>
+                <span class="method-start">974198 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyActiveHeadingsDisplayInContractListingPage</span>
-                <span class="method-start">207837 ms</span>
+                <span class="method-start">974200 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyActiveHeadingsDisplayInContractListingPage status=FAILURE method=ContractTest...)</span>
-                <span class="method-start">207842 ms</span>
+                <span class="method-start">986259 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyContractListingOnLanguageChange</span>
-                <span class="method-start">207844 ms</span>
+                <span class="method-start">986261 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyContractListingOnLanguageChange status=FAILURE method=ContractTest.VerifyCont...)</span>
-                <span class="method-start">207849 ms</span>
+                <span class="method-start">998312 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyCustomFieldDisplayInContractForm</span>
-                <span class="method-start">207850 ms</span>
+                <span class="method-start">998314 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=VerifyCustomFieldDisplayInContractForm status=FAILURE method=ContractTest.VerifyCus...)</span>
-                <span class="method-start">207856 ms</span>
+                <span class="method-start">1010394 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Teardown</span>
-                <span class="method-start">207856 ms</span>
+                <span class="method-start">1010401 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.md.testcases.QuickQuotesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">Teardown</span>
+                <span class="method-start">1010632 ms</span>
+              </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">reportTeardown</span>
-                <span class="method-start">212062 ms</span>
+                <span class="method-start">1010780 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

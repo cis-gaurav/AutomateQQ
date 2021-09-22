@@ -33,7 +33,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReporterNG {
 
 	public static ExtentReports extent = new ExtentReports();
-	// public static ExtentTest test;
+	public static ExtentTest test;
 	public static ExtentTest logger;
 	public static WebDriver driver;
 //	WebDriver driver;
