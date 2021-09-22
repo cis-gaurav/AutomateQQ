@@ -4,11 +4,11 @@
 	<listners>
 		<listners class-name="com.md.util.ExtentReportListener" />
 	</listners>
-
+	
+	
 	<test thread-count="5" name="Functional Test">
 		<classes>
 			<class name="com.md.testcases.QuickQuotesTest" />
-			<class name="com.md.testcases.ContractTest" />
-		</classes>
+		</classes>	
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

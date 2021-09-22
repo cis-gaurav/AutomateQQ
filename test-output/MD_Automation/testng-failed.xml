@@ -3,25 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [MD_Automation]">
   <test thread-count="5" name="Functional Test(failed)">
     <classes>
-      <class name="com.md.testcases.ContractTest">
+      <class name="com.md.testcases.QuickQuotesTest">
         <methods>
           <include name="createReport"/>
-          <include name="VerifyUserIsAbleToSearchContract"/>
-          <include name="VerifySearchContractUsingSupplier"/>
-          <include name="reportTeardown"/>
-          <include name="VerifyAlertMsgOnSearchingContracts"/>
-          <include name="Teardown"/>
-          <include name="VerifySearchContractUsingStartDate"/>
-          <include name="VerifySearchContractUsingCategory"/>
-          <include name="VerifySearchContractUsingValue"/>
-          <include name="VerifyDisplayOfArchivedContracts"/>
-          <include name="VerifyHeadingOnContractListingPage"/>
-          <include name="VerifySearchContractUsingExpiryDate"/>
           <include name="setUp"/>
-          <include name="VerifySearchContractUsingTitle"/>
+          <include name="reportTeardown"/>
+          <include name="AddPar"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.md.testcases.ContractTest -->
+      </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
   </test> <!-- Functional Test(failed) -->
 </suite> <!-- Failed suite [MD_Automation] -->

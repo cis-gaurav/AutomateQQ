@@ -9,6 +9,7 @@ import java.net.MalformedURLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,7 +41,7 @@ public class TestBase extends ExtentReporterNG {
 	public static void initialization() throws MalformedURLException, InterruptedException {
 
 		// Define Execution Environment here i.e. Local/server
-		String ExecutionLocation = "server";
+		String ExecutionLocation = "local";
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;

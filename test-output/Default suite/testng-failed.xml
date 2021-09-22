@@ -5,10 +5,10 @@
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
-          <include name="verifyEditContent"/>
           <include name="createReport"/>
           <include name="setUp"/>
           <include name="reportTeardown"/>
+          <include name="verifyMessage"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->

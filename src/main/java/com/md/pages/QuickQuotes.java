@@ -1,15 +1,32 @@
 package com.md.pages;
 
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.internal.junit.ArrayAsserts;
 
 import com.md.base.TestBase;
 
@@ -190,7 +207,21 @@ public class QuickQuotes extends TestBase {
 	@FindBy(xpath = "//a[@class='collapsed' and text()= 'Participant List']")
 	WebElement messageToggel;
 
-//	@FindBy(xpath="//tbody/tr[3]/td[2]")
+	@FindBy(xpath="//button[contains(text(), 'Send new message')]")
+	WebElement sendNewMessagePopupBtn;
+	
+	@FindBy(xpath="	//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
+	WebElement sendNewMsgTxtField;
+	
+	@FindBy(xpath="//label [contains(text(),'All participants')]")
+	WebElement allParticipantCheckbox;
+
+	@FindBy(xpath="//button [contains(text(),'Send Message')]")
+	WebElement sendMsgBtn;
+
+	@FindBy(xpath="//div[contains(text(),'Your Message has been sent.')]")
+	WebElement msgSendToasterd;
+	
 	@FindBy(xpath = "//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
 	WebElement questionnaireAnswerVerify;
 
@@ -508,9 +539,6 @@ public class QuickQuotes extends TestBase {
 		return questionnaireAnswerVerify.isDisplayed();
 	}
 
-	@FindBy(xpath = "//div[contains (@class, 'alert alert-fixed alert-info fade in')]/p")
-	WebElement Verify2;
-
 	public boolean createEditContent() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(7000);
@@ -531,4 +559,51 @@ public class QuickQuotes extends TestBase {
         Assert.assertEquals(AutomateText1.getText(), "ADVICE FROM PROCUREMENT TEAM");
         return AutomateText1.isDisplayed();
 	}
+
+public void createMessage() throws InterruptedException {
+	driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+	Thread.sleep(6000);
+//	JavascriptExecutor executor = (JavascriptExecutor)driver;
+//	executor.executeScript("arguments[0].click();", sandpitHeader);
+	sandpitHeader.click();
+	Thread.sleep(3000);
+	WebDriverWait wait = new WebDriverWait(driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
+	newQuoteBtn.click();// click on new quote button on quote listing page
+	wait.until(ExpectedConditions.elementToBeClickable(name));
+	name.sendKeys("Automate Messages");
+	scrollTillBottom();
+	Thread.sleep(3000);
+	wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
+	sandpitco1Checkbox.click();
+	getQuoteButton.click();
+	wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
+	messageToggel.click();
+}	
+
+WebElement Carousel;
+//*[@id="anonCarousel1"]/ol/li[1]
+//*[@id="anonCarousel1"]/ol/li[2]
+//*[@id="anonCarousel1"]/ol/li[3]
+
+
+@FindBy(xpath = "//table[@id='customers']/tbody/tr")
+WebElement tableRow;
+
+@FindBy(xpath = "//table[@id='customers']/tbody/tr/td")
+WebElement tableData;
+
+@FindBy(xpath = "//table[@id='customers']/tbody/tr/th")
+WebElement tableColoumn;
+
+public void Rough1() throws InterruptedException {
+	driver.navigate().to("https://www.w3schools.com/html/html_tables.asp");
+			driver.findElement(By.linkText("CSS")).click();
+			Thread.sleep(3000);
+			Actions actions = new Actions(driver);
+			WebElement elementLocator = driver.findElement(By.linkText("SQL"));
+			actions.contextClick(elementLocator).perform();
+			
+		} 
 }
+
