@@ -1,10 +1,8 @@
 package com.md.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,7 +26,7 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//a[contains(text(),'Dashboard')]")
 	static private WebElement AdminDashboard;
 
-	@FindBy(xpath = "//*[@id=\"header-navbar\"]/div/div[2]/ul/li[6]/a")
+	@FindBy(xpath = "//*[@id='header-navbar']/div/div[2]/ul/li[6]/a")
 	private static WebElement quickquoteDashbaord;
 
 	@FindBy(xpath = "//h4[text()='YOUR QUOTES']")
@@ -290,6 +288,7 @@ public class QuickQuotesPage extends TestBase {
 
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
+		Thread.sleep(3000);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -567,27 +566,7 @@ public class QuickQuotesPage extends TestBase {
 		messageToggel.click();
 	}
 
-	private WebElement Carousel;
-//*[@id="anonCarousel1"]/ol/li[1]
-//*[@id="anonCarousel1"]/ol/li[2]
-//*[@id="anonCarousel1"]/ol/li[3]
-
-	@FindBy(xpath = "//table[@id='customers']/tbody/tr")
-	private WebElement tableRow;
-
-	@FindBy(xpath = "//table[@id='customers']/tbody/tr/td")
-	private WebElement tableData;
-
-	@FindBy(xpath = "//table[@id='customers']/tbody/tr/th")
-	private WebElement tableColoumn;
-
 	public void Rough1() throws InterruptedException {
 		driver.navigate().to("https://www.w3schools.com/html/html_tables.asp");
-		driver.findElement(By.linkText("CSS")).click();
-		Thread.sleep(3000);
-		Actions actions = new Actions(driver);
-		WebElement elementLocator = driver.findElement(By.linkText("SQL"));
-		actions.contextClick(elementLocator).perform();
-
 	}
 }

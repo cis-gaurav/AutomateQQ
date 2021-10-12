@@ -21,7 +21,7 @@ public class QuickQuotesTest extends TestBase {
 	public  void QQSetUp() throws MalformedURLException, InterruptedException {
 		initializationAndLogin();
 		QuickQuotesPage = new QuickQuotesPage();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		System.out.println("QQ_test start executing");
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
@@ -70,10 +70,10 @@ public class QuickQuotesTest extends TestBase {
 //		Assert.assertTrue(flag);
 //	}
 //
-//	@Test(priority=8)
-//	public void Rough() throws InterruptedException {
-//		QuickQuotesPage.Rough1();
-//	}
+	@Test(priority=8)
+	public void Rough() throws InterruptedException {
+		QuickQuotesPage.Rough1();
+	}
 
 	@AfterClass
 	public void Teardown() throws Exception {

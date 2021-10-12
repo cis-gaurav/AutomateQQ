@@ -1,5 +1,4 @@
 package com.md.testcases;
-
 import org.testng.annotations.Test;
 import com.md.base.TestBase;
 import com.md.pages.ContractPage;
@@ -19,8 +18,8 @@ public class ContractTest extends TestBase {
 	public void setUp() throws MalformedURLException, InterruptedException {
 		initializationAndLogin();
 	    contractPage = new ContractPage();
+		Thread.sleep(4000);	
 		System.out.println("Contract_test_ starts");
-		Thread.sleep(3000);	
 	}
 
 //	@Test(priority=11)
@@ -42,7 +41,6 @@ public class ContractTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 	
-
 //	@Test(priority=14)
 //	public void contract_VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
 //		boolean flag = contractPage.VerifyAlertMsgOnSearchingContracts();
