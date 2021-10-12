@@ -11,7 +11,7 @@ public static ExtentReports extentReportGenerator() {
 	String path = System.getProperty("user.dir") + "\\reports\\index.html";
 	ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 	reporter.config().setReportName("Automation result");
-	reporter.config().setDocumentTitle("Test Results");
+	reporter.config().setDocumentTitle("Extent_Report");
 	extent = new ExtentReports();
 	extent.attachReporter(reporter);
 	extent.setSystemInfo("QA", "Gaurav Jain");
