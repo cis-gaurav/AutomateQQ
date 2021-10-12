@@ -1,6 +1,7 @@
 package com.md.base;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,28 +10,28 @@ import java.net.MalformedURLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Keys;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.md.ExtentReportListener.ExtentReporterNG;
 
-public class TestBase extends ExtentReporterNG {
+public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
 
+// how to read data from properties file below 3 lines will do
 	public TestBase() {
 		try {
-			//how to read data from properties file below 3 lines will do 
-			prop = new Properties(); //Need to create object of properties class 
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/config.properties"); //check file at bottom config.
-			prop.load(ip); // loading data of property file 
-			
+			prop = new Properties(); // Need to create object of properties class
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/config.properties");
+			prop.load(ip); // loading data of property file
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -38,9 +39,8 @@ public class TestBase extends ExtentReporterNG {
 		}
 	}
 
-	public static void initialization() throws MalformedURLException, InterruptedException {
-
-		// Define Execution Environment here i.e. Local/server
+// Define Execution Environment here i.e. Local/server for Jenkins
+	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
 		String ExecutionLocation = "server";
 
 		if (ExecutionLocation.equals("server")) {
@@ -63,55 +63,39 @@ public class TestBase extends ExtentReporterNG {
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("/usr/bin/google-chrome");
 			options.addArguments("--headless");
-			options.addArguments("start-maximized"); // open Browser in maximized mode	
+			options.addArguments("start-maximized"); // open Browser in maximized mode
 			options.addArguments("--window-size=1980,1080");
-//			options.addArguments("--window-size=1400,600");
-//			options.addArguments("start-maximized"); // open Browser in maximized mode														 
 			options.addArguments("disable-infobars"); // disabling infobars
-			options.addArguments("--disable-extensions"); // disabling extensions														
-			options.addArguments("--disable-gpu"); // applicable to windows os only												 
-			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems																
+			options.addArguments("--disable-extensions"); // disabling extensions
+			options.addArguments("--disable-gpu"); // applicable to windows os only
+			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.addArguments("--allowed-ips");
-
 			driver = new ChromeDriver(options);
 		} else if (ExecutionLocation.equals("local")) {
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
 			driver = new ChromeDriver();
+// Navigate to url and login to marketdojo application 
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.get(prop.getProperty("url"));
+			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
+			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
+			driver.findElement(By.xpath("//input[@name ='commit']")).click();
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 		}
-
-		// Navigate to URL
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("url"));
-		
-		
-		
-		//Promotion Popup Close
-		// WebDriverWait wait = new WebDriverWait(driver, 60);
-		// wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[contains(text(),'Close')]"))));
-
-		// Click on Close popup button
-		// driver.findElement(By.xpath("//span[contains(text(),'Close')]")).click();
 	}
-
-	// Page factory for Gloabl Login to MD 
-	@FindBy(name = "user[login]")
-	static WebElement username;
-	@FindBy(name = "user[password]")
-	static WebElement password;
-	@FindBy(name = "commit")
-	static WebElement loginBtn;
-	@FindBy(xpath = "//a[contains(text(),'Dashboard')]")
-	static WebElement AdminDashboard;
 	
-	// Actions for Global Login Method 
-	public static void login() throws InterruptedException {
-		username.sendKeys(prop.getProperty("username")); //reading data from properties file 
-		password.sendKeys(prop.getProperty("password"));
-		loginBtn.click(); // User get loggedin 
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(AdminDashboard));
+//Screenshot of failed test case 
+	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException 
+	{
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destPath = System.getProperty("user.dir")+"\\reports\\" +TestCaseName+ ".png";
+		File file = new File(destPath);
+		FileUtils.copyFile(source, file);
+		return destPath;
 	}
-
+	
 }

@@ -2,292 +2,256 @@ package com.md.testcases;
 
 import org.testng.annotations.Test;
 import com.md.base.TestBase;
-import com.md.pages.Contract;
-import org.testng.annotations.BeforeTest;
+import com.md.pages.ContractPage;
+import com.md.pages.QuickQuotesPage;
 import java.net.MalformedURLException;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+
 
 public class ContractTest extends TestBase {
-	Contract contractPage;
-	
+	ContractPage contractPage;
+
 	public ContractTest() {
 		super(); // Need to create constructor to initialize properties file
 	}
 
-	@BeforeTest
+	@BeforeClass
 	public void setUp() throws MalformedURLException, InterruptedException {
-		initialization();
-		contractPage = new Contract();
-		TestBase.login();
+		initializationAndLogin();
+	    contractPage = new ContractPage();
+		System.out.println("Contract_test_ starts");
+//		Thread.sleep(3000);	
 	}
 
 	@Test(priority=11)
-	public void VerifyUserIsAbleToAddContract() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyUserIsAbleToAddContract() throws InterruptedException{		
 		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
 		Assert.assertTrue(flag);
 	}	
 	
 	@Test(priority=12)
-	public void VerifyHeadingOnContractListingPage() throws InterruptedException{
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
+	public void contract_VerifyHeadingOnContractListingPage() throws InterruptedException{
 		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
 		Assert.assertTrue(flag);
+
 	}
 	
 	@Test(priority=13)
-	public void VerifyUserIsAbleToSearchContract() throws InterruptedException {	
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+	public void contract_VerifyUserIsAbleToSearchContract() throws InterruptedException {	 
 		boolean flag = contractPage.VerifyUserIsAbleToSearchContract();
 		Assert.assertTrue(flag);
 	}
 	
-//	@Test(priority=3)
-//	public void VerifyDisplayOfArchivedContracts() throws InterruptedException {
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
-//		boolean flag = contractPage.VerifyDisplayOfArchivedContracts();
-//		Assert.assertTrue(flag);
-//	}
-//	
+
 	@Test(priority=14)
-	public void VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+	public void contract_VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
 		boolean flag = contractPage.VerifyAlertMsgOnSearchingContracts();
 		Assert.assertTrue(flag);
 	}
 			
 	@Test(priority=15)
-	public void VerifySearchContractUsingTitle() throws InterruptedException {		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+	public void contract_VerifySearchContractUsingTitle() throws InterruptedException {		 
 		boolean flag = contractPage.VerifySearchContractUsingTitle();
 		Assert.assertTrue(flag);
 	}
 			
 	@Test(priority=16)
-	public void VerifySearchContractUsingStartDate() throws InterruptedException {	
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  		
+	public void contract_VerifySearchContractUsingStartDate() throws InterruptedException {	
 		boolean flag = contractPage.VerifySearchContractUsingStartDate();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=17)
-	public void VerifySearchContractUsingExpiryDate() throws InterruptedException {		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+	public void contract_VerifySearchContractUsingExpiryDate() throws InterruptedException {		 
 		boolean flag = contractPage.VerifySearchContractUsingExpiryDate();
 		Assert.assertTrue(flag);
 	}	
 	@Test(priority=18)
-	public void VerifySearchContractUsingCategory() throws InterruptedException {				
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());   
+	public void contract_VerifySearchContractUsingCategory() throws InterruptedException {				
 		boolean flag = contractPage.VerifySearchContractUsingCategory();
 		Assert.assertTrue(flag);
 	}
 	@Test(priority=19)
-	public void VerifySearchContractUsingSupplier() throws InterruptedException {	
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+	public void contract_VerifySearchContractUsingSupplier() throws InterruptedException {	
 		boolean flag = contractPage.VerifySearchContractUsingSupplier();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=20)
-	public void VerifySearchContractUsingValue() throws InterruptedException {		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+	public void contract_VerifySearchContractUsingValue() throws InterruptedException {		
 		boolean flag = contractPage.VerifySearchContractUsingValue();
 		Assert.assertTrue(flag);
 	}
 	@Test(priority=21)
-	public void VerifySearchContractUsingStakeHolder() throws InterruptedException {	
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());  
+	public void contract_VerifySearchContractUsingStakeHolder() throws InterruptedException {	
 		boolean flag = contractPage.VerifySearchContractUsingStakeHolder();
 		Assert.assertTrue(flag);
 	}
 	@Test(priority=22)
-	public void VerifyContractValidationMsg() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyContractValidationMsg() throws InterruptedException{		
 		boolean flag = contractPage.VerifyContractValidationMsg();
 		Assert.assertTrue(flag);
 	}
 	@Test(priority=23)
-	public void VerifyUserNavigationToContractForm() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyUserNavigationToContractForm() throws InterruptedException{		
 		boolean flag = contractPage.VerifyUserNavigationToContractForm();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority = 24)
-	public void VerifySearchContractUsingOwner() throws InterruptedException {
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifySearchContractUsingOwner() throws InterruptedException {
 		boolean flag = contractPage.VerifySearchContractUsingOwner();
 		Assert.assertTrue(flag);
 	}
 	@Test(priority=25)
-	public void VerifyOneMonthNoticePeriodIsSelectedByDefault() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyOneMonthNoticePeriodIsSelectedByDefault() throws InterruptedException{		
 		boolean flag = contractPage.VerifyOneMonthNoticePeriodIsSelectedByDefault();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=26)
-	public void VerifyUserIsAbleToEditContract() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyUserIsAbleToEditContract() throws InterruptedException{		
 		boolean flag = contractPage.VerifyUserIsAbleToEditContract();
 		Assert.assertTrue(flag);
 	}
-		
-	
-	
+			
 	@Test(priority=27)
-	public void VerifyDisplayOfCategoryInContractForm() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyDisplayOfCategoryInContractForm() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfCategoryInContractForm();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=28)
-	public void VerifyAutoSuggestionForSupplierContact() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyAutoSuggestionForSupplierContact() throws InterruptedException{		
 		boolean flag = contractPage.VerifyAutoSuggestionForSupplierContact();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=29)
-	public void VerifyAutoSuggestionForStakeHolder() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyAutoSuggestionForStakeHolder() throws InterruptedException{		
 		boolean flag = contractPage.VerifyAutoSuggestionForStakeHolder();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=30)
-	public void VerifyDisplayOfSupplierContactDetails() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyDisplayOfSupplierContactDetails() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfSupplierContactDetails();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=31)
-	public void VerifyAlertMsgIfHostAddedToSupplierContact() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyAlertMsgIfHostAddedToSupplierContact() throws InterruptedException{		
 		boolean flag = contractPage.VerifyAlertMsgIfHostAddedToSupplierContact();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=32)
-	public void VerifyRemovalOfSupplierContact() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyRemovalOfSupplierContact() throws InterruptedException{		
 		boolean flag = contractPage.VerifyRemovalOfSupplierContact();
 		Assert.assertFalse(flag);
 	}
 	
 	@Test(priority=33)
-	public void VerifyAtleastOneValueInSupplierContact() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyAtleastOneValueInSupplierContact() throws InterruptedException{		
 		boolean flag = contractPage.VerifyAtleastOneValueInSupplierContact();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=34)
-	public void VerifyAlertMsgIfParticipantAddedToStakeHolder() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyAlertMsgIfParticipantAddedToStakeHolder() throws InterruptedException{		
 		boolean flag = contractPage.VerifyAlertMsgIfParticipantAddedToStakeHolder();
 		Assert.assertTrue(flag);
 	}
 
 	@Test(priority=35)
-	public void VerifyDisplayOfDropbox() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyDisplayOfDropbox() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfDropbox();
 		Assert.assertTrue(flag);
 	}
 	
-	
 	@Test(priority=36)
-	public void VerifyNoticePeriodChangeAccordingToPeriodSelected() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyNoticePeriodChangeAccordingToPeriodSelected() throws InterruptedException{		
 		boolean flag = contractPage.VerifyNoticePeriodChangeAccordingToPeriodSelected();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=37)
-	public void VerifyDisplayOfExpiryNotiticationLink() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyDisplayOfExpiryNotiticationLink() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfExpiryNotiticationLink();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=38)
-	public void VerifySupplierAndStakeHolderInRecipientPopup() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifySupplierAndStakeHolderInRecipientPopup() throws InterruptedException{		
 		boolean flag = contractPage.VerifySupplierAndStakeHolderInRecipientPopup();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=39)
-	public void VerifyDisplayOfCustomNotiticationLink() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyDisplayOfCustomNotiticationLink() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfCustomNotiticationLink();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=40)
-	public void VerifyDisplayOfParentHeirarchyDropdown() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyDisplayOfParentHeirarchyDropdown() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfParentHeirarchyDropdown();
 		Assert.assertTrue(flag);
 	}
 
     @Test(priority=41)
-	public void VerifySelectedParentNotDisplayInChildDropdown() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifySelectedParentNotDisplayInChildDropdown() throws InterruptedException{		
 		boolean flag = contractPage.VerifySelectedParentNotDisplayInChildDropdown();
 		Assert.assertTrue(flag);
 	}
-	
-//	@Test(priority=33)
-//	public void VerifySelectedChildNotDisplayInParentDropdown() throws InterruptedException{		
-//		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
-//		boolean flag = contractPage.VerifySelectedChildNotDisplayInParentDropdown();
-//		Assert.assertTrue(flag);
-//	}
-	
+		
 	@Test(priority=42)
-	public void VerifyLanguageChange() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyLanguageChange() throws InterruptedException{		
 		boolean flag = contractPage.VerifyLanguageChange();
 		Assert.assertTrue(flag);
 	}
 	@Test(priority=43)
-	public void VerifyActiveHeadingsDisplayInContractForm() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyActiveHeadingsDisplayInContractForm() throws InterruptedException{		
 		boolean flag = contractPage.VerifyActiveHeadingsDisplayInContractForm();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=44)
-	public void VerifyActiveHeadingsDisplayInContractListingPage() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyActiveHeadingsDisplayInContractListingPage() throws InterruptedException{		
 		boolean flag = contractPage.VerifyActiveHeadingsDisplayInContractListingPage();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=45)
-	public void VerifyContractListingOnLanguageChange() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyContractListingOnLanguageChange() throws InterruptedException{		
 		boolean flag = contractPage.VerifyContractListingOnLanguageChange();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=46)
-	public void VerifyCustomFieldDisplayInContractForm() throws InterruptedException{		
-		logger = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toString());
+	public void contract_VerifyCustomFieldDisplayInContractForm() throws InterruptedException{		
 		boolean flag = contractPage.VerifyCustomFieldDisplayInContractForm();
 		Assert.assertFalse(flag);
 	}
-
-	@AfterTest
+	
+//	@Test(priority=fail)
+//	public void VerifySelectedChildNotDisplayInParentDropdown() throws InterruptedException{		
+//		boolean flag = contractPage.VerifySelectedChildNotDisplayInParentDropdown();
+//		Assert.assertTrue(flag);
+//	}
+//	@Test(priority=fail)
+//	public void VerifyDisplayOfArchivedContracts() throws InterruptedException {
+//		boolean flag = contractPage.VerifyDisplayOfArchivedContracts();
+//		Assert.assertTrue(flag);
+//	}
+//	
+	@AfterClass
 	public void Teardown() throws Exception {
+	System.out.println("Contract_test_ ends");
     driver.close();
 	}
 

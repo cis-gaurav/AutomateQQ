@@ -1,308 +1,292 @@
 package com.md.pages;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.internal.junit.ArrayAsserts;
-
 import com.md.base.TestBase;
 
-public class QuickQuotes extends TestBase {
+public class QuickQuotesPage extends TestBase {
 
 ///////////////// Page Factory == OR
-	
+
 	@FindBy(name = "user[login]")
-	static WebElement username;
-
+	private static  WebElement username;
+	
 	@FindBy(name = "user[password]")
-	static WebElement password;
-
+	static private WebElement password;
+	
 	@FindBy(name = "commit")
-	static WebElement loginBtn;
-
+	static private WebElement loginBtn;
+	
 	@FindBy(xpath = "//a[contains(text(),'Dashboard')]")
-	static WebElement AdminDashboard;
+	static private WebElement AdminDashboard;
 
-	@FindBy(xpath = "//ul[@class='nav-header']/li[6]/a")
-	WebElement quickquoteDashbaord;
+	@FindBy(xpath = "//*[@id=\"header-navbar\"]/div/div[2]/ul/li[6]/a")
+	private static WebElement quickquoteDashbaord;
 
 	@FindBy(xpath = "//h4[text()='YOUR QUOTES']")
-	WebElement yourQuoteText;
+	static private WebElement yourQuoteText;
 
 	@FindBy(xpath = "//a[@class='btn btn-primary btn-fixed pull-right']")
-	WebElement newQuoteBtn;
+	private WebElement newQuoteBtn;
 
 ///////////Create QQ Page Element /////////////////
-	
+
 	@FindBy(xpath = "//button[@class='btn btn-lg btn-primary m-t20 btn-sizebig']")
-	WebElement getQuoteButton;
+	private WebElement getQuoteButton;
 
 	@FindBy(xpath = "//div[@class='alert alert-warning']")
-	WebElement alertLiscenceMsg;
+	private WebElement alertLiscenceMsg;
 
 	@FindBy(xpath = "//input[@name='QQGeneralDetails.quote_name']")
-	WebElement name;
+	private WebElement name;
 
 	@FindBy(xpath = "//*[contains(text(), 'Required')]")
-	WebElement blankNameValidation;
+	private WebElement blankNameValidation;
 
 	@FindBy(xpath = "//span[@class='text-danger']")
-	WebElement longNameValidation;
+	private WebElement longNameValidation;
 
 	@FindBy(xpath = "//input[@id='deadline-custom-date-time']")
-	WebElement deadline;
+	private WebElement deadline;
 
 	@FindBy(xpath = "//div[contains(text(),'The deadline you have selected in the past. Please')]")
-	WebElement pastDeadlineToaster;
+	private WebElement pastDeadlineToaster;
 
 	@FindBy(xpath = "//span[@class=’time-zone’]")
-	WebElement timezone;
+	private WebElement timezone;
 
 	@FindBy(xpath = "/html/body[contains(text(),'Details')]")
-	WebElement description;
+	private WebElement description;
 
 	@FindBy(xpath = "//button[@class='btn btn-primary btn-fontsmall']")
-	WebElement fromLibraryBtn;
+	private WebElement fromLibraryBtn;
 
 	@FindBy(xpath = "//div[text()=’Drop files here or click to upload’]")
-	WebElement uploadFromSystem;
+	private WebElement uploadFromSystem;
 
 	@FindBy(xpath = "//table[@class='table table-striped table-bordered']/tbody/tr[1]/td[3]/div[1]/label/span")
-	WebElement SelectDocPopup;
+	private WebElement SelectDocPopup;
 
 	@FindBy(xpath = "//button[text()='Select Document(s)']")
-	WebElement clickBtnFromPopup;
+	private WebElement clickBtnFromPopup;
 
 	@FindBy(xpath = "//label[text()='I want to get prices']/span")
-	WebElement lotCheckbox;
+	private WebElement lotCheckbox;
 
 	@FindBy(xpath = "//*[contains(@name,'qqPrice.lots[0].name')]")
-	WebElement lotName;
+	private WebElement lotName;
 
 	@FindBy(xpath = "//input[@name='qqPrice.lots[0].unit_of_measure_uomname']")
-	WebElement lotUom;
+	private WebElement lotUom;
 
 	@FindBy(xpath = "//input[@name='qqPrice.lots[0].quantity']")
-	WebElement lotQuantity;
+	private WebElement lotQuantity;
 
 	@FindBy(xpath = "(//I[@class='fa fa-trash'])[1]")
-	WebElement lotDelete;
+	private WebElement lotDelete;
 
 	@FindBy(xpath = "//*[@class=’btn btn-primary’ and text()=’Add Another Item’]")
-	WebElement lotAdd;
+	private WebElement lotAdd;
 
 	@FindBy(xpath = "//label[text()='I want to ask other questions']/span")
-	WebElement questionnaireCheckbox;
+	private WebElement questionnaireCheckbox;
 
 	@FindBy(xpath = "//input[@name='qqQuestions.questionnaire[0].title']")
-	WebElement questionName;
+	private WebElement questionName;
 
 	@FindBy(xpath = "//select[@name='qqQuestions.questionnaire[0].question_type']")
-	WebElement questionDropdown;
+	private WebElement questionDropdown;
 
 	@FindBy(xpath = "//select[@name='qqQuestions.questionnaire[0].question_type']/option[2]")
-	WebElement oneLineText;
+	private WebElement oneLineText;
 
 	@FindBy(xpath = "//select[@name='qqQuestions.questionnaire[0].question_type']/option[3]")
-	WebElement documentUpload;
+	private WebElement documentUpload;
 
 	@FindBy(xpath = "//select[@name='qqQuestions.questionnaire[0].question_type']/option[4]")
-	WebElement yesno;
+	private WebElement yesno;
 
 	@FindBy(xpath = "//select[@name=//*[@id=’optional_quality’]/div[1]/div[3]/a’]")
-	WebElement deleteQuestion;
+	private WebElement deleteQuestion;
 
 	@FindBy(xpath = "//*[@class=’btn btn-primary’ and text()=’Add Another Question’]")
-	WebElement addQuestion;
+	private WebElement addQuestion;
 
 	@FindBy(xpath = "//*[contains (text(),'From group')]")
-	WebElement addGroup;
+	private WebElement addGroup;
 
 	@FindBy(xpath = "//div[@class=' css-tlfecz-indicatorContainer']")
-	WebElement addParticpantManuallyArrrow;
+	private WebElement addParticpantManuallyArrrow;
 
 	@FindBy(xpath = "//input[@id='react-select-2-input']")
-	WebElement addParticpantManually;
+	private WebElement addParticpantManually;
 
 	@FindBy(xpath = "//h4[contains(text(),'Advice from procurement team')]")
-	WebElement AdviceText;
+	private WebElement AdviceText;
 
 	@FindBy(xpath = "//label[text()='Who to invite']")
-	WebElement whoToInviteText;
+	private WebElement whoToInviteText;
 
 	@FindBy(xpath = "//*[contains (text(), 'createQQByName')]")
-	WebElement quoteName;
+	private WebElement quoteName;
 
 ////////////////////Left panel Element /////////////////	
 
 	@FindBy(xpath = "//*[@id=\"app\"]//div[2]/div[2]/div/div/div/div[1]/a/i")
-	WebElement editcontentToolTip;
-	
+	private WebElement editcontentToolTip;
+
 	@FindBy(xpath = "//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
-	WebElement editContentPopup;
-	
+	private WebElement editContentPopup;
+
 	@FindBy(xpath = "//button[text()='Delete']")
-	WebElement delteButton;
-	
+	private WebElement delteButton;
+
 	@FindBy(xpath = "//div[contains(text(),'Deleted')]")
-	WebElement delteToaster;
-	
+	private WebElement delteToaster;
+
 	@FindBy(xpath = "//button[text()='Submit']")
-	WebElement submitButton;
-	
+	private WebElement submitButton;
+
 	@FindBy(xpath = "//button[text()='Close']")
-	WebElement closeButton;
-	
+	private WebElement closeButton;
+
 	@FindBy(xpath = "//div[@class='list']/p[1]")
-	WebElement AutomateText;
-	
+	private WebElement AutomateText;
+
 	@FindBy(xpath = "//div[@class='list']/h4")
-	WebElement AutomateText1;
-	
+	private WebElement AutomateText1;
+
 ///////////////// QQ summary page Elements /////////////////////////////////////////////////////////////////////////////////////////////
 	@FindBy(xpath = "//h2[text()='Create QuickQuote Event with all Details']")
-	WebElement nameVerify;
+	private WebElement nameVerify;
 
 	@FindBy(xpath = "//a[@class='collapsed' and text()='Brief']")
-	WebElement briefToggel;
+	private WebElement briefToggel;
 
 	@FindBy(xpath = "//div[@class='table-box list']/p")
-	WebElement descriptionVerify;
+	private WebElement descriptionVerify;
 
 	@FindBy(xpath = "//a[@class='collapsed' and text()= 'Summary']")
-	WebElement summaryToggel;
+	private WebElement summaryToggel;
 
 	@FindBy(xpath = "//div[@class='summary-table table-scroll']/table/tbody/tr/td/span")
-	WebElement lotNameVerify;
+	private WebElement lotNameVerify;
 
-	@FindBy(xpath = "//a[@class='collapsed' and text()= 'Participant List']")
-	WebElement particpantToggel;
+	@FindBy(xpath = "//*[@id='headingTwo']/h4/a")
+	private WebElement particpantToggel;
 
 	@FindBy(xpath = "//table[@class='participant-table common-table']/thead/tr/th[2]")
-	WebElement particpantName;
+	private WebElement particpantName;
 
-	@FindBy(xpath = "//a[@class='collapsed' and text()= 'Participant List']")
-	WebElement messageToggel;
+	@FindBy(xpath = "//*[@id='messageCollapse']")
+	private WebElement messageToggel;
 
-	@FindBy(xpath="//button[contains(text(), 'Send new message')]")
-	WebElement sendNewMessagePopupBtn;
-	
-	@FindBy(xpath="	//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
-	WebElement sendNewMsgTxtField;
-	
-	@FindBy(xpath="//label [contains(text(),'All participants')]")
-	WebElement allParticipantCheckbox;
+	@FindBy(xpath = "//button[contains(text(), 'Send new message')]")
+	private WebElement sendNewMessagePopupBtn;
 
-	@FindBy(xpath="//button [contains(text(),'Send Message')]")
-	WebElement sendMsgBtn;
+	@FindBy(xpath = "	//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
+	private WebElement sendNewMsgTxtField;
 
-	@FindBy(xpath="//div[contains(text(),'Your Message has been sent.')]")
-	WebElement msgSendToasterd;
-	
+	@FindBy(xpath = "//label [contains(text(),'All participants')]")
+	private WebElement allParticipantCheckbox;
+
+	@FindBy(xpath = "//button [contains(text(),'Send Message')]")
+	private WebElement sendMsgBtn;
+
+	@FindBy(xpath = "//div[contains(text(),'Your Message has been sent.')]")
+	private WebElement msgSendToasterd;
+
 	@FindBy(xpath = "//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
-	WebElement questionnaireAnswerVerify;
+	private WebElement questionnaireAnswerVerify;
 
 ///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
 
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 1 sandpit1@marketdojo.com\")]")
-	WebElement sandpitco1Checkbox;
+	private WebElement sandpitco1Checkbox;
 
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 2 sandpit2@marketdojo.com\")]")
-	WebElement sandpitco2Checkbox;
+	private WebElement sandpitco2Checkbox;
 
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 3 sandpit3@marketdojo.com\")]")
-	WebElement sandpitco3Checkbox;
+	private WebElement sandpitco3Checkbox;
 
 	@FindBy(xpath = "//*[contains (@class ,'navbar-nav collapse navbar-collapse navbar-module-right pull-left')]/ul/li[3]")
-	WebElement sandpitHeader;
+	private WebElement sandpitHeader;
 
 	@FindBy(xpath = "//*[contains (text(),  'Act as Host')]")
-	WebElement actAsHost;
+	private WebElement actAsHost;
 
 	@FindBy(xpath = "//*[contains (text(),  'Act as Sandpit Co 1')]")
-	WebElement dropdownSandpitco1;
+	private WebElement dropdownSandpitco1;
 
 	@FindBy(xpath = "//*[@id='header-navbar']/div/div[2]/ul/li/a")
-	WebElement eventHeader;
+	private WebElement eventHeader;
 
 	// Participant end Sandpit Elements
 
 	@FindBy(xpath = "//*[@id=\"main-container\"]/div[3]/div/div/div[1]/div/form/table/tbody/tr[1]/td[2]/div[2]/div/div/div/div/button")
-	WebElement eventInvitation;
+	private WebElement eventInvitation;
 
 	@FindBy(xpath = "//*[@id=\"main-container\"]/div[3]/div/div/div[1]/div/form/table/tbody/tr[1]/td[2]/div[2]/div/div/div/div/ul/li[1]/a")
-	WebElement eventAccept;
+	private WebElement eventAccept;
 
 	@FindBy(xpath = "//*[contains(@title, 'Questionnaire')]")
-	WebElement questionnaireTab;
+	private WebElement questionnaireTab;
 
 	@FindBy(xpath = "//div[@class='form-item-block qqa-block']/div/div/div/div[2]/div/input")
-	WebElement questionnaireAnwer1;
+	private WebElement questionnaireAnwer1;
 
 	@FindBy(xpath = "//*[contains(text(), 'Submit answers')]")
-	WebElement submitAnswer;
+	private WebElement submitAnswer;
 
 	@FindBy(xpath = "//*[contains(@id, 'confirmOk')]")
-	WebElement submitAnswerFinalConfirmation;
+	private WebElement submitAnswerFinalConfirmation;
 
 	@FindBy(xpath = "//*[contains(text(), 'RFQs')]")
-	WebElement RfqTab;
+	private WebElement RfqTab;
 
 	@FindBy(xpath = "//*[contains(text(), 'Enter Bid')]")
-	WebElement enterBidBtn;
+	private WebElement enterBidBtn;
 
 	@FindBy(xpath = "//*[contains(@name, 'bid[price]')]")
-	WebElement enterBid;
+	private WebElement enterBid;
 
 	@FindBy(xpath = "//*[contains(@class, 'btn btn-default light-gray-color push-5-r br-green-color')]")
-	WebElement submitBid;
+	private WebElement submitBid;
 
 	@FindBy(xpath = "//*[contains(@class, 'btn btn-primary ok-btn')]")
-	WebElement confirmSubmitBid;
+	private WebElement confirmSubmitBid;
 
 	@FindBy(xpath = "//*[contains(@class,'modal-dialog modal-dialog-popout custom-modal modal-lg')]/div/div[3]/button")
-	WebElement confirmBidReceivedPoupup;
+	private WebElement confirmBidReceivedPoupup;
 
 	@FindBy(xpath = "//*[contains (text(), 'Allow resubmission')]")
-	WebElement AllowResubmissionBtn;
+	private WebElement AllowResubmissionBtn;
 
 	@FindBy(xpath = "//*[contains (text(), 'Waiting for resubmission')]")
-	WebElement WaitingForResubmissionText;
+	private WebElement WaitingForResubmissionText;
 
 	@FindBy(xpath = "//*[contains (@class, 'participant-table common-table')]/tbody/tr[2]/td[2]/a")
-	WebElement particpantBid;
+	private WebElement particpantBid;
 
 	@FindBy(xpath = "//*[contains (@class, 'icon-link')]")
-	WebElement deleteBid;
+	private WebElement deleteBid;
 
 	@FindBy(xpath = "//*[contains (@class, 'button-l btn btn-primary')]")
-	WebElement deleteBidConfirm;
+	private WebElement deleteBidConfirm;
 
 	// Initialize the Page Object
-	public QuickQuotes() {
+	public  QuickQuotesPage() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -310,7 +294,6 @@ public class QuickQuotes extends TestBase {
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
-//		quickquoteDashbaord.click();// click on Quote from MDDashbaord
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 	}
@@ -339,13 +322,15 @@ public class QuickQuotes extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		Thread.sleep(6000);
+//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		AdviceText.click();
+//		deadline.click();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
@@ -364,10 +349,11 @@ public class QuickQuotes extends TestBase {
 	}
 
 	public boolean createToasterMessage() throws InterruptedException {
+		Thread.sleep(2000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		name.clear();
 		name.sendKeys("Verify Toaster message");
 		deadline.sendKeys("2019-04-14 19:35");
@@ -444,7 +430,7 @@ public class QuickQuotes extends TestBase {
 		Assert.assertEquals(descrption, "This is my description");
 //		briefToggel.click();
 		// lotName Verify
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		summaryToggel.click();
 		wait.until(ExpectedConditions.visibilityOf(lotNameVerify));
 		String LotName = lotNameVerify.getText();
@@ -458,7 +444,7 @@ public class QuickQuotes extends TestBase {
 	}
 
 	@FindBy(xpath = "//*[@id=\"flash_messages\"]/div/p/text()")
-	WebElement Verify1;
+	private WebElement Verify1;
 
 	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
@@ -491,7 +477,7 @@ public class QuickQuotes extends TestBase {
 		dropdownSandpitco1.click();
 		Thread.sleep(3000);
 		eventHeader.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
@@ -507,17 +493,18 @@ public class QuickQuotes extends TestBase {
 //		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
-		Thread.sleep(5000);
-//		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
-//		JavascriptExecutor executor = (JavascriptExecutor)driver;
-//		executor.executeScript("arguments[0].click();", particpantToggel);
+		Thread.sleep(8000);
+		scrollTillBottom();
+		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", particpantToggel);
 		particpantToggel.click();
-//		Thread.sleep(2000);
+		Thread.sleep(2000);
 		scroll();
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
 		AllowResubmissionBtn.click();
 		Thread.sleep(2000);
-		///////////// Allow Resubmisson at Host end
+		///////////// Allow resub at Host end
 		actAsHost.click();
 		dropdownSandpitco1.click();
 		questionnaireTab.click();
@@ -529,7 +516,7 @@ public class QuickQuotes extends TestBase {
 		submitAnswerFinalConfirmation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		particpantToggel.click();
 		Thread.sleep(2000);
 		scrollTillBottom();
@@ -548,62 +535,61 @@ public class QuickQuotes extends TestBase {
 //		executor.executeScript("arguments[0].click();", editcontentToolTip);
 		editcontentToolTip.click();
 		driver.switchTo().frame(1);
-        editContentPopup.clear();
-        editContentPopup.sendKeys("Automate test");
-        driver.switchTo().defaultContent();
-        submitButton.click();
-        Assert.assertEquals(AutomateText.getText(), "Automate test");
-        editcontentToolTip.click();
-        delteButton.click();
+		editContentPopup.clear();
+		editContentPopup.sendKeys("Automate test");
+		driver.switchTo().defaultContent();
+		submitButton.click();
+		Assert.assertEquals(AutomateText.getText(), "Automate test");
+		editcontentToolTip.click();
+		delteButton.click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOf(AutomateText1));
-        Assert.assertEquals(AutomateText1.getText(), "ADVICE FROM PROCUREMENT TEAM");
-        return AutomateText1.isDisplayed();
+		Assert.assertEquals(AutomateText1.getText(), "ADVICE FROM PROCUREMENT TEAM");
+		return AutomateText1.isDisplayed();
 	}
 
-public void createMessage() throws InterruptedException {
-	driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-	Thread.sleep(6000);
+	public void createMessage() throws InterruptedException {
+		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(6000);
 //	JavascriptExecutor executor = (JavascriptExecutor)driver;
 //	executor.executeScript("arguments[0].click();", sandpitHeader);
-	sandpitHeader.click();
-	Thread.sleep(3000);
-	WebDriverWait wait = new WebDriverWait(driver, 60);
-	wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
-	newQuoteBtn.click();// click on new quote button on quote listing page
-	wait.until(ExpectedConditions.elementToBeClickable(name));
-	name.sendKeys("Automate Messages");
-	scrollTillBottom();
-	Thread.sleep(3000);
-	wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
-	sandpitco1Checkbox.click();
-	getQuoteButton.click();
-	wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
-	messageToggel.click();
-}	
+		sandpitHeader.click();
+		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
+		newQuoteBtn.click();// click on new quote button on quote listing page
+		wait.until(ExpectedConditions.elementToBeClickable(name));
+		name.sendKeys("Automate Messages");
+		scrollTillBottom();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
+		sandpitco1Checkbox.click();
+		getQuoteButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
+		messageToggel.click();
+	}
 
-WebElement Carousel;
+	private WebElement Carousel;
 //*[@id="anonCarousel1"]/ol/li[1]
 //*[@id="anonCarousel1"]/ol/li[2]
 //*[@id="anonCarousel1"]/ol/li[3]
 
+	@FindBy(xpath = "//table[@id='customers']/tbody/tr")
+	private WebElement tableRow;
 
-@FindBy(xpath = "//table[@id='customers']/tbody/tr")
-WebElement tableRow;
+	@FindBy(xpath = "//table[@id='customers']/tbody/tr/td")
+	private WebElement tableData;
 
-@FindBy(xpath = "//table[@id='customers']/tbody/tr/td")
-WebElement tableData;
+	@FindBy(xpath = "//table[@id='customers']/tbody/tr/th")
+	private WebElement tableColoumn;
 
-@FindBy(xpath = "//table[@id='customers']/tbody/tr/th")
-WebElement tableColoumn;
+	public void Rough1() throws InterruptedException {
+		driver.navigate().to("https://www.w3schools.com/html/html_tables.asp");
+		driver.findElement(By.linkText("CSS")).click();
+		Thread.sleep(3000);
+		Actions actions = new Actions(driver);
+		WebElement elementLocator = driver.findElement(By.linkText("SQL"));
+		actions.contextClick(elementLocator).perform();
 
-public void Rough1() throws InterruptedException {
-	driver.navigate().to("https://www.w3schools.com/html/html_tables.asp");
-			driver.findElement(By.linkText("CSS")).click();
-			Thread.sleep(3000);
-			Actions actions = new Actions(driver);
-			WebElement elementLocator = driver.findElement(By.linkText("SQL"));
-			actions.contextClick(elementLocator).perform();
-			
-		} 
+	}
 }
-

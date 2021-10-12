@@ -1,8 +1,6 @@
 package com.md.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -13,14 +11,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import com.md.base.TestBase;
 
-		public class Contract extends TestBase {
+		public class ContractPage extends TestBase {
 		
-		// Page factory 
-			
+		// Page factory 			
 		@FindBy(xpath="//a[contains(text(),'Analytics')]")
 		static
 		WebElement AnalyticsButton;
@@ -575,22 +570,17 @@ import com.md.base.TestBase;
 		
 
 		// Initialize page factory 
-			public Contract() 
+			public ContractPage() 
 			{
 			PageFactory.initElements(driver, this);
-			}
-
-//			//Login
-//			public static void Login() throws InterruptedException
-//			{
-//				TestBase.login();
-//			}			
+			}	
 		
 			//Scripts
 			public boolean VerifyUserIsAbleToAddContract() throws InterruptedException {
 			driver.navigate().to(prop.getProperty("ContractHomepage"));
 			WebDriverWait wait = new WebDriverWait(driver,60);
-	        System.out.println(" execution started");	   
+	        System.out.println(" execution started");
+	        Thread.sleep(5000);
 	        //Wait for Contract Page to Load
 	        wait.until(ExpectedConditions.visibilityOf(AddNewContractButton ));        
 	        //Click on Add New Contract Button

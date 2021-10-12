@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <test thread-count="5" name="Test(failed)(failed)">
+    <classes>
+      <class name="com.md.testcases.QuickQuotesTest">
+        <methods>
+          <include name="Teardown1"/>
+          <include name="verifyToasterMessage"/>
+          <include name="setUp1"/>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="verifyQuotebyName"/>
+        </methods>
+      </class> <!-- com.md.testcases.QuickQuotesTest -->
+      <class name="com.md.testcases.ContractTest">
+        <methods>
+          <include name="setUp2"/>
+          <include name="VerifyHeadingOnContractListingPage"/>
+          <include name="Teardown2"/>
+          <include name="close"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.md.testcases.ContractTest -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->
