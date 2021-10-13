@@ -22,6 +22,7 @@ public class QuickQuotesTest extends TestBase {
 		initializationAndLogin();
 		QuickQuotesPage = new QuickQuotesPage();
 		Thread.sleep(4000);
+		Thread.sleep(4000);
 		System.out.println("QQ_test start executing");
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
