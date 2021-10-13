@@ -71,10 +71,10 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 
-	@Test(priority=8)
-	public void Rough() throws InterruptedException {
-		QuickQuotesPage.Rough1();
-	}
+//	@Test(priority=8)
+//	public void Rough() throws InterruptedException {
+//		QuickQuotesPage.Rough1();
+//	}
 
 	@AfterClass
 	public void Teardown() throws Exception {

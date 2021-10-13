@@ -662,8 +662,8 @@ import com.md.base.TestBase;
 			public boolean VerifyUserIsAbleToSearchContract() throws InterruptedException{
 			
 			driver.navigate().to(prop.getProperty("ContractHomepage"));
-		    Thread.sleep(3000);
-		    Thread.sleep(3000);
+//		    Thread.sleep(3000);
+//		    Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait(driver,60);
 	        
 	        //Wait for Contract Page to Load

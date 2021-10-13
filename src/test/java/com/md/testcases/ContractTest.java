@@ -20,7 +20,6 @@ public class ContractTest extends TestBase {
 	    contractPage = new ContractPage();
 		Thread.sleep(4000);	
 		System.out.println("Contract_test_ starts");
-	    Thread.sleep(3000);
 	}
 
 //	@Test(priority=11)
