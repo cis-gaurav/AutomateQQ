@@ -72,6 +72,18 @@ public class TestBase {
 			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.addArguments("--allowed-ips");
 			driver = new ChromeDriver(options);
+			System.out.println("Driver Intilaized");
+// Navigate to url and login to marketdojo application 
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.get(prop.getProperty("url"));
+			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
+			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
+			driver.findElement(By.xpath("//input[@name ='commit']")).click();
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
+			System.out.println("Logged in and redirect to MD Dashbaord");
+			Thread.sleep(3000);
 		} else if (ExecutionLocation.equals("local")) {
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
 			driver = new ChromeDriver();
