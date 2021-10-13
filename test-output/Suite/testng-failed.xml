@@ -8,14 +8,9 @@
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
-          <include name="qq_VerifyQuotebyName"/>
           <include name="QQSetUp"/>
-          <include name="qq_VerfiyQQEventWithAllDetails"/>
-          <include name="qq_VerifyEditContent"/>
-          <include name="qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission"/>
           <include name="Teardown"/>
           <include name="qq_VerifyGetQuoteButtonIsDisable"/>
-          <include name="qq_VerifyToasterMessage"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
       <class name="com.md.testcases.ContractTest">
