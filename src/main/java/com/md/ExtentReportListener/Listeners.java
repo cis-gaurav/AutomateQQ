@@ -15,7 +15,7 @@ import com.md.base.TestBase;
 
 public class Listeners extends TestBase implements ITestListener  {
 	 
-		ExtentReports extent =ExtentReporterNG.extentReportGenerator();
+		ExtentReports extent = ExtentReporterNG.extentReportGenerator();
 		ExtentTest test;
 		
 		public void onTestStart(ITestResult result) {
@@ -34,20 +34,20 @@ public class Listeners extends TestBase implements ITestListener  {
 			// TODO Auto-generated method stub
 			test.fail(MarkupHelper.createLabel("Test case failed check error and attched screenshot", ExtentColor.RED));
 			test.fail(result.getThrowable());
-			Object testObject = result.getInstance();
-			Class clazz = result.getTestClass().getRealClass();
-			try {
-				driver = (WebDriver)clazz.getDeclaredField("driver").get(testObject);
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-			}
-			try {
-				test.addScreenCaptureFromPath(getScreenshotPath(result.getMethod().getMethodName(), driver),result.getMethod().getMethodName());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
+//			Object testObject = result.getInstance();
+//			Class clazz = result.getTestClass().getRealClass();
+//			try {
+//				driver = (WebDriver)clazz.getDeclaredField("driver").get(testObject);
+//			} catch (Exception e1) {
+//				// TODO Auto-generated catch block
+//			}
+//			try {
+//				test.addScreenCaptureFromPath(getScreenshotPath(result.getMethod().getMethodName(), driver),result.getMethod().getMethodName());
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			
 		}
 
 		public void onTestSkipped(ITestResult result) {
