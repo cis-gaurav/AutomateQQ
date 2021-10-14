@@ -19,6 +19,7 @@ public class Listeners extends TestBase implements ITestListener  {
 		ExtentTest test;
 		
 		public void onTestStart(ITestResult result) {
+			System.out.println("startttttttttttttt");
 			// TODO Auto-generated method stub
 			test =extent.createTest(result.getMethod().getMethodName()).assignAuthor("Gaurav Jain").assignDevice("Windows10, Chrome");
 		}
