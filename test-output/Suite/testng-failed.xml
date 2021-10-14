@@ -6,59 +6,11 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.md.testcases.QuickQuotesTest">
-        <methods>
-          <include name="qq_VerifyQuotebyName"/>
-          <include name="QQSetUp"/>
-          <include name="Rough"/>
-          <include name="qq_VerfiyQQEventWithAllDetails"/>
-          <include name="qq_VerifyEditContent"/>
-          <include name="qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission"/>
-          <include name="Teardown"/>
-          <include name="qq_VerifyGetQuoteButtonIsDisable"/>
-          <include name="qq_VerifyToasterMessage"/>
-        </methods>
-      </class> <!-- com.md.testcases.QuickQuotesTest -->
       <class name="com.md.testcases.ContractTest">
         <methods>
-          <include name="contract_VerifyOneMonthNoticePeriodIsSelectedByDefault"/>
-          <include name="contract_VerifySearchContractUsingTitle"/>
-          <include name="contract_VerifyAlertMsgIfHostAddedToSupplierContact"/>
-          <include name="contract_VerifySearchContractUsingOwner"/>
-          <include name="contract_VerifyAlertMsgIfParticipantAddedToStakeHolder"/>
-          <include name="contract_VerifySearchContractUsingExpiryDate"/>
-          <include name="Teardown"/>
-          <include name="contract_VerifyAutoSuggestionForSupplierContact"/>
-          <include name="contract_VerifyDisplayOfParentHeirarchyDropdown"/>
-          <include name="contract_VerifySearchContractUsingStakeHolder"/>
-          <include name="contract_VerifyDisplayOfExpiryNotiticationLink"/>
-          <include name="contract_VerifyAutoSuggestionForStakeHolder"/>
-          <include name="contract_VerifySelectedParentNotDisplayInChildDropdown"/>
-          <include name="contract_VerifySearchContractUsingCategory"/>
-          <include name="contract_VerifyDisplayOfCustomNotiticationLink"/>
-          <include name="setUp"/>
-          <include name="contract_VerifySearchContractUsingStartDate"/>
-          <include name="contract_VerifySupplierAndStakeHolderInRecipientPopup"/>
-          <include name="contract_VerifyAtleastOneValueInSupplierContact"/>
-          <include name="contract_VerifySearchContractUsingSupplier"/>
-          <include name="contract_VerifyUserIsAbleToAddContract"/>
-          <include name="contract_VerifyDisplayOfSupplierContactDetails"/>
-          <include name="contract_VerifyContractListingOnLanguageChange"/>
-          <include name="contract_VerifyContractValidationMsg"/>
-          <include name="contract_VerifyLanguageChange"/>
           <include name="contract_VerifyHeadingOnContractListingPage"/>
-          <include name="contract_VerifyDisplayOfDropbox"/>
-          <include name="contract_VerifySearchContractUsingValue"/>
-          <include name="contract_VerifyActiveHeadingsDisplayInContractListingPage"/>
-          <include name="contract_VerifyAlertMsgOnSearchingContracts"/>
-          <include name="contract_VerifyCustomFieldDisplayInContractForm"/>
-          <include name="contract_VerifyRemovalOfSupplierContact"/>
-          <include name="contract_VerifyDisplayOfCategoryInContractForm"/>
-          <include name="contract_VerifyUserNavigationToContractForm"/>
-          <include name="contract_VerifyNoticePeriodChangeAccordingToPeriodSelected"/>
-          <include name="contract_VerifyUserIsAbleToEditContract"/>
-          <include name="contract_VerifyUserIsAbleToSearchContract"/>
-          <include name="contract_VerifyActiveHeadingsDisplayInContractForm"/>
+          <include name="setUp"/>
+          <include name="Teardown"/>
         </methods>
       </class> <!-- com.md.testcases.ContractTest -->
     </classes>

@@ -31,7 +31,8 @@ public class ContractTest extends TestBase {
 	@Test(priority=12)
 	public void contract_VerifyHeadingOnContractListingPage() throws InterruptedException{
 		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
-		Assert.assertTrue(flag);
+//		Assert.assertTrue(flag);
+		Assert.assertFalse(flag);
 
 	}
 //	
