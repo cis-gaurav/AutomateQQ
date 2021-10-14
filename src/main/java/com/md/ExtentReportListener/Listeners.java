@@ -9,6 +9,8 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.md.base.TestBase;
 
 public class Listeners extends TestBase implements ITestListener  {
@@ -18,17 +20,19 @@ public class Listeners extends TestBase implements ITestListener  {
 		
 		public void onTestStart(ITestResult result) {
 			// TODO Auto-generated method stub
-			test =extent.createTest(result.getMethod().getMethodName());
+			test =extent.createTest(result.getMethod().getMethodName()).assignAuthor("Gaurav Jain").assignDevice("Windows10, Chrome");
 		}
 
 		public void onTestSuccess(ITestResult result) {
 			// TODO Auto-generated method stub
 			test.log(Status.PASS, "Sucessful");
+			test.pass(MarkupHelper.createLabel("Test case passed sucessfully", ExtentColor.GREEN));
 		}
 
 		public void onTestFailure(ITestResult result) {
 //			WebDriver driver = null;
 			// TODO Auto-generated method stub
+			test.fail(MarkupHelper.createLabel("Test case failed check error", ExtentColor.RED));
 			test.fail(result.getThrowable());
 			Object testObject = result.getInstance();
 			Class clazz = result.getTestClass().getRealClass();
