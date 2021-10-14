@@ -83,7 +83,6 @@ public class TestBase {
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 			System.out.println("Logged in and redirect to MD Dashbaord");
-			Thread.sleep(3000);
 		} else if (ExecutionLocation.equals("local")) {
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
 			driver = new ChromeDriver();

@@ -2,16 +2,38 @@
 <testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="167688" started-at="2021-10-14T12:32:27 IST" finished-at="2021-10-14T12:35:14 IST">
+  <suite name="Suite" duration-ms="153845" started-at="2021-10-14T16:52:17 IST" finished-at="2021-10-14T16:54:50 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="167688" started-at="2021-10-14T12:32:27 IST" finished-at="2021-10-14T12:35:14 IST">
+    <test name="Test" duration-ms="153845" started-at="2021-10-14T16:52:17 IST" finished-at="2021-10-14T16:54:50 IST">
       <class name="com.md.testcases.ContractTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.md.testcases.ContractTest@12405818]" name="setUp" is-config="true" duration-ms="32778" started-at="2021-10-14T12:33:56 IST" finished-at="2021-10-14T12:34:29 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.md.testcases.ContractTest@12405818]" name="setUp" is-config="true" duration-ms="56103" started-at="2021-10-14T16:53:23 IST" finished-at="2021-10-14T16:54:19 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="contract_VerifyHeadingOnContractListingPage()[pri:12, instance:com.md.testcases.ContractTest@12405818]" name="contract_VerifyHeadingOnContractListingPage" duration-ms="40297" started-at="2021-10-14T12:34:29 IST" finished-at="2021-10-14T12:35:09 IST">
+        <test-method status="PASS" signature="contract_VerifyHeadingOnContractListingPage()[pri:12, instance:com.md.testcases.ContractTest@12405818]" name="contract_VerifyHeadingOnContractListingPage" duration-ms="27356" started-at="2021-10-14T16:54:19 IST" finished-at="2021-10-14T16:54:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contract_VerifyHeadingOnContractListingPage -->
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.ContractTest@12405818]" name="Teardown" is-config="true" duration-ms="4174" started-at="2021-10-14T16:54:46 IST" finished-at="2021-10-14T16:54:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.md.testcases.ContractTest -->
+      <class name="com.md.testcases.QuickQuotesTest">
+        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="QQSetUp" is-config="true" duration-ms="44955" started-at="2021-10-14T16:52:17 IST" finished-at="2021-10-14T16:53:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QQSetUp -->
+        <test-method status="PASS" signature="qq_VerifyGetQuoteButtonIsDisable()[pri:2, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="qq_VerifyGetQuoteButtonIsDisable" duration-ms="1818" started-at="2021-10-14T16:53:02 IST" finished-at="2021-10-14T16:53:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qq_VerifyGetQuoteButtonIsDisable -->
+        <test-method status="PASS" signature="qq_VerifyToasterMessage()[pri:3, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="qq_VerifyToasterMessage" duration-ms="8876" started-at="2021-10-14T16:53:03 IST" finished-at="2021-10-14T16:53:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qq_VerifyToasterMessage -->
+        <test-method status="FAIL" signature="qq_VerifyQuotebyName()[pri:4, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="qq_VerifyQuotebyName" duration-ms="9997" started-at="2021-10-14T16:53:12 IST" finished-at="2021-10-14T16:53:22 IST">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [false] but found [true]]]>
@@ -22,7 +44,7 @@ at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertFalse(Assert.java:67)
 at org.testng.Assert.assertFalse(Assert.java:77)
-at com.md.testcases.ContractTest.contract_VerifyHeadingOnContractListingPage(ContractTest.java:35)
+at com.md.testcases.QuickQuotesTest.qq_VerifyQuotebyName(QuickQuotesTest.java:54)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,30 +78,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- contract_VerifyHeadingOnContractListingPage -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.ContractTest@12405818]" name="Teardown" is-config="true" duration-ms="4219" started-at="2021-10-14T12:35:10 IST" finished-at="2021-10-14T12:35:14 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Teardown -->
-      </class> <!-- com.md.testcases.ContractTest -->
-      <class name="com.md.testcases.QuickQuotesTest">
-        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="QQSetUp" is-config="true" duration-ms="64340" started-at="2021-10-14T12:32:27 IST" finished-at="2021-10-14T12:33:31 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QQSetUp -->
-        <test-method status="PASS" signature="qq_VerifyGetQuoteButtonIsDisable()[pri:2, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="qq_VerifyGetQuoteButtonIsDisable" duration-ms="2414" started-at="2021-10-14T12:33:31 IST" finished-at="2021-10-14T12:33:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyGetQuoteButtonIsDisable -->
-        <test-method status="PASS" signature="qq_VerifyToasterMessage()[pri:3, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="qq_VerifyToasterMessage" duration-ms="11971" started-at="2021-10-14T12:33:33 IST" finished-at="2021-10-14T12:33:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyToasterMessage -->
-        <test-method status="PASS" signature="qq_VerifyQuotebyName()[pri:4, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="qq_VerifyQuotebyName" duration-ms="10489" started-at="2021-10-14T12:33:45 IST" finished-at="2021-10-14T12:33:56 IST">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- qq_VerifyQuotebyName -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="Teardown" is-config="true" duration-ms="193" started-at="2021-10-14T12:33:56 IST" finished-at="2021-10-14T12:33:56 IST">
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@6c3f5566]" name="Teardown" is-config="true" duration-ms="79" started-at="2021-10-14T16:53:23 IST" finished-at="2021-10-14T16:53:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->

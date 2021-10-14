@@ -21,8 +21,7 @@ public class QuickQuotesTest extends TestBase {
 	public  void QQSetUp() throws MalformedURLException, InterruptedException {
 		initializationAndLogin();
 		QuickQuotesPage = new QuickQuotesPage();
-		Thread.sleep(4000);
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		System.out.println("QQ_test start executing");
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
@@ -51,6 +50,7 @@ public class QuickQuotesTest extends TestBase {
 		boolean flag = QuickQuotesPage.createQQByName();
 		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
 		System.out.println("QQ  @test2");
+		Assert.assertFalse(flag);
 	}
 
 //	@Test (priority=6)
