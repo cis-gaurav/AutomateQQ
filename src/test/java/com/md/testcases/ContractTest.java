@@ -1,5 +1,7 @@
 package com.md.testcases;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.md.base.TestBase;
 import com.md.pages.ContractPage;
 import java.net.MalformedURLException;

@@ -67,6 +67,7 @@ public class Listeners extends TestBase implements ITestListener  {
 
 		public void onFinish(ITestContext context) {
 			// TODO Auto-generated method stub
+			System.out.println("Flush Report");
 			extent.flush();
 		}
 	}
