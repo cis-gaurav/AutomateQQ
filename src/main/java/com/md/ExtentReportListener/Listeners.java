@@ -32,7 +32,7 @@ public class Listeners extends TestBase implements ITestListener  {
 		public void onTestFailure(ITestResult result) {
 //			WebDriver driver = null;
 			// TODO Auto-generated method stub
-			test.fail(MarkupHelper.createLabel("Test case failed check error", ExtentColor.RED));
+			test.fail(MarkupHelper.createLabel("Test case failed check error and attched screenshot", ExtentColor.RED));
 			test.fail(result.getThrowable());
 			Object testObject = result.getInstance();
 			Class clazz = result.getTestClass().getRealClass();

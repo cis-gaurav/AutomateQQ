@@ -22,17 +22,17 @@ public class ContractTest extends TestBase {
 		System.out.println("Contract_test_ starts");
 	}
 
-//	@Test(priority=11)
-//	public void contract_VerifyUserIsAbleToAddContract() throws InterruptedException{		
-//		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
-//		Assert.assertTrue(flag);
-//	}	
+	@Test(priority=11)
+	public void contract_VerifyUserIsAbleToAddContract() throws InterruptedException{		
+		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
+		Assert.assertTrue(flag);
+	}	
 	
 	@Test(priority=12)
 	public void contract_VerifyHeadingOnContractListingPage() throws InterruptedException{
 		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
 		Assert.assertTrue(flag);
-	
+		Assert.assertFalse(flag);
 
 	}
 //	
