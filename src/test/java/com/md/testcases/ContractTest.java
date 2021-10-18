@@ -35,13 +35,13 @@ public class ContractTest extends TestBase {
 		Assert.assertTrue(flag);
 
 	}
-//	
-//	@Test(priority=13)
-//	public void contract_VerifyUserIsAbleToSearchContract() throws InterruptedException {	 
-//		boolean flag = contractPage.VerifyUserIsAbleToSearchContract();
-//		Assert.assertTrue(flag);
-//	}
-//	
+	
+	@Test(priority=13)
+	public void contract_VerifyUserIsAbleToSearchContract() throws InterruptedException {	 
+		boolean flag = contractPage.VerifyUserIsAbleToSearchContract();
+		Assert.assertTrue(flag);
+	}
+	
 //	@Test(priority=14)
 //	public void contract_VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
 //		boolean flag = contractPage.VerifyAlertMsgOnSearchingContracts();

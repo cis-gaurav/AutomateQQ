@@ -38,13 +38,13 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertFalse(flag);
 	}
 	
-//	@Test(priority=3)
-//	public void qq_VerifyToasterMessage() throws InterruptedException {
-//		boolean flag = QuickQuotesPage.createToasterMessage();
-//		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
-//		System.out.println("QQ  @test1");
-//	}
-//
+	@Test(priority=3)
+	public void qq_VerifyToasterMessage() throws InterruptedException {
+		boolean flag = QuickQuotesPage.createToasterMessage();
+		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
+		System.out.println("QQ  @test1");
+	}
+
 //	@Test(priority=4)
 //	public void qq_VerifyQuotebyName() throws Throwable {
 //		boolean flag = QuickQuotesPage.createQQByName();
