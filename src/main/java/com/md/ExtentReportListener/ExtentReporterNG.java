@@ -9,6 +9,7 @@ public class ExtentReporterNG {
 public static ExtentReports extentReportGenerator() {
 
 	String path = System.getProperty("user.dir") + "\\reports\\Index.html";
+	System.out.println("Inside ExtentReporterNG");
 //	String path = System.getProperty("user.dir") + "\\123.html";
 	ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 	reporter.config().setReportName("Market Dojo_ Automation Report");
