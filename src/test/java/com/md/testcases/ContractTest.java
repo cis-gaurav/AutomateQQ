@@ -22,13 +22,13 @@ public class ContractTest extends TestBase {
 		Thread.sleep(4000);	
 		System.out.println("*******Contract_test_ starts*******");
 	}
-//
-//	@Test(priority=11)
-//	public void contract_VerifyUserIsAbleToAddContract() throws InterruptedException{		
-//		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
-//		Assert.assertTrue(flag);
-//	}	
-//	
+
+	@Test(priority=11)
+	public void contract_VerifyUserIsAbleToAddContract() throws InterruptedException{		
+		boolean flag = contractPage.VerifyUserIsAbleToAddContract();
+		Assert.assertTrue(flag);
+	}	
+	
 	@Test(priority=12)
 	public void contract_VerifyHeadingOnContractListingPage() throws InterruptedException{
 		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
@@ -42,17 +42,17 @@ public class ContractTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 	
-//	@Test(priority=14)
-//	public void contract_VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
-//		boolean flag = contractPage.VerifyAlertMsgOnSearchingContracts();
-//		Assert.assertTrue(flag);
-//	}
-//			
-//	@Test(priority=15)
-//	public void contract_VerifySearchContractUsingTitle() throws InterruptedException {		 
-//		boolean flag = contractPage.VerifySearchContractUsingTitle();
-//		Assert.assertTrue(flag);
-//	}
+	@Test(priority=14)
+	public void contract_VerifyAlertMsgOnSearchingContracts() throws InterruptedException {
+		boolean flag = contractPage.VerifyAlertMsgOnSearchingContracts();
+		Assert.assertTrue(flag);
+	}
+			
+	@Test(priority=15)
+	public void contract_VerifySearchContractUsingTitle() throws InterruptedException {		 
+		boolean flag = contractPage.VerifySearchContractUsingTitle();
+		Assert.assertTrue(flag);
+	}
 //			
 //	@Test(priority=16)
 //	public void contract_VerifySearchContractUsingStartDate() throws InterruptedException {	
