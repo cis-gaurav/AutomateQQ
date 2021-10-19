@@ -1,49 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="354156" started-at="2021-10-19T10:20:17 IST" finished-at="2021-10-19T10:26:11 IST">
+  <suite name="Suite" duration-ms="345062" started-at="2021-10-19T17:08:20 IST" finished-at="2021-10-19T17:14:05 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="354156" started-at="2021-10-19T10:20:17 IST" finished-at="2021-10-19T10:26:11 IST">
-      <class name="com.md.testcases.QuickQuotesTest">
-        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="QQSetUp" is-config="true" duration-ms="39710" started-at="2021-10-19T10:20:17 IST" finished-at="2021-10-19T10:20:56 IST">
+    <test name="Test" duration-ms="345062" started-at="2021-10-19T17:08:20 IST" finished-at="2021-10-19T17:14:05 IST">
+      <class name="com.md.testcases.ContractTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.md.testcases.ContractTest@5cee5251]" name="setUp" is-config="true" duration-ms="50689" started-at="2021-10-19T17:08:20 IST" finished-at="2021-10-19T17:09:11 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- QQSetUp -->
-        <test-method status="PASS" signature="qq_VerifyValidationMessageOnNamefield()[pri:1, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="qq_VerifyValidationMessageOnNamefield" duration-ms="17709" started-at="2021-10-19T10:20:56 IST" finished-at="2021-10-19T10:21:14 IST">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="contract_VerifyUserIsAbleToAddContract()[pri:11, instance:com.md.testcases.ContractTest@5cee5251]" name="contract_VerifyUserIsAbleToAddContract" duration-ms="135101" started-at="2021-10-19T17:09:11 IST" finished-at="2021-10-19T17:11:26 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifyValidationMessageOnNamefield -->
-        <test-method status="PASS" signature="qq_VerifyGetQuoteButtonIsDisable()[pri:2, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="qq_VerifyGetQuoteButtonIsDisable" duration-ms="2060" started-at="2021-10-19T10:21:14 IST" finished-at="2021-10-19T10:21:16 IST">
+        </test-method> <!-- contract_VerifyUserIsAbleToAddContract -->
+        <test-method status="PASS" signature="contract_VerifyHeadingOnContractListingPage()[pri:12, instance:com.md.testcases.ContractTest@5cee5251]" name="contract_VerifyHeadingOnContractListingPage" duration-ms="37592" started-at="2021-10-19T17:11:26 IST" finished-at="2021-10-19T17:12:03 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifyGetQuoteButtonIsDisable -->
-        <test-method status="PASS" signature="qq_VerifyToasterMessage()[pri:3, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="qq_VerifyToasterMessage" duration-ms="8928" started-at="2021-10-19T10:21:16 IST" finished-at="2021-10-19T10:21:25 IST">
+        </test-method> <!-- contract_VerifyHeadingOnContractListingPage -->
+        <test-method status="PASS" signature="contract_VerifyUserIsAbleToSearchContract()[pri:13, instance:com.md.testcases.ContractTest@5cee5251]" name="contract_VerifyUserIsAbleToSearchContract" duration-ms="37979" started-at="2021-10-19T17:12:03 IST" finished-at="2021-10-19T17:12:41 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifyToasterMessage -->
-        <test-method status="PASS" signature="qq_VerifyQuotebyName()[pri:4, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="qq_VerifyQuotebyName" duration-ms="9847" started-at="2021-10-19T10:21:25 IST" finished-at="2021-10-19T10:21:35 IST">
+        </test-method> <!-- contract_VerifyUserIsAbleToSearchContract -->
+        <test-method status="PASS" signature="contract_VerifyAlertMsgOnSearchingContracts()[pri:14, instance:com.md.testcases.ContractTest@5cee5251]" name="contract_VerifyAlertMsgOnSearchingContracts" duration-ms="42312" started-at="2021-10-19T17:12:41 IST" finished-at="2021-10-19T17:13:24 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifyQuotebyName -->
-        <test-method status="PASS" signature="qq_VerfiyQQEventWithAllDetails()[pri:6, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="qq_VerfiyQQEventWithAllDetails" duration-ms="29025" started-at="2021-10-19T10:21:35 IST" finished-at="2021-10-19T10:22:04 IST">
+        </test-method> <!-- contract_VerifyAlertMsgOnSearchingContracts -->
+        <test-method status="PASS" signature="contract_VerifySearchContractUsingTitle()[pri:15, instance:com.md.testcases.ContractTest@5cee5251]" name="contract_VerifySearchContractUsingTitle" duration-ms="40925" started-at="2021-10-19T17:13:24 IST" finished-at="2021-10-19T17:14:04 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerfiyQQEventWithAllDetails -->
-        <test-method status="PASS" signature="qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission()[pri:7, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission" duration-ms="236325" started-at="2021-10-19T10:22:04 IST" finished-at="2021-10-19T10:26:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission -->
-        <test-method status="PASS" signature="qq_VerifyEditContent()[pri:8, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="qq_VerifyEditContent" duration-ms="10065" started-at="2021-10-19T10:26:00 IST" finished-at="2021-10-19T10:26:10 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyEditContent -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@1f7030a6]" name="Teardown" is-config="true" duration-ms="433" started-at="2021-10-19T10:26:10 IST" finished-at="2021-10-19T10:26:11 IST">
+        </test-method> <!-- contract_VerifySearchContractUsingTitle -->
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.ContractTest@5cee5251]" name="Teardown" is-config="true" duration-ms="423" started-at="2021-10-19T17:14:04 IST" finished-at="2021-10-19T17:14:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-      </class> <!-- com.md.testcases.QuickQuotesTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.md.testcases.ContractTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
