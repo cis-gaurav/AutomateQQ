@@ -44,32 +44,32 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
 		System.out.println("QQ  @test1");
 	}
-//
-//	@Test(priority=4)
-//	public void qq_VerifyQuotebyName() throws Throwable {
-//		boolean flag = QuickQuotesPage.createQQByName();
-//		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
-//		System.out.println("QQ  @test2");
-//		Assert.assertTrue(flag);
-//	}
-//
-//	@Test (priority=6)
-//	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
-//		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
-//		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
-//	}
-//
-//	@Test(priority=7)	
-//	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
-//		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
-//		Assert.assertTrue(flag,"verifySandpitEventWithQuestionnaireAndAllowResubmission is failed ask devloper to fix ");
-//	}
-//	
-//	@Test(priority=8)	
-//	public void qq_VerifyEditContent() throws InterruptedException { 
-//		boolean flag= QuickQuotesPage.createEditContent();
-//		Assert.assertTrue(flag);
-//	}
+
+	@Test(priority=4)
+	public void qq_VerifyQuotebyName() throws Throwable {
+		boolean flag = QuickQuotesPage.createQQByName();
+		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
+		System.out.println("QQ  @test2");
+		Assert.assertTrue(flag);
+	}
+
+	@Test (priority=6)
+	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
+		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
+		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
+	}
+
+	@Test(priority=7)	
+	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
+		Assert.assertTrue(flag,"verifySandpitEventWithQuestionnaireAndAllowResubmission is failed ask devloper to fix ");
+	}
+	
+	@Test(priority=8)	
+	public void qq_VerifyEditContent() throws InterruptedException { 
+		boolean flag= QuickQuotesPage.createEditContent();
+		Assert.assertTrue(flag);
+	}
 
 //	@Test(priority=8)
 //	public void Rough() throws InterruptedException {
