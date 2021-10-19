@@ -288,7 +288,7 @@ public class QuickQuotesPage extends TestBase {
 
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(quickquoteDashbaord));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
