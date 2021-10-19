@@ -96,7 +96,7 @@ public class TestBase {
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 			System.out.println("Logged in and redirect to MD Dashbaord");
-			Thread.sleep(3000);
+//			Thread.sleep(000);
 		}
 	}
 	
