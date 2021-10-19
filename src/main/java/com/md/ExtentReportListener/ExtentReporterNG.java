@@ -8,7 +8,7 @@ public class ExtentReporterNG {
 
 public static ExtentReports extentReportGenerator() {
 
-	String path = System.getProperty("user.dir") + "//reports//testCaseReport.html";
+	String path = System.getProperty("user.dir") + "//reports//index.html";
 	System.out.println("Inside ExtentReporterNG");
 //	String path = System.getProperty("user.dir") + "\\123.html";
 	ExtentSparkReporter reporter = new ExtentSparkReporter(path);
