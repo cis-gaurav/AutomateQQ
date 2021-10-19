@@ -24,7 +24,7 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 
-// how to read data from properties file below 3 lines will do
+/////////////////// how to read data from properties file below 3 lines will do
 	public TestBase() {
 		try {
 			prop = new Properties(); // Need to create object of properties class
@@ -38,7 +38,7 @@ public class TestBase {
 		}
 	}
 
-// Define Execution Environment here i.e. Local/server for Jenkins
+///////////// Define Execution Environment here i.e. Local/server for Jenkins
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
 		String ExecutionLocation = "server";
 
@@ -72,7 +72,7 @@ public class TestBase {
 			options.addArguments("--allowed-ips");
 			driver = new ChromeDriver(options);
 			System.out.println("Driver Intilaized");
-// Navigate to url and login to marketdojo application 
+///////////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.get(prop.getProperty("url"));
@@ -86,7 +86,7 @@ public class TestBase {
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
 			driver = new ChromeDriver();
 			System.out.println("Driver Intilaized");
-// Navigate to url and login to marketdojo application 
+///////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.get(prop.getProperty("url"));
@@ -100,15 +100,15 @@ public class TestBase {
 		}
 	}
 	
-//Screenshot of failed test case 
-//	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException 
-//	{
-//		TakesScreenshot ts = (TakesScreenshot) driver;
-//		File source = ts.getScreenshotAs(OutputType.FILE);
-//		String destPath = System.getProperty("user.dir")+"\\reports\\" +TestCaseName+ ".png";
-//		File file = new File(destPath);
-//		FileUtils.copyFile(source, file);
-//		return destPath;
-//	}
+/////////////////////////Screenshot of failed test case 
+	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException 
+	{
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destPath = System.getProperty("user.dir")+"\\reports\\" +TestCaseName+ ".png";
+		File file = new File(destPath);
+		FileUtils.copyFile(source, file);
+		return destPath;
+	}
 	
 }

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Market Dojo_ Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 19, 2021 09:19:33 AM</span></a>
+<a href="#"><span class="badge badge-primary">Oct 19, 2021 09:46:04 AM</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('device-view')">
@@ -82,7 +77,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -102,25 +96,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author="GauravJain"
           tag=""
           device="Windows10,Chrome">
           <div class="test-detail">
             <p class="name">qq_VerifyGetQuoteButtonIsDisable</p>
             <p class="text-sm">
-              <span>9:19:56 AM</span> / <span>00:01:00:578</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>9:47:23 AM</span> / <span>00:00:01:553</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">qq_VerifyGetQuoteButtonIsDisable</h5>
-<span class='badge badge-success'>10.19.2021 9:19:56 AM</span>
-<span class='badge badge-danger'>10.19.2021 9:20:57 AM</span>
-<span class='badge badge-default'>00:01:00:578</span>
+<h5 class="test-status text-pass">qq_VerifyGetQuoteButtonIsDisable</h5>
+<span class='badge badge-success'>10.19.2021 9:47:23 AM</span>
+<span class='badge badge-danger'>10.19.2021 9:47:25 AM</span>
+<span class='badge badge-default'>00:00:01:553</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -133,88 +127,17 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>9:20:57 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:25 AM</td>
         <td>
-          <span class='badge white-text red'>Test case failed check error</span>
+          Sucessful
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>9:20:57 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:25 AM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=94.0.4606.81)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'CISM-I-458', ip: '192.168.2.203', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:51536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 53858cf53782617d8b82341789a6742b
-*** Element info: {Using=xpath, value=//label[text()='Who to invite']}
-	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.toString(Unknown Source)
-	at java.lang.String.valueOf(String.java:2994)
-	at java.lang.StringBuilder.append(StringBuilder.java:131)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:683)
-	at java.lang.String.valueOf(String.java:2994)
-	at java.lang.StringBuilder.append(StringBuilder.java:131)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:268)
-	at com.md.pages.QuickQuotesPage.createGetQuoteButtonIsDisable(QuickQuotesPage.java:340)
-	at com.md.testcases.QuickQuotesTest.qq_VerifyGetQuoteButtonIsDisable(QuickQuotesTest.java:37)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-	at org.testng.TestNG.runSuites(TestNG.java:1039)
-	at org.testng.TestNG.run(TestNG.java:1007)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</textarea>
-          
+          <span class='badge white-text green'>Test case passed sucessfully</span>
         </td>
       </tr>
   </tbody>
@@ -222,25 +145,25 @@ Session ID: 53858cf53782617d8b82341789a6742b
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="2"
+        <li class="test-item"  status="pass" test-id="2"
           author="GauravJain"
           tag=""
           device="Windows10,Chrome">
           <div class="test-detail">
             <p class="name">qq_VerifyToasterMessage</p>
             <p class="text-sm">
-              <span>9:20:57 AM</span> / <span>00:00:02:042</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>9:47:25 AM</span> / <span>00:00:24:720</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">qq_VerifyToasterMessage</h5>
-<span class='badge badge-success'>10.19.2021 9:20:57 AM</span>
-<span class='badge badge-danger'>10.19.2021 9:20:59 AM</span>
-<span class='badge badge-default'>00:00:02:042</span>
+<h5 class="test-status text-pass">qq_VerifyToasterMessage</h5>
+<span class='badge badge-success'>10.19.2021 9:47:25 AM</span>
+<span class='badge badge-danger'>10.19.2021 9:47:49 AM</span>
+<span class='badge badge-default'>00:00:24:720</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -253,76 +176,17 @@ Session ID: 53858cf53782617d8b82341789a6742b
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>9:20:59 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:49 AM</td>
         <td>
-          <span class='badge white-text red'>Test case failed check error</span>
+          Sucessful
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>9:20:59 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:49 AM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=94.0.4606.81)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'CISM-I-458', ip: '192.168.2.203', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:51536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 53858cf53782617d8b82341789a6742b
-	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.md.pages.QuickQuotesPage.createToasterMessage(QuickQuotesPage.java:351)
-	at com.md.testcases.QuickQuotesTest.qq_VerifyToasterMessage(QuickQuotesTest.java:43)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-	at org.testng.TestNG.runSuites(TestNG.java:1039)
-	at org.testng.TestNG.run(TestNG.java:1007)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</textarea>
-          
+          <span class='badge white-text green'>Test case passed sucessfully</span>
         </td>
       </tr>
   </tbody>
@@ -337,7 +201,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
           <div class="test-detail">
             <p class="name">contract_VerifyHeadingOnContractListingPage</p>
             <p class="text-sm">
-              <span>9:21:05 AM</span> / <span>00:00:00:000</span>
+              <span>9:48:54 AM</span> / <span>00:00:37:438</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -346,9 +210,9 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">contract_VerifyHeadingOnContractListingPage</h5>
-<span class='badge badge-success'>10.19.2021 9:21:05 AM</span>
-<span class='badge badge-danger'>10.19.2021 9:21:05 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>10.19.2021 9:48:54 AM</span>
+<span class='badge badge-danger'>10.19.2021 9:49:32 AM</span>
+<span class='badge badge-default'>00:00:37:438</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -356,7 +220,28 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <div class="m-t-15"><span class="badge badge-pill badge-default">GauravJain</span>
 <span class="badge badge-pill badge-default">Windows10,Chrome</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:49:32 AM</td>
+        <td>
+          Sucessful
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:49:32 AM</td>
+        <td>
+          <span class='badge white-text green'>Test case passed sucessfully</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="4"
           author="GauravJain"
@@ -365,7 +250,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
           <div class="test-detail">
             <p class="name">contract_VerifyUserIsAbleToSearchContract</p>
             <p class="text-sm">
-              <span>9:21:05 AM</span> / <span>00:00:00:000</span>
+              <span>9:49:32 AM</span> / <span>00:00:36:673</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -374,9 +259,9 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">contract_VerifyUserIsAbleToSearchContract</h5>
-<span class='badge badge-success'>10.19.2021 9:21:05 AM</span>
-<span class='badge badge-danger'>10.19.2021 9:21:05 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>10.19.2021 9:49:32 AM</span>
+<span class='badge badge-danger'>10.19.2021 9:50:09 AM</span>
+<span class='badge badge-default'>00:00:36:673</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -384,7 +269,28 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <div class="m-t-15"><span class="badge badge-pill badge-default">GauravJain</span>
 <span class="badge badge-pill badge-default">Windows10,Chrome</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:50:09 AM</td>
+        <td>
+          Sucessful
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:50:09 AM</td>
+        <td>
+          <span class='badge white-text green'>Test case passed sucessfully</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
       </ul>
     </div>
@@ -395,63 +301,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>2</span>
-</span>
-<p class="name">org.openqa.selenium.NoSuchWindowException</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.NoSuchWindowException</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:19:56 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='1'>qq_VerifyGetQuoteButtonIsDisable</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:20:57 AM</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>qq_VerifyToasterMessage</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view device-view attributes-view">
+<div class="test-wrapper row view device-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
@@ -462,8 +312,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>2</span>
-<span class='badge log badge-danger'>2</span>
+<span class='badge log pass-bg'>4</span>
 </span>
 <p class="name">Windows10,Chrome</p>
 <p class="duration text-sm">4 tests</p>
@@ -471,8 +320,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <div class="test-contents d-none">
 <div class="info">
 <h4>Windows10,Chrome</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -483,30 +331,30 @@ Session ID: 53858cf53782617d8b82341789a6742b
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:19:56 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:47:23 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>qq_VerifyGetQuoteButtonIsDisable</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:20:57 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:47:25 AM</td>
 <td>
 <a href="#" class="linked" test-id='2' id='2'>qq_VerifyToasterMessage</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:21:05 AM</td>
+<td>09:48:54 AM</td>
 <td>
 <a href="#" class="linked" test-id='3' id='3'>contract_VerifyHeadingOnContractListingPage</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:21:05 AM</td>
+<td>09:49:32 AM</td>
 <td>
 <a href="#" class="linked" test-id='4' id='4'>contract_VerifyUserIsAbleToSearchContract</a>
 </td>
@@ -534,8 +382,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>2</span>
-<span class='badge log badge-danger'>2</span>
+<span class='badge log pass-bg'>4</span>
 </span>
 <p class="name">GauravJain</p>
 <p class="duration text-sm">4 tests</p>
@@ -543,8 +390,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <div class="test-contents d-none">
 <div class="info">
 <h4>GauravJain</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -555,30 +401,30 @@ Session ID: 53858cf53782617d8b82341789a6742b
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:19:56 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:47:23 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>qq_VerifyGetQuoteButtonIsDisable</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:20:57 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:47:25 AM</td>
 <td>
 <a href="#" class="linked" test-id='2' id='2'>qq_VerifyToasterMessage</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:21:05 AM</td>
+<td>09:48:54 AM</td>
 <td>
 <a href="#" class="linked" test-id='3' id='3'>contract_VerifyHeadingOnContractListingPage</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:21:05 AM</td>
+<td>09:49:32 AM</td>
 <td>
 <a href="#" class="linked" test-id='4' id='4'>contract_VerifyUserIsAbleToSearchContract</a>
 </td>
@@ -600,25 +446,25 @@ Session ID: 53858cf53782617d8b82341789a6742b
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 19, 2021 09:19:33 AM</h3>
+<h3>Oct 19, 2021 09:46:04 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 19, 2021 09:21:05 AM</h3>
+<h3>Oct 19, 2021 09:50:09 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>2</h3>
+<h3>4</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -634,12 +480,12 @@ Session ID: 53858cf53782617d8b82341789a6742b
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
-<b>2</b> tests passed
+<div><small data-tooltip='100%'>
+<b>4</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>2</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -657,9 +503,9 @@ Session ID: 53858cf53782617d8b82341789a6742b
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div><small data-tooltip='100%'><b>8</b> events passed</small></div>
 <div>
-<small data-tooltip='100%'><b>4</b> events failed,
+<small data-tooltip='0%'><b>0</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -676,7 +522,7 @@ Session ID: 53858cf53782617d8b82341789a6742b
 </div></div>
 <script>
 var timeline = {
-"qq_VerifyGetQuoteButtonIsDisable":60.578,"qq_VerifyToasterMessage":2.042,"contract_VerifyHeadingOnContractListingPage":0,"contract_VerifyUserIsAbleToSearchContract":0
+"qq_VerifyGetQuoteButtonIsDisable":1.553,"qq_VerifyToasterMessage":24.72,"contract_VerifyHeadingOnContractListingPage":37.438,"contract_VerifyUserIsAbleToSearchContract":36.673
 };
 </script>
 <div class="row">
@@ -688,11 +534,11 @@ var timeline = {
 <tbody>
 <tr>
 <td>GauravJain</td>
-<td>2</td>
-<td>2</td>
+<td>4</td>
 <td>0</td>
 <td>0</td>
-<td>50%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -706,11 +552,11 @@ var timeline = {
 <tbody>
 <tr>
 <td>Windows10,Chrome</td>
-<td>2</td>
-<td>2</td>
+<td>4</td>
 <td>0</td>
 <td>0</td>
-<td>50%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -735,8 +581,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 2,
-failParent: 2,
+passParent: 4,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -752,8 +598,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 4,
+passEvents: 8,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

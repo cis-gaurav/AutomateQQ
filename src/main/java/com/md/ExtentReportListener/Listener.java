@@ -1,5 +1,8 @@
 package com.md.ExtentReportListener;
 
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -27,24 +30,24 @@ public class Listener extends TestBase implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-//		WebDriver driver = null;
+		WebDriver driver = null;
 		// TODO Auto-generated method stub
 		test.fail(MarkupHelper.createLabel("Test case failed check error", ExtentColor.RED));
 		test.fail(result.getThrowable());
-//		Object testObject = result.getInstance();
-//		Class clazz = result.getTestClass().getRealClass();
-//		try {
-//			driver = (WebDriver)clazz.getDeclaredField("driver").get(testObject);
-//		} catch (Exception e1) {
-//			// TODO Auto-generated catch block
-//		}
-//		try {
-//			test.addScreenCaptureFromPath(getScreenshotPath(result.getMethod().getMethodName(), driver),result.getMethod().getMethodName());
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
+		Object testObject = result.getInstance();
+		Class clazz = result.getTestClass().getRealClass();
+		try {
+			driver = (WebDriver)clazz.getDeclaredField("driver").get(testObject);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+		}
+		try {
+			test.addScreenCaptureFromPath(getScreenshotPath(result.getMethod().getMethodName(), driver),result.getMethod().getMethodName());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	public void onTestSkipped(ITestResult result) {
