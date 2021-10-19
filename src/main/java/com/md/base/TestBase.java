@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -41,7 +40,7 @@ public class TestBase {
 
 // Define Execution Environment here i.e. Local/server for Jenkins
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
-		String ExecutionLocation = "local";
+		String ExecutionLocation = "server";
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;
