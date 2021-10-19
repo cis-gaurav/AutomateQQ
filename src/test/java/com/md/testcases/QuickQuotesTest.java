@@ -32,11 +32,11 @@ public class QuickQuotesTest extends TestBase {
 //		Assert.assertTrue(flag);
 //	}
 //	
-//	@Test(priority=2)
-//	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
-//		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
-//		Assert.assertFalse(flag);
-//	}
+	@Test(priority=2)
+	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
+		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
+		Assert.assertFalse(flag);
+	}
 //	
 //	@Test(priority=3)
 //	public void qq_VerifyToasterMessage() throws InterruptedException {
