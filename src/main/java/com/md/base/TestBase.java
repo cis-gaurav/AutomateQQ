@@ -71,7 +71,7 @@ public class TestBase {
 			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.addArguments("--allowed-ips");
 			driver = new ChromeDriver(options);
-			System.out.println("Driver Intilaized");
+			System.out.println("*******Driver Intilaized*******");
 ///////////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

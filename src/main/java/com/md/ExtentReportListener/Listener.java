@@ -30,7 +30,7 @@ public class Listener extends TestBase implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-		WebDriver driver = null;
+//		WebDriver driver = null;
 		// TODO Auto-generated method stub
 		test.fail(MarkupHelper.createLabel("Test case failed check error", ExtentColor.RED));
 		test.fail(result.getThrowable());

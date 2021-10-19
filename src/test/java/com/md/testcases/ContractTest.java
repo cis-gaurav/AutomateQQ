@@ -20,7 +20,7 @@ public class ContractTest extends TestBase {
 		initializationAndLogin();
 	    contractPage = new ContractPage();
 		Thread.sleep(4000);	
-		System.out.println("Contract_test_ starts");
+		System.out.println("*******Contract_test_ starts*******");
 	}
 //
 //	@Test(priority=11)
@@ -246,7 +246,7 @@ public class ContractTest extends TestBase {
 	
 	@AfterClass
 	public void Teardown() throws Exception {
-	System.out.println("Contract_test_ ends");
+	System.out.println("*******Contract_test_ ends*******");
     driver.close();
 	}
 
