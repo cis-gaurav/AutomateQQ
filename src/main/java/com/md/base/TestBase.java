@@ -96,19 +96,18 @@ public class TestBase {
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 			System.out.println("Logged in and redirect to MD Dashbaord");
-//			Thread.sleep(000);
 		}
 	}
 	
 /////////////////////////Screenshot of failed test case 
-	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException 
-	{
+	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException{
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destPath = System.getProperty("user.dir")+"\\reports\\" +TestCaseName+ ".png";
+		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png";
 		File file = new File(destPath);
 		FileUtils.copyFile(source, file);
 		return destPath;
 	}
+	 
 	
 }
