@@ -45,11 +45,11 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
 	}
 
-//	@Test(priority=4)
-//	public void qq_VerifyQuotebyName() throws Throwable {
-//		boolean flag = QuickQuotesPage.createQQByName();
-//		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
-//	}
+	@Test(priority=4)
+	public void qq_VerifyQuotebyName() throws Throwable {
+		boolean flag = QuickQuotesPage.createQQByName();
+		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
+	}
 //
 //	@Test (priority=6)
 //	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
