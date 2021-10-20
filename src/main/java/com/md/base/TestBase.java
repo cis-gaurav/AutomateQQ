@@ -40,7 +40,7 @@ public class TestBase {
 
 ///////////// Define Execution Environment here i.e. Local/server for Jenkins
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
-		String ExecutionLocation = "server";
+		String ExecutionLocation = "local";
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;
@@ -103,7 +103,8 @@ public class TestBase {
 	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException{
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png";
+//		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png";
+		String destPath = "reports/" +TestCaseName+".png";
 		File file = new File(destPath);
 		FileUtils.copyFile(source, file);
 		return destPath;
