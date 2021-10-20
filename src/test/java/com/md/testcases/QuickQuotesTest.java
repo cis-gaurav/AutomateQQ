@@ -35,8 +35,8 @@ public class QuickQuotesTest extends TestBase {
 	@Test(priority=2)
 	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
 		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
-//		Assert.assertFalse(flag);
-		Assert.assertTrue(flag);
+		Assert.assertFalse(flag);
+//		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=3)
