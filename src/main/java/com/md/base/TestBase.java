@@ -104,7 +104,7 @@ public class TestBase {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 //		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png";
-		String destPath = "reports/" +TestCaseName+".png";
+		String destPath = TestCaseName+".png";
 		File file = new File(destPath);
 		FileUtils.copyFile(source, file);
 		return destPath;
