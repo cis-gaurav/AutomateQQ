@@ -1,81 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="216094" started-at="2021-10-20T14:21:32 IST" finished-at="2021-10-20T14:25:08 IST">
+  <suite name="Suite" duration-ms="315998" started-at="2021-10-25T14:40:02 IST" finished-at="2021-10-25T14:45:18 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="216094" started-at="2021-10-20T14:21:32 IST" finished-at="2021-10-20T14:25:08 IST">
+    <test name="Test" duration-ms="315998" started-at="2021-10-25T14:40:02 IST" finished-at="2021-10-25T14:45:18 IST">
       <class name="com.md.testcases.ContractTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.md.testcases.ContractTest@433d61fb]" name="setUp" is-config="true" duration-ms="94725" started-at="2021-10-20T14:22:34 IST" finished-at="2021-10-20T14:24:09 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.md.testcases.ContractTest@7ed7259e]" name="setUp" is-config="true" duration-ms="73927" started-at="2021-10-25T14:41:36 IST" finished-at="2021-10-25T14:42:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="contract_VerifyHeadingOnContractListingPage()[pri:12, instance:com.md.testcases.ContractTest@433d61fb]" name="contract_VerifyHeadingOnContractListingPage" duration-ms="54900" started-at="2021-10-20T14:24:09 IST" finished-at="2021-10-20T14:25:04 IST">
+        <test-method status="PASS" signature="contract_VerifyUserIsAbleToAddContract()[pri:11, instance:com.md.testcases.ContractTest@7ed7259e]" name="contract_VerifyUserIsAbleToAddContract" duration-ms="113841" started-at="2021-10-25T14:42:50 IST" finished-at="2021-10-25T14:44:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contract_VerifyUserIsAbleToAddContract -->
+        <test-method status="PASS" signature="contract_VerifyHeadingOnContractListingPage()[pri:12, instance:com.md.testcases.ContractTest@7ed7259e]" name="contract_VerifyHeadingOnContractListingPage" duration-ms="33598" started-at="2021-10-25T14:44:44 IST" finished-at="2021-10-25T14:45:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contract_VerifyHeadingOnContractListingPage -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.ContractTest@433d61fb]" name="Teardown" is-config="true" duration-ms="4162" started-at="2021-10-20T14:25:04 IST" finished-at="2021-10-20T14:25:08 IST">
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.ContractTest@7ed7259e]" name="Teardown" is-config="true" duration-ms="159" started-at="2021-10-25T14:45:18 IST" finished-at="2021-10-25T14:45:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
       </class> <!-- com.md.testcases.ContractTest -->
       <class name="com.md.testcases.QuickQuotesTest">
-        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@5cee5251]" name="QQSetUp" is-config="true" duration-ms="51094" started-at="2021-10-20T14:21:32 IST" finished-at="2021-10-20T14:22:23 IST">
+        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@3d51f06e]" name="QQSetUp" is-config="true" duration-ms="76488" started-at="2021-10-25T14:40:02 IST" finished-at="2021-10-25T14:41:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QQSetUp -->
-        <test-method status="FAIL" signature="qq_VerifyGetQuoteButtonIsDisable()[pri:2, instance:com.md.testcases.QuickQuotesTest@5cee5251]" name="qq_VerifyGetQuoteButtonIsDisable" duration-ms="1428" started-at="2021-10-20T14:22:23 IST" finished-at="2021-10-20T14:22:25 IST">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at com.md.testcases.QuickQuotesTest.qq_VerifyGetQuoteButtonIsDisable(QuickQuotesTest.java:39)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="qq_VerifyValidationMessageOnNamefield()[pri:1, instance:com.md.testcases.QuickQuotesTest@3d51f06e]" name="qq_VerifyValidationMessageOnNamefield" duration-ms="17816" started-at="2021-10-25T14:41:18 IST" finished-at="2021-10-25T14:41:36 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifyGetQuoteButtonIsDisable -->
-        <test-method status="PASS" signature="qq_VerifyToasterMessage()[pri:3, instance:com.md.testcases.QuickQuotesTest@5cee5251]" name="qq_VerifyToasterMessage" duration-ms="9135" started-at="2021-10-20T14:22:25 IST" finished-at="2021-10-20T14:22:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyToasterMessage -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@5cee5251]" name="Teardown" is-config="true" duration-ms="138" started-at="2021-10-20T14:22:34 IST" finished-at="2021-10-20T14:22:34 IST">
+        </test-method> <!-- qq_VerifyValidationMessageOnNamefield -->
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@3d51f06e]" name="Teardown" is-config="true" duration-ms="110" started-at="2021-10-25T14:41:36 IST" finished-at="2021-10-25T14:41:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->

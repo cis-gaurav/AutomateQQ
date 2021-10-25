@@ -20,7 +20,7 @@ public class ContractTest extends TestBase {
 		initializationAndLogin();
 	    contractPage = new ContractPage();
 		Thread.sleep(4000);	
-		System.out.println("*******Contract_test_ starts*******");
+		logger.info("*******Contract_test_ starts*******");
 	}
 
 	@Test(priority=11)
@@ -33,7 +33,6 @@ public class ContractTest extends TestBase {
 	public void contract_VerifyHeadingOnContractListingPage() throws InterruptedException{
 		boolean flag = contractPage.VerifyHeadingOnContractListingPage();
 		Assert.assertTrue(flag);
-
 	}
 	
 	@Test(priority=13)
@@ -246,7 +245,7 @@ public class ContractTest extends TestBase {
 	
 	@AfterClass
 	public void Teardown() throws Exception {
-	System.out.println("*******Contract_test_ ends*******");
+	logger.info("*******Contract_test_ ends*******");
     driver.close();
 	}
 

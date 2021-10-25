@@ -22,21 +22,20 @@ public class QuickQuotesTest extends TestBase {
 		initializationAndLogin();
 		QuickQuotesPage = new QuickQuotesPage();
 		Thread.sleep(3000);
-		System.out.println("*******QQ_test start executing*******");
+		logger.info("*******QQ_test start executing*******");
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
 
-//	@Test(priority=1)
-//	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
-//		boolean flag = QuickQuotesPage.createNameFieldValidaions();
-//		Assert.assertTrue(flag);
-//	}
+	@Test(priority=1)
+	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
+		boolean flag = QuickQuotesPage.createNameFieldValidaions();
+		Assert.assertTrue(flag);
+	}
 	
 	@Test(priority=2)
 	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
 		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
 		Assert.assertFalse(flag);
-//		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=3)
@@ -69,14 +68,14 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 
-//	@Test(priority=8)
-//	public void Rough() throws InterruptedException {
-//		QuickQuotesPage.Rough1();
-//	}
+	@Test(priority=8)
+	public void Rough() throws InterruptedException {
+		QuickQuotesPage.Rough1();
+	}
 
 	@AfterClass
 	public void Teardown() throws Exception {
-		System.out.println("*******QQ_test ends*******");
+		logger.info("*******QQ_test ends*******");
 		driver.close();
 	}
 }
