@@ -69,10 +69,21 @@ public class QuickQuotesTest extends TestBase {
 	}
 
 	@Test(priority=8)
-	public void Rough() throws InterruptedException {
-		QuickQuotesPage.Rough1();
+	public void qq_VerifyDeleteQuote() throws InterruptedException {
+		QuickQuotesPage.deleteQuote();
 	}
-
+   
+	@Test(priority=9)
+	public void qq_VerifySearchQuote() throws InterruptedException {
+		QuickQuotesPage.searchQuote();
+	}
+	
+	@Test(priority=10)
+	public void qq_VerifyCreateMessage() throws InterruptedException {
+		QuickQuotesPage.createMessage();
+	}
+   
+   
 	@AfterClass
 	public void Teardown() throws Exception {
 		logger.info("*******QQ_test ends*******");
