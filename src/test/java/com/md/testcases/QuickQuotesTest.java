@@ -50,19 +50,19 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
 	}
 
-	@Test (priority=6)
+	@Test (priority=5)
 	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
 		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
 		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
 	}
 
-	@Test(priority=7)	
+	@Test(priority=6)	
 	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
 		Assert.assertTrue(flag,"verifySandpitEventWithQuestionnaireAndAllowResubmission is failed ask devloper to fix ");
 	}
 	
-	@Test(priority=8)	
+	@Test(priority=7)	
 	public void qq_VerifyEditContent() throws InterruptedException { 
 		boolean flag= QuickQuotesPage.createEditContent();
 		Assert.assertTrue(flag);
@@ -82,7 +82,6 @@ public class QuickQuotesTest extends TestBase {
 	public void qq_VerifyCreateMessage() throws InterruptedException {
 		QuickQuotesPage.createMessage();
 	}
-   
    
 	@AfterClass
 	public void Teardown() throws Exception {
