@@ -412,6 +412,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
@@ -665,13 +666,14 @@ public class QuickQuotesPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
+        Thread.sleep(2000);
         wait.until(ExpectedConditions.elementToBeClickable(searchResult));
         Assert.assertEquals(searchResult.getText(), "Search Quote");
         return searchResult.isDisplayed();	
 	}
 	public boolean createMessage() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 //		wait.until(ExpectedConditions.elementToBeClickable(sandpitHeader));

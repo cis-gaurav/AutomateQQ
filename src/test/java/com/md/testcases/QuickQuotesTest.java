@@ -26,16 +26,17 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
 
-	@Test(priority=1)
-	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
-		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
-		Assert.assertFalse(flag);
-	}
-	
+
 	@Test(priority=2)
 	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
 		boolean flag = QuickQuotesPage.createNameFieldValidaions();
 		Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=1)
+	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
+		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
+		Assert.assertFalse(flag);
 	}
 	
 	@Test(priority=3)
