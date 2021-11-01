@@ -525,7 +525,7 @@ public class QuickQuotesPage extends TestBase {
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
 		sandpitHeader.click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();// click on new quote button on quote listing page
 		wait.until(ExpectedConditions.elementToBeClickable(name));
