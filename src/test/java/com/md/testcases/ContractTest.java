@@ -19,7 +19,7 @@ public class ContractTest extends TestBase {
 	public void setUp() throws MalformedURLException, InterruptedException {
 		initializationAndLogin();
 	    contractPage = new ContractPage();
-		Thread.sleep(4000);	
+		Thread.sleep(3000);	
 		logger.info("*******Contract_test_ starts*******");
 	}
 
@@ -64,27 +64,30 @@ public class ContractTest extends TestBase {
 		boolean flag = contractPage.VerifySearchContractUsingExpiryDate();
 		Assert.assertTrue(flag);
 	}	
-	@Test(priority=18)
+	
+	@Test(priority=18,enabled= false)
 	public void contract_VerifySearchContractUsingCategory() throws InterruptedException {				
 		boolean flag = contractPage.VerifySearchContractUsingCategory();
 		Assert.assertTrue(flag);
 	}
-	@Test(priority=19)
+	
+	@Test(priority=19 )
 	public void contract_VerifySearchContractUsingSupplier() throws InterruptedException {	
 		boolean flag = contractPage.VerifySearchContractUsingSupplier();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(priority=20)
+	@Test(priority=20,enabled= false)
 	public void contract_VerifySearchContractUsingValue() throws InterruptedException {		
 		boolean flag = contractPage.VerifySearchContractUsingValue();
 		Assert.assertTrue(flag);
 	}
-	@Test(priority=21)
+	@Test(priority=21,enabled= false)
 	public void contract_VerifySearchContractUsingStakeHolder() throws InterruptedException {	
 		boolean flag = contractPage.VerifySearchContractUsingStakeHolder();
 		Assert.assertTrue(flag);
 	}
+	
 	@Test(priority=22)
 	public void contract_VerifyContractValidationMsg() throws InterruptedException{		
 		boolean flag = contractPage.VerifyContractValidationMsg();

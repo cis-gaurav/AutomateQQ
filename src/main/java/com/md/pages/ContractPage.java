@@ -201,8 +201,8 @@ import com.md.base.TestBase;
 		WebElement ListingPageContractTitleName;		
 		
 		@FindBy(xpath="//tr[@class='search-row']/td[6]/div/div//input[@id='search_input']")
-		static
-		WebElement CategorySearch;
+//		@FindBy(xpath="//td[5]//div[1]//div[1]//input[1]")
+		static WebElement CategorySearch;
 		
 		@FindBy(xpath="//ul[@class='optionContainer']/li[contains(text(),'Automation Category')]")
 		static
@@ -221,6 +221,7 @@ import com.md.base.TestBase;
 		WebElement ResetContractButton;				
 		
 		@FindBy(xpath="//tr[@class='search-row']/td[7]/div/div//input[@id='search_input']")
+//		@FindBy(xpath="/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/table[1]/thead[1]/tr[2]/td[6]/div[1]/div[1]/input[1]")
 		static
 		WebElement SupplierSearch;
 		
@@ -777,9 +778,12 @@ import com.md.base.TestBase;
 	        CategorySearch.click();
 	        
 	        //Select Owner
+	        Thread.sleep(3000);
+	        wait.until(ExpectedConditions.elementToBeClickable(CategoryName ));
 	        CategoryName.click();
 	        
 	        //Click on Search Button
+	        wait.until(ExpectedConditions.elementToBeClickable(SearchContractButton ));
 	        SearchContractButton.click();
 	        
 	        //verify Owner Contract is Displayed in Listing Page
@@ -845,6 +849,8 @@ import com.md.base.TestBase;
 		        //Click on Search Button
 		        SearchContractButton.click();
 		        
+		        Thread.sleep(2000);
+		        
 		        //verify Owner Contract is Displayed in Listing Page
 		        wait.until(ExpectedConditions.visibilityOf(ListingPageExpiryDate));
 				return ListingPageExpiryDate.isDisplayed();	        	   
@@ -860,7 +866,7 @@ import com.md.base.TestBase;
 		        Actions a=new Actions(driver);
 		        a.moveToElement(StateSearch).build().perform();
 		        
-		        Thread.sleep(2000);
+		        Thread.sleep(3000);
 		        //Enter Value
 		        ContractValue.click();
 		        
@@ -885,7 +891,7 @@ import com.md.base.TestBase;
 		        Actions a=new Actions(driver);
 		        a.moveToElement(StateSearch).build().perform();
 		        
-		        Thread.sleep(2000);
+		        Thread.sleep(4000);
 		        //click on Stakeholder Search
 		        StakeHolderSearch.click();
 		        

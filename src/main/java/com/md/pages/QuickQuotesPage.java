@@ -3,6 +3,7 @@ package com.md.pages;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.server.handler.interactions.touch.Scroll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -396,16 +397,14 @@ public class QuickQuotesPage extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
-		Thread.sleep(6000);
-//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
-		AdviceText.click();
-//		deadline.click();
-		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(name));
+		Thread.sleep(2000);
+		name.sendKeys(Keys.TAB);
 		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
@@ -497,7 +496,7 @@ public class QuickQuotesPage extends TestBase {
 		getQuoteButton.click();
 		// Verify on create page
 		// description Verify
-//		Thread.sleep(8000);
+		Thread.sleep(4000);
 		wait.until(ExpectedConditions.visibilityOf(particpantToggel));
 		briefToggel.click();
 		wait.until(ExpectedConditions.visibilityOf(descriptionVerify));
@@ -521,8 +520,8 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(6000);
-//		JavascriptExecutor executor = (JavascriptExecutor)driver;
-//		executor.executeScript("arguments[0].click();", sandpitHeader);
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", sandpitHeader);
 		sandpitHeader.click();
 		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -568,8 +567,8 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(8000);
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();", particpantToggel);
+		JavascriptExecutor executor1 = (JavascriptExecutor)driver;
+		executor1.executeScript("arguments[0].click();", particpantToggel);
 		particpantToggel.click();
 		Thread.sleep(2000);
 		scroll();
@@ -648,7 +647,7 @@ public class QuickQuotesPage extends TestBase {
         logger.info("Quote Deleted sucessfully");
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
         scrollUp();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
         searchForQuote.clear();
         searchForQuote.sendKeys("verify Delete quote");
@@ -661,9 +660,11 @@ public class QuickQuotesPage extends TestBase {
 	}
 	
 	public boolean searchQuote() throws InterruptedException {
+		Thread.sleep(3000);
 		searchForQuote.clear();
-		searchForQuote.sendKeys("Search Quote");
 		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
+		searchForQuote.sendKeys("Search Quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
         Thread.sleep(2000);
@@ -671,13 +672,16 @@ public class QuickQuotesPage extends TestBase {
         Assert.assertEquals(searchResult.getText(), "Search Quote");
         return searchResult.isDisplayed();	
 	}
+	
 	public boolean createMessage() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 //		wait.until(ExpectedConditions.elementToBeClickable(sandpitHeader));
-		sandpitHeader.click();
+//		sandpitHeader.click();
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", sandpitHeader);
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();

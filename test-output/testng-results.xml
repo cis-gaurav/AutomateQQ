@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="192769" started-at="2021-10-29T14:18:24 IST" finished-at="2021-10-29T14:21:37 IST">
+  <suite name="Default suite" duration-ms="35861" started-at="2021-11-01T20:02:10 IST" finished-at="2021-11-01T20:02:46 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="192769" started-at="2021-10-29T14:18:24 IST" finished-at="2021-10-29T14:21:37 IST">
+    <test name="Default test" duration-ms="35861" started-at="2021-11-01T20:02:10 IST" finished-at="2021-11-01T20:02:46 IST">
       <class name="com.md.testcases.QuickQuotesTest">
-        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@63440df3]" name="QQSetUp" is-config="true" duration-ms="54289" started-at="2021-10-29T14:18:24 IST" finished-at="2021-10-29T14:19:18 IST">
+        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@6950e31]" name="QQSetUp" is-config="true" duration-ms="29312" started-at="2021-11-01T20:02:10 IST" finished-at="2021-11-01T20:02:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QQSetUp -->
-        <test-method status="PASS" signature="qq_VerifyDeleteQuote()[pri:8, instance:com.md.testcases.QuickQuotesTest@63440df3]" name="qq_VerifyDeleteQuote" duration-ms="12884" started-at="2021-10-29T14:19:18 IST" finished-at="2021-10-29T14:19:31 IST">
+        <test-method status="PASS" signature="qq_VerifyValidationMessageOnNamefield()[pri:1, instance:com.md.testcases.QuickQuotesTest@6950e31]" name="qq_VerifyValidationMessageOnNamefield" duration-ms="4452" started-at="2021-11-01T20:02:40 IST" finished-at="2021-11-01T20:02:44 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifyDeleteQuote -->
-        <test-method status="PASS" signature="qq_VerifySearchQuote()[pri:9, instance:com.md.testcases.QuickQuotesTest@63440df3]" name="qq_VerifySearchQuote" duration-ms="829" started-at="2021-10-29T14:19:31 IST" finished-at="2021-10-29T14:19:32 IST">
+        </test-method> <!-- qq_VerifyValidationMessageOnNamefield -->
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@6950e31]" name="Teardown" is-config="true" duration-ms="2066" started-at="2021-11-01T20:02:44 IST" finished-at="2021-11-01T20:02:46 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifySearchQuote -->
-        <test-method status="PASS" signature="qq_VerifyCreateMessage()[pri:10, instance:com.md.testcases.QuickQuotesTest@63440df3]" name="qq_VerifyCreateMessage" duration-ms="124727" started-at="2021-10-29T14:19:32 IST" finished-at="2021-10-29T14:21:37 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyCreateMessage -->
+        </test-method> <!-- Teardown -->
       </class> <!-- com.md.testcases.QuickQuotesTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
