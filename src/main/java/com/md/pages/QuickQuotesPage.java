@@ -397,7 +397,7 @@ public class QuickQuotesPage extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(7000);
+		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
@@ -519,12 +519,13 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(6000);
+		Thread.sleep(7000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
 		sandpitHeader.click();
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();// click on new quote button on quote listing page
 		wait.until(ExpectedConditions.elementToBeClickable(name));
@@ -660,7 +661,8 @@ public class QuickQuotesPage extends TestBase {
 	}
 	
 	public boolean searchQuote() throws InterruptedException {
-		Thread.sleep(3000);
+		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
+		Thread.sleep(4000);
 		searchForQuote.clear();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
