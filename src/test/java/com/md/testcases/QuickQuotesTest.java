@@ -31,6 +31,7 @@ public class QuickQuotesTest extends TestBase {
 	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
 		boolean flag = QuickQuotesPage.createNameFieldValidaions();
 		Assert.assertTrue(flag);
+		logger.info("First test has passed");
 	}
 	
 	@Test(priority=2)
