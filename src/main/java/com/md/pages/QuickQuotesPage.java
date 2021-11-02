@@ -624,10 +624,12 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean deleteQuote() throws InterruptedException {
 		driver.get(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
 		name.sendKeys("verify Delete quote");
 		scrollTillBottom();
-		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
 		//Redirect to summary page 
