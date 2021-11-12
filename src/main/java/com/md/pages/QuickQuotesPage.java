@@ -564,12 +564,12 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+		Thread.sleep(9000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
-//		Thread.sleep(4000);
+		Thread.sleep(3000);
 //		sandpitHeader.click();
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
@@ -646,7 +646,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createEditContent() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+		Thread.sleep(9000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// Click on edit pencil icon right panel 
@@ -705,7 +705,7 @@ public class QuickQuotesPage extends TestBase {
         searchForQuote.sendKeys("verify Delete quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         wait.until(ExpectedConditions.elementToBeClickable(noQuoteFound));
         Assert.assertEquals(noQuoteFound.getText(), "No Quick Quotes Found");
         return noQuoteFound.isDisplayed();
@@ -721,7 +721,7 @@ public class QuickQuotesPage extends TestBase {
 		searchForQuote.sendKeys("Search Quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         wait.until(ExpectedConditions.elementToBeClickable(searchResult));
         Assert.assertEquals(searchResult.getText(), "Search Quote");
         return searchResult.isDisplayed();	
@@ -806,7 +806,7 @@ public class QuickQuotesPage extends TestBase {
 		name.sendKeys("Add from Group");
 //		Thread.sleep(2000);
 		scrollTillBottom();
-//		Thread.sleep(2000);
+		Thread.sleep(3000);//Adding because failed on Jenkins
 		wait.until(ExpectedConditions.elementToBeClickable(addGroup));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", addGroup);
@@ -854,6 +854,7 @@ public class QuickQuotesPage extends TestBase {
 		addParticpantManually.sendKeys("d1@mailinator.com");
 		addParticpantManually.sendKeys(Keys.ENTER);
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
+		Thread.sleep(2000);
 		getQuoteButton.click();
 		/////////////////////////Moving to edit mode again 
 		editQuote.click();
