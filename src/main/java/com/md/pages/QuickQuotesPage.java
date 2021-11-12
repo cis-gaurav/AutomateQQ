@@ -648,6 +648,7 @@ public class QuickQuotesPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// Click on edit pencil icon right panel 
+		Thread.sleep(3000);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", editcontentToolTip);
 //		editcontentToolTip.click();
@@ -703,8 +704,8 @@ public class QuickQuotesPage extends TestBase {
         searchForQuote.sendKeys("verify Delete quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
-        Thread.sleep(4000);
-        wait.until(ExpectedConditions.elementToBeClickable(noQuoteFound));
+        Thread.sleep(5000);// Adding as failing on Jenkins 
+//      wait.until(ExpectedConditions.elementToBeClickable(noQuoteFound));
         Assert.assertEquals(noQuoteFound.getText(), "No Quick Quotes Found");
         return noQuoteFound.isDisplayed();
 	}
@@ -719,8 +720,8 @@ public class QuickQuotesPage extends TestBase {
 		searchForQuote.sendKeys("Search Quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
-        Thread.sleep(4000);
-        wait.until(ExpectedConditions.elementToBeClickable(searchResult));
+        Thread.sleep(5000);// Adding wait as failed on Jenkins 
+//        wait.until(ExpectedConditions.elementToBeClickable(searchResult));
         Assert.assertEquals(searchResult.getText(), "Search Quote");
         return searchResult.isDisplayed();	
 	}
