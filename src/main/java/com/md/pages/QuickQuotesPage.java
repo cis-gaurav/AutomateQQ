@@ -442,7 +442,7 @@ public class QuickQuotesPage extends TestBase {
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
@@ -456,7 +456,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
@@ -468,9 +468,8 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createToasterMessage() throws InterruptedException {
-//		Thread.sleep(2000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		name.clear();
@@ -486,7 +485,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createQQByName() throws Throwable {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
@@ -496,14 +495,13 @@ public class QuickQuotesPage extends TestBase {
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
-//		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(quoteName));
 		return quoteName.isDisplayed();
 	}
 
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
@@ -564,7 +562,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(9000);
+//		Thread.sleep(9000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -646,7 +644,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createEditContent() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(9000);
+//		Thread.sleep(9000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// Click on edit pencil icon right panel 
@@ -673,7 +671,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean deleteQuote() throws InterruptedException {
 		driver.get(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
@@ -713,7 +711,7 @@ public class QuickQuotesPage extends TestBase {
 	
 	public boolean searchQuote() throws InterruptedException {
 		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
 		searchForQuote.clear();
@@ -729,7 +727,7 @@ public class QuickQuotesPage extends TestBase {
 	
 	public boolean createMessage() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 //		wait.until(ExpectedConditions.elementToBeClickable(sandpitHeader));
@@ -799,7 +797,7 @@ public class QuickQuotesPage extends TestBase {
 	
 	public boolean particpantAddedFromGroup() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(6000);
+//		Thread.sleep(6000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
@@ -823,7 +821,7 @@ public class QuickQuotesPage extends TestBase {
 	
 	public boolean EditQQEvent() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(7000);
+//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.clear();

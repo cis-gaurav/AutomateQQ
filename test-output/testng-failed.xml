@@ -5,8 +5,10 @@
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
+          <include name="qq_VerifyParticpantAddedFromGroup"/>
           <include name="QQSetUp"/>
-          <include name="qq_VerifyEditContent"/>
+          <include name="qq_VerifyCreateMessage"/>
+          <include name="qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission"/>
           <include name="Teardown"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
