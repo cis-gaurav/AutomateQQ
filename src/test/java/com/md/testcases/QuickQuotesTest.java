@@ -53,55 +53,58 @@ public class QuickQuotesTest extends TestBase {
 		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
 		logger.info("Quick Quote TC04 has passed");
 	}
-
-	@Test (priority=5)
-	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
-		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
-		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
-		logger.info("Quick Quote TC05 has passed");
-	}
-
-	@Test(priority=6)	
-	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
-		boolean flag=QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
-		Assert.assertTrue(flag,"verifySandpitEventWithQuestionnaireAndAllowResubmission is failed ask devloper to fix ");
-		logger.info("Quick Quote TC06 has passed");
-	}
 	
-	@Test(priority=7)	
+	@Test(priority=5)	
 	public void qq_VerifyEditContent() throws InterruptedException { 
 		boolean flag= QuickQuotesPage.createEditContent();
 		Assert.assertTrue(flag);
+		logger.info("Quick Quote TC05 has passed");
+	}
+	
+	@Test(priority=6)
+	public void qq_VerifyDeleteQuote() throws InterruptedException {
+		boolean flag=QuickQuotesPage.deleteQuote();
+		Assert.assertTrue(flag);
+		logger.info("Quick Quote TC06 has passed");
+	}
+   	
+	@Test (priority=7)
+	public void qq_VerifyParticpantAddedFromGroup() throws InterruptedException {
+		boolean flag=QuickQuotesPage.particpantAddedFromGroup();
+		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC07 has passed");
 	}
-
-	@Test(priority=8)
-	public void qq_VerifyDeleteQuote() throws InterruptedException {
-		QuickQuotesPage.deleteQuote();
+	
+	@Test (priority=8)
+	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
+		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
+		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC08 has passed");
 	}
-   
+
+	
 	@Test(priority=9)
-	public void qq_VerifySearchQuote() throws InterruptedException {
-		QuickQuotesPage.searchQuote();
+	public void qq_VerifyCreateMessage() throws InterruptedException {
+		QuickQuotesPage.createMessage();
 		logger.info("Quick Quote TC09 has passed");
 	}
 	
-	@Test(priority=10)
-	public void qq_VerifyCreateMessage() throws InterruptedException {
-		QuickQuotesPage.createMessage();
+	@Test(priority=10)	
+	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
 		logger.info("Quick Quote TC10 has passed");
 	}
-   
+	
 	@Test (priority=11)
-	public void qq_VerifyParticpantAddedFromGroup() throws InterruptedException {
-		QuickQuotesPage.particpantAddedFromGroup();
+	public void qq_VerfiyEditQQEvent() throws InterruptedException {
+		QuickQuotesPage.EditQQEvent();
 		logger.info("Quick Quote TC11 has passed");
 	}
 	
-	@Test (priority=12)
-	public void qq_VerfiyEditQQEvent() throws InterruptedException {
-		QuickQuotesPage.EditQQEvent();
+	@Test(priority=12)
+	public void qq_VerifySearchQuote() throws InterruptedException {
+		boolean flag=QuickQuotesPage.searchQuote();
+		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC12 has passed");
 	}
 	

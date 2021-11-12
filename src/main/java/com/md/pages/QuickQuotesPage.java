@@ -316,6 +316,9 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains (text(),  'Act as Host')]")
 	private WebElement actAsHost;
+	
+	@FindBy(xpath = "//button[text()='Leave Sandpit']")
+	private WebElement leaveSandpit;
 
 	@FindBy(xpath = "//*[contains (text(),  'Act as Sandpit Co 1')]")
 	private WebElement dropdownSandpitco1;
@@ -407,10 +410,11 @@ public class QuickQuotesPage extends TestBase {
 	// Actions
 	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(quickquoteDashbaord));
+		wait.until(ExpectedConditions.elementToBeClickable(quickquoteDashbaord));// Click on Quote from MD HomePage
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
+		Thread.sleep(3000);
 	}
 
 	// Global things
@@ -441,8 +445,9 @@ public class QuickQuotesPage extends TestBase {
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(7000);
+		Thread.sleep(7000);// This is execute first on Jenkins
+		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
@@ -484,8 +489,8 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQByName() throws Throwable {
+		Thread.sleep(2000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
@@ -500,6 +505,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
+		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -560,7 +566,8 @@ public class QuickQuotesPage extends TestBase {
 		return nameVerify.isDisplayed();
 	}
 
-	public boolean createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+	public void createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(9000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -638,11 +645,13 @@ public class QuickQuotesPage extends TestBase {
 		scrollTillBottom();
 //		String text= questionnaireAnswerVerify.getText();
 //		Assert.assertEquals(text, "This is the Automated Answer of Questionnaire");
+//		return questionnaireAnswerVerify.isDisplayed();
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
-		return questionnaireAnswerVerify.isDisplayed();
+		leaveSandpit.click();
 	}
 
 	public boolean createEditContent() throws InterruptedException {
+		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(9000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -671,30 +680,32 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean deleteQuote() throws InterruptedException {
+		Thread.sleep(3000);// Adding wait as failing on Jenkins 
 		driver.get(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		Thread.sleep(2000);// Adding wait as failing on Jenkins 
 		name.clear();
 		name.sendKeys("verify Delete quote");
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
+		System.out.println("Line no 685");
 		//Redirect to summary page 
-//		Thread.sleep(4000);
+		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
 		current.click();
 		wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		currentDrop.click();
 		//Redirect to list page 
-//		Thread.sleep(3000);
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 		current.click();
 		wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		delteDrop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
         confrimationOk.click();
-//        System.out.println("Quote Deleted sucessfully");
+//       System.out.println("Quote Deleted sucessfully");
         logger.info("Quote Deleted sucessfully");
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
         scrollUp();
@@ -726,13 +737,14 @@ public class QuickQuotesPage extends TestBase {
         return searchResult.isDisplayed();	
 	}
 	
-	public boolean createMessage() throws InterruptedException {
+	public void createMessage() throws InterruptedException {
+		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 //		wait.until(ExpectedConditions.elementToBeClickable(sandpitHeader));
 //		sandpitHeader.click();
+		Thread.sleep(4000);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
 		Thread.sleep(4000);
@@ -793,20 +805,25 @@ public class QuickQuotesPage extends TestBase {
         sendMsgBtn.click();
         wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
-        return msgSendToasterd2.isDisplayed();
+		leaveSandpit.click();
+//        return msgSendToasterd2.isDisplayed();
 	}
 	
 	public boolean particpantAddedFromGroup() throws InterruptedException {
+		Thread.sleep(5000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(6000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
 		name.sendKeys("Add from Group");
-//		Thread.sleep(2000);
-		scrollTillBottom();
+//		scrollTillBottom();
+		scroll();
 		Thread.sleep(3000);//Adding because failed on Jenkins
+		scroll();
+		Thread.sleep(3000);//Adding because failed on Jenkins
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		wait.until(ExpectedConditions.elementToBeClickable(addGroup));
+		scroll();
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", addGroup);
 		Thread.sleep(3000);
@@ -821,6 +838,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 	
 	public boolean EditQQEvent() throws InterruptedException {
+		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
