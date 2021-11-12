@@ -26,7 +26,6 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
 
-
 	@Test(priority=1)
 	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
 		boolean flag = QuickQuotesPage.createNameFieldValidaions();
@@ -85,6 +84,16 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage.createMessage();
 	}
    
+	@Test (priority=11)
+	public void qq_VerifyParticpantAddedFromGroup() throws InterruptedException {
+		QuickQuotesPage.particpantAddedFromGroup();
+	}
+	
+	@Test (priority=12)
+	public void qq_VerfiyEditQQEvent() throws InterruptedException {
+		QuickQuotesPage.EditQQEvent();
+	}
+	
 	@AfterClass
 	public void Teardown() throws Exception {
 		logger.info("*******QQ_test ends*******");

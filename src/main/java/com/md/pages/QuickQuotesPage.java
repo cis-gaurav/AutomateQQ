@@ -1,5 +1,8 @@
 package com.md.pages;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -122,7 +125,16 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains (text(),'From group')]")
 	private WebElement addGroup;
-
+	
+	@FindBy(xpath = "//span[@title='automationGroup']")
+	private WebElement selectGroup;
+	
+	@FindBy(xpath = "//button[text()='Done']")
+	private WebElement btnDone;
+	
+	@FindBy(xpath = "//strong[text()='automationGroup']")
+	private WebElement groupName;
+	
 	@FindBy(xpath = "//div[@class=' css-tlfecz-indicatorContainer']")
 	private WebElement addParticpantManuallyArrrow;
 
@@ -137,10 +149,39 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains (text(), 'createQQByName')]")
 	private WebElement quoteName;
+	
+//// Edit Quote/////////////////////////////////
+	
+	@FindBy(xpath = "//div[@class='alert alert-warning']")
+	private WebElement editModeTxt;
+	
+	@FindBy(xpath = "//a[@class='editbox']//i[@class='fa fa-pencil-square-o']")
+	private WebElement editOverview;
+	
+	@FindBy(xpath = "//input[@placeholder='Quote name']")
+	private WebElement editName;
+	
+	@FindBy(xpath = "//button[text()='Save']")
+	private WebElement editSaveBtn;
+	
+	@FindBy(xpath ="//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div[4]/div/div/div[1]/div/div[3]/table/tbody/tr[1]/td[4]/div[1]/button[1]")
+	private WebElement editLot;
+	
+	@FindBy(xpath = "//input[contains(@value,'Metal Scrap')]")
+	private WebElement editLotName;
 
+	@FindBy(xpath = "//*[@id=\"app\"]/div/div/div/div/div/div/div/div/div/div/div[4]/div/div/div[1]/div/div[3]/table/tbody/tr[1]/td[4]/div[2]/button[1]")
+	private WebElement editSaveLot;
+	
+	@FindBy(xpath = "//tbody/tr/td[3]/div[1]/button[2]")
+	private WebElement deleteQuestionnaire;
+	
+	@FindBy(xpath = "//button[text()='Go live']")
+	private WebElement goLive;
+	
 ////////////////////Create Quote Left panel Element /////////////////	
 
-	@FindBy(xpath = "//*[@id=\"app\"]//div[2]/div[2]/div/div/div/div[1]/a/i")
+	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/i[1]")
 	private WebElement editcontentToolTip;
 
 //	@FindBy(xpath = "//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
@@ -253,6 +294,10 @@ public class QuickQuotesPage extends TestBase {
 	
 	@FindBy (xpath="//button[text()='OK']")
 	private WebElement confrimationOk;
+	
+	@FindBy (xpath="//*[@id='accordion']/div[5]/button")
+	private WebElement editQuote;
+	
 	
 
 ///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
@@ -423,7 +468,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createToasterMessage() throws InterruptedException {
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -460,7 +505,7 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
 		name.sendKeys("Create QuickQuote Event with all Details");
 		deadline.clear();
@@ -524,7 +569,8 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
-		sandpitHeader.click();
+//		Thread.sleep(4000);
+//		sandpitHeader.click();
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();// click on new quote button on quote listing page
@@ -602,14 +648,19 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(AutomateText1));
-//		JavascriptExecutor executor = (JavascriptExecutor)driver;
-//		executor.executeScript("arguments[0].click();", editcontentToolTip);
-		editcontentToolTip.click();
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		// Click on edit pencil icon right panel 
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", editcontentToolTip);
+//		editcontentToolTip.click();
+		Thread.sleep(2000);
 		driver.switchTo().frame(1);
+		System.out.println("Inside Frame");
+		wait.until(ExpectedConditions.elementToBeClickable(sendNewMsgTxtField));
 		sendNewMsgTxtField.clear();
 		sendNewMsgTxtField.sendKeys("Automate test");
 		driver.switchTo().defaultContent();
+		wait.until(ExpectedConditions.elementToBeClickable(submitButton));
 		submitButton.click();
 		Assert.assertEquals(AutomateText.getText(), "Automate test");
 		editcontentToolTip.click();
@@ -619,8 +670,6 @@ public class QuickQuotesPage extends TestBase {
 		Assert.assertEquals(AutomateText1.getText(), "ADVICE FROM PROCUREMENT TEAM");
 		return AutomateText1.isDisplayed();
 	}
-
-	
 
 	public boolean deleteQuote() throws InterruptedException {
 		driver.get(prop.getProperty("QuickQuotesHomepage"));
@@ -665,8 +714,9 @@ public class QuickQuotesPage extends TestBase {
 	public boolean searchQuote() throws InterruptedException {
 		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
 		Thread.sleep(4000);
-		searchForQuote.clear();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
+		searchForQuote.clear();
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
 		searchForQuote.sendKeys("Search Quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
@@ -745,6 +795,101 @@ public class QuickQuotesPage extends TestBase {
         wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
         return msgSendToasterd2.isDisplayed();
-
+	}
+	
+	public boolean particpantAddedFromGroup() throws InterruptedException {
+		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(6000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		name.clear();
+		name.sendKeys("Add from Group");
+//		Thread.sleep(2000);
+		scrollTillBottom();
+//		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(addGroup));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", addGroup);
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(selectGroup));
+        selectGroup.click();
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.elementToBeClickable(btnDone));
+        btnDone.click();
+        Assert.assertEquals(groupName.getText(), "AUTOMATIONGROUP");
+        getQuoteButton.click();
+        return groupName.isDisplayed();
+	}
+	
+	public boolean EditQQEvent() throws InterruptedException {
+		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		Thread.sleep(7000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(name));
+		name.clear();
+		name.sendKeys("Create QQ Event");
+		scrollTillBottom();
+		wait.until(ExpectedConditions.elementToBeClickable(lotCheckbox));
+		/////////////////////Adding lots 
+		lotCheckbox.click();
+		wait.until(ExpectedConditions.elementToBeClickable(lotName));
+		lotName.sendKeys("Metal Scrap");
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(lotUom));
+		lotUom.sendKeys("tonnes");
+		lotQuantity.sendKeys("5");
+		scroll();
+		wait.until(ExpectedConditions.elementToBeClickable(questionnaireCheckbox));
+		////////////////////Adding Questionnaire 
+		questionnaireCheckbox.click();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(questionName));
+		questionName.sendKeys("Automation");
+		wait.until(ExpectedConditions.elementToBeClickable(questionDropdown));
+		questionDropdown.click();
+		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
+		oneLineText.click();
+		scroll();
+		wait.until(ExpectedConditions.elementToBeClickable(addParticpantManually));
+		addParticpantManually.sendKeys("d1@mailinator.com");
+		addParticpantManually.sendKeys(Keys.ENTER);
+		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
+		getQuoteButton.click();
+		/////////////////////////Moving to edit mode again 
+		editQuote.click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
+        Assert.assertEquals(editModeTxt.getText(), "This event is currently in Edit Mode which has put it on hold.");
+        editOverview.click();
+		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
+        editName.clear();
+        editName.sendKeys("Edited QQ Event");
+        scroll();
+		wait.until(ExpectedConditions.elementToBeClickable(editSaveBtn));
+        editSaveBtn.click();
+        Thread.sleep(2000);
+        scroll();
+        editLot.click();
+		wait.until(ExpectedConditions.elementToBeClickable(editLotName));
+		editLotName.clear();
+		editLotName.sendKeys("Edited Lot");
+		wait.until(ExpectedConditions.elementToBeClickable(editSaveLot));
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", editSaveLot);
+		wait.until(ExpectedConditions.elementToBeClickable(deleteQuestionnaire));
+		deleteQuestionnaire.click();
+		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
+		confrimationOk.click();
+		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+		executor1.executeScript("arguments[0].click();", goLive);
+//		wait.until(ExpectedConditions.elementToBeClickable(goLive));
+//		goLive.click();
+		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
+		wait.until(ExpectedConditions.elementToBeClickable(summaryToggel));
+		JavascriptExecutor executor2 = (JavascriptExecutor) driver;
+		executor2.executeScript("arguments[0].click();", summaryToggel);
+		Thread.sleep(3000);
+		Assert.assertEquals(lotNameVerify.getText(), "Edited Lot");
+		return lotNameVerify.isDisplayed();
 	}
 }
