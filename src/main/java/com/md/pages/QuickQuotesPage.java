@@ -573,6 +573,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public void createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+		logger.info("TC10 start");
 		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(9000);
@@ -822,18 +823,21 @@ public class QuickQuotesPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
+		Thread.sleep(5000);
 		name.sendKeys("Add from Group");
-//		scrollTillBottom();
-		scroll();
-		Thread.sleep(3000);//Adding because failed on Jenkins
-		scroll();
-		Thread.sleep(3000);//Adding because failed on Jenkins
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
-		wait.until(ExpectedConditions.elementToBeClickable(addGroup));
-		scroll();
+		scrollTillBottom();
+		Thread.sleep(2000);
+//		scroll();
+//		Thread.sleep(3000);//Adding because failed on Jenkins
+//		scroll();
+//		Thread.sleep(3000);//Adding because failed on Jenkins
+//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+//		wait.until(ExpectedConditions.elementToBeClickable(addGroup));
+//		scroll();
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", addGroup);
 		Thread.sleep(3000);
+		logger.info("Group poup gets open");
 		wait.until(ExpectedConditions.elementToBeClickable(selectGroup));
         selectGroup.click();
         Thread.sleep(2000);
