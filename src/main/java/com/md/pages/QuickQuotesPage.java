@@ -445,7 +445,7 @@ public class QuickQuotesPage extends TestBase {
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-		Thread.sleep(7000);// This is execute first on Jenkins
+		Thread.sleep(5000);// This is execute first on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -453,8 +453,9 @@ public class QuickQuotesPage extends TestBase {
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
 		wait.until(ExpectedConditions.elementToBeClickable(name));
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		name.sendKeys(Keys.TAB);
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(longNameValidation));
 		return longNameValidation.isDisplayed();
 	}
@@ -657,11 +658,11 @@ public class QuickQuotesPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// Click on edit pencil icon right panel 
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", editcontentToolTip);
 //		editcontentToolTip.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);//Adding because failed on Jenkins
 		driver.switchTo().frame(1);
 		System.out.println("Inside Frame");
 		wait.until(ExpectedConditions.elementToBeClickable(sendNewMsgTxtField));

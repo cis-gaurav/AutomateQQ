@@ -1,9 +1,17 @@
-2021-11-12 21:44:23,088  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-11-12 21:44:37,950  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-11-12 21:44:40,982  INFO [main] TestBase:25 - *******QQ_test start executing*******
-2021-11-12 21:44:58,630  INFO [main] TestBase:33 - Quick Quote TC01 has passed
-2021-11-12 21:45:00,885  INFO [main] TestBase:40 - Quick Quote TC02 has passed
-2021-11-12 21:45:06,162  INFO [main] TestBase:47 - Quick Quote TC03 has passed
-2021-11-12 21:45:15,112  INFO [main] TestBase:54 - Quick Quote TC04 has passed
-2021-11-12 21:45:27,181  INFO [main] TestBase:61 - Quick Quote TC05 has passed
-2021-11-12 21:45:43,744  INFO [main] TestBase:709 - Quote Deleted sucessfully
+2021-11-15 12:01:30,777  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-11-15 12:01:40,944  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2021-11-15 12:01:43,977  INFO [main] TestBase:25 - *******QQ_test start executing*******
+2021-11-15 12:02:02,291  INFO [main] TestBase:40 - Quick Quote TC02 has passed
+2021-11-15 12:02:07,486  INFO [main] TestBase:47 - Quick Quote TC03 has passed
+2021-11-15 12:02:18,897  INFO [main] TestBase:54 - Quick Quote TC04 has passed
+2021-11-15 12:02:32,990  INFO [main] TestBase:61 - Quick Quote TC05 has passed
+2021-11-15 12:02:53,688  INFO [main] TestBase:710 - Quote Deleted sucessfully
+2021-11-15 12:03:02,190  INFO [main] TestBase:68 - Quick Quote TC06 has passed
+2021-11-15 12:03:21,798  INFO [main] TestBase:75 - Quick Quote TC07 has passed
+2021-11-15 12:03:54,896  INFO [main] TestBase:82 - Quick Quote TC08 has passed
+2021-11-15 12:04:44,213  INFO [main] TestBase:795 - Bubble count host end
+2021-11-15 12:04:55,032  INFO [main] TestBase:88 - Quick Quote TC09 has passed
+2021-11-15 12:06:33,164  INFO [main] TestBase:94 - Quick Quote TC10 has passed
+2021-11-15 12:06:46,170  INFO [main] TestBase:107 - Quick Quote TC12 has passed
+2021-11-15 12:06:46,171  INFO [main] TestBase:112 - *******QQ_test ends*******
+2021-11-15 12:06:51,534  INFO [main] TestBase:94 - ******Local Driver Intilaized*****

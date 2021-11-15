@@ -82,7 +82,6 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC08 has passed");
 	}
 
-	
 	@Test(priority=9)
 	public void qq_VerifyCreateMessage() throws InterruptedException {
 		QuickQuotesPage.createMessage();
