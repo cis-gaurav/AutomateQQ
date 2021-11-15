@@ -462,12 +462,13 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(4000);
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		// Scroll to bottom of page
 		scrollTillBottom();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// verify get quote button is disabled
 		return getQuoteButton.isEnabled();
@@ -475,7 +476,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createToasterMessage() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		name.clear();
@@ -484,7 +485,7 @@ public class QuickQuotesPage extends TestBase {
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
-//		Thread.sleep(4000);
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(pastDeadlineToaster));
 		return pastDeadlineToaster.isDisplayed();
 	}
@@ -496,11 +497,14 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
 		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.sendKeys("createQQByName");
+		wait.until(ExpectedConditions.elementToBeClickable(deadline));
 		deadline.clear();
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(quoteName));
 		return quoteName.isDisplayed();
 	}
@@ -514,8 +518,9 @@ public class QuickQuotesPage extends TestBase {
 		name.clear();
 		name.sendKeys("Create QuickQuote Event with all Details");
 		deadline.clear();
-		deadline.sendKeys("2024-04-14 19:35");
+//		deadline.sendKeys("2024-04-14 19:35");
 		driver.switchTo().frame(0);
+		wait.until(ExpectedConditions.elementToBeClickable(description));
 		description.sendKeys("This is my description");
 		Thread.sleep(3000);
 		driver.switchTo().defaultContent();

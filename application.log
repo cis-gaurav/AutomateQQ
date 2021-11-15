@@ -1,17 +1,45 @@
-2021-11-15 12:01:30,777  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-11-15 12:01:40,944  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-11-15 12:01:43,977  INFO [main] TestBase:25 - *******QQ_test start executing*******
-2021-11-15 12:02:02,291  INFO [main] TestBase:40 - Quick Quote TC02 has passed
-2021-11-15 12:02:07,486  INFO [main] TestBase:47 - Quick Quote TC03 has passed
-2021-11-15 12:02:18,897  INFO [main] TestBase:54 - Quick Quote TC04 has passed
-2021-11-15 12:02:32,990  INFO [main] TestBase:61 - Quick Quote TC05 has passed
-2021-11-15 12:02:53,688  INFO [main] TestBase:710 - Quote Deleted sucessfully
-2021-11-15 12:03:02,190  INFO [main] TestBase:68 - Quick Quote TC06 has passed
-2021-11-15 12:03:21,798  INFO [main] TestBase:75 - Quick Quote TC07 has passed
-2021-11-15 12:03:54,896  INFO [main] TestBase:82 - Quick Quote TC08 has passed
-2021-11-15 12:04:44,213  INFO [main] TestBase:795 - Bubble count host end
-2021-11-15 12:04:55,032  INFO [main] TestBase:88 - Quick Quote TC09 has passed
-2021-11-15 12:06:33,164  INFO [main] TestBase:94 - Quick Quote TC10 has passed
-2021-11-15 12:06:46,170  INFO [main] TestBase:107 - Quick Quote TC12 has passed
-2021-11-15 12:06:46,171  INFO [main] TestBase:112 - *******QQ_test ends*******
-2021-11-15 12:06:51,534  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-11-15 12:58:47,816  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-11-15 12:59:04,642  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2021-11-15 12:59:07,667  INFO [main] TestBase:25 - *******QQ_test start executing*******
+2021-11-15 12:59:26,992  INFO [main] TestBase:33 - Quick Quote TC01 has passed
+2021-11-15 12:59:29,016  INFO [main] TestBase:40 - Quick Quote TC02 has passed
+2021-11-15 12:59:34,235  INFO [main] TestBase:47 - Quick Quote TC03 has passed
+2021-11-15 12:59:58,395  INFO [main] TestBase:61 - Quick Quote TC05 has passed
+2021-11-15 13:00:46,123  INFO [main] TestBase:82 - Quick Quote TC08 has passed
+2021-11-15 13:01:35,247  INFO [main] TestBase:797 - Bubble count host end
+2021-11-15 13:01:46,654  INFO [main] TestBase:88 - Quick Quote TC09 has passed
+2021-11-15 13:05:11,715  INFO [main] TestBase:112 - *******QQ_test ends*******
+2021-11-15 13:05:17,011  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-11-15 13:05:29,031  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2021-11-15 13:05:32,044  INFO [main] TestBase:23 - *******Contract_test_ starts*******
+2021-11-15 13:06:27,989  INFO [main] TestBase:30 - Contract TC01 has passed
+2021-11-15 13:07:31,451  INFO [main] TestBase:37 - Contract TC02 has passed
+2021-11-15 13:08:20,500  INFO [main] TestBase:44 - Contract TC03 has passed
+2021-11-15 13:08:41,767  INFO [main] TestBase:51 - Contract TC04 has passed
+2021-11-15 13:09:00,899  INFO [main] TestBase:58 - Contract TC05 has passed
+2021-11-15 13:09:22,488  INFO [main] TestBase:65 - Contract TC06 has passed
+2021-11-15 13:09:51,609  INFO [main] TestBase:72 - Contract TC07 has passed
+2021-11-15 13:11:07,465  INFO [main] TestBase:106 - Contract TC12 has passed
+2021-11-15 13:11:33,739  INFO [main] TestBase:112 - Contract TC13 has passed
+2021-11-15 13:11:52,757  INFO [main] TestBase:119 - Contract TC14 has passed
+2021-11-15 13:12:31,826  INFO [main] TestBase:125 - Contract TC15 has passed
+2021-11-15 13:12:56,895  INFO [main] TestBase:132 - Contract TC16 has passed
+2021-11-15 13:13:22,187  INFO [main] TestBase:139 - Contract TC17 has passed
+2021-11-15 13:13:54,145  INFO [main] TestBase:146 - Contract TC18 has passed
+2021-11-15 13:14:28,015  INFO [main] TestBase:153 - Contract TC19 has passed
+2021-11-15 13:15:05,484  INFO [main] TestBase:160 - Contract TC20 has passed
+2021-11-15 13:15:36,865  INFO [main] TestBase:167 - Contract TC21 has passed
+2021-11-15 13:16:23,277  INFO [main] TestBase:174 - Contract TC22 has passed
+2021-11-15 13:17:00,370  INFO [main] TestBase:181 - Contract TC23 has passed
+2021-11-15 13:17:31,934  INFO [main] TestBase:188 - Contract TC24 has passed
+2021-11-15 13:17:59,375  INFO [main] TestBase:195 - Contract TC25 has passed
+2021-11-15 13:18:43,369  INFO [main] TestBase:202 - Contract TC26 has passed
+2021-11-15 13:19:18,363  INFO [main] TestBase:209 - Contract TC27 has passed
+2021-11-15 13:19:53,747  INFO [main] TestBase:216 - Contract TC28 has passed
+2021-11-15 13:20:31,336  INFO [main] TestBase:223 - Contract TC29 has passed
+2021-11-15 13:20:57,401  INFO [main] TestBase:230 - Contract TC30 has passed
+2021-11-15 13:21:32,945  INFO [main] TestBase:237 - Contract TC31 has passed
+2021-11-15 13:22:29,863  INFO [main] TestBase:244 - Contract TC32 has passed
+2021-11-15 13:27:10,485  INFO [main] TestBase:264 - Contract TC35 has passed
+2021-11-15 13:28:39,777  INFO [main] TestBase:271 - Contract TC36 has passed
+2021-11-15 13:28:39,778  INFO [main] TestBase:290 - *******Contract_test_ ends*******
