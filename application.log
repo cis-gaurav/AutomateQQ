@@ -1,24 +1,4 @@
-2021-11-30 10:19:46,986  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-11-30 10:20:20,099  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-11-30 10:20:23,129  INFO [main] TestBase:25 - *******QQ_test start executing*******
-2021-11-30 10:20:44,173  INFO [main] TestBase:40 - Quick Quote TC02 has passed
-2021-11-30 10:20:53,427  INFO [main] TestBase:47 - Quick Quote TC03 has passed
-2021-11-30 10:21:01,771  INFO [main] TestBase:54 - Quick Quote TC04 has passed
-2021-11-30 10:21:15,686  INFO [main] TestBase:61 - Quick Quote TC05 has passed
-2021-11-30 10:21:33,524  INFO [main] TestBase:717 - Quote Deleted sucessfully
-2021-11-30 10:21:42,209  INFO [main] TestBase:68 - Quick Quote TC06 has passed
-2021-11-30 10:21:59,171  INFO [main] TestBase:840 - Group poup gets open
-2021-11-30 10:22:01,675  INFO [main] TestBase:75 - Quick Quote TC07 has passed
-2021-11-30 10:22:34,534  INFO [main] TestBase:82 - Quick Quote TC08 has passed
-2021-11-30 10:23:20,610  INFO [main] TestBase:802 - Bubble count host end
-2021-11-30 10:23:28,065  INFO [main] TestBase:88 - Quick Quote TC09 has passed
-2021-11-30 10:23:28,071  INFO [main] TestBase:576 - TC10 start
-2021-11-30 10:25:01,371  INFO [main] TestBase:94 - Quick Quote TC10 has passed
-2021-11-30 10:25:13,896  INFO [main] TestBase:107 - Quick Quote TC12 has passed
-2021-11-30 10:25:13,898  INFO [main] TestBase:112 - *******QQ_test ends*******
-2021-11-30 10:25:15,241  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-11-30 10:25:23,637  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-11-30 10:25:26,659  INFO [main] TestBase:23 - *******Contract_test_ starts*******
-2021-11-30 10:25:49,208  INFO [main] TestBase:30 - Contract TC01 has passed
-2021-11-30 10:26:56,790  INFO [main] TestBase:37 - Contract TC02 has passed
-2021-11-30 10:27:17,161  INFO [main] TestBase:44 - Contract TC03 has passed
+2021-11-30 14:20:09,532  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-11-30 14:20:40,379  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2021-11-30 14:20:43,421  INFO [main] TestBase:25 - *******QQ_test start executing*******
+2021-11-30 14:21:04,251  INFO [main] TestBase:33 - Quick Quote TC01 has passed
