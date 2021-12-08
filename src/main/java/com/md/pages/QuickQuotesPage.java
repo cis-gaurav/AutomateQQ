@@ -576,9 +576,9 @@ public class QuickQuotesPage extends TestBase {
 		logger.info("TC10 start");
 		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(9000);
+		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
 		Thread.sleep(3000);
@@ -687,12 +687,14 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean deleteQuote() throws InterruptedException {
-		Thread.sleep(4000);// Adding wait as failing on Jenkins 
+		Thread.sleep(6000);// Adding wait as failing on Jenkins 
 		driver.get(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
-		Thread.sleep(2000);// Adding wait as failing on Jenkins 
+		Thread.sleep(3000);// Adding wait as failing on Jenkins 
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		wait.until(ExpectedConditions.elementToBeClickable(name));
+		System.out.println("Start deleteQuote test");
 		name.clear();
 		name.sendKeys("verify Delete quote");
 		scrollTillBottom();
@@ -713,7 +715,7 @@ public class QuickQuotesPage extends TestBase {
 		delteDrop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
         confrimationOk.click();
-//       System.out.println("Quote Deleted sucessfully");
+//      System.out.println("Quote Deleted successfully");
         logger.info("Quote Deleted sucessfully");
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
         scrollUp();
@@ -837,7 +839,7 @@ public class QuickQuotesPage extends TestBase {
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", addGroup);
 		Thread.sleep(3000);
-		logger.info("Group poup gets open");
+		logger.info("Group poup gets open7");
 		wait.until(ExpectedConditions.elementToBeClickable(selectGroup));
         selectGroup.click();
         Thread.sleep(2000);
@@ -851,7 +853,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean EditQQEvent() throws InterruptedException {
 		Thread.sleep(3000);//Adding because failed on Jenkins
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(7000);
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
@@ -859,6 +861,7 @@ public class QuickQuotesPage extends TestBase {
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(lotCheckbox));
 		/////////////////////Adding lots 
+		logger.info("Adding lots");
 		lotCheckbox.click();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
 		lotName.sendKeys("Metal Scrap");
