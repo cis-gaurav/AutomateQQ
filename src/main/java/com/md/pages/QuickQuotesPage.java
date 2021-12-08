@@ -449,7 +449,7 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText ));// this is load at last
 		// Enter long name in quoteName field
 		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
 		wait.until(ExpectedConditions.elementToBeClickable(name));
@@ -690,7 +690,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(4000);// Adding wait as failing on Jenkins 
 		driver.get(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		Thread.sleep(2000);// Adding wait as failing on Jenkins 
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.clear();
@@ -853,7 +853,7 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(name));
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
 		name.sendKeys("Create QQ Event");
 		scrollTillBottom();
