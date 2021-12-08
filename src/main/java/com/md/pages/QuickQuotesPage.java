@@ -491,10 +491,10 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQByName() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(name));
@@ -700,14 +700,16 @@ public class QuickQuotesPage extends TestBase {
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
-		System.out.println("Line no 685");
+		System.out.println("Summary page TCO6");
 		//Redirect to summary page 
 		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(messageToggel));
 		wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
 		current.click();
 		wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		currentDrop.click();
-		//Redirect to list page 
+		//Redirect to list page
+		logger.info("Redirect to list Page");
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 		current.click();
