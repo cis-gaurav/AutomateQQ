@@ -505,7 +505,7 @@ public class QuickQuotesPage extends TestBase {
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
-		logger.info("getQuoteButton clicked "); // for test 
+		logger.info("getQuoteButton clicked ");// for test 
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(quoteName));
 		return quoteName.isDisplayed();
