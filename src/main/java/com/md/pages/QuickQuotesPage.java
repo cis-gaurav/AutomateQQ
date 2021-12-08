@@ -499,11 +499,13 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.sendKeys("createQQByName");
+		logger.info("Enter Name "); // for test
 		wait.until(ExpectedConditions.elementToBeClickable(deadline));
 		deadline.clear();
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
+		logger.info("getQuoteButton clicked "); // for test 
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(quoteName));
 		return quoteName.isDisplayed();

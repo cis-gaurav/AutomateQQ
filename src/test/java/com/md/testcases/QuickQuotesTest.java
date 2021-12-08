@@ -26,21 +26,21 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
 
-	@Test(priority=1)
+	@Test(priority=1,enabled=false)
 	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
 		boolean flag = QuickQuotesPage.createNameFieldValidaions();
 		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC01 has passed");
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2,enabled=false)
 	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
 		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
 		Assert.assertFalse(flag);
 		logger.info("Quick Quote TC02 has passed");
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3,enabled=false)
 	public void qq_VerifyToasterMessage() throws InterruptedException {
 		boolean flag = QuickQuotesPage.createToasterMessage();
 		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
@@ -54,7 +54,7 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC04 has passed");
 	}
 	
-	@Test(priority=5)	
+	@Test(priority=5,enabled=false)	
 	public void qq_VerifyEditContent() throws InterruptedException { 
 		boolean flag= QuickQuotesPage.createEditContent();
 		Assert.assertTrue(flag);
@@ -68,44 +68,44 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC06 has passed");
 	}
    	
-	@Test (priority=7)
-	public void qq_VerifyParticpantAddedFromGroup() throws InterruptedException {
-		boolean flag=QuickQuotesPage.particpantAddedFromGroup();
-		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC07 has passed");
-	}
-	
-	@Test (priority=8)
-	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
-		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
-		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC08 has passed");
-	}
-
-	@Test(priority=9)
-	public void qq_VerifyCreateMessage() throws InterruptedException {
-		QuickQuotesPage.createMessage();
-		logger.info("Quick Quote TC09 has passed");
-	}
-	
-	@Test(priority=10)	
-	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
-		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
-		logger.info("Quick Quote TC10 has passed");
-	}
-	
-	@Test (priority=11)
-	public void qq_VerfiyEditQQEvent() throws InterruptedException {
-		QuickQuotesPage.EditQQEvent();
-		logger.info("Quick Quote TC11 has passed");
-	}
-	
-	@Test(priority=12)
-	public void qq_VerifySearchQuote() throws InterruptedException {
-		boolean flag=QuickQuotesPage.searchQuote();
-		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC12 has passed");
-	}
+//	@Test (priority=7)
+//	public void qq_VerifyParticpantAddedFromGroup() throws InterruptedException {
+//		boolean flag=QuickQuotesPage.particpantAddedFromGroup();
+//		Assert.assertTrue(flag);
+//		logger.info("Quick Quote TC07 has passed");
+//	}
+//	
+//	@Test (priority=8)
+//	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
+//		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
+//		Assert.assertTrue(flag);
+//		logger.info("Quick Quote TC08 has passed");
+//	}
+//
+//	@Test(priority=9)
+//	public void qq_VerifyCreateMessage() throws InterruptedException {
+//		QuickQuotesPage.createMessage();
+//		logger.info("Quick Quote TC09 has passed");
+//	}
+//	
+//	@Test(priority=10)	
+//	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+//		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
+//		logger.info("Quick Quote TC10 has passed");
+//	}
+//	
+//	@Test (priority=11)
+//	public void qq_VerfiyEditQQEvent() throws InterruptedException {
+//		QuickQuotesPage.EditQQEvent();
+//		logger.info("Quick Quote TC11 has passed");
+//	}
+//	
+//	@Test(priority=12)
+//	public void qq_VerifySearchQuote() throws InterruptedException {
+//		boolean flag=QuickQuotesPage.searchQuote();
+//		Assert.assertTrue(flag);
+//		logger.info("Quick Quote TC12 has passed");
+//	}
 	
 	@AfterClass
 	public void Teardown() throws Exception {
