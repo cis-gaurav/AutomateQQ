@@ -497,16 +497,16 @@ public class QuickQuotesPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(name));
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(whoToInviteText)));
-		Thread.sleep(2000);
 		name.clear();
 		name.clear();
 		logger.info("Name clear");
 		wait.until(ExpectedConditions.visibilityOf(name));
 		name.sendKeys("createQQByName");
 //		name.sendKeys("createQQByName");
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(deadline)));
+//		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(deadline)));
 		deadline.clear();
 		scrollTillBottom();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(getQuoteButton)));
 		getQuoteButton.click();
 		logger.info("getQuoteButton clicked ");// for test 
