@@ -464,7 +464,8 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
+//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(whoToInviteText)));
 		name.clear();
 		// Scroll to bottom of page
 		scrollTillBottom();
