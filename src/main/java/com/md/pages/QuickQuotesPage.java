@@ -464,8 +464,7 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-//		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(whoToInviteText)));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		// Scroll to bottom of page
 		scrollTillBottom();
@@ -492,21 +491,21 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQByName() throws Throwable {
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(name));
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(whoToInviteText)));
+//		Thread.sleep(2000);
 		name.clear();
 		name.clear();
 		logger.info("Name clear");
 		wait.until(ExpectedConditions.visibilityOf(name));
 		name.sendKeys("createQQByName");
 		name.sendKeys("createQQByName");
-		wait.until(ExpectedConditions.elementToBeClickable(deadline));
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(deadline)));
 		deadline.clear();
 		scrollTillBottom();
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(getQuoteButton)));
 		getQuoteButton.click();
 		logger.info("getQuoteButton clicked ");// for test 
 		wait.until(ExpectedConditions.elementToBeClickable(quoteName));
