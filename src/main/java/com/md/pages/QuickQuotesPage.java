@@ -495,20 +495,17 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(name));
-		Thread.sleep(2000);
 		name.clear();
 		logger.info("Name clear");
 		wait.until(ExpectedConditions.visibilityOf(name));
 		name.sendKeys("createQQByName");
 		name.sendKeys("createQQByName");
-		logger.info("Enter Name "); // for test
 		wait.until(ExpectedConditions.elementToBeClickable(deadline));
 		deadline.clear();
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
 		logger.info("getQuoteButton clicked ");// for test 
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(quoteName));
 		return quoteName.isDisplayed();
 	}
