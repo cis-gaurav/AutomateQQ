@@ -498,7 +498,8 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		name.clear();
 		logger.info("Name clear");
-		wait.until(ExpectedConditions.elementToBeClickable(name));
+		wait.until(ExpectedConditions.visibilityOf(name));
+		name.sendKeys("createQQByName");
 		name.sendKeys("createQQByName");
 		logger.info("Enter Name "); // for test
 		wait.until(ExpectedConditions.elementToBeClickable(deadline));
