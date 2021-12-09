@@ -495,6 +495,8 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(name));
+		Thread.sleep(2000);
+		name.clear();
 		name.clear();
 		logger.info("Name clear");
 		wait.until(ExpectedConditions.visibilityOf(name));
