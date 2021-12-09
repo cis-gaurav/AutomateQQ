@@ -493,6 +493,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createQQByName() throws Throwable {
 //		Thread.sleep(4000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(whoToInviteText)));
 //		Thread.sleep(2000);
