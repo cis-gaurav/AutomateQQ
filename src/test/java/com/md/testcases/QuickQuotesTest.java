@@ -40,7 +40,7 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC02 has passed");
 	}
 	
-	@Test(priority=3,enabled=false)
+	@Test(priority=3)
 	public void qq_VerifyToasterMessage() throws InterruptedException {
 		boolean flag = QuickQuotesPage.createToasterMessage();
 		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
@@ -61,7 +61,7 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC05 has passed");
 	}
 	
-	@Test(priority=6)
+	@Test(priority=6,enabled=false)
 	public void qq_VerifyDeleteQuote() throws InterruptedException {
 		boolean flag=QuickQuotesPage.deleteQuote();
 		Assert.assertTrue(flag);

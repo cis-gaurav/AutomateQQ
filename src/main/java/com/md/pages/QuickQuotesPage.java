@@ -493,8 +493,9 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createQQByName() throws Throwable {
 //		Thread.sleep(4000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(name));
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(whoToInviteText)));
 //		Thread.sleep(2000);
 		name.clear();
@@ -502,7 +503,7 @@ public class QuickQuotesPage extends TestBase {
 		logger.info("Name clear");
 		wait.until(ExpectedConditions.visibilityOf(name));
 		name.sendKeys("createQQByName");
-		name.sendKeys("createQQByName");
+//		name.sendKeys("createQQByName");
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(deadline)));
 		deadline.clear();
 		scrollTillBottom();
