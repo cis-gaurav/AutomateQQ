@@ -40,7 +40,7 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//a[@class='btn btn-primary btn-fixed pull-right']")
 	private WebElement newQuoteBtn;
 	
-	@FindBy(xpath="//a[contains(text(),'Quotes')]")
+	@FindBy(xpath="//li[@class='mobile-menu-hidden']//a[@class='menu-item-tab header-main-link'][normalize-space()='Quotes']")
 	private WebElement quotesHeading;
 
 ///////////Create Quote Page Element /////////////////
@@ -410,17 +410,29 @@ public class QuickQuotesPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	// Actions
-	public void redirectFromMDDashboardtoQQCreate() throws InterruptedException {
+	////////////////////////////////////// Actions
+	
+	// Used in BeforeClass 
+	public void redirectFromMdDashboardToQuoteListing() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(quickquoteDashbaord));// Click on Quote from MD HomePage
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
-		Thread.sleep(3000);
-		newQuoteBtn.click();
+//		Thread.sleep(3000);
+//		newQuoteBtn.click();
 	}
 
+	// Used in BeforeMethod 
+	public void quoteListingToCreate() throws InterruptedException {
+		Thread.sleep(2000);
+		quotesHeading.click();
+		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
+		newQuoteBtn.click();
+	}
+	
 	// Global things
 	public void scroll() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -441,7 +453,7 @@ public class QuickQuotesPage extends TestBase {
 
 	// Unused script of new user license check
 	public boolean verifyQQLiscence() throws InterruptedException {
-		redirectFromMDDashboardtoQQCreate();
+		redirectFromMdDashboardToQuoteListing();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(alertLiscenceMsg));
 		return alertLiscenceMsg.isDisplayed();
@@ -504,8 +516,9 @@ public class QuickQuotesPage extends TestBase {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", name);
 		name.sendKeys("createQQByName");
-		Thread.sleep(3000);
 		deadline.clear();
+		deadline.click();
+//		Thread.sleep(2000);
 		scrollTillBottom();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));// this is load at last
@@ -549,6 +562,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(oneLineText));
 		oneLineText.click();
 		scroll();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOf(addParticpantManually));
 		addParticpantManually.sendKeys("d1@mailinator.com");
 		addParticpantManually.sendKeys(Keys.ENTER);

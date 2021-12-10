@@ -1,7 +1,9 @@
-2021-12-10 15:16:02,643  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-12-10 15:16:15,048  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-12-10 15:16:18,074  INFO [main] TestBase:25 - *******QQ_test start executing*******
-2021-12-10 15:16:42,084  INFO [main] TestBase:61 - Quick Quote TC05 has passed
-2021-12-10 15:16:52,123  INFO [main] TestBase:714 - Redirect to list Page
-2021-12-10 15:16:55,558  INFO [main] TestBase:723 - Quote Deleted sucessfully
-2021-12-10 15:17:03,989  INFO [main] TestBase:68 - Quick Quote TC06 has passed
+2021-12-10 19:17:07,139  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-12-10 19:18:15,729  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2021-12-10 19:18:20,562  INFO [main] TestBase:28 - *******Redirect to QQ Listing*******
+2021-12-10 19:18:20,571  INFO [main] TestBase:34 - ****************
+2021-12-10 19:18:50,082  INFO [main] TestBase:91 - Quick Quote TC08 has passed
+2021-12-10 19:18:50,092  INFO [main] TestBase:34 - ****************
+2021-12-10 19:20:54,380  INFO [main] TestBase:826 - Bubble count host end
+2021-12-10 19:21:21,700  INFO [main] TestBase:97 - Quick Quote TC09 has passed
+2021-12-10 19:21:21,702  INFO [main] TestBase:34 - ****************

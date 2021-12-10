@@ -4,6 +4,8 @@ import java.net.MalformedURLException;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.md.base.TestBase;
 import com.md.pages.QuickQuotesPage;
@@ -22,8 +24,15 @@ public class QuickQuotesTest extends TestBase {
 		initializationAndLogin();
 		QuickQuotesPage = new QuickQuotesPage();
 		Thread.sleep(3000);
-		logger.info("*******QQ_test start executing*******");
-		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
+		QuickQuotesPage.redirectFromMdDashboardToQuoteListing();
+		logger.info("*******Redirect to QQ Listing*******");
+	}
+	
+	@BeforeMethod
+	public void Test() throws InterruptedException {
+//		Thread.sleep(2000);
+		logger.info("****************");
+		QuickQuotesPage.quoteListingToCreate();
 	}
 
 	@Test(priority=1)
@@ -83,13 +92,13 @@ public class QuickQuotesTest extends TestBase {
 	}
 
 	@Test(priority=9)
-	public void qq_VerifyCreateMessage() throws InterruptedException {
+	public void qq_VerifyCreateMessageinSandpit() throws InterruptedException {
 		QuickQuotesPage.createMessage();
 		logger.info("Quick Quote TC09 has passed");
 	}
 	
 	@Test(priority=10)	
-	public void qq_VerifySandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
+	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
 		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
 		logger.info("Quick Quote TC10 has passed");
 	}
