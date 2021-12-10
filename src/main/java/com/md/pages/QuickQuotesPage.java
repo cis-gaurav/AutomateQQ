@@ -463,12 +463,12 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createNameFieldValidaions() throws InterruptedException {
 //		Thread.sleep(5000);// This is execute first on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText ));// this is load at last
 		// Enter long name in quoteName field
-		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
 		wait.until(ExpectedConditions.elementToBeClickable(name));
+		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
 		Thread.sleep(3000);
 		name.sendKeys(Keys.TAB);
 		Thread.sleep(3000);
@@ -528,7 +528,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
-//		Thread.sleep(3000);//Adding because failed on Jenkins
+		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -728,7 +728,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		currentDrop.click();
 		//Redirect to list page
-		logger.info("Redirect to list Page");
+		System.out.println("Redirect to list Page");
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 		current.click();
@@ -736,8 +736,7 @@ public class QuickQuotesPage extends TestBase {
 		delteDrop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
         confrimationOk.click();
-//      System.out.println("Quote Deleted successfully");
-        logger.info("Quote Deleted sucessfully");
+        System.out.println("Quote Deleted successfully");
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
         scrollUp();
         Thread.sleep(3000);
@@ -861,7 +860,7 @@ public class QuickQuotesPage extends TestBase {
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", addGroup);
 		Thread.sleep(3000);
-		logger.info("Group poup gets open7");
+		System.out.println("Group poup gets open7");
 		wait.until(ExpectedConditions.elementToBeClickable(selectGroup));
         selectGroup.click();
         Thread.sleep(2000);
