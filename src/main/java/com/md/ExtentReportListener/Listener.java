@@ -51,6 +51,8 @@ public class Listener extends TestBase implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
+		test.log(Status.SKIP, "Skipped");
+		test.pass(MarkupHelper.createLabel("Test case Skipped/failed", ExtentColor.ORANGE));
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
