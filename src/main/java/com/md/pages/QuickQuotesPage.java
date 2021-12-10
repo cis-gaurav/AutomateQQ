@@ -39,6 +39,9 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//a[@class='btn btn-primary btn-fixed pull-right']")
 	private WebElement newQuoteBtn;
+	
+	@FindBy(xpath="//a[contains(text(),'Quotes')]")
+	private WebElement quotesHeading;
 
 ///////////Create Quote Page Element /////////////////
 
@@ -693,7 +696,7 @@ public class QuickQuotesPage extends TestBase {
 //		driver.get(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
-		Thread.sleep(3000);// Adding wait as failing on Jenkins 
+//		Thread.sleep(3000);// Adding wait as failing on Jenkins 
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		System.out.println("Start deleteQuote test");
@@ -736,8 +739,9 @@ public class QuickQuotesPage extends TestBase {
 	}
 	
 	public boolean searchQuote() throws InterruptedException {
-		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
-//		Thread.sleep(4000);
+//		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
+		quotesHeading.click();
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
 		searchForQuote.clear();
@@ -829,7 +833,7 @@ public class QuickQuotesPage extends TestBase {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		name.sendKeys("Add from Group");
 		scrollTillBottom();
 		Thread.sleep(2000);

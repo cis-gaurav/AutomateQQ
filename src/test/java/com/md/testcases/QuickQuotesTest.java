@@ -26,33 +26,33 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage.redirectFromMDDashboardtoQQCreate();
 	}
 
-//	@Test(priority=1)
-//	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
-//		boolean flag = QuickQuotesPage.createNameFieldValidaions();
-//		Assert.assertTrue(flag);
-//		logger.info("Quick Quote TC01 has passed");
-//	}
-//	
-//	@Test(priority=2)
-//	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
-//		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
-//		Assert.assertFalse(flag);
-//		logger.info("Quick Quote TC02 has passed");
-//	}
-//	
-//	@Test(priority=3)
-//	public void qq_VerifyToasterMessage() throws InterruptedException {
-//		boolean flag = QuickQuotesPage.createToasterMessage();
-//		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
-//		logger.info("Quick Quote TC03 has passed");
-//	}
-//
-//	@Test(priority=4)
-//	public void qq_VerifyQuotebyName() throws Throwable {
-//		boolean flag = QuickQuotesPage.createQQByName();
-//		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
-//		logger.info("Quick Quote TC04 has passed");
-//	}
+	@Test(priority=1)
+	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
+		boolean flag = QuickQuotesPage.createNameFieldValidaions();
+		Assert.assertTrue(flag);
+		logger.info("Quick Quote TC01 has passed");
+	}
+	
+	@Test(priority=2)
+	public void qq_VerifyGetQuoteButtonIsDisable () throws InterruptedException {
+		boolean flag = QuickQuotesPage.createGetQuoteButtonIsDisable();
+		Assert.assertFalse(flag);
+		logger.info("Quick Quote TC02 has passed");
+	}
+	
+	@Test(priority=3)
+	public void qq_VerifyToasterMessage() throws InterruptedException {
+		boolean flag = QuickQuotesPage.createToasterMessage();
+		Assert.assertTrue(flag, "verifyToasterMessage is failed ask developer to fix");
+		logger.info("Quick Quote TC03 has passed");
+	}
+
+	@Test(priority=4)
+	public void qq_VerifyQuotebyName() throws Throwable {
+		boolean flag = QuickQuotesPage.createQQByName();
+		Assert.assertTrue(flag, "verfiyQQEventWithAllDetails is failed ask developer to fix");
+		logger.info("Quick Quote TC04 has passed");
+	}
 	
 	@Test(priority=5)	
 	public void qq_VerifyEditContent() throws InterruptedException { 
