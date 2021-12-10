@@ -461,14 +461,15 @@ public class QuickQuotesPage extends TestBase {
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-//		Thread.sleep(5000);// This is execute first on Jenkins
+		Thread.sleep(3000);// This is execute first on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText ));// this is load at last
 		// Enter long name in quoteName field
 		wait.until(ExpectedConditions.elementToBeClickable(name));
-		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");
+		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");//Adding long name 
+		System.out.println("long name");
 		Thread.sleep(3000);
 		name.sendKeys(Keys.TAB);
 		Thread.sleep(3000);
@@ -561,11 +562,13 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(questionDropdown));
 		questionDropdown.click();
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.visibilityOf(oneLineText));
+		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
 		oneLineText.click();
+		wait.until(ExpectedConditions.visibilityOf(questionName));
 		questionName.click();
 		scroll();
 		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		wait.until(ExpectedConditions.visibilityOf(addParticpantManually));
 		addParticpantManually.sendKeys("d1@mailinator.com");
 		addParticpantManually.sendKeys(Keys.ENTER);

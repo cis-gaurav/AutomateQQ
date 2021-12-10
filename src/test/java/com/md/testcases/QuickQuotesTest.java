@@ -91,11 +91,11 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC08 has passed");
 	}
 
-	@Test(priority=9)
-	public void qq_VerifyCreateMessageinSandpit() throws InterruptedException {
-		QuickQuotesPage.createMessage();
-		logger.info("Quick Quote TC09 has passed");
-	}
+//	@Test(priority=9)
+//	public void qq_VerifyCreateMessageinSandpit() throws InterruptedException {
+//		QuickQuotesPage.createMessage();
+//		logger.info("Quick Quote TC09 has passed");
+//	}
 	
 	@Test(priority=10)	
 	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
