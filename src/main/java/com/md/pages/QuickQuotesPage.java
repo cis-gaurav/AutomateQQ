@@ -530,7 +530,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
 		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(7000);
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
@@ -560,6 +560,7 @@ public class QuickQuotesPage extends TestBase {
 		questionName.sendKeys("Automation");
 		wait.until(ExpectedConditions.elementToBeClickable(questionDropdown));
 		questionDropdown.click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOf(oneLineText));
 		oneLineText.click();
 		questionName.click();
@@ -597,7 +598,7 @@ public class QuickQuotesPage extends TestBase {
 //		logger.info("TC10 start");
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(7000);
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
