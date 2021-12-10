@@ -446,8 +446,8 @@ public class QuickQuotesPage extends TestBase {
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-		Thread.sleep(5000);// This is execute first on Jenkins
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
+//		Thread.sleep(5000);// This is execute first on Jenkins
+//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText ));// this is load at last
@@ -462,8 +462,8 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
+//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+//		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
@@ -476,8 +476,8 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createToasterMessage() throws InterruptedException {
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(5000);
+//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+//		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
 		name.clear();
