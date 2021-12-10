@@ -491,7 +491,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQByName() throws Throwable {
-//		Thread.sleep(2000);
+		Thread.sleep(2000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
