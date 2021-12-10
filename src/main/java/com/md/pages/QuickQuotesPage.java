@@ -491,23 +491,23 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQByName() throws Throwable {
-		Thread.sleep(4000);
+//		Thread.sleep(2000);
 		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(name));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		name.clear();// for test
 		logger.info("Name clear");
-		wait.until(ExpectedConditions.visibilityOf(name));
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", name);
 		name.sendKeys("createQQByName");
 		logger.info("Name enter");
 		deadline.clear();
 		scrollTillBottom();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));// this is load at last
 		logger.info("Scroll");// for test
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
-		getQuoteButton.click();
+		executor.executeScript("arguments[0].click();", getQuoteButton);
 		logger.info("getQuoteButton clicked ");// for test 
 		wait.until(ExpectedConditions.elementToBeClickable(quoteName));
 		return quoteName.isDisplayed();

@@ -1,8 +1,9 @@
-2021-12-09 20:08:45,434  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-12-09 20:09:33,543  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-12-09 20:09:36,566  INFO [main] TestBase:25 - *******QQ_test start executing*******
-2021-12-09 20:09:50,979  INFO [main] TestBase:47 - Quick Quote TC03 has passed
-2021-12-09 20:09:53,227  INFO [main] TestBase:503 - Name clear
-2021-12-09 20:09:53,975  INFO [main] TestBase:512 - getQuoteButton clicked 
-2021-12-09 20:09:57,530  INFO [main] TestBase:54 - Quick Quote TC04 has passed
-2021-12-09 20:09:57,531  INFO [main] TestBase:112 - *******QQ_test ends*******
+2021-12-10 13:08:00,587  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-12-10 13:08:09,601  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2021-12-10 13:08:12,631  INFO [main] TestBase:25 - *******QQ_test start executing*******
+2021-12-10 13:08:20,422  INFO [main] TestBase:500 - Name clear
+2021-12-10 13:08:20,800  INFO [main] TestBase:504 - Name enter
+2021-12-10 13:08:21,013  INFO [main] TestBase:509 - Scroll
+2021-12-10 13:08:21,150  INFO [main] TestBase:512 - getQuoteButton clicked 
+2021-12-10 13:08:25,147  INFO [main] TestBase:54 - Quick Quote TC04 has passed
+2021-12-10 13:08:25,156  INFO [main] TestBase:112 - *******QQ_test ends*******
