@@ -558,10 +558,11 @@ public class QuickQuotesPage extends TestBase {
 		questionnaireCheckbox.click();
 		wait.until(ExpectedConditions.visibilityOf(questionName));
 		questionName.sendKeys("Automation");
+		wait.until(ExpectedConditions.elementToBeClickable(questionDropdown));
 		questionDropdown.click();
 		wait.until(ExpectedConditions.visibilityOf(oneLineText));
 		oneLineText.click();
-		oneLineText.click();
+		questionName.click();
 		scroll();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.visibilityOf(addParticpantManually));
@@ -876,7 +877,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean EditQQEvent() throws InterruptedException {
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
