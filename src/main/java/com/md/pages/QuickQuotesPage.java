@@ -415,6 +415,7 @@ public class QuickQuotesPage extends TestBase {
 		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 		Thread.sleep(3000);
+		newQuoteBtn.click();
 	}
 
 	// Global things
@@ -491,8 +492,8 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQByName() throws Throwable {
-		Thread.sleep(2000);
-		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
+//		Thread.sleep(2000);
+//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
