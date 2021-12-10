@@ -663,7 +663,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createEditContent() throws InterruptedException {
-//		Thread.sleep(3000);//Adding because failed on Jenkins
+		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
