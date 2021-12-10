@@ -529,19 +529,18 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
-		Thread.sleep(3000);//Adding because failed on Jenkins
-//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(3000);
+//		Thread.sleep(2000);//Adding because failed on Jenkins
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
 		name.sendKeys("Create QuickQuote Event with all Details");
+		System.out.println("Name added");
 		deadline.clear();
 //		deadline.sendKeys("2024-04-14 19:35");
 		driver.switchTo().frame(0);
 		wait.until(ExpectedConditions.elementToBeClickable(description));
 		description.sendKeys("This is my description");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		driver.switchTo().defaultContent();
 		scroll();
 		fromLibraryBtn.click();
@@ -554,8 +553,12 @@ public class QuickQuotesPage extends TestBase {
 		lotCheckbox.click();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
 		lotName.sendKeys("Metal Scrap");
+		wait.until(ExpectedConditions.elementToBeClickable(lotUom));
 		lotUom.sendKeys("tonnes");
+		wait.until(ExpectedConditions.elementToBeClickable(lotQuantity));
 		lotQuantity.sendKeys("5");
+		System.out.println("lot added");
+		wait.until(ExpectedConditions.elementToBeClickable(questionnaireCheckbox));
 		questionnaireCheckbox.click();
 		wait.until(ExpectedConditions.visibilityOf(questionName));
 		questionName.sendKeys("Automation");
@@ -566,13 +569,15 @@ public class QuickQuotesPage extends TestBase {
 		oneLineText.click();
 		wait.until(ExpectedConditions.visibilityOf(questionName));
 		questionName.click();
+		System.out.println("questionnaire added");
 		scroll();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOf(addParticpantManually));
 		addParticpantManually.sendKeys("d1@mailinator.com");
 		addParticpantManually.sendKeys(Keys.ENTER);
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		getQuoteButton.click();
 		// Verify on create page
 		// description Verify
