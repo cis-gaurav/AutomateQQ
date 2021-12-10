@@ -502,6 +502,7 @@ public class QuickQuotesPage extends TestBase {
 		executor.executeScript("arguments[0].click();", name);
 		name.sendKeys("createQQByName");
 		logger.info("Name enter");
+		Thread.sleep(3000);
 		deadline.clear();
 		scrollTillBottom();
 		Thread.sleep(3000);
