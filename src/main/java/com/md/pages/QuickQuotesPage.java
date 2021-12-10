@@ -561,8 +561,9 @@ public class QuickQuotesPage extends TestBase {
 		questionDropdown.click();
 		wait.until(ExpectedConditions.visibilityOf(oneLineText));
 		oneLineText.click();
+		oneLineText.click();
 		scroll();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.visibilityOf(addParticpantManually));
 		addParticpantManually.sendKeys("d1@mailinator.com");
 		addParticpantManually.sendKeys(Keys.ENTER);
@@ -822,7 +823,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
 	    messageTab.click();
 	    scroll();
-	    logger.info("Bubble count host end");
+        System.out.println("Bubble count host end");
 		Assert.assertEquals(InboxTxt.getText(), "Inbox");
 		Assert.assertEquals(messageBubbleCount.getText(), "1");
 		wait.until(ExpectedConditions.elementToBeClickable(messageMarkAsReadBtn));
