@@ -754,8 +754,9 @@ public class QuickQuotesPage extends TestBase {
 	
 	public boolean searchQuote() throws InterruptedException {
 //		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
+		Thread.sleep(2000);
 		quotesHeading.click();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
 		searchForQuote.clear();
