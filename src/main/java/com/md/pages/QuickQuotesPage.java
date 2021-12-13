@@ -139,11 +139,15 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//strong[text()='automationGroup']")
 	private WebElement groupName;
 	
-	@FindBy(xpath = "//div[@class=' css-1gtu0rj-indicatorContainer']//*[name()='svg']")
+	@FindBy(xpath = "//*[name()='path' and contains(@d,'M4.516 7.5')]")
 	private WebElement addParticpantManuallyArrrow;
 
 	@FindBy(xpath = "//input[@id='react-select-2-input']")
 	private WebElement addParticpantManually;
+	
+	@FindBy(xpath = "//div[@class=' css-1wa3eu0-placeholder']")
+	private WebElement addParticpantManually1;
+
 
 	@FindBy(xpath = "//h4[contains(text(),'Advice from procurement team')]")
 	private WebElement AdviceText;
@@ -572,7 +576,12 @@ public class QuickQuotesPage extends TestBase {
 		questionnairedrp.selectByVisibleText("Text");
         scrollTillBottom();
 		Thread.sleep(2000);
+		addParticpantManuallyArrrow.click();
+		System.out.println("TTTTT");
+//		addParticpantManually.sendKeys("d1@mailinator.com");
+//		addParticpantManually.sendKeys(Keys.ENTER);
 		addParticpantManually.sendKeys("d1@mailinator.com");
+		Thread.sleep(1000);
 		addParticpantManually.sendKeys(Keys.ENTER);
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
