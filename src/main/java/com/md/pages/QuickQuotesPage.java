@@ -580,9 +580,9 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println("TTTTT");
 //		addParticpantManually.sendKeys("d1@mailinator.com");
 //		addParticpantManually.sendKeys(Keys.ENTER);
-		addParticpantManually.sendKeys("d1@mailinator.com");
+		addParticpantManually1.sendKeys("d1@mailinator.com");
 		Thread.sleep(1000);
-		addParticpantManually.sendKeys(Keys.ENTER);
+		addParticpantManually1.sendKeys(Keys.ENTER);
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
 		// Verify on create page
