@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.server.handler.interactions.touch.Scroll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import com.md.base.TestBase;
@@ -138,7 +139,7 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//strong[text()='automationGroup']")
 	private WebElement groupName;
 	
-	@FindBy(xpath = "//div[@class=' css-tlfecz-indicatorContainer']")
+	@FindBy(xpath = "//div[@class=' css-1gtu0rj-indicatorContainer']//*[name()='svg']")
 	private WebElement addParticpantManuallyArrrow;
 
 	@FindBy(xpath = "//input[@id='react-select-2-input']")
@@ -301,7 +302,11 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy (xpath="//*[@id='accordion']/div[5]/button")
 	private WebElement editQuote;
 	
+	@FindBy (xpath="//i[@class='fa fa-times']")
+	private WebElement editPoupclose;
 	
+	@FindBy (xpath="//button[normalize-space()='Cancel']")
+	private WebElement editPoupCancel;
 
 ///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
 
@@ -461,7 +466,7 @@ public class QuickQuotesPage extends TestBase {
 
 // Scripts 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-		Thread.sleep(3000);// This is execute first on Jenkins
+		Thread.sleep(5000);// This is execute first on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
 //		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -562,22 +567,14 @@ public class QuickQuotesPage extends TestBase {
 		questionnaireCheckbox.click();
 		wait.until(ExpectedConditions.visibilityOf(questionName));
 		questionName.sendKeys("Automation");
-		wait.until(ExpectedConditions.elementToBeClickable(questionDropdown));
-		questionDropdown.click();
+		System.out.println("questionnaire added"); //till here pass on Jenkins
+		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
+		questionnairedrp.selectByVisibleText("Text");
+        scrollTillBottom();
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
-		oneLineText.click();
-		wait.until(ExpectedConditions.visibilityOf(questionName));
-		questionName.click();
-		System.out.println("questionnaire added");
-		scroll();
-		Thread.sleep(3000);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.visibilityOf(addParticpantManually));
 		addParticpantManually.sendKeys("d1@mailinator.com");
 		addParticpantManually.sendKeys(Keys.ENTER);
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
 		// Verify on create page
 		// description Verify
@@ -886,7 +883,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean EditQQEvent() throws InterruptedException {
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
@@ -947,8 +944,9 @@ public class QuickQuotesPage extends TestBase {
 		confrimationOk.click();
 		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", goLive);
-//		wait.until(ExpectedConditions.elementToBeClickable(goLive));
-//		goLive.click();
+		// Move to current mode again 
+		wait.until(ExpectedConditions.elementToBeClickable(editPoupCancel));
+		editPoupCancel.click();
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
 		wait.until(ExpectedConditions.elementToBeClickable(summaryToggel));
 		JavascriptExecutor executor2 = (JavascriptExecutor) driver;

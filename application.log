@@ -1,9 +1,7 @@
-2021-12-10 23:22:50,949  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-12-10 23:23:03,304  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-12-10 23:23:08,471  INFO [main] TestBase:28 - *******Redirect to QQ Listing*******
-2021-12-10 23:23:08,483  INFO [main] TestBase:34 - ****************
-2021-12-10 23:23:46,739  INFO [main] TestBase:91 - Quick Quote TC08 has passed
-2021-12-10 23:23:46,754  INFO [main] TestBase:34 - ****************
-2021-12-10 23:26:56,653  INFO [main] TestBase:103 - Quick Quote TC10 has passed
-2021-12-10 23:26:56,655  INFO [main] TestBase:34 - ****************
-2021-12-10 23:27:06,758  INFO [main] TestBase:891 - Adding lots
+2021-12-13 15:27:14,583  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2021-12-13 15:27:45,317  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2021-12-13 15:27:50,492  INFO [main] TestBase:28 - *******Redirect to QQ Listing*******
+2021-12-13 15:27:50,506  INFO [main] TestBase:34 - ****************
+2021-12-13 15:27:55,976  INFO [main] TestBase:894 - Adding lots
+2021-12-13 15:28:21,220  INFO [main] TestBase:109 - Quick Quote TC11 has passed
+2021-12-13 15:28:21,229  INFO [main] TestBase:121 - *******QQ_test ends*******
