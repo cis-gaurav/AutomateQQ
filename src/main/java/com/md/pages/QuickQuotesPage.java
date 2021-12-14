@@ -933,7 +933,7 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println("QQ created");
 		/////////////////////////Moving to edit mode again 
 		editQuote.click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
         Assert.assertEquals(editModeTxt.getText(), "This event is currently in Edit Mode which has put it on hold.");
         editOverview.click();
