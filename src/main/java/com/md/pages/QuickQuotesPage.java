@@ -930,7 +930,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		Thread.sleep(2000);
 		getQuoteButton.click();
-		System.out.println("Questionnaire added");
+		System.out.println("QQ created");
 		/////////////////////////Moving to edit mode again 
 		editQuote.click();
 		Thread.sleep(2000);
