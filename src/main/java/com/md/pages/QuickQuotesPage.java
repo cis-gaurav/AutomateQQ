@@ -901,7 +901,6 @@ public class QuickQuotesPage extends TestBase {
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(lotCheckbox));
 		/////////////////////Adding lots 
-		logger.info("Adding lots");
 		lotCheckbox.click();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
 		lotName.sendKeys("Metal Scrap");
@@ -910,6 +909,7 @@ public class QuickQuotesPage extends TestBase {
 		lotUom.sendKeys("tonnes");
 		lotQuantity.sendKeys("5");
 		scroll();
+		System.out.println("lot added");
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireCheckbox));
 		////////////////////Adding Questionnaire 
 		questionnaireCheckbox.click();
@@ -920,6 +920,7 @@ public class QuickQuotesPage extends TestBase {
 		questionDropdown.click();
 		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
 		oneLineText.click();
+		System.out.println("Questionnaire added");
 		scroll();
 		scroll();
 		Thread.sleep(4000);
@@ -929,6 +930,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		Thread.sleep(2000);
 		getQuoteButton.click();
+		System.out.println("Questionnaire added");
 		/////////////////////////Moving to edit mode again 
 		editQuote.click();
 		Thread.sleep(2000);
