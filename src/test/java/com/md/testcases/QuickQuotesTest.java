@@ -83,42 +83,42 @@ public class QuickQuotesTest extends TestBase {
 //		Assert.assertTrue(flag);
 //		logger.info("Quick Quote TC07 has passed");
 //	}
-	
-	@Test (priority=8)
-	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
-		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
-		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC08 has passed");
-	}
-
+//	
+//	@Test (priority=8)
+//	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
+//		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
+//		Assert.assertTrue(flag);
+//		logger.info("Quick Quote TC08 has passed");
+//	}
+//
 //	@Test(priority=9)
 //	public void qq_VerifyCreateMessageinSandpit() throws InterruptedException {
 //		QuickQuotesPage.createMessage();
 //		logger.info("Quick Quote TC09 has passed");
 //	}
 //	
-//	@Test(priority=10)	
-//	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
-//		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
-//		logger.info("Quick Quote TC10 has passed");
-//	}
-//	
-//	@Test (priority=11)
-//	public void qq_VerfiyEditQQEvent() throws InterruptedException {
-//		QuickQuotesPage.EditQQEvent();
-//		logger.info("Quick Quote TC11 has passed");
-//	}
-//	
-//	@Test(priority=12)
-//    public void qq_VerifySearchQuote() throws InterruptedException {
-//		boolean flag=QuickQuotesPage.searchQuote();
-//		Assert.assertTrue(flag);
-//		logger.info("Quick Quote TC12 has passed");
-//	}
-//	
-//	@AfterClass
-//	public void Teardown() throws Exception {
-//		logger.info("*******QQ_test ends*******");
-//		driver.close();
-//	}
+	@Test(priority=10)	
+	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
+		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
+		logger.info("Quick Quote TC10 has passed");
+	}
+	
+	@Test (priority=11)
+	public void qq_VerfiyEditQQEvent() throws InterruptedException {
+		QuickQuotesPage.EditQQEvent();
+		logger.info("Quick Quote TC11 has passed");
+	}
+	
+	@Test(priority=12)
+    public void qq_VerifySearchQuote() throws InterruptedException {
+		boolean flag=QuickQuotesPage.searchQuote();
+		Assert.assertTrue(flag);
+		logger.info("Quick Quote TC12 has passed");
+	}
+	
+	@AfterClass
+	public void Teardown() throws Exception {
+		logger.info("*******QQ_test ends*******");
+		driver.close();
+	}
 }
