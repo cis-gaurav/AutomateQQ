@@ -1,7 +1,0 @@
-2021-12-14 12:22:00,111  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-12-14 12:22:31,381  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-12-14 12:22:35,691  INFO [main] TestBase:28 - *******Redirect to QQ Listing*******
-2021-12-14 12:22:35,704  INFO [main] TestBase:34 - ****************
-2021-12-14 12:22:40,735  INFO [main] TestBase:904 - Adding lots
-2021-12-14 12:23:10,927  INFO [main] TestBase:109 - Quick Quote TC11 has passed
-2021-12-14 12:23:10,946  INFO [main] TestBase:121 - *******QQ_test ends*******
