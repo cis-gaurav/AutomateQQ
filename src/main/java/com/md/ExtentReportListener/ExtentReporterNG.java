@@ -10,7 +10,9 @@ public class ExtentReporterNG {
 
 public static ExtentReports extentReportGenerator() {
 
-	String path = System.getProperty("user.dir") + "//automationReport.html";
+//	String path = System.getProperty("user.dir") + "//automationReport.html";
+	String path = System.getProperty("user.dir") +"//reports//automationReport.html";
+
 	System.out.println("******Inside ExtentReporterNG******");
 	ExtentSparkReporter reporter = new ExtentSparkReporter(path).viewConfigurer().viewOrder().as(new ViewName[] {ViewName.AUTHOR,ViewName.DASHBOARD,ViewName.TEST}).apply();
 	reporter.config().setTheme(Theme.DARK);
