@@ -893,7 +893,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean EditQQEvent() throws InterruptedException {
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-//		Thread.sleep(5000);
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
@@ -921,6 +921,8 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
 		oneLineText.click();
 		scroll();
+		scroll();
+		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(addParticpantManually));
 		addParticpantManually.sendKeys("d1@mailinator.com");
 		addParticpantManually.sendKeys(Keys.ENTER);
@@ -961,7 +963,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(summaryToggel));
 		JavascriptExecutor executor2 = (JavascriptExecutor) driver;
 		executor2.executeScript("arguments[0].click();", summaryToggel);
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		Assert.assertEquals(lotNameVerify.getText(), "Edited Lot");
 		return lotNameVerify.isDisplayed();
 	}
