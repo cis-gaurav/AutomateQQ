@@ -139,7 +139,7 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//strong[text()='automationGroup']")
 	private WebElement groupName;
 	
-	@FindBy(xpath = "//*[name()='path' and contains(@d,'M4.516 7.5')]")
+	@FindBy(xpath = "//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div/form/div[6]/div/div/div[1]/div[1]/div/div[3]/div/div[1]/div/div[2]")
 	private WebElement addParticpantManuallyArrrow;
 
 	@FindBy(xpath = "//input[@id='react-select-2-input']")
@@ -574,15 +574,16 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println("questionnaire added"); //till here pass on Jenkins
 		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
 		questionnairedrp.selectByVisibleText("Text");
-        scrollTillBottom();
-		Thread.sleep(2000);
-		addParticpantManuallyArrrow.click();
-		System.out.println("TTTTT");
+//        scroll();
+//		Thread.sleep(2000);
+//		addParticpantManuallyArrrow.click();
+//		System.out.println("clicked arrow");
 //		addParticpantManually.sendKeys("d1@mailinator.com");
 //		addParticpantManually.sendKeys(Keys.ENTER);
-		addParticpantManually1.sendKeys("d1@mailinator.com");
-		Thread.sleep(1000);
-		addParticpantManually1.sendKeys(Keys.ENTER);
+//		Thread.sleep(2000);
+//		addParticpantManually1.sendKeys(Keys.DOWN,Keys.RETURN);
+//		System.out.println("Added d1");
+		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
 		// Verify on create page
