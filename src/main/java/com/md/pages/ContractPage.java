@@ -693,7 +693,7 @@ import com.md.base.TestBase;
 
 	        System.out.println("Total Contracts: "+totalcontracts);
 	        
-	        //Clcik on Show All Contracts Button
+	        //Click on Show All Contracts Button
 	        ShowArchiveToggleButton.click();
 	        
 	        //get First Four Characters 
