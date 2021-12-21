@@ -71,27 +71,27 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC07 has passed");
 	}	
 	
-	@Test(priority=8,enabled= false)
+	@Test(priority=8)
 	public void contract_VerifySearchContractUsingCategory() throws InterruptedException {				
 		boolean flag = contractPage.VerifySearchContractUsingCategory();
 		Assert.assertTrue(flag);
 		logger.info("Contract TC08 has passed");
 	}
 	
-	@Test(priority=9 )
+	@Test(priority=9)
 	public void contract_VerifySearchContractUsingSupplier() throws InterruptedException {	
 		boolean flag = contractPage.VerifySearchContractUsingSupplier();
 		Assert.assertTrue(flag);
 		logger.info("Contract TC09 has passed");
 	}
 	
-	@Test(priority=10,enabled= false)
+	@Test(priority=10)
 	public void contract_VerifySearchContractUsingValue() throws InterruptedException {		
 		boolean flag = contractPage.VerifySearchContractUsingValue();
 		Assert.assertTrue(flag);
 		logger.info("Contract TC10 has passed");
 	}
-	@Test(priority=11,enabled= false)
+	@Test(priority=11)
 	public void contract_VerifySearchContractUsingStakeHolder() throws InterruptedException {	
 		boolean flag = contractPage.VerifySearchContractUsingStakeHolder();
 		Assert.assertTrue(flag);
@@ -111,7 +111,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC13 has passed");
 	}
 	
-	@Test(priority =14)
+	@Test(priority=14)
 	public void contract_VerifySearchContractUsingOwner() throws InterruptedException {
 		boolean flag = contractPage.VerifySearchContractUsingOwner();
 		Assert.assertTrue(flag);
