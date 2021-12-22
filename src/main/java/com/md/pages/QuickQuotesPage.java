@@ -613,7 +613,7 @@ public class QuickQuotesPage extends TestBase {
 //		logger.info("TC10 start");
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -695,7 +695,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createEditContent() throws InterruptedException {
-		Thread.sleep(5000);//Adding because failed on Jenkins
+		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -771,7 +771,7 @@ public class QuickQuotesPage extends TestBase {
 	
 	public boolean searchQuote() throws InterruptedException {
 //		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		quotesHeading.click();
 		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -933,7 +933,7 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println("QQ created");
 		/////////////////////////Moving to edit mode again 
 		editQuote.click();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
         Assert.assertEquals(editModeTxt.getText(), "This event is currently in Edit Mode which has put it on hold.");
         editOverview.click();
