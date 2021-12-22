@@ -69,12 +69,12 @@ public class QuickQuotesTest extends TestBase {
 //		logger.info("Quick Quote TC05 has passed");
 //	}
 //	
-	@Test(priority=6)
-	public void qq_VerifyDeleteQuote() throws InterruptedException {
-		boolean flag=QuickQuotesPage.deleteQuote();
-		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC06 has passed");
-	}
+//	@Test(priority=6)
+//	public void qq_VerifyDeleteQuote() throws InterruptedException {
+//		boolean flag=QuickQuotesPage.deleteQuote();
+//		Assert.assertTrue(flag);
+//		logger.info("Quick Quote TC06 has passed");
+//	}
 //   	
 //	@Test (priority=7)
 //	public void qq_VerifyParticpantAddedFromGroup() throws InterruptedException {

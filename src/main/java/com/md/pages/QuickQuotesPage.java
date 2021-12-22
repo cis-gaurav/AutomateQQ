@@ -1,13 +1,9 @@
 package com.md.pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.server.handler.interactions.touch.Scroll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -613,7 +609,7 @@ public class QuickQuotesPage extends TestBase {
 //		logger.info("TC10 start");
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -631,9 +627,11 @@ public class QuickQuotesPage extends TestBase {
 		questionnaireCheckbox.click();
 		wait.until(ExpectedConditions.elementToBeClickable(questionName));
 		questionName.sendKeys("Automation");
-		questionDropdown.click();
-		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
-		oneLineText.click();
+		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
+		questionnairedrp.selectByVisibleText("Text");
+//		questionDropdown.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
+//		oneLineText.click();
 		Thread.sleep(2000);
 		sandpitco1Checkbox.click();
 		getQuoteButton.click();
@@ -893,7 +891,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean EditQQEvent() throws InterruptedException {
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
@@ -916,18 +914,20 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionName));
 		questionName.sendKeys("Automation");
-		wait.until(ExpectedConditions.elementToBeClickable(questionDropdown));
-		questionDropdown.click();
-		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
-		oneLineText.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(questionDropdown));
+//		questionDropdown.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
+//		oneLineText.click();		
+		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
+		questionnairedrp.selectByVisibleText("Text");
 		System.out.println("Questionnaire added");
 		scroll();
 		scroll();
-		Thread.sleep(4000);
-		wait.until(ExpectedConditions.elementToBeClickable(addParticpantManually));
-		addParticpantManually.sendKeys("d1@mailinator.com");
-		addParticpantManually.sendKeys(Keys.ENTER);
-		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
+		Thread.sleep(2000);
+//		wait.until(ExpectedConditions.elementToBeClickable(addParticpantManually));
+//		addParticpantManually.sendKeys("d1@mailinator.com");
+//		addParticpantManually.sendKeys(Keys.ENTER);
+//		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		Thread.sleep(2000);
 		getQuoteButton.click();
 		System.out.println("QQ created");
