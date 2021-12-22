@@ -287,6 +287,9 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
 	private WebElement questionnaireAnswerVerify;
 	
+	@FindBy(xpath = "//span[contains(text(),'2222This')]")
+	private WebElement questionnaireAnswerVerify2;
+	
 	@FindBy (xpath="//button[text()='Current']")
 	private WebElement current;
 	
@@ -359,7 +362,13 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains(text(), 'Submit answers')]")
 	private WebElement submitAnswer;
-
+	
+	@FindBy(xpath = "//div[@class='alert alert-info alert-dismissable']")
+	private WebElement reSubVal;
+	
+	@FindBy(xpath = "//h6[@class='questionnaire-status green']")
+	private WebElement subVal;
+	
 	@FindBy(xpath = "//*[contains(@id, 'confirmOk')]")
 	private WebElement submitAnswerFinalConfirmation;
 
@@ -606,9 +615,6 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public void createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
-//		logger.info("TC10 start");
-//		Thread.sleep(3000);//Adding because failed on Jenkins
-//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
@@ -616,12 +622,12 @@ public class QuickQuotesPage extends TestBase {
 		executor.executeScript("arguments[0].click();", sandpitHeader);
 		Thread.sleep(3000);
 //		sandpitHeader.click();
-		Thread.sleep(4000);
+//		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();// click on new quote button on quote listing page
 		wait.until(ExpectedConditions.elementToBeClickable(name));
-		name.sendKeys("Create QuickQuote Event with Particpant Answers");
-		Thread.sleep(4000);
+		name.sendKeys("Create QuickQuote Event with Participant Answers");
+		Thread.sleep(5000);
 		scroll();
 		scroll();
 		questionnaireCheckbox.click();
@@ -629,6 +635,7 @@ public class QuickQuotesPage extends TestBase {
 		questionName.sendKeys("Automation");
 		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
 		questionnairedrp.selectByVisibleText("Text");
+		scroll();
 //		questionDropdown.click();
 //		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
 //		oneLineText.click();
@@ -640,14 +647,17 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
 		dropdownSandpitco1.click();
-		Thread.sleep(3000);
+//		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(eventHeader));
 		eventHeader.click();
-		Thread.sleep(3000);
+//		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(eventInvitation));
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireTab));
 		questionnaireTab.click();
+		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.sendKeys("This is the Automated Answer of Questionnaire");
 		System.out.println(questionnaireAnwer1.getText());
@@ -659,7 +669,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
 		Thread.sleep(8000);
-		scrollTillBottom();
+		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
 		JavascriptExecutor executor1 = (JavascriptExecutor)driver;
 		executor1.executeScript("arguments[0].click();", particpantToggel);
@@ -667,29 +677,45 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		scroll();
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
+		scroll();
 		AllowResubmissionBtn.click();
 		Thread.sleep(2000);
-		///////////// Allow resub at Host end
+		/////////////////////////////////////// Allow Resub at Host end
 		actAsHost.click();
 		dropdownSandpitco1.click();
+//		scroll();
 		questionnaireTab.click();
+		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.clear();
+		System.out.println(reSubVal.getText());
+		Assert.assertEquals(reSubVal.getText(), "Your answers have not been re-submitted.");
 		questionnaireAnwer1.sendKeys("2222This is the Automated Answer of Questionnaire");
 		submitAnswer.click();
 		wait.until(ExpectedConditions.elementToBeClickable(submitAnswerFinalConfirmation));
 		submitAnswerFinalConfirmation.click();
+		Assert.assertEquals(subVal.getText(), "Submitted");
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
-		Thread.sleep(6000);
+		scroll();
+		Thread.sleep(7000);
+		wait.until(ExpectedConditions.visibilityOf(particpantToggel));
+//		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
+//		JavascriptExecutor executor11 = (JavascriptExecutor)driver;
+//		executor11.executeScript("arguments[0].click();", particpantToggel);
+//		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify2));
 		particpantToggel.click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
+//		scroll();
 		scrollTillBottom();
+		Thread.sleep(4000);
 //		String text= questionnaireAnswerVerify.getText();
-//		Assert.assertEquals(text, "This is the Automated Answer of Questionnaire");
-//		return questionnaireAnswerVerify.isDisplayed();
-		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
+		Assert.assertEquals(questionnaireAnswerVerify2.getText(), "2222This is the Automated Answer of Questionnaire");
+//		System.out.println("scroll up");
+		scrollUp();
+		scrollUp();
 		leaveSandpit.click();
+//		return questionnaireAnswerVerify2.isDisplayed();
 	}
 
 	public boolean createEditContent() throws InterruptedException {
@@ -853,8 +879,8 @@ public class QuickQuotesPage extends TestBase {
         sendMsgBtn.click();
         wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
+		scrollUp();
 		leaveSandpit.click();
-//        return msgSendToasterd2.isDisplayed();
 	}
 	
 	public boolean particpantAddedFromGroup() throws InterruptedException {

@@ -98,7 +98,8 @@ public class QuickQuotesTest extends TestBase {
 	
 	@Test (priority=10)
 	public void qq_VerfiyEditQQEvent() throws InterruptedException {
-		QuickQuotesPage.EditQQEvent();
+		boolean flag=QuickQuotesPage.EditQQEvent();
+		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC10 has passed");
 	}
 	
@@ -106,7 +107,7 @@ public class QuickQuotesTest extends TestBase {
     public void qq_VerifySearchQuote() throws InterruptedException {
 		boolean flag=QuickQuotesPage.searchQuote();
 		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC12 has passed");
+		logger.info("Quick Quote TC11 has passed");
 	}
 	
 	@Test(priority=12)	
