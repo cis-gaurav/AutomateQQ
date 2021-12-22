@@ -90,27 +90,27 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC08 has passed");
 	}
 
-	@Test(priority=9)
+	@Test(priority=9,alwaysRun = true)
 	public void qq_VerifyCreateMessageinSandpit() throws InterruptedException {
 		QuickQuotesPage.createMessage();
 		logger.info("Quick Quote TC09 has passed");
 	}
 	
-	@Test (priority=10)
+	@Test (priority=10,alwaysRun = true)
 	public void qq_VerfiyEditQQEvent() throws InterruptedException {
 		boolean flag=QuickQuotesPage.EditQQEvent();
 		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC10 has passed");
 	}
 	
-	@Test(priority=11)
+	@Test(priority=11,alwaysRun = true)
     public void qq_VerifySearchQuote() throws InterruptedException {
 		boolean flag=QuickQuotesPage.searchQuote();
 		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC11 has passed");
 	}
 	
-	@Test(priority=12)	
+	@Test(priority=12,alwaysRun = true)	
 	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
 		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
 		logger.info("Quick Quote TC12 has passed");
