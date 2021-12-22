@@ -6,3 +6,6 @@
 2021-12-22 12:55:30,761  INFO [main] TestBase:33 - ****************
 2021-12-22 12:55:45,755  INFO [main] TestBase:109 - Quick Quote TC12 has passed
 2021-12-22 12:55:45,757  INFO [main] TestBase:33 - ****************
+2021-12-22 13:00:00,311  INFO [main] TestBase:115 - Quick Quote TC12 has passed
+2021-12-22 13:00:00,313  INFO [main] TestBase:120 - *******QQ_test ends*******
+2021-12-22 13:00:01,957  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
