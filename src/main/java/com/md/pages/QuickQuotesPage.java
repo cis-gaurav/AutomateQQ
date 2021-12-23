@@ -715,6 +715,8 @@ public class QuickQuotesPage extends TestBase {
 		scrollUp();
 		scrollUp();
 		leaveSandpit.click();
+		JavascriptExecutor executor2 = (JavascriptExecutor) driver;
+		executor2.executeScript("arguments[0].click();", quickquoteDashbaord);
 //		return questionnaireAnswerVerify2.isDisplayed();
 	}
 
@@ -879,8 +881,12 @@ public class QuickQuotesPage extends TestBase {
         sendMsgBtn.click();
         wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
+		Thread.sleep(2000);
 		scrollUp();
 		leaveSandpit.click();
+		Thread.sleep(2000);
+		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+		executor1.executeScript("arguments[0].click();", quickquoteDashbaord);
 	}
 	
 	public boolean particpantAddedFromGroup() throws InterruptedException {
@@ -917,11 +923,12 @@ public class QuickQuotesPage extends TestBase {
 	public boolean EditQQEvent() throws InterruptedException {
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
 		name.sendKeys("Create QQ Event");
+		System.out.println("Entering name");
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(lotCheckbox));
 		/////////////////////Adding lots 
@@ -959,7 +966,7 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println("QQ created");
 		/////////////////////////Moving to edit mode again 
 		editQuote.click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
         Assert.assertEquals(editModeTxt.getText(), "This event is currently in Edit Mode which has put it on hold.");
         editOverview.click();
