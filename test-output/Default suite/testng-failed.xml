@@ -7,10 +7,8 @@
         <methods>
           <include name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit"/>
           <include name="QQSetUp"/>
-          <include name="qq_VerfiyEditQQEvent"/>
           <include name="Teardown"/>
           <include name="Test"/>
-          <include name="qq_VerifySearchQuote"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>

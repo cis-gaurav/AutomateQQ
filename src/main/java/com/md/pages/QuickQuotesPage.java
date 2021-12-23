@@ -615,7 +615,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public void createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -715,6 +715,7 @@ public class QuickQuotesPage extends TestBase {
 		scrollUp();
 		scrollUp();
 		leaveSandpit.click();
+		Thread.sleep(2000);
 		JavascriptExecutor executor2 = (JavascriptExecutor) driver;
 		executor2.executeScript("arguments[0].click();", quickquoteDashbaord);
 //		return questionnaireAnswerVerify2.isDisplayed();
@@ -992,8 +993,14 @@ public class QuickQuotesPage extends TestBase {
 		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", goLive);
 		// Move to current mode again 
+		Thread.sleep(2000);
+		try {
 		wait.until(ExpectedConditions.elementToBeClickable(editPoupCancel));
 		editPoupCancel.click();
+		}
+		catch(Exception e) {
+			
+		}
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
 		wait.until(ExpectedConditions.elementToBeClickable(summaryToggel));
 		JavascriptExecutor executor2 = (JavascriptExecutor) driver;
