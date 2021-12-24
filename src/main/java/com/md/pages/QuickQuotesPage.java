@@ -410,6 +410,9 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath="//input[@placeholder='Search for quote']")
 	private WebElement searchForQuote;
 	
+	@FindBy(xpath="//span[text()='QQ deadline']")
+    private WebElement qqDeadlinetxt;
+    
 	@FindBy(xpath="//i[@class='fa fa-search']")
 	private WebElement searchBtn;
 	
@@ -751,15 +754,12 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean deleteQuote() throws InterruptedException {
-//		Thread.sleep(6000);// Adding wait as failing on Jenkins 
-//		driver.get(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
-//		Thread.sleep(3000);// Adding wait as failing on Jenkins 
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
-		wait.until(ExpectedConditions.elementToBeClickable(name));
-		System.out.println("Start deleteQuote test");
-		name.clear();
+		wait.until(ExpectedConditions.elementToBeClickable(name));		
+//		newQuoteBtn.click();		
+//		wait.until(ExpectedConditions.elementToBeClickable(name));
+		System.out.println("create qq");
+	    name.clear();
 		name.sendKeys("verify Delete quote");
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
@@ -772,12 +772,17 @@ public class QuickQuotesPage extends TestBase {
 		current.click();
 		wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		currentDrop.click();
-		//Redirect to list page
+		/////////////////Redirect to list page
+		wait.until(ExpectedConditions.visibilityOf(qqDeadlinetxt));
 		System.out.println("Redirect to list Page");
-		Thread.sleep(3000);
-		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
+		searchForQuote.clear();
+        searchForQuote.sendKeys("verify Delete quote");
+        wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
+        searchBtn.click();
+    	wait.until(ExpectedConditions.visibilityOf(qqDeadlinetxt));
+        Thread.sleep(2000);
 		current.click();
-		wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
+    	wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		delteDrop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
         confrimationOk.click();
@@ -790,8 +795,8 @@ public class QuickQuotesPage extends TestBase {
         searchForQuote.sendKeys("verify Delete quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
-        Thread.sleep(5000);// Adding as failing on Jenkins 
-//      wait.until(ExpectedConditions.elementToBeClickable(noQuoteFound));
+//      Thread.sleep(5000);// Adding as failing on Jenkins 
+        wait.until(ExpectedConditions.visibilityOf(noQuoteFound));
         Assert.assertEquals(noQuoteFound.getText(), "No Quick Quotes Found");
         return noQuoteFound.isDisplayed();
 	}
