@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71138" started-at="2021-12-24T19:49:45 IST" finished-at="2021-12-24T19:50:57 IST">
+  <suite name="Default suite" duration-ms="84291" started-at="2021-12-29T17:32:51 IST" finished-at="2021-12-29T17:34:15 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71138" started-at="2021-12-24T19:49:45 IST" finished-at="2021-12-24T19:50:57 IST">
+    <test name="Default test" duration-ms="84291" started-at="2021-12-29T17:32:51 IST" finished-at="2021-12-29T17:34:15 IST">
       <class name="com.md.testcases.QuickQuotesTest">
-        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="QQSetUp" is-config="true" duration-ms="51716" started-at="2021-12-24T19:49:45 IST" finished-at="2021-12-24T19:50:37 IST">
+        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="QQSetUp" is-config="true" duration-ms="27151" started-at="2021-12-29T17:32:51 IST" finished-at="2021-12-29T17:33:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QQSetUp -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="Test" is-config="true" duration-ms="4427" started-at="2021-12-24T19:50:37 IST" finished-at="2021-12-24T19:50:42 IST">
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="Test" is-config="true" duration-ms="4660" started-at="2021-12-29T17:33:18 IST" finished-at="2021-12-29T17:33:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test -->
-        <test-method status="PASS" signature="qq_VerifyDeleteQuote()[pri:6, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="qq_VerifyDeleteQuote" duration-ms="14827" started-at="2021-12-24T19:50:42 IST" finished-at="2021-12-24T19:50:56 IST">
+        <test-method status="PASS" signature="qq_VerifyDeleteQuote()[pri:6, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="qq_VerifyDeleteQuote" duration-ms="15166" started-at="2021-12-29T17:33:23 IST" finished-at="2021-12-29T17:33:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qq_VerifyDeleteQuote -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="Teardown" is-config="true" duration-ms="136" started-at="2021-12-24T19:50:56 IST" finished-at="2021-12-24T19:50:57 IST">
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="Test" is-config="true" duration-ms="4283" started-at="2021-12-29T17:33:38 IST" finished-at="2021-12-29T17:33:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="qq_VerifyDeleteQuote()[pri:6, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="qq_VerifyDeleteQuote" duration-ms="14292" started-at="2021-12-29T17:33:42 IST" finished-at="2021-12-29T17:33:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qq_VerifyDeleteQuote -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="Test" is-config="true" duration-ms="4280" started-at="2021-12-29T17:33:56 IST" finished-at="2021-12-29T17:34:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="qq_VerifyDeleteQuote()[pri:6, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="qq_VerifyDeleteQuote" duration-ms="14208" started-at="2021-12-29T17:34:01 IST" finished-at="2021-12-29T17:34:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qq_VerifyDeleteQuote -->
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@b7dd107]" name="Teardown" is-config="true" duration-ms="201" started-at="2021-12-29T17:34:15 IST" finished-at="2021-12-29T17:34:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->

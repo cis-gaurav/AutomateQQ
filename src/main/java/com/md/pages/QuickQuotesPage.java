@@ -766,7 +766,7 @@ public class QuickQuotesPage extends TestBase {
 		getQuoteButton.click();
 		System.out.println("Summary page TCO6");
 		//Redirect to summary page 
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		wait.until(ExpectedConditions.visibilityOf(messageToggel));
 		wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
 		current.click();
@@ -780,7 +780,7 @@ public class QuickQuotesPage extends TestBase {
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
     	wait.until(ExpectedConditions.visibilityOf(qqDeadlinetxt));
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 		current.click();
     	wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		delteDrop.click();
@@ -789,7 +789,7 @@ public class QuickQuotesPage extends TestBase {
         System.out.println("Quote Deleted successfully");
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
         scrollUp();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
         searchForQuote.clear();
         searchForQuote.sendKeys("verify Delete quote");
