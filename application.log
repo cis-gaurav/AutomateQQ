@@ -1,10 +1,14 @@
-2021-12-29 17:32:54,907  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2021-12-29 17:33:13,085  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2021-12-29 17:33:18,359  INFO [main] TestBase:27 - *******Redirect to QQ Listing*******
-2021-12-29 17:33:18,375  INFO [main] TestBase:33 - ****************
-2021-12-29 17:33:38,199  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2021-12-29 17:33:38,203  INFO [main] TestBase:33 - ****************
-2021-12-29 17:33:56,776  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2021-12-29 17:33:56,790  INFO [main] TestBase:33 - ****************
-2021-12-29 17:34:15,269  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2021-12-29 17:34:15,275  INFO [main] TestBase:121 - *******QQ_test ends*******
+2022-01-03 23:12:04,707  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
+2022-01-03 23:12:48,665  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
+2022-01-03 23:12:54,444  INFO [main] TestBase:27 - *******Redirect to QQ Listing*******
+2022-01-03 23:12:54,456  INFO [main] TestBase:33 - ****************
+2022-01-03 23:13:16,622  INFO [main] TestBase:76 - Quick Quote TC06 has passed
+2022-01-03 23:13:16,626  INFO [main] TestBase:33 - ****************
+2022-01-03 23:13:38,297  INFO [main] TestBase:76 - Quick Quote TC06 has passed
+2022-01-03 23:13:38,300  INFO [main] TestBase:33 - ****************
+2022-01-03 23:13:59,646  INFO [main] TestBase:76 - Quick Quote TC06 has passed
+2022-01-03 23:13:59,648  INFO [main] TestBase:33 - ****************
+2022-01-03 23:14:20,978  INFO [main] TestBase:76 - Quick Quote TC06 has passed
+2022-01-03 23:14:20,980  INFO [main] TestBase:33 - ****************
+2022-01-03 23:14:42,587  INFO [main] TestBase:76 - Quick Quote TC06 has passed
+2022-01-03 23:14:42,590  INFO [main] TestBase:121 - *******QQ_test ends*******

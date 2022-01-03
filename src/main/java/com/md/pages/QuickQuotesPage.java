@@ -795,7 +795,7 @@ public class QuickQuotesPage extends TestBase {
         searchForQuote.sendKeys("verify Delete quote");
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
         searchBtn.click();
-//      Thread.sleep(5000);// Adding as failing on Jenkins 
+        Thread.sleep(3000);// Adding as failing on Jenkins 
         wait.until(ExpectedConditions.visibilityOf(noQuoteFound));
         Assert.assertEquals(noQuoteFound.getText(), "No Quick Quotes Found");
         return noQuoteFound.isDisplayed();

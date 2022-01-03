@@ -7,7 +7,6 @@
         <methods>
           <include name="QQSetUp"/>
           <include name="qq_VerifyDeleteQuote"/>
-          <include name="Teardown"/>
           <include name="Test"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
