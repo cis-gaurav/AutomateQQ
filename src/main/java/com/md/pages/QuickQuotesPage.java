@@ -759,6 +759,7 @@ public class QuickQuotesPage extends TestBase {
 //		newQuoteBtn.click();		
 //		wait.until(ExpectedConditions.elementToBeClickable(name));
 		System.out.println("create qq");
+		Thread.sleep(3000);
 	    name.clear();
 		name.sendKeys("verify Delete quote");
 		scrollTillBottom();
