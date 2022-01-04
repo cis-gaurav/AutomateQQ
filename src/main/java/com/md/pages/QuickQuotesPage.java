@@ -821,7 +821,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 	
 	public void createMessage() throws InterruptedException {
-//		Thread.sleep(3000);//Adding because failed on Jenkins
+		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
