@@ -788,6 +788,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
         confrimationOk.click();
         System.out.println("Quote Deleted successfully");
+        Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
         scrollUp();
         Thread.sleep(4000);
@@ -872,6 +873,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
 		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
+		Thread.sleep(3000);// As test failing on Jenkins
 	    messageTab.click();
 	    scroll();
         System.out.println("Bubble count host end");
