@@ -31,7 +31,8 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties(); // Need to create object of properties class
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/config.properties");
+			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";
+			FileInputStream ip = new FileInputStream(configPath);
 			prop.load(ip); // loading data of property file
 
 		} catch (FileNotFoundException e) {
@@ -94,6 +95,7 @@ public class TestBase {
 			logger.info("******Local Driver Intilaized*****");
 ///////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.get(prop.getProperty("url"));
 			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));

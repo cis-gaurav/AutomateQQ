@@ -5,8 +5,9 @@
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
+          <include name="qq_VerifyUserName"/>
+          <include name="qq_VerifyCompanyLogo"/>
           <include name="QQSetUp"/>
-          <include name="qq_VerifyDeleteQuote"/>
           <include name="Teardown"/>
           <include name="Test"/>
         </methods>

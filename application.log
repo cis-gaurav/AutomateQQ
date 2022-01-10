@@ -1,14 +1,12 @@
-2022-01-03 23:23:33,609  INFO [main] TestBase:94 - ******Local Driver Intilaized*****
-2022-01-03 23:25:03,723  INFO [main] TestBase:104 - Logged in and redirect to MD Dashbaord
-2022-01-03 23:25:08,354  INFO [main] TestBase:27 - *******Redirect to QQ Listing*******
-2022-01-03 23:25:08,367  INFO [main] TestBase:33 - ****************
-2022-01-03 23:25:35,961  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2022-01-03 23:25:35,965  INFO [main] TestBase:33 - ****************
-2022-01-03 23:26:03,354  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2022-01-03 23:26:03,356  INFO [main] TestBase:33 - ****************
-2022-01-03 23:26:30,785  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2022-01-03 23:26:30,787  INFO [main] TestBase:33 - ****************
-2022-01-03 23:26:58,220  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2022-01-03 23:26:58,222  INFO [main] TestBase:33 - ****************
-2022-01-03 23:27:25,602  INFO [main] TestBase:76 - Quick Quote TC06 has passed
-2022-01-03 23:27:25,604  INFO [main] TestBase:121 - *******QQ_test ends*******
+2022-01-10 18:49:52,037  INFO [main] TestBase:95 - ******Local Driver Intilaized*****
+2022-01-10 18:50:15,131  INFO [main] TestBase:106 - Logged in and redirect to MD Dashbaord
+2022-01-10 18:50:19,945  INFO [main] TestBase:30 - *******Redirect to QQ Listing*******
+2022-01-10 18:50:19,953  INFO [main] TestBase:36 - ****************
+2022-01-10 18:50:54,801  INFO [main] TestBase:79 - Quick Quote TC06 has passed
+2022-01-10 18:50:54,807  INFO [main] TestBase:36 - ****************
+2022-01-10 18:50:59,139  INFO [main] TestBase:126 - Quick Quote TC13 has passed
+2022-01-10 18:50:59,143  INFO [main] TestBase:36 - ****************
+2022-01-10 18:51:03,537  INFO [main] TestBase:134 - Quick Quote TC14 has passed
+2022-01-10 18:51:03,542  INFO [main] TestBase:36 - ****************
+2022-01-10 18:51:07,925  INFO [main] TestBase:142 - Quick Quote TC15 has passed
+2022-01-10 18:51:07,928  INFO [main] TestBase:148 - *******QQ_test ends*******
