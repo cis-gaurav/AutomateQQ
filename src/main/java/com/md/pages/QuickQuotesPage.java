@@ -897,7 +897,8 @@ public class QuickQuotesPage extends TestBase {
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
-		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
+		Thread.sleep(2000);// As test failing on Jenkins
+//		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
 		Thread.sleep(3000);// As test failing on Jenkins
 	    messageTab.click();
 	    scroll();
@@ -918,6 +919,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		scrollUp();
 		leaveSandpit.click();
+		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
 		Thread.sleep(2000);
 		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", quickquoteDashbaord);

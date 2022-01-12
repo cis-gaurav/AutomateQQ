@@ -58,7 +58,6 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC03 has passed");
 	}
 
-
 	@Test(priority=4)
 	public void qq_VerifyValidationMessageOnNamefield() throws InterruptedException {
 		boolean flag = QuickQuotesPage.createNameFieldValidaions();
