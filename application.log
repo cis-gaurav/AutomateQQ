@@ -1,12 +1,5 @@
-2022-01-10 18:49:52,037  INFO [main] TestBase:95 - ******Local Driver Intilaized*****
-2022-01-10 18:50:15,131  INFO [main] TestBase:106 - Logged in and redirect to MD Dashbaord
-2022-01-10 18:50:19,945  INFO [main] TestBase:30 - *******Redirect to QQ Listing*******
-2022-01-10 18:50:19,953  INFO [main] TestBase:36 - ****************
-2022-01-10 18:50:54,801  INFO [main] TestBase:79 - Quick Quote TC06 has passed
-2022-01-10 18:50:54,807  INFO [main] TestBase:36 - ****************
-2022-01-10 18:50:59,139  INFO [main] TestBase:126 - Quick Quote TC13 has passed
-2022-01-10 18:50:59,143  INFO [main] TestBase:36 - ****************
-2022-01-10 18:51:03,537  INFO [main] TestBase:134 - Quick Quote TC14 has passed
-2022-01-10 18:51:03,542  INFO [main] TestBase:36 - ****************
-2022-01-10 18:51:07,925  INFO [main] TestBase:142 - Quick Quote TC15 has passed
-2022-01-10 18:51:07,928  INFO [main] TestBase:148 - *******QQ_test ends*******
+2022-01-12 18:45:24,905  INFO [main] TestBase:95 - ******Local Driver Intilaized*****
+2022-01-12 18:45:56,774  INFO [main] TestBase:106 - Logged in and redirect to MD Dashbaord
+2022-01-12 18:46:02,149  INFO [main] TestBase:30 - *******Redirect to QQ Listing Before Class*******
+2022-01-12 18:46:02,169  INFO [main] TestBase:36 - ****************Before Method
+2022-01-12 18:50:11,085  INFO [main] TestBase:140 - Quick Quote TC15 has passed

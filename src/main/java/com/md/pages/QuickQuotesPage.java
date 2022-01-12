@@ -333,6 +333,9 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//ul[@class='nav-header']/li[3]/a/span/i")
 	private WebElement sandpitHeader;
+	
+	@FindBy(xpath = "//p[contains(text(), 'Welcome to the')]")
+	private WebElement sandpitWelcomeMessage;
 
 	@FindBy(xpath = "//*[contains (text(),  'Act as Host')]")
 	private WebElement actAsHost;
@@ -740,10 +743,10 @@ public class QuickQuotesPage extends TestBase {
 		scrollUp();
 		scrollUp();
 		leaveSandpit.click();
+		System.out.println("Leaving sandpit");
 		Thread.sleep(2000);
-		JavascriptExecutor executor2 = (JavascriptExecutor) driver;
-		executor2.executeScript("arguments[0].click();", quickquoteDashbaord);
-//		return questionnaireAnswerVerify2.isDisplayed();
+//		executor1.executeScript("arguments[0].click();", quickquoteDashbaord);
+		Assert.assertEquals(yourQuoteText.getText(), "YOUR QUOTES");
 	}
 
 	public boolean createEditContent() throws InterruptedException {
@@ -862,6 +865,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		Thread.sleep(5000);
 		//Create Quote in Sandpit mode 
+		Assert.assertEquals(sandpitWelcomeMessage.getText(), "Welcome to the Sandpit! Here you can learn to use Market Dojo; viewing events from both the host and participant perspective to test event configurations.");
 		System.out.println("Entering event name ");
 		name.sendKeys("Msg flow host and particpant end ");
 		scrollTillBottom();
@@ -927,6 +931,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", quickquoteDashbaord);
+		Assert.assertEquals(yourQuoteText.getText(), "YOUR QUOTES");
 	}
 	
 	public boolean particpantAddedFromGroup() throws InterruptedException {

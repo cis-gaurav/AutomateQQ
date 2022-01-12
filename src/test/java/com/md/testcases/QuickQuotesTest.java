@@ -6,7 +6,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.md.base.TestBase;
 import com.md.pages.QuickQuotesPage;
 import com.md.utils.TestUtils;
@@ -27,13 +26,13 @@ public class QuickQuotesTest extends TestBase {
 		QuickQuotesPage = new QuickQuotesPage();
 		Thread.sleep(3000);
 		QuickQuotesPage.redirectFromMdDashboardToQuoteListing();
-		logger.info("*******Redirect to QQ Listing*******");
+		logger.info("*******Redirect to QQ Listing Before Class*******");
 	}
 
 	@BeforeMethod
 	public void Test() throws InterruptedException {
 //		Thread.sleep(2000);
-		logger.info("****************");
+		logger.info("****************Before Method");
 		QuickQuotesPage.quoteListingToCreate();
 	}
 	
