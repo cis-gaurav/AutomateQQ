@@ -32,7 +32,7 @@ public class QuickQuotesTest extends TestBase {
 	@BeforeMethod
 	public void Test() throws InterruptedException {
 //		Thread.sleep(2000);
-		logger.info("****************Before Method");
+		logger.info("**Before Method***");
 		QuickQuotesPage.quoteListingToCreate();
 	}
 	
