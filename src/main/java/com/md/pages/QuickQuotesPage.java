@@ -862,6 +862,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		Thread.sleep(5000);
 		//Create Quote in Sandpit mode 
+		System.out.println("Entering event name ");
 		name.sendKeys("Msg flow host and particpant end ");
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
@@ -897,15 +898,16 @@ public class QuickQuotesPage extends TestBase {
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
-		Thread.sleep(2000);// As test failing on Jenkins
+//		Thread.sleep(2000);// As test failing on Jenkins
 //		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
 		Thread.sleep(3000);// As test failing on Jenkins
 	    messageTab.click();
 	    scroll();
-        System.out.println("Bubble count host end");
+        System.out.println("Bubble count at host end");
 		Assert.assertEquals(InboxTxt.getText(), "Inbox");
 		Assert.assertEquals(messageBubbleCount.getText(), "1");
 		wait.until(ExpectedConditions.elementToBeClickable(messageMarkAsReadBtn));
+		Thread.sleep(2000);
 		messageMarkAsReadBtn.click();
 		messageSendReply.click();
 		Thread.sleep(2000);
@@ -914,13 +916,14 @@ public class QuickQuotesPage extends TestBase {
 		sendNewMsgTxtField.sendKeys("Automate message as particpant");
 		driver.switchTo().defaultContent();
         sendMsgBtn.click();
+        System.out.println("Sending message as participant");
 		Thread.sleep(2000);// As test failing on Jenkins
         wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
 		Thread.sleep(2000);
 		scrollUp();
 		leaveSandpit.click();
-		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
+		System.out.println("Leaving sandpit");
 		Thread.sleep(2000);
 		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", quickquoteDashbaord);
