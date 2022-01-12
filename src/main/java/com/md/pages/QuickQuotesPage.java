@@ -914,6 +914,7 @@ public class QuickQuotesPage extends TestBase {
 		sendNewMsgTxtField.sendKeys("Automate message as particpant");
 		driver.switchTo().defaultContent();
         sendMsgBtn.click();
+		Thread.sleep(2000);// As test failing on Jenkins
         wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
 		Thread.sleep(2000);
