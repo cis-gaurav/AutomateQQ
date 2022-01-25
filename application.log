@@ -1,5 +1,1 @@
-2022-01-12 18:45:24,905  INFO [main] TestBase:95 - ******Local Driver Intilaized*****
-2022-01-12 18:45:56,774  INFO [main] TestBase:106 - Logged in and redirect to MD Dashbaord
-2022-01-12 18:46:02,149  INFO [main] TestBase:30 - *******Redirect to QQ Listing Before Class*******
-2022-01-12 18:46:02,169  INFO [main] TestBase:36 - ****************Before Method
-2022-01-12 18:50:11,085  INFO [main] TestBase:140 - Quick Quote TC15 has passed
+2022-01-25 13:03:17,357  INFO [main] TestBase:102 - ******Local Driver Intilaized*****

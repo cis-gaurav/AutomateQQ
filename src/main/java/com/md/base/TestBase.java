@@ -20,6 +20,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 
 	public static WebDriver driver;
@@ -91,7 +93,10 @@ public class TestBase {
 			logger.info("Logged in and redirect to MD Dashbaord");
 			
 		} else if (ExecutionLocation.equals("local")) {
-			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
+//			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
+			
+////////////////Adding WebDriverManger 
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 //			System.out.println("Driver Intilaized");
 			logger.info("******Local Driver Intilaized*****");
