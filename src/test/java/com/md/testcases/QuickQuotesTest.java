@@ -155,10 +155,9 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC17 has passed");
 	}
 
-	
-//	@AfterClass
-//	public void Teardown() throws Exception {
-//		logger.info("*******QQ_test ends*******");
-//		driver.close();
-//	}
+	@AfterClass
+	public void Teardown() throws Exception {
+		logger.info("*******QQ_test ends*******");
+		driver.close();
+	}
 }

@@ -5,9 +5,16 @@
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
+          <include name="qq_VerifyCreateMessageinSandpit"/>
+          <include name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit"/>
+          <include name="qq_VerifyParticpantAddedFromGroup"/>
           <include name="QQSetUp"/>
+          <include name="qq_VerfiyQQEventWithAllDetails"/>
+          <include name="qq_VerifyClosedReopenEvent"/>
+          <include name="qq_VerfiyEditQQEvent"/>
           <include name="qq_VerifyAwardLotPopup"/>
           <include name="Test"/>
+          <include name="qq_VerifySearchQuote"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
