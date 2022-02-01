@@ -872,11 +872,8 @@ public class QuickQuotesPage extends TestBase {
 	
 	public void createMessage() throws InterruptedException {
 		Thread.sleep(3000);//Adding because failed on Jenkins
-//		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
-//		wait.until(ExpectedConditions.elementToBeClickable(sandpitHeader));
-//		sandpitHeader.click();
 		Thread.sleep(4000);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
@@ -915,7 +912,7 @@ public class QuickQuotesPage extends TestBase {
 		// At participants end 
 		actAsHost.click();
 		dropdownSandpitco1.click();
-//		Thread.sleep(3000);
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(eventHeader));
 	    eventHeader.click();
 		Thread.sleep(3000);
@@ -923,8 +920,8 @@ public class QuickQuotesPage extends TestBase {
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
-//		Thread.sleep(2000);// As test failing on Jenkins
-//		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
+		Thread.sleep(2000);// As test failing on Jenkins
+		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
 		Thread.sleep(3000);// As test failing on Jenkins
 	    messageTab.click();
 	    scroll();
