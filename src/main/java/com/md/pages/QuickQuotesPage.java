@@ -3,6 +3,7 @@ package com.md.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.server.handler.GetTitle;
 import org.openqa.selenium.support.FindBy;
@@ -286,13 +287,6 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//span[text()='Inbox']")
 	private WebElement InboxTxt;
 	
-//	@FindBy(xpath = "//span[contains(text(), 'Sandpit')]")
-//	private WebElement partTxt;
-//	
-//	@FindBy(xpath = "//div[contains(text(),'Your Message has been sent.')]")
-//	private WebElement automateMsgTxt;
-	
-
 	@FindBy(xpath = "//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
 	private WebElement questionnaireAnswerVerify;
 	
@@ -302,8 +296,29 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy (xpath="//button[text()='Current']")
 	private WebElement current;
 	
+	@FindBy (xpath="//button[normalize-space()='Current']")
+	private WebElement current1;
+	
 	@FindBy (xpath="//a[text()='Current']")
 	private WebElement currentDrop;
+	
+	@FindBy (xpath="//button[normalize-space()='Closed']")
+	private WebElement closeDrp1;
+	
+	@FindBy(xpath="//a[contains(text(), 'Close Event')]")
+	private WebElement closeDrop;
+	
+	@FindBy(xpath="//div[contains(text(),'By closing')]")
+	private WebElement closeAlertTxt;
+	
+	@FindBy(xpath="//div[contains(text(),'By re-opening')]")
+	private WebElement reopenAlertTxt;
+	
+	@FindBy(xpath="//a[contains(text(), 'Re-Open')]")
+	private WebElement reOpenDrop;
+	
+	@FindBy(xpath="//div[contains(text(),'Your event has now been reopened')]")
+	private WebElement reOpenToaster;
 	
 	@FindBy (xpath="//a[text()='Delete']")
 	private WebElement delteDrop;
@@ -319,7 +334,39 @@ public class QuickQuotesPage extends TestBase {
 	
 	@FindBy (xpath="//button[normalize-space()='Cancel']")
 	private WebElement editPoupCancel;
+	
+	@FindBy (xpath="//a[text()='Export Report']")
+	private WebElement exportReportBtn;
+	
+	@FindBy (xpath="//button[text()='Edit']")
+	private WebElement editEvent;
+	
+	//AwardLot popup 
+	
+	@FindBy (xpath="//button[contains(text(), 'Lot')]")
+	private WebElement awardLotBtn;
+	
+	@FindBy (xpath="//tbody/tr[1]/td[5]/div[1]/div[1]/button[1]")
+	private WebElement awardLotCheckbox;
+	
+	@FindBy (xpath="//button[@class='btn clearfix small white button red notified_trashed btn-award fa fa-trash-o fa-red']")
+	private WebElement awardLotDelete;
+	
+	@FindBy (xpath="//div[contains(@class, 'alert alert-info')]")
+	private WebElement awardPopupValMsg;
+	
+	@FindBy (xpath="//button[contains(text(), 'Create New Award Notice')]")
+	private WebElement createAwardNoticeBtn;
 
+	@FindBy (xpath="//button[text()='Send Award Notice']")
+	private WebElement sendAwardNoticeBtn;
+	
+	@FindBy (xpath="//div[@class='alert alert-success msg']")
+	private WebElement awardLotValidationMsg;
+	
+	@FindBy (xpath="//*[@id='accordion']/div[5]/div/div/div/div/div/div/div/div/div/div/div[2]/div[2]/div")
+	private WebElement awardLotDeleteValidationMsg;
+	
 ///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
 
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 1 sandpit1@marketdojo.com\")]")
@@ -448,8 +495,6 @@ public class QuickQuotesPage extends TestBase {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
-//		Thread.sleep(3000);
-//		newQuoteBtn.click();
 	}
 
 	// Used in BeforeMethod 
@@ -1053,4 +1098,58 @@ public class QuickQuotesPage extends TestBase {
 		Assert.assertEquals(lotNameVerify.getText(), "Edited Lot");
 		return lotNameVerify.isDisplayed();
 	}
+	
+	public boolean  ClosedReopenEvent() throws InterruptedException {
+		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33396");
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
+		Thread.sleep(2000);
+		closeDrp1.click();
+		wait.until(ExpectedConditions.elementToBeClickable(reOpenDrop));
+		reOpenDrop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
+		confrimationOk.click();
+		Assert.assertEquals(reOpenToaster.getText(), "YOUR EVENT HAS NOW BEEN REOPENED");
+		//Event gets re-opened
+		wait.until(ExpectedConditions.elementToBeClickable(current));
+		Thread.sleep(2000);
+		current.click();
+		wait.until(ExpectedConditions.elementToBeClickable(closeDrop));
+		closeDrop.click();
+		Thread.sleep(2000);
+		Assert.assertEquals(closeAlertTxt.getText(), "By closing this event your participants will no longer have access to the documents, including uploading their own documents, the Lots or any of the event details. You can re-open this event manually at any time if you wish to reverse this action. Are you sure you would like to close this event?");
+		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
+		confrimationOk.click();
+		//Event gets closed 
+		Thread.sleep(4000);
+		return exportReportBtn.isDisplayed();
+	}
+	
+	public boolean AwardLotPopup () throws InterruptedException {
+		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33416");
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(awardLotBtn));
+		awardLotBtn.click();
+		Thread.sleep(2000);
+		Select se = new Select(driver.findElement(By.xpath("//tbody/tr[1]/td[3]/div[1]/select[1]")));
+	    se.selectByVisibleText("mailinator.com");
+	    wait.until(ExpectedConditions.visibilityOf(awardLotCheckbox));
+	    awardLotCheckbox.click();
+		Thread.sleep(3000);
+	    scrollTillBottom();
+		wait.until(ExpectedConditions.visibilityOf(createAwardNoticeBtn));
+	    createAwardNoticeBtn.click();
+	    Thread.sleep(4000);
+	    scrollTillBottom();
+		wait.until(ExpectedConditions.elementToBeClickable(sendAwardNoticeBtn));
+        sendAwardNoticeBtn.click();
+        System.out.println(awardLotValidationMsg.getText());
+        Thread.sleep(2000);
+        awardLotDelete.click();
+        System.out.println(awardLotDeleteValidationMsg.getText());
+        Assert.assertEquals(awardLotDeleteValidationMsg.getText(), "The Award Notice has been deleted.");
+        return awardLotDeleteValidationMsg.isDisplayed();
+	}
+	
+	
 }

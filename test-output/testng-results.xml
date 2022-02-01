@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="288942" started-at="2022-01-12T18:45:22 IST" finished-at="2022-01-12T18:50:11 IST">
+  <suite name="Default suite" duration-ms="76781" started-at="2022-02-01T17:19:13 IST" finished-at="2022-02-01T17:20:30 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="288942" started-at="2022-01-12T18:45:22 IST" finished-at="2022-01-12T18:50:11 IST">
+    <test name="Default test" duration-ms="76781" started-at="2022-02-01T17:19:13 IST" finished-at="2022-02-01T17:20:30 IST">
       <class name="com.md.testcases.QuickQuotesTest">
-        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@6950e31]" name="QQSetUp" is-config="true" duration-ms="39970" started-at="2022-01-12T18:45:22 IST" finished-at="2022-01-12T18:46:02 IST">
+        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@18bf3d14]" name="QQSetUp" is-config="true" duration-ms="30918" started-at="2022-02-01T17:19:13 IST" finished-at="2022-02-01T17:19:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QQSetUp -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@6950e31]" name="Test" is-config="true" duration-ms="4900" started-at="2022-01-12T18:46:02 IST" finished-at="2022-01-12T18:46:07 IST">
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@18bf3d14]" name="Test" is-config="true" duration-ms="4477" started-at="2022-02-01T17:19:44 IST" finished-at="2022-02-01T17:19:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test -->
-        <test-method status="PASS" signature="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit()[pri:15, instance:com.md.testcases.QuickQuotesTest@6950e31]" name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit" duration-ms="244016" started-at="2022-01-12T18:46:07 IST" finished-at="2022-01-12T18:50:11 IST">
+        <test-method status="PASS" signature="qq_VerifyClosedReopenEvent()[pri:16, instance:com.md.testcases.QuickQuotesTest@18bf3d14]" name="qq_VerifyClosedReopenEvent" duration-ms="15244" started-at="2022-02-01T17:19:48 IST" finished-at="2022-02-01T17:20:04 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qq_VerifyQuestionnaireAndAllowResubmissioninSandpit -->
+        </test-method> <!-- qq_VerifyClosedReopenEvent -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@18bf3d14]" name="Test" is-config="true" duration-ms="4393" started-at="2022-02-01T17:20:04 IST" finished-at="2022-02-01T17:20:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="qq_VerifyAwardLotPopup()[pri:17, instance:com.md.testcases.QuickQuotesTest@18bf3d14]" name="qq_VerifyAwardLotPopup" duration-ms="21718" started-at="2022-02-01T17:20:08 IST" finished-at="2022-02-01T17:20:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qq_VerifyAwardLotPopup -->
       </class> <!-- com.md.testcases.QuickQuotesTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
