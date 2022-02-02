@@ -1082,6 +1082,7 @@ public class QuickQuotesPage extends TestBase {
 		reOpenDrop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
 		confrimationOk.click();
+		Thread.sleep(2000);// Adding wait as failing on Jenkins
 		Assert.assertEquals(reOpenToaster.getText(), "YOUR EVENT HAS NOW BEEN REOPENED");
 		//Event gets re-opened
 		wait.until(ExpectedConditions.elementToBeClickable(current));

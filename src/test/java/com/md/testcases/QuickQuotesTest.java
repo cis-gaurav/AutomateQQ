@@ -108,18 +108,18 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC10 has passed");
 	}
 	
-//	@Test (priority=11)
-//	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
-//		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
-//		Assert.assertTrue(flag);
-//		logger.info("Quick Quote TC11 has passed");
-//	}
-//
-//	@Test(priority=12)
-//	public void qq_VerifyCreateMessageinSandpit() throws InterruptedException {
-//		QuickQuotesPage.createMessage();
-//		logger.info("Quick Quote TC12 has passed");
-//	}
+	@Test (priority=11)
+	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
+		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
+		Assert.assertTrue(flag);
+		logger.info("Quick Quote TC11 has passed");
+	}
+
+	@Test(priority=12)
+	public void qq_VerifyCreateMessageinSandpit() throws InterruptedException {
+		QuickQuotesPage.createMessage();
+		logger.info("Quick Quote TC12 has passed");
+	}
 	
 	@Test (priority=13)
 	public void qq_VerfiyEditQQEvent() throws InterruptedException {
@@ -135,11 +135,11 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC14 has passed");
 	}
 	
-//	@Test(priority=15)	
-//	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
-//		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
-//		logger.info("Quick Quote TC15 has passed");
-//	}
+	@Test(priority=15)	
+	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
+		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
+		logger.info("Quick Quote TC15 has passed");
+	}
 	
 	@Test(priority=16)
 	public void qq_VerifyClosedReopenEvent() throws InterruptedException {
