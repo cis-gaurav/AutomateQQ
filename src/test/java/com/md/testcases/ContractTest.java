@@ -111,7 +111,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC13 has passed");
 	}
 	
-	@Test(priority=14)
+	@Test(priority=14, enabled= false)
 	public void contract_VerifySearchContractUsingOwner() throws InterruptedException {
 		boolean flag = contractPage.VerifySearchContractUsingOwner();
 		Assert.assertTrue(flag);
@@ -263,7 +263,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC35 has passed");
 	}
 	
-	@Test(priority=36)
+	@Test(priority=36, enabled= false)
 	public void contract_VerifyCustomFieldDisplayInContractForm() throws InterruptedException{		
 		boolean flag = contractPage.VerifyCustomFieldDisplayInContractForm();
 		Assert.assertFalse(flag);
