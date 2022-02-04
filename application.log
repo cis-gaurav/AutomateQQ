@@ -1,7 +1,12 @@
-2022-02-01 19:35:19,426  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
-2022-02-01 19:36:03,188  INFO [main] TestBase:113 - Logged in and redirect to MD Dashbaord
-2022-02-01 19:36:09,857  INFO [main] TestBase:30 - *******Redirect to QQ Listing Before Class*******
-2022-02-01 19:36:09,868  INFO [main] TestBase:37 - **Before Method***
-2022-02-01 19:36:32,508  INFO [main] TestBase:115 - Quick Quote TC11 has passed
-2022-02-01 19:36:32,513  INFO [main] TestBase:37 - **Before Method***
-2022-02-01 19:39:32,606  INFO [main] TestBase:37 - **Before Method***
+2022-02-04 17:43:46,889 DEBUG [main] ResolutionCache:186 - Resolution chrome=97 in cache (valid until 18:24:16 04/02/2022 IST)
+2022-02-04 17:43:46,896 DEBUG [main] ResolutionCache:186 - Resolution chrome97=97.0.4692.71 in cache (valid until 17:24:16 05/02/2022 IST)
+2022-02-04 17:43:46,900  INFO [main] WebDriverManager:966 - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+2022-02-04 17:43:46,920 DEBUG [main] WebDriverManager:922 - Driver chromedriver 97.0.4692.71 found in cache
+2022-02-04 17:43:46,921  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-02-04 17:43:48,516  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
+2022-02-04 17:43:50,624 DEBUG [main] ResolutionCache:186 - Resolution chrome=97 in cache (valid until 18:24:16 04/02/2022 IST)
+2022-02-04 17:43:50,626 DEBUG [main] ResolutionCache:186 - Resolution chrome97=97.0.4692.71 in cache (valid until 17:24:16 05/02/2022 IST)
+2022-02-04 17:43:50,627  INFO [main] WebDriverManager:966 - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+2022-02-04 17:43:50,635 DEBUG [main] WebDriverManager:922 - Driver chromedriver 97.0.4692.71 found in cache
+2022-02-04 17:43:50,636  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-02-04 17:43:51,785  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
