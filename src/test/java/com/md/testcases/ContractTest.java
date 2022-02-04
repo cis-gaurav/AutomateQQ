@@ -201,7 +201,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC26 has passed");
 	}
 	
-	@Test(priority=27)
+	@Test(priority=27, enabled= false)
 	public void contract_VerifyDisplayOfExpiryNotiticationLink() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfExpiryNotiticationLink();
 		Assert.assertTrue(flag);
