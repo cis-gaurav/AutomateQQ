@@ -131,7 +131,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC16 has passed");
 	}
 			
-	@Test(priority=17)
+	@Test(priority=17,enabled=false)
 	public void contract_VerifyDisplayOfCategoryInContractForm() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfCategoryInContractForm();
 		Assert.assertTrue(flag);
@@ -173,7 +173,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC22 has passed");
 	}
 	
-	@Test(priority=23)
+	@Test(priority=23,enabled=false)
 	public void contract_VerifyAtleastOneValueInSupplierContact() throws InterruptedException{		
 		boolean flag = contractPage.VerifyAtleastOneValueInSupplierContact();
 		Assert.assertTrue(flag);
