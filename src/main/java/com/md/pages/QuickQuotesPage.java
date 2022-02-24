@@ -1121,7 +1121,7 @@ public class QuickQuotesPage extends TestBase {
 		return exportReportBtn.isDisplayed();
 	}
 
-	public boolean awardLotPopup() throws InterruptedException {
+	public void awardLotPopup() throws InterruptedException {
 		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33416");
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(awardLotBtn));
@@ -1144,7 +1144,8 @@ public class QuickQuotesPage extends TestBase {
 		awardLotDelete.click();
 		System.out.println(awardLotDeleteValidationMsg.getText());
 		Assert.assertEquals(awardLotDeleteValidationMsg.getText(), "The Award Notice has been deleted.");
-		return awardLotDeleteValidationMsg.isDisplayed();
+		editPoupCancel.click();
+//		return awardLotDeleteValidationMsg.isDisplayed();
 	}
 
 	public void ckEditor() throws InterruptedException {

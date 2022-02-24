@@ -6,7 +6,8 @@
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
           <include name="QQSetUp"/>
-          <include name="qq_VerifyCurrencySymbol"/>
+          <include name="Teardown"/>
+          <include name="qq_VerifyAwardLotPopup"/>
           <include name="Test"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
