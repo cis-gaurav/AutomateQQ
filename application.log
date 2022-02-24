@@ -1,12 +1,59 @@
-2022-02-04 17:43:46,889 DEBUG [main] ResolutionCache:186 - Resolution chrome=97 in cache (valid until 18:24:16 04/02/2022 IST)
-2022-02-04 17:43:46,896 DEBUG [main] ResolutionCache:186 - Resolution chrome97=97.0.4692.71 in cache (valid until 17:24:16 05/02/2022 IST)
-2022-02-04 17:43:46,900  INFO [main] WebDriverManager:966 - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
-2022-02-04 17:43:46,920 DEBUG [main] WebDriverManager:922 - Driver chromedriver 97.0.4692.71 found in cache
-2022-02-04 17:43:46,921  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\97.0.4692.71\chromedriver.exe
-2022-02-04 17:43:48,516  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
-2022-02-04 17:43:50,624 DEBUG [main] ResolutionCache:186 - Resolution chrome=97 in cache (valid until 18:24:16 04/02/2022 IST)
-2022-02-04 17:43:50,626 DEBUG [main] ResolutionCache:186 - Resolution chrome97=97.0.4692.71 in cache (valid until 17:24:16 05/02/2022 IST)
-2022-02-04 17:43:50,627  INFO [main] WebDriverManager:966 - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
-2022-02-04 17:43:50,635 DEBUG [main] WebDriverManager:922 - Driver chromedriver 97.0.4692.71 found in cache
-2022-02-04 17:43:50,636  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\97.0.4692.71\chromedriver.exe
-2022-02-04 17:43:51,785  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
+2022-02-24 10:40:40,105 DEBUG [main] ResolutionCache:186 - Resolution chrome=97 in cache (valid until 11:27:25 24/02/2022 IST)
+2022-02-24 10:40:40,110 DEBUG [main] ResolutionCache:186 - Resolution chrome97=97.0.4692.71 in cache (valid until 10:27:25 25/02/2022 IST)
+2022-02-24 10:40:40,114  INFO [main] WebDriverManager:966 - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+2022-02-24 10:40:40,131 DEBUG [main] WebDriverManager:922 - Driver chromedriver 97.0.4692.71 found in cache
+2022-02-24 10:40:40,133  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-02-24 10:40:41,994  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
+2022-02-24 10:41:30,561  INFO [main] TestBase:113 - Logged in and redirect to MD Dashbaord
+2022-02-24 10:41:35,800  INFO [main] TestBase:30 - *******Redirect to QQ Listing Before Class*******
+2022-02-24 10:41:40,226  INFO [main] TestBase:45 - Quick Quote TC01 has passed
+2022-02-24 10:41:44,601  INFO [main] TestBase:52 - Quick Quote TC02 has passed
+2022-02-24 10:41:49,056  INFO [main] TestBase:59 - Quick Quote TC03 has passed
+2022-02-24 10:42:05,700  INFO [main] TestBase:66 - Quick Quote TC04 has passed
+2022-02-24 10:42:12,415  INFO [main] TestBase:73 - Quick Quote TC05 has passed
+2022-02-24 10:42:20,863  INFO [main] TestBase:80 - Quick Quote TC06 has passed
+2022-02-24 10:42:30,919  INFO [main] TestBase:87 - Quick Quote TC07 has passed
+2022-02-24 10:42:48,147  INFO [main] TestBase:94 - Quick Quote TC08 has passed
+2022-02-24 10:43:04,479  INFO [main] TestBase:101 - Quick Quote TC09 has passed
+2022-02-24 10:43:20,749  INFO [main] TestBase:108 - Quick Quote TC10 has passed
+2022-02-24 10:43:42,450  INFO [main] TestBase:115 - Quick Quote TC11 has passed
+2022-02-24 10:46:38,435  INFO [main] TestBase:121 - Quick Quote TC12 has passed
+2022-02-24 10:48:46,489  INFO [main] TestBase:128 - Quick Quote TC13 has passed
+2022-02-24 10:49:01,435  INFO [main] TestBase:135 - Quick Quote TC14 has passed
+2022-02-24 10:55:15,399  INFO [main] TestBase:141 - Quick Quote TC15 has passed
+2022-02-24 10:55:37,214  INFO [main] TestBase:148 - Quick Quote TC16 has passed
+2022-02-24 10:56:00,696  INFO [main] TestBase:155 - Quick Quote TC17 has passed
+2022-02-24 10:56:03,824 DEBUG [main] ResolutionCache:186 - Resolution chrome=97 in cache (valid until 11:27:25 24/02/2022 IST)
+2022-02-24 10:56:03,824 DEBUG [main] ResolutionCache:186 - Resolution chrome97=97.0.4692.71 in cache (valid until 10:27:25 25/02/2022 IST)
+2022-02-24 10:56:03,825  INFO [main] WebDriverManager:966 - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+2022-02-24 10:56:03,831 DEBUG [main] WebDriverManager:922 - Driver chromedriver 97.0.4692.71 found in cache
+2022-02-24 10:56:03,833  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-02-24 10:56:04,971  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
+2022-02-24 10:56:52,477  INFO [main] TestBase:113 - Logged in and redirect to MD Dashbaord
+2022-02-24 10:56:55,497  INFO [main] TestBase:22 - *******Contract_test_ starts*******
+2022-02-24 10:57:56,671  INFO [main] TestBase:29 - Contract TC01 has passed
+2022-02-24 11:02:49,817  INFO [main] TestBase:43 - Contract TC03 has passed
+2022-02-24 11:04:00,443  INFO [main] TestBase:50 - Contract TC04 has passed
+2022-02-24 11:05:02,240  INFO [main] TestBase:57 - Contract TC05 has passed
+2022-02-24 11:06:02,118  INFO [main] TestBase:64 - Contract TC06 has passed
+2022-02-24 11:07:04,498  INFO [main] TestBase:71 - Contract TC07 has passed
+2022-02-24 11:15:13,212  INFO [main] TestBase:105 - Contract TC12 has passed
+2022-02-24 11:16:39,505  INFO [main] TestBase:111 - Contract TC13 has passed
+2022-02-24 11:18:18,106  INFO [main] TestBase:124 - Contract TC15 has passed
+2022-02-24 11:19:45,898  INFO [main] TestBase:131 - Contract TC16 has passed
+2022-02-24 11:21:23,119  INFO [main] TestBase:145 - Contract TC18 has passed
+2022-02-24 11:23:00,061  INFO [main] TestBase:152 - Contract TC19 has passed
+2022-02-24 11:24:35,840  INFO [main] TestBase:159 - Contract TC20 has passed
+2022-02-24 11:26:13,076  INFO [main] TestBase:166 - Contract TC21 has passed
+2022-02-24 11:27:55,125  INFO [main] TestBase:173 - Contract TC22 has passed
+2022-02-24 11:29:32,057  INFO [main] TestBase:187 - Contract TC24 has passed
+2022-02-24 11:31:03,665  INFO [main] TestBase:194 - Contract TC25 has passed
+2022-02-24 11:32:54,250  INFO [main] TestBase:201 - Contract TC26 has passed
+2022-02-24 11:34:35,418  INFO [main] TestBase:215 - Contract TC28 has passed
+2022-02-24 11:36:16,917  INFO [main] TestBase:222 - Contract TC29 has passed
+2022-02-24 11:37:47,081  INFO [main] TestBase:229 - Contract TC30 has passed
+2022-02-24 11:40:10,035  INFO [main] TestBase:236 - Contract TC31 has passed
+2022-02-24 11:43:09,745  INFO [main] TestBase:243 - Contract TC32 has passed
+2022-02-24 11:48:03,944  INFO [main] TestBase:249 - Contract TC33 has passed
+2022-02-24 11:55:37,199  INFO [main] TestBase:263 - Contract TC35 has passed
+2022-02-24 11:55:37,200  INFO [main] TestBase:289 - *******Contract_test_ ends*******

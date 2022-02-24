@@ -1,10 +1,16 @@
 package com.md.pages;
 
+import java.awt.Font;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.server.handler.GetTitle;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -23,10 +29,10 @@ public class QuickQuotesPage extends TestBase {
 	
 	@FindBy(name = "user[password]")
 	static private WebElement password;
-	
+
 	@FindBy(name = "commit")
 	static private WebElement loginBtn;
-	
+
 	@FindBy(xpath = "//a[contains(text(),'Dashboard')]")
 	static private WebElement AdminDashboard;
 
@@ -38,19 +44,19 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//a[@class='btn btn-primary btn-fixed pull-right']")
 	private WebElement newQuoteBtn;
-	
-	@FindBy(xpath="//li[@class='mobile-menu-hidden']//a[@class='menu-item-tab header-main-link'][normalize-space()='Quotes']")
+
+	@FindBy(xpath = "//li[@class='mobile-menu-hidden']//a[@class='menu-item-tab header-main-link'][normalize-space()='Quotes']")
 	private WebElement quotesHeading;
-	
-	@FindBy(xpath ="//a[normalize-space()='Automati...']")
+
+	@FindBy(xpath = "//a[normalize-space()='Automati...']")
 	private WebElement userNameLabel;
 
 ///////////Create Quote Page Element /////////////////
-	
-	//a[@class='default no_company_logo navbar-brand']//img
-	
-	@FindBy(xpath="//a[@class='default no_company_logo navbar-brand']//img")
-	private WebElement mdLogo; 
+
+	// a[@class='default no_company_logo navbar-brand']//img
+
+	@FindBy(xpath = "//a[@class='default no_company_logo navbar-brand']//img")
+	private WebElement mdLogo;
 
 	@FindBy(xpath = "//button[@class='btn btn-lg btn-primary m-t20 btn-sizebig']")
 	private WebElement getQuoteButton;
@@ -63,6 +69,9 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains(text(), 'Required')]")
 	private WebElement blankNameValidation;
+
+	@FindBy(xpath = "//span[@class='cke_button_icon cke_button__bold_icon']")
+	private WebElement boldText;
 
 	@FindBy(xpath = "//span[@class='text-danger']")
 	private WebElement longNameValidation;
@@ -90,6 +99,18 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//button[text()='Select Document(s)']")
 	private WebElement clickBtnFromPopup;
+	
+	@FindBy(xpath = "//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div/form/div[4]/div[1]/div/div[3]/div")
+	private WebElement currencyContainer;
+
+	@FindBy(xpath = "//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div/form/div[4]/div[1]/div/div[3]/div/div/div[2]/div")
+	private WebElement currencyDrop;
+
+	@FindBy(xpath = "//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div/form/div[4]/div[1]/div/div[3]/div/div/div[1]/div[1]")
+	private WebElement currencyEnter;
+	
+	@FindBy(xpath="//*[@id='collapseOne']/div/div/table/tbody/tr/td[3]")
+	private WebElement currencySymbol;
 
 	@FindBy(xpath = "//label[text()='I want to get prices']/span")
 	private WebElement lotCheckbox;
@@ -135,25 +156,24 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains (text(),'From group')]")
 	private WebElement addGroup;
-	
+
 	@FindBy(xpath = "//span[@title='automationGroup']")
 	private WebElement selectGroup;
-	
+
 	@FindBy(xpath = "//button[text()='Done']")
 	private WebElement btnDone;
-	
+
 	@FindBy(xpath = "//strong[text()='automationGroup']")
 	private WebElement groupName;
-	
+
 	@FindBy(xpath = "//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div/form/div[6]/div/div/div[1]/div[1]/div/div[3]/div/div[1]/div/div[2]")
 	private WebElement addParticpantManuallyArrrow;
 
 	@FindBy(xpath = "//input[@id='react-select-2-input']")
 	private WebElement addParticpantManually;
-	
+
 	@FindBy(xpath = "//div[@class=' css-1wa3eu0-placeholder']")
 	private WebElement addParticpantManually1;
-
 
 	@FindBy(xpath = "//h4[contains(text(),'Advice from procurement team')]")
 	private WebElement AdviceText;
@@ -163,36 +183,36 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains (text(), 'createQQByName')]")
 	private WebElement quoteName;
-	
+
 //// Edit Quote/////////////////////////////////
-	
+
 	@FindBy(xpath = "//div[@class='alert alert-warning']")
 	private WebElement editModeTxt;
-	
+
 	@FindBy(xpath = "//a[@class='editbox']//i[@class='fa fa-pencil-square-o']")
 	private WebElement editOverview;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Quote name']")
 	private WebElement editName;
-	
+
 	@FindBy(xpath = "//button[text()='Save']")
 	private WebElement editSaveBtn;
-	
-	@FindBy(xpath ="//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div[4]/div/div/div[1]/div/div[3]/table/tbody/tr[1]/td[4]/div[1]/button[1]")
+
+	@FindBy(xpath = "//*[@id='app']/div/div/div/div/div/div/div/div/div/div/div[4]/div/div/div[1]/div/div[3]/table/tbody/tr[1]/td[4]/div[1]/button[1]")
 	private WebElement editLot;
-	
+
 	@FindBy(xpath = "//input[contains(@value,'Metal Scrap')]")
 	private WebElement editLotName;
 
 	@FindBy(xpath = "//*[@id=\"app\"]/div/div/div/div/div/div/div/div/div/div/div[4]/div/div/div[1]/div/div[3]/table/tbody/tr[1]/td[4]/div[2]/button[1]")
 	private WebElement editSaveLot;
-	
+
 	@FindBy(xpath = "//tbody/tr/td[3]/div[1]/button[2]")
 	private WebElement deleteQuestionnaire;
-	
+
 	@FindBy(xpath = "//button[text()='Go live']")
 	private WebElement goLive;
-	
+
 ////////////////////Create Quote Left panel Element /////////////////	
 
 	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/i[1]")
@@ -220,7 +240,7 @@ public class QuickQuotesPage extends TestBase {
 	private WebElement AutomateText1;
 
 ///////////////// QQ summary page Elements /////////////////////////////////////////////////////////////////////////////////////////////
-	
+
 	@FindBy(xpath = "//h2[text()='Create QuickQuote Event with all Details']")
 	private WebElement nameVerify;
 
@@ -247,25 +267,25 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//div[text()='No messages available']")
 	private WebElement noMessage;
-	
+
 	@FindBy(xpath = "//div[contains(@id, 'message_count')]")
 	private WebElement messageToaster;
-	
+
 	@FindBy(xpath = "//button[contains(text(), 'Mark As Read')]")
-	private WebElement messageMarkAsReadBtn ;
-	
+	private WebElement messageMarkAsReadBtn;
+
 	@FindBy(xpath = "//button[contains(text(), 'Send Reply')]")
-	private WebElement messageSendReply ;
+	private WebElement messageSendReply;
 
 	@FindBy(xpath = "//div[contains(@id, 'message_count')]")
 	private WebElement messageBubbleCount;
-	
+
 	@FindBy(xpath = "//button[contains(text(), 'Send new message')]")
 	private WebElement sendNewMessagePopupBtn;
-	
+
 	@FindBy(xpath = "//button[contains(text(), 'Send New Message')]")
 	private WebElement sendNewMessagePopupBtn2;
-	
+
 	@FindBy(xpath = "//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
 	private WebElement sendNewMsgTxtField;
 
@@ -277,96 +297,96 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//div[contains(text(),'Your Message has been sent.')]")
 	private WebElement msgSendToasterd;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'Your Message has been sent.')]")
 	private WebElement msgSendToasterd2;
-	
+
 	@FindBy(xpath = "//span[text()='Outbox']")
 	private WebElement outboxTxt;
-	
+
 	@FindBy(xpath = "//span[text()='Inbox']")
 	private WebElement InboxTxt;
-	
+
 	@FindBy(xpath = "//span[contains (text(),'This is the Automated Answer of Questionnaire')]")
 	private WebElement questionnaireAnswerVerify;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'2222This')]")
 	private WebElement questionnaireAnswerVerify2;
-	
-	@FindBy (xpath="//button[text()='Current']")
+
+	@FindBy(xpath = "//button[text()='Current']")
 	private WebElement current;
-	
-	@FindBy (xpath="//button[normalize-space()='Current']")
+
+	@FindBy(xpath = "//button[normalize-space()='Current']")
 	private WebElement current1;
-	
-	@FindBy (xpath="//a[text()='Current']")
+
+	@FindBy(xpath = "//a[text()='Current']")
 	private WebElement currentDrop;
-	
-	@FindBy (xpath="//button[normalize-space()='Closed']")
+
+	@FindBy(xpath = "//button[normalize-space()='Closed']")
 	private WebElement closeDrp1;
-	
-	@FindBy(xpath="//a[contains(text(), 'Close Event')]")
+
+	@FindBy(xpath = "//a[contains(text(), 'Close Event')]")
 	private WebElement closeDrop;
-	
-	@FindBy(xpath="//div[contains(text(),'By closing')]")
+
+	@FindBy(xpath = "//div[contains(text(),'By closing')]")
 	private WebElement closeAlertTxt;
-	
-	@FindBy(xpath="//div[contains(text(),'By re-opening')]")
+
+	@FindBy(xpath = "//div[contains(text(),'By re-opening')]")
 	private WebElement reopenAlertTxt;
-	
-	@FindBy(xpath="//a[contains(text(), 'Re-Open')]")
+
+	@FindBy(xpath = "//a[contains(text(), 'Re-Open')]")
 	private WebElement reOpenDrop;
-	
-	@FindBy(xpath="//div[contains(text(),'Your event has now been reopened')]")
+
+	@FindBy(xpath = "//div[contains(text(),'Your event has now been reopened')]")
 	private WebElement reOpenToaster;
-	
-	@FindBy (xpath="//a[text()='Delete']")
+
+	@FindBy(xpath = "//a[text()='Delete']")
 	private WebElement delteDrop;
-	
-	@FindBy (xpath="//button[text()='OK']")
+
+	@FindBy(xpath = "//button[text()='OK']")
 	private WebElement confrimationOk;
-	
-	@FindBy (xpath="//*[@id='accordion']/div[5]/button")
+
+	@FindBy(xpath = "//*[@id='accordion']/div[5]/button")
 	private WebElement editQuote;
-	
-	@FindBy (xpath="//i[@class='fa fa-times']")
+
+	@FindBy(xpath = "//i[@class='fa fa-times']")
 	private WebElement editPoupclose;
-	
-	@FindBy (xpath="//button[normalize-space()='Cancel']")
+
+	@FindBy(xpath = "//button[normalize-space()='Cancel']")
 	private WebElement editPoupCancel;
-	
-	@FindBy (xpath="//a[text()='Export Report']")
+
+	@FindBy(xpath = "//a[text()='Export Report']")
 	private WebElement exportReportBtn;
-	
-	@FindBy (xpath="//button[text()='Edit']")
+
+	@FindBy(xpath = "//button[text()='Edit']")
 	private WebElement editEvent;
-	
-	//AwardLot popup 
-	
-	@FindBy (xpath="//button[contains(text(), 'Lot')]")
+
+	// AwardLot popup
+
+	@FindBy(xpath = "//button[contains(text(), 'Lot')]")
 	private WebElement awardLotBtn;
-	
-	@FindBy (xpath="//tbody/tr[1]/td[5]/div[1]/div[1]/button[1]")
+
+	@FindBy(xpath = "//tbody/tr[1]/td[5]/div[1]/div[1]/button[1]")
 	private WebElement awardLotCheckbox;
-	
-	@FindBy (xpath="//button[@class='btn clearfix small white button red notified_trashed btn-award fa fa-trash-o fa-red']")
+
+	@FindBy(xpath = "//button[@class='btn clearfix small white button red notified_trashed btn-award fa fa-trash-o fa-red']")
 	private WebElement awardLotDelete;
-	
-	@FindBy (xpath="//div[contains(@class, 'alert alert-info')]")
+
+	@FindBy(xpath = "//div[contains(@class, 'alert alert-info')]")
 	private WebElement awardPopupValMsg;
-	
-	@FindBy (xpath="//button[contains(text(), 'Create New Award Notice')]")
+
+	@FindBy(xpath = "//button[contains(text(), 'Create New Award Notice')]")
 	private WebElement createAwardNoticeBtn;
 
-	@FindBy (xpath="//button[text()='Send Award Notice']")
+	@FindBy(xpath = "//button[text()='Send Award Notice']")
 	private WebElement sendAwardNoticeBtn;
-	
-	@FindBy (xpath="//div[@class='alert alert-success msg']")
+
+	@FindBy(xpath = "//div[@class='alert alert-success msg']")
 	private WebElement awardLotValidationMsg;
-	
-	@FindBy (xpath="//*[@id='accordion']/div[5]/div/div/div/div/div/div/div/div/div/div/div[2]/div[2]/div")
+
+	@FindBy(xpath = "//*[@id='accordion']/div[5]/div/div/div/div/div/div/div/div/div/div/div[2]/div[2]/div")
 	private WebElement awardLotDeleteValidationMsg;
-	
+
 ///////////////////////////////Sandpit Elements /////////////////////////////////////////////////////
 
 	@FindBy(xpath = "//*[contains(text(), \"Sandpit Co 1 sandpit1@marketdojo.com\")]")
@@ -380,13 +400,13 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//ul[@class='nav-header']/li[3]/a/span/i")
 	private WebElement sandpitHeader;
-	
+
 	@FindBy(xpath = "//p[contains(text(), 'Welcome to the')]")
 	private WebElement sandpitWelcomeMessage;
 
 	@FindBy(xpath = "//*[contains (text(),  'Act as Host')]")
 	private WebElement actAsHost;
-	
+
 	@FindBy(xpath = "//button[text()='Leave Sandpit']")
 	private WebElement leaveSandpit;
 
@@ -397,10 +417,10 @@ public class QuickQuotesPage extends TestBase {
 	private WebElement eventHeader;
 
 	// Participant end Sandpit Elements
-	
+
 	@FindBy(xpath = "//li[contains(@class,'menu-item events current')]//a[@class='menu-item-tab'][normalize-space()='Events']")
 	private WebElement eventsHeaders;
-	
+
 	@FindBy(xpath = "//*[@id='main-container']/div[3]/div/div/div[1]/div/form/table/tbody/tr[1]/td[2]/div[2]/div/div/div/div/button")
 	private WebElement eventInvitation;
 
@@ -409,10 +429,10 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains(@title, 'Questionnaire')]")
 	private WebElement questionnaireTab;
-	
+
 	@FindBy(xpath = "//span[contains(text(), 'Messages')]")
 	private WebElement messageTab;
-	
+
 	@FindBy(xpath = "//button[contains(text(), 'Send New Message')]")
 	private WebElement sendNewMessageBtnP;
 
@@ -421,13 +441,13 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains(text(), 'Submit answers')]")
 	private WebElement submitAnswer;
-	
+
 	@FindBy(xpath = "//div[@class='alert alert-info alert-dismissable']")
 	private WebElement reSubVal;
-	
+
 	@FindBy(xpath = "//h6[@class='questionnaire-status green']")
 	private WebElement subVal;
-	
+
 	@FindBy(xpath = "//*[contains(@id, 'confirmOk')]")
 	private WebElement submitAnswerFinalConfirmation;
 
@@ -464,31 +484,31 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//*[contains (@class, 'button-l btn btn-primary')]")
 	private WebElement deleteBidConfirm;
 
-	//QQ List page Elements 
-	
-	@FindBy(xpath="//input[@placeholder='Search for quote']")
+	// QQ List page Elements
+
+	@FindBy(xpath = "//input[@placeholder='Search for quote']")
 	private WebElement searchForQuote;
-	
-	@FindBy(xpath="//span[text()='QQ deadline']")
-    private WebElement qqDeadlinetxt;
-    
-	@FindBy(xpath="//i[@class='fa fa-search']")
+
+	@FindBy(xpath = "//span[text()='QQ deadline']")
+	private WebElement qqDeadlinetxt;
+
+	@FindBy(xpath = "//i[@class='fa fa-search']")
 	private WebElement searchBtn;
-	
-	@FindBy(xpath="//td[text()='No Quick Quotes Found']")
+
+	@FindBy(xpath = "//td[text()='No Quick Quotes Found']")
 	private WebElement noQuoteFound;
-	
-	@FindBy(xpath="//a[text()='Search Quote']")
+
+	@FindBy(xpath = "//a[text()='Search Quote']")
 	private WebElement searchResult;
-	
+
 	// Initialize the Page Object
-	public  QuickQuotesPage() {
+	public QuickQuotesPage() {
 		PageFactory.initElements(driver, this);
 	}
 
 	////////////////////////////////////// Actions
-	
-	// Used in BeforeClass 
+
+	// Used in BeforeClass
 	public void redirectFromMdDashboardToQuoteListing() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(quickquoteDashbaord));// Click on Quote from MD HomePage
@@ -497,7 +517,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
 	}
 
-	// Used in BeforeMethod 
+	// Used in BeforeMethod
 	public void quoteListingToCreate() throws InterruptedException {
 		Thread.sleep(2000);
 		quotesHeading.click();
@@ -506,13 +526,13 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();
 	}
-	
+
 	// Global things
 	public void scroll() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0,700)");
 	}
-	
+
 	public void scrollUp() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0,-250)");
@@ -534,28 +554,28 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 // Scripts 
-	
-	public String  titleTest() {
+
+	public String titleTest() {
 		return driver.getTitle();
 	}
-	
+
 	public boolean checkusername() {
 		return userNameLabel.isDisplayed();
 	}
-	
-	
+
 	public boolean checkLogo() {
 		return mdLogo.isDisplayed();
 	}
+
 	public boolean createNameFieldValidaions() throws InterruptedException {
 		Thread.sleep(5000);// This is execute first on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
 //		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText ));// this is load at last
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
 		wait.until(ExpectedConditions.elementToBeClickable(name));
-		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");//Adding long name 
+		name.sendKeys("Automate test on enter long name validation message should appearsdfsdfsdf");// Adding long name
 		System.out.println("long name");
 		Thread.sleep(3000);
 		name.sendKeys(Keys.TAB);
@@ -582,7 +602,7 @@ public class QuickQuotesPage extends TestBase {
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last 
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		name.sendKeys("Verify Toaster message");
 		deadline.sendKeys("2019-04-14 19:35");
@@ -649,7 +669,7 @@ public class QuickQuotesPage extends TestBase {
 		questionnaireCheckbox.click();
 		wait.until(ExpectedConditions.visibilityOf(questionName));
 		questionName.sendKeys("Automation");
-		System.out.println("questionnaire added"); //till here pass on Jenkins
+		System.out.println("questionnaire added"); // till here pass on Jenkins
 		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
 		questionnairedrp.selectByVisibleText("Text");
 //        scroll();
@@ -691,7 +711,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
 		Thread.sleep(3000);
 //		sandpitHeader.click();
@@ -744,7 +764,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(8000);
 		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
-		JavascriptExecutor executor1 = (JavascriptExecutor)driver;
+		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", particpantToggel);
 		particpantToggel.click();
 		Thread.sleep(2000);
@@ -795,17 +815,17 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createEditContent() throws InterruptedException {
-		Thread.sleep(3000);//Adding because failed on Jenkins
+		Thread.sleep(3000);// Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
-		// Click on edit pencil icon right panel 
+		// Click on edit pencil icon right panel
 		Thread.sleep(2000);
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", editcontentToolTip);
 //		editcontentToolTip.click();
-		Thread.sleep(5000);//Adding because failed on Jenkins
+		Thread.sleep(5000);// Adding because failed on Jenkins
 		driver.switchTo().frame(1);
 		System.out.println("Inside Frame");
 		wait.until(ExpectedConditions.elementToBeClickable(sendNewMsgTxtField));
@@ -825,33 +845,34 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean deleteQuote() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(name));		
+		wait.until(ExpectedConditions.elementToBeClickable(name));
 //		newQuoteBtn.click();		
 //		wait.until(ExpectedConditions.elementToBeClickable(name));
 		System.out.println("create qq");
 		Thread.sleep(3000);
-	    name.clear();
+		name.clear();
 		name.sendKeys("verify Delete quote");
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
 		System.out.println("Summary page TCO6");
-		//Redirect to summary page 
+		// Redirect to summary page
 		wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
 		current.click();
-    	wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
+		wait.until(ExpectedConditions.elementToBeClickable(delteDrop));
 		delteDrop.click();
-        Thread.sleep(2000);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
-        confrimationOk.click();
-        Thread.sleep(2000);
-        System.out.println("Quote Deleted successfully");
-        Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));;
-        Assert.assertEquals(yourQuoteText.getText(), "YOUR QUOTES");
-        return yourQuoteText.isDisplayed();
+		confrimationOk.click();
+		Thread.sleep(2000);
+		System.out.println("Quote Deleted successfully");
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
+		;
+		Assert.assertEquals(yourQuoteText.getText(), "YOUR QUOTES");
+		return yourQuoteText.isDisplayed();
 	}
-	
+
 	public boolean searchQuote() throws InterruptedException {
 //		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
 		Thread.sleep(2000);
@@ -862,28 +883,29 @@ public class QuickQuotesPage extends TestBase {
 		searchForQuote.clear();
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
 		searchForQuote.sendKeys("Search Quote");
-        wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
-        searchBtn.click();
-        Thread.sleep(5000);// Adding wait as failed on Jenkins 
+		wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
+		searchBtn.click();
+		Thread.sleep(5000);// Adding wait as failed on Jenkins
 //        wait.until(ExpectedConditions.elementToBeClickable(searchResult));
-        Assert.assertEquals(searchResult.getText(), "Search Quote");
-        return searchResult.isDisplayed();	
+		Assert.assertEquals(searchResult.getText(), "Search Quote");
+		return searchResult.isDisplayed();
 	}
-	
+
 	public void createMessage() throws InterruptedException {
-		Thread.sleep(3000);//Adding because failed on Jenkins
+		Thread.sleep(3000);// Adding because failed on Jenkins
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		Thread.sleep(4000);
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		Thread.sleep(5000);
-		//Create Quote in Sandpit mode 
-		Assert.assertEquals(sandpitWelcomeMessage.getText(), "Welcome to the Sandpit! Here you can learn to use Market Dojo; viewing events from both the host and participant perspective to test event configurations.");
+		// Create Quote in Sandpit mode
+		Assert.assertEquals(sandpitWelcomeMessage.getText(),
+				"Welcome to the Sandpit! Here you can learn to use Market Dojo; viewing events from both the host and participant perspective to test event configurations.");
 		System.out.println("Entering event name ");
 		name.sendKeys("Msg flow host and particpant end ");
 		scrollTillBottom();
@@ -891,7 +913,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
 		sandpitco1Checkbox.click();
 		getQuoteButton.click();
-		//Redirect to summary page 
+		// Redirect to summary page
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
 		messageToggel.click();
@@ -909,12 +931,12 @@ public class QuickQuotesPage extends TestBase {
 		Assert.assertEquals(msgSendToasterd.getText(), "YOUR MESSAGE HAS BEEN SENT.");
 		Assert.assertEquals(outboxTxt.getText(), "Outbox");
 		scrollUp();
-		// At participants end 
+		// At participants end
 		actAsHost.click();
 		dropdownSandpitco1.click();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(eventHeader));
-	    eventHeader.click();
+		eventHeader.click();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(eventInvitation));
 		eventInvitation.click();
@@ -923,9 +945,9 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);// As test failing on Jenkins
 		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
 		Thread.sleep(3000);// As test failing on Jenkins
-	    messageTab.click();
-	    scroll();
-        System.out.println("Bubble count at host end");
+		messageTab.click();
+		scroll();
+		System.out.println("Bubble count at host end");
 		Assert.assertEquals(InboxTxt.getText(), "Inbox");
 		Assert.assertEquals(messageBubbleCount.getText(), "1");
 		wait.until(ExpectedConditions.elementToBeClickable(messageMarkAsReadBtn));
@@ -937,10 +959,10 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(sendNewMsgTxtField));
 		sendNewMsgTxtField.sendKeys("Automate message as particpant");
 		driver.switchTo().defaultContent();
-        sendMsgBtn.click();
-        System.out.println("Sending message as participant");
+		sendMsgBtn.click();
+		System.out.println("Sending message as participant");
 		Thread.sleep(2000);// As test failing on Jenkins
-        wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
+		wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
 		Thread.sleep(2000);
 		scrollUp();
@@ -951,7 +973,7 @@ public class QuickQuotesPage extends TestBase {
 		executor1.executeScript("arguments[0].click();", quickquoteDashbaord);
 		Assert.assertEquals(yourQuoteText.getText(), "YOUR QUOTES");
 	}
-	
+
 	public boolean particpantAddedFromGroup() throws InterruptedException {
 //		Thread.sleep(5000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
@@ -969,20 +991,20 @@ public class QuickQuotesPage extends TestBase {
 //		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 //		wait.until(ExpectedConditions.elementToBeClickable(addGroup));
 //		scroll();
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", addGroup);
 		Thread.sleep(3000);
 		System.out.println("Group poup gets open7");
 		wait.until(ExpectedConditions.elementToBeClickable(selectGroup));
-        selectGroup.click();
-        Thread.sleep(2000);
-        wait.until(ExpectedConditions.elementToBeClickable(btnDone));
-        btnDone.click();
-        Assert.assertEquals(groupName.getText(), "AUTOMATIONGROUP");
-        getQuoteButton.click();
-        return groupName.isDisplayed();
+		selectGroup.click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(btnDone));
+		btnDone.click();
+		Assert.assertEquals(groupName.getText(), "AUTOMATIONGROUP");
+		getQuoteButton.click();
+		return groupName.isDisplayed();
 	}
-	
+
 	public boolean EditQQEvent() throws InterruptedException {
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
@@ -994,7 +1016,7 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println("Entering name");
 		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(lotCheckbox));
-		/////////////////////Adding lots 
+		///////////////////// Adding lots
 		lotCheckbox.click();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
 		lotName.sendKeys("Metal Scrap");
@@ -1005,7 +1027,7 @@ public class QuickQuotesPage extends TestBase {
 		scroll();
 		System.out.println("lot added");
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireCheckbox));
-		////////////////////Adding Questionnaire 
+		//////////////////// Adding Questionnaire
 		questionnaireCheckbox.click();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionName));
@@ -1027,21 +1049,21 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		getQuoteButton.click();
 		System.out.println("QQ created");
-		/////////////////////////Moving to edit mode again 
+		///////////////////////// Moving to edit mode again
 		editQuote.click();
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
-        Assert.assertEquals(editModeTxt.getText(), "This event is currently in Edit Mode which has put it on hold.");
-        editOverview.click();
+		Assert.assertEquals(editModeTxt.getText(), "This event is currently in Edit Mode which has put it on hold.");
+		editOverview.click();
 		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
-        editName.clear();
-        editName.sendKeys("Edited QQ Event");
-        scroll();
+		editName.clear();
+		editName.sendKeys("Edited QQ Event");
+		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(editSaveBtn));
-        editSaveBtn.click();
-        Thread.sleep(2000);
-        scroll();
-        editLot.click();
+		editSaveBtn.click();
+		Thread.sleep(2000);
+		scroll();
+		editLot.click();
 		wait.until(ExpectedConditions.elementToBeClickable(editLotName));
 		editLotName.clear();
 		editLotName.sendKeys("Edited Lot");
@@ -1054,14 +1076,13 @@ public class QuickQuotesPage extends TestBase {
 		confrimationOk.click();
 		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", goLive);
-		// Move to current mode again 
+		// Move to current mode again
 		Thread.sleep(2000);
 		try {
-		wait.until(ExpectedConditions.elementToBeClickable(editPoupCancel));
-		editPoupCancel.click();
-		}
-		catch(Exception e) {
-			
+			wait.until(ExpectedConditions.elementToBeClickable(editPoupCancel));
+			editPoupCancel.click();
+		} catch (Exception e) {
+
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
 		wait.until(ExpectedConditions.elementToBeClickable(summaryToggel));
@@ -1071,8 +1092,8 @@ public class QuickQuotesPage extends TestBase {
 		Assert.assertEquals(lotNameVerify.getText(), "Edited Lot");
 		return lotNameVerify.isDisplayed();
 	}
-	
-	public boolean  ClosedReopenEvent() throws InterruptedException {
+
+	public boolean closedReopenEvent() throws InterruptedException {
 		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33396");
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
@@ -1084,46 +1105,106 @@ public class QuickQuotesPage extends TestBase {
 		confrimationOk.click();
 		Thread.sleep(2000);// Adding wait as failing on Jenkins
 		Assert.assertEquals(reOpenToaster.getText(), "YOUR EVENT HAS NOW BEEN REOPENED");
-		//Event gets re-opened
+		// Event gets re-opened
 		wait.until(ExpectedConditions.elementToBeClickable(current));
 		Thread.sleep(2000);
 		current.click();
 		wait.until(ExpectedConditions.elementToBeClickable(closeDrop));
 		closeDrop.click();
 		Thread.sleep(2000);
-		Assert.assertEquals(closeAlertTxt.getText(), "By closing this event your participants will no longer have access to the documents, including uploading their own documents, the Lots or any of the event details. You can re-open this event manually at any time if you wish to reverse this action. Are you sure you would like to close this event?");
+		Assert.assertEquals(closeAlertTxt.getText(),
+				"By closing this event your participants will no longer have access to the documents, including uploading their own documents, the Lots or any of the event details. You can re-open this event manually at any time if you wish to reverse this action. Are you sure you would like to close this event?");
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
 		confrimationOk.click();
-		//Event gets closed 
+		// Event gets closed
 		Thread.sleep(4000);
 		return exportReportBtn.isDisplayed();
 	}
-	
-	public boolean AwardLotPopup () throws InterruptedException {
+
+	public boolean awardLotPopup() throws InterruptedException {
 		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33416");
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(awardLotBtn));
 		awardLotBtn.click();
 		Thread.sleep(2000);
 		Select se = new Select(driver.findElement(By.xpath("//tbody/tr[1]/td[3]/div[1]/select[1]")));
-	    se.selectByVisibleText("mailinator.com");
-	    wait.until(ExpectedConditions.visibilityOf(awardLotCheckbox));
-	    awardLotCheckbox.click();
+		se.selectByVisibleText("mailinator.com");
+		wait.until(ExpectedConditions.visibilityOf(awardLotCheckbox));
+		awardLotCheckbox.click();
 		Thread.sleep(3000);
-	    scrollTillBottom();
+		scrollTillBottom();
 		wait.until(ExpectedConditions.visibilityOf(createAwardNoticeBtn));
-	    createAwardNoticeBtn.click();
-	    Thread.sleep(4000);
-	    scrollTillBottom();
+		createAwardNoticeBtn.click();
+		Thread.sleep(4000);
+		scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(sendAwardNoticeBtn));
-        sendAwardNoticeBtn.click();
-        System.out.println(awardLotValidationMsg.getText());
-        Thread.sleep(2000);
-        awardLotDelete.click();
-        System.out.println(awardLotDeleteValidationMsg.getText());
-        Assert.assertEquals(awardLotDeleteValidationMsg.getText(), "The Award Notice has been deleted.");
-        return awardLotDeleteValidationMsg.isDisplayed();
+		sendAwardNoticeBtn.click();
+		System.out.println(awardLotValidationMsg.getText());
+		Thread.sleep(2000);
+		awardLotDelete.click();
+		System.out.println(awardLotDeleteValidationMsg.getText());
+		Assert.assertEquals(awardLotDeleteValidationMsg.getText(), "The Award Notice has been deleted.");
+		return awardLotDeleteValidationMsg.isDisplayed();
 	}
-	
-	
+
+	public void ckEditor() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
+		name.clear();
+		name.sendKeys("ckEditor Test");
+		Thread.sleep(2000);
+		// Inside Description
+		driver.switchTo().frame(0);
+		wait.until(ExpectedConditions.elementToBeClickable(description));
+		description.sendKeys("boldText");
+		Actions act = new Actions(driver);
+		WebElement ele = driver.findElement(By.xpath("//p[normalize-space()='boldText']"));
+		act.doubleClick(ele).perform();
+		Thread.sleep(2000);
+		driver.switchTo().defaultContent();
+		boldText.click();
+		scrollTillBottom();
+		getQuoteButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(briefToggel));
+		briefToggel.click();
+		String BoldTxt1 = driver.findElement(By.xpath("//strong[normalize-space()='boldText']")).getTagName();
+		Assert.assertEquals(BoldTxt1, "strong");
+	}
+
+	public boolean currencySymbol() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		Thread.sleep(4000);
+		name.clear();
+		name.sendKeys("currency Symbol Test");
+		scroll();
+		wait.until(ExpectedConditions.visibilityOf(lotCheckbox));
+		lotCheckbox.click();
+		Thread.sleep(3000);
+////////Open currency dropdown
+		currencyDrop.click();
+		Thread.sleep(2000);
+//		Actions keyDown = new Actions(driver); keyDown.sendKeys(Keys.chord(Keys.DOWN, Keys.DOWN, Keys.ENTER)).perform();
+		Actions keyDown = new Actions(driver); keyDown.sendKeys(Keys.chord(Keys.ENTER)).perform();
+		System.out.println(keyDown);
+		scroll();
+		wait.until(ExpectedConditions.elementToBeClickable(lotName));
+		lotName.sendKeys("Metal Scrap");
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(lotUom));
+		lotUom.sendKeys("tonnes");
+		lotQuantity.sendKeys("5");
+		scroll();
+		scroll();
+		getQuoteButton.click();
+//		Thread.sleep(5000);
+/////////Using JS Excecutor instead of ThreadSleeep		
+		wait.until(ExpectedConditions.elementToBeClickable(summaryToggel));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", summaryToggel);
+//	    summaryToggel.click();
+		Thread.sleep(2000);
+        System.out.println(currencySymbol.getText());
+	    Assert.assertEquals(currencySymbol.getText(), "$-");
+		return currencySymbol.isDisplayed();	
+	}
 }

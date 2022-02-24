@@ -1,75 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.md.ExtentReportListener.Listener"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
-          <include name="qq_VerifyCreateMessageinSandpit"/>
-          <include name="qq_VerifyParticpantAddedFromGroup"/>
           <include name="QQSetUp"/>
-          <include name="qq_VerfiyEditQQEvent"/>
-          <include name="qq_VerifyEditContent"/>
-          <include name="qq_VerifyValidationMessageOnNamefield"/>
-          <include name="qq_VerifyToasterMessage"/>
-          <include name="qq_VerifySearchQuote"/>
-          <include name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit"/>
-          <include name="qq_VerifyUserName"/>
-          <include name="qq_VerifyQuotebyName"/>
-          <include name="qq_VerifyCompanyLogo"/>
-          <include name="qq_VerfiyQQEventWithAllDetails"/>
-          <include name="qq_VerifyClosedReopenEvent"/>
-          <include name="qq_VerifyDeleteQuote"/>
-          <include name="Teardown"/>
-          <include name="qq_VerifyAwardLotPopup"/>
-          <include name="qq_VerifyTitleTest"/>
+          <include name="qq_VerifyCurrencySymbol"/>
           <include name="Test"/>
-          <include name="qq_VerifyGetQuoteButtonIsDisable"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
-      <class name="com.md.testcases.ContractTest">
-        <methods>
-          <include name="contract_VerifyOneMonthNoticePeriodIsSelectedByDefault"/>
-          <include name="contract_VerifySearchContractUsingTitle"/>
-          <include name="contract_VerifyAlertMsgIfHostAddedToSupplierContact"/>
-          <include name="contract_VerifyAlertMsgIfParticipantAddedToStakeHolder"/>
-          <include name="contract_VerifySearchContractUsingExpiryDate"/>
-          <include name="Teardown"/>
-          <include name="contract_VerifyAutoSuggestionForSupplierContact"/>
-          <include name="contract_VerifyDisplayOfParentHeirarchyDropdown"/>
-          <include name="contract_VerifySearchContractUsingStakeHolder"/>
-          <include name="contract_VerifyDisplayOfExpiryNotiticationLink"/>
-          <include name="contract_VerifyAutoSuggestionForStakeHolder"/>
-          <include name="contract_VerifySelectedParentNotDisplayInChildDropdown"/>
-          <include name="contract_VerifySearchContractUsingCategory"/>
-          <include name="contract_VerifyDisplayOfCustomNotiticationLink"/>
-          <include name="setUp"/>
-          <include name="contract_VerifySearchContractUsingStartDate"/>
-          <include name="contract_VerifySupplierAndStakeHolderInRecipientPopup"/>
-          <include name="contract_VerifyAtleastOneValueInSupplierContact"/>
-          <include name="contract_VerifySearchContractUsingSupplier"/>
-          <include name="contract_VerifyUserIsAbleToAddContract"/>
-          <include name="contract_VerifyDisplayOfSupplierContactDetails"/>
-          <include name="contract_VerifyContractListingOnLanguageChange"/>
-          <include name="contract_VerifyContractValidationMsg"/>
-          <include name="contract_VerifyLanguageChange"/>
-          <include name="contract_VerifyHeadingOnContractListingPage"/>
-          <include name="contract_VerifyDisplayOfDropbox"/>
-          <include name="contract_VerifySearchContractUsingValue"/>
-          <include name="contract_VerifyActiveHeadingsDisplayInContractListingPage"/>
-          <include name="contract_VerifyAlertMsgOnSearchingContracts"/>
-          <include name="contract_VerifyRemovalOfSupplierContact"/>
-          <include name="contract_VerifyDisplayOfCategoryInContractForm"/>
-          <include name="contract_VerifyUserNavigationToContractForm"/>
-          <include name="contract_VerifyNoticePeriodChangeAccordingToPeriodSelected"/>
-          <include name="contract_VerifyUserIsAbleToEditContract"/>
-          <include name="contract_VerifyUserIsAbleToSearchContract"/>
-          <include name="contract_VerifyActiveHeadingsDisplayInContractForm"/>
-        </methods>
-      </class> <!-- com.md.testcases.ContractTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

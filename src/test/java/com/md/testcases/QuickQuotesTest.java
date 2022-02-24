@@ -34,7 +34,7 @@ public class QuickQuotesTest extends TestBase {
 	//On QQ List page click on New Quote Button
 	public void Test() throws InterruptedException {
 //		Thread.sleep(2000);
-		logger.info("**Before Method***");
+//		logger.info("**Before Method***");
 		QuickQuotesPage.quoteListingToCreate();
 	}
 	
@@ -143,18 +143,31 @@ public class QuickQuotesTest extends TestBase {
 	
 	@Test(priority=16)
 	public void qq_VerifyClosedReopenEvent() throws InterruptedException {
-		boolean flag =QuickQuotesPage.ClosedReopenEvent();
+		boolean flag =QuickQuotesPage.closedReopenEvent();
 		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC16 has passed");
 	}
 	
 	@Test (priority=17)
 	public void qq_VerifyAwardLotPopup() throws InterruptedException {
-		boolean flag =QuickQuotesPage.AwardLotPopup();
+		boolean flag =QuickQuotesPage.awardLotPopup();
 		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC17 has passed");
 	}
 
+	@Test(priority=18)
+	public void qq_VerifyCKEditor() throws InterruptedException {
+		QuickQuotesPage.ckEditor();
+		logger.info("Quick Quote TC18 has passed");
+	}
+	
+	@Test(priority=19)
+	public void qq_VerifyCurrencySymbol() throws InterruptedException {
+		boolean flag=QuickQuotesPage.currencySymbol();
+		Assert.assertTrue(flag);
+		logger.info("Quick Quote TC19 has passed");
+	}
+	
 	@AfterClass
 	public void Teardown() throws Exception {
 		logger.info("*******QQ_test ends*******");

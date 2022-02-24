@@ -5,15 +5,9 @@
     <classes>
       <class name="com.md.testcases.QuickQuotesTest">
         <methods>
-          <include name="qq_VerifyCreateMessageinSandpit"/>
-          <include name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit"/>
           <include name="QQSetUp"/>
-          <include name="qq_VerifyClosedReopenEvent"/>
-          <include name="qq_VerfiyEditQQEvent"/>
-          <include name="Teardown"/>
-          <include name="qq_VerifyAwardLotPopup"/>
+          <include name="qq_VerifyCurrencySymbol"/>
           <include name="Test"/>
-          <include name="qq_VerifySearchQuote"/>
         </methods>
       </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
