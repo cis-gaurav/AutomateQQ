@@ -154,17 +154,16 @@ public class QuickQuotesTest extends TestBase {
 		logger.info("Quick Quote TC17 has passed");
 	}
 	
-	@Test(priority=18)
-	public void qq_VerifyCurrencySymbol() throws InterruptedException {
-		boolean flag=QuickQuotesPage.currencySymbol();
-		Assert.assertTrue(flag);
+	@Test (priority=18)
+	public void qq_VerifyAwardLotPopup() throws InterruptedException {
+		QuickQuotesPage.awardLotPopup();
 		logger.info("Quick Quote TC18 has passed");
 	}
 	
-	@Test (priority=19)
-	public void qq_VerifyAwardLotPopup() throws InterruptedException {
-		QuickQuotesPage.awardLotPopup();
-//		Assert.assertTrue(flag);
+	@Test(priority=19)
+	public void qq_VerifyCurrencySymbol() throws InterruptedException {
+		boolean flag=QuickQuotesPage.currencySymbol();
+		Assert.assertTrue(flag);
 		logger.info("Quick Quote TC19 has passed");
 	}
 	

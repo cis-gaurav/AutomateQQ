@@ -1145,6 +1145,7 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println(awardLotDeleteValidationMsg.getText());
 		Assert.assertEquals(awardLotDeleteValidationMsg.getText(), "The Award Notice has been deleted.");
 		editPoupCancel.click();
+		Thread.sleep(2000);
 //		return awardLotDeleteValidationMsg.isDisplayed();
 	}
 
