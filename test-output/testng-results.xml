@@ -1,45 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="104208" started-at="2022-02-24T15:21:45 IST" finished-at="2022-02-24T15:23:30 IST">
+  <suite name="Default suite" duration-ms="12" started-at="2022-03-03T10:46:01 IST" finished-at="2022-03-03T10:46:01 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="104208" started-at="2022-02-24T15:21:45 IST" finished-at="2022-02-24T15:23:30 IST">
-      <class name="com.md.testcases.QuickQuotesTest">
-        <test-method status="PASS" signature="QQSetUp()[pri:0, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="QQSetUp" is-config="true" duration-ms="43780" started-at="2022-02-24T15:21:45 IST" finished-at="2022-02-24T15:22:29 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QQSetUp -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="Test" is-config="true" duration-ms="4476" started-at="2022-02-24T15:22:29 IST" finished-at="2022-02-24T15:22:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test -->
-        <test-method status="PASS" signature="qq_VerifyAwardLotPopup()[pri:17, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="qq_VerifyAwardLotPopup" duration-ms="21664" started-at="2022-02-24T15:22:34 IST" finished-at="2022-02-24T15:22:55 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyAwardLotPopup -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="Test" is-config="true" duration-ms="4458" started-at="2022-02-24T15:22:55 IST" finished-at="2022-02-24T15:23:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test -->
-        <test-method status="PASS" signature="qq_VerifyCKEditor()[pri:18, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="qq_VerifyCKEditor" duration-ms="7315" started-at="2022-02-24T15:23:00 IST" finished-at="2022-02-24T15:23:07 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyCKEditor -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="Test" is-config="true" duration-ms="4511" started-at="2022-02-24T15:23:07 IST" finished-at="2022-02-24T15:23:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test -->
-        <test-method status="PASS" signature="qq_VerifyCurrencySymbol()[pri:19, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="qq_VerifyCurrencySymbol" duration-ms="17852" started-at="2022-02-24T15:23:12 IST" finished-at="2022-02-24T15:23:29 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qq_VerifyCurrencySymbol -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:com.md.testcases.QuickQuotesTest@782663d3]" name="Teardown" is-config="true" duration-ms="113" started-at="2022-02-24T15:23:29 IST" finished-at="2022-02-24T15:23:30 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Teardown -->
-      </class> <!-- com.md.testcases.QuickQuotesTest -->
+    <test name="Default test" duration-ms="12" started-at="2022-03-03T10:46:01 IST" finished-at="2022-03-03T10:46:01 IST">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
