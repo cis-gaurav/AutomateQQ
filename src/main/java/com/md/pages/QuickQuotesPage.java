@@ -1188,7 +1188,6 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 //		Actions keyDown = new Actions(driver); keyDown.sendKeys(Keys.chord(Keys.DOWN, Keys.DOWN, Keys.ENTER)).perform();
 		Actions keyDown = new Actions(driver); keyDown.sendKeys(Keys.chord(Keys.ENTER)).perform();
-		Thread.sleep(2000);
 		System.out.println(keyDown);
 		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
@@ -1200,7 +1199,7 @@ public class QuickQuotesPage extends TestBase {
 		scroll();
 		scroll();
 		getQuoteButton.click();
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 /////////Using JS Excecutor instead of ThreadSleeep		
 		wait.until(ExpectedConditions.elementToBeClickable(summaryToggel));
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", summaryToggel);

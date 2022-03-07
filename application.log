@@ -1,12 +1,10 @@
-2022-03-03 13:29:43,218 DEBUG [main] ResolutionCache:186 - Resolution chrome=98 in cache (valid until 14:21:13 03/03/2022 IST)
-2022-03-03 13:29:43,222 DEBUG [main] ResolutionCache:186 - Resolution chrome98=98.0.4758.102 in cache (valid until 10:47:37 04/03/2022 IST)
-2022-03-03 13:29:43,223  INFO [main] WebDriverManager:966 - Using chromedriver 98.0.4758.102 (resolved driver for Chrome 98)
-2022-03-03 13:29:43,238 DEBUG [main] WebDriverManager:922 - Driver chromedriver 98.0.4758.102 found in cache
-2022-03-03 13:29:43,239  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\98.0.4758.102\chromedriver.exe
-2022-03-03 13:29:45,062  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
-2022-03-03 13:29:55,265  INFO [main] TestBase:113 - Logged in and redirect to MD Dashbaord
-2022-03-03 13:29:59,465  INFO [main] TestBase:30 - *******Redirect to QQ Listing Before Class*******
-2022-03-03 13:30:10,753  INFO [main] TestBase:154 - Quick Quote TC17 has passed
-2022-03-03 13:30:36,898  INFO [main] TestBase:160 - Quick Quote TC18 has passed
-2022-03-03 13:30:59,355  INFO [main] TestBase:167 - Quick Quote TC19 has passed
-2022-03-03 13:30:59,359  INFO [main] TestBase:172 - *******QQ_test ends*******
+2022-03-07 13:06:57,691 DEBUG [main] ResolutionCache:186 - Resolution chrome=98 in cache (valid until 14:03:03 07/03/2022 IST)
+2022-03-07 13:06:57,694 DEBUG [main] ResolutionCache:186 - Resolution chrome98=98.0.4758.102 in cache (valid until 13:03:03 08/03/2022 IST)
+2022-03-07 13:06:57,695  INFO [main] WebDriverManager:966 - Using chromedriver 98.0.4758.102 (resolved driver for Chrome 98)
+2022-03-07 13:06:57,708 DEBUG [main] WebDriverManager:922 - Driver chromedriver 98.0.4758.102 found in cache
+2022-03-07 13:06:57,709  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\98.0.4758.102\chromedriver.exe
+2022-03-07 13:06:59,391  INFO [main] TestBase:102 - ******Local Driver Intilaized*****
+2022-03-07 13:07:07,419  INFO [main] TestBase:113 - Logged in and redirect to MD Dashbaord
+2022-03-07 13:07:10,451  INFO [main] TestBase:22 - *******Contract_test_ starts*******
+2022-03-07 13:14:00,248  INFO [main] TestBase:105 - Contract TC12 has passed
+2022-03-07 13:14:54,026  INFO [main] TestBase:111 - Contract TC13 has passed
