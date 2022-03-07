@@ -1188,6 +1188,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 //		Actions keyDown = new Actions(driver); keyDown.sendKeys(Keys.chord(Keys.DOWN, Keys.DOWN, Keys.ENTER)).perform();
 		Actions keyDown = new Actions(driver); keyDown.sendKeys(Keys.chord(Keys.ENTER)).perform();
+		Thread.sleep(2000);
 		System.out.println(keyDown);
 		scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
