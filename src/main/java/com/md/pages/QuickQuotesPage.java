@@ -740,14 +740,15 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
 		dropdownSandpitco1.click();
-//		Thread.sleep(2000);
+		Thread.sleep(1000);
 		wait.until(ExpectedConditions.elementToBeClickable(eventHeader));
 		eventHeader.click();
-//		Thread.sleep(2000);
+		Thread.sleep(1000);
 		wait.until(ExpectedConditions.elementToBeClickable(eventInvitation));
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireTab));
 		questionnaireTab.click();
 		scroll();
