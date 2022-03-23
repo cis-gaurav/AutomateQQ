@@ -1,17 +1,10 @@
 package com.md.pages;
 
-import java.awt.Font;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.server.handler.GetTitle;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,9 +12,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import com.md.base.TestBase;
+import com.md.utils.TestUtils;
 
 public class QuickQuotesPage extends TestBase {
-
+	TestUtils TestUtils = new TestUtils();
 ///////////////// Page Factory == OR
 
 	@FindBy(name = "user[login]")
@@ -527,23 +521,23 @@ public class QuickQuotesPage extends TestBase {
 		newQuoteBtn.click();
 	}
 
-	// Global things
-	public void scroll() {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,700)");
-	}
-
-	public void scrollUp() {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,-250)");
-	}
-
-	// GlobalThings
-	public void scrollTillBottom() {
-		// Scroll to bottom of page
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-	}
+//	// Global things
+//	public void scroll() {
+//		JavascriptExecutor jse = (JavascriptExecutor) driver;
+//		jse.executeScript("window.scrollBy(0,700)");
+//	}
+//
+//	public void scrollUp() {
+//		JavascriptExecutor jse = (JavascriptExecutor) driver;
+//		jse.executeScript("window.scrollBy(0,-250)");
+//	}
+//
+//	// GlobalThings
+//	public void scrollTillBottom() {
+//		// Scroll to bottom of page
+//		JavascriptExecutor jse = (JavascriptExecutor) driver;
+//		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//	}
 
 	// Unused script of new user license check
 	public boolean verifyQQLiscence() throws InterruptedException {
@@ -591,7 +585,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		// Scroll to bottom of page
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// verify get quote button is disabled
@@ -606,7 +600,7 @@ public class QuickQuotesPage extends TestBase {
 		name.clear();
 		name.sendKeys("Verify Toaster message");
 		deadline.sendKeys("2019-04-14 19:35");
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		getQuoteButton.click();
 		Thread.sleep(3000);
@@ -627,7 +621,7 @@ public class QuickQuotesPage extends TestBase {
 		deadline.clear();
 		deadline.click();
 //		Thread.sleep(2000);
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));// this is load at last
 		executor.executeScript("arguments[0].click();", getQuoteButton);
@@ -649,14 +643,14 @@ public class QuickQuotesPage extends TestBase {
 		description.sendKeys("This is my description");
 		Thread.sleep(2000);
 		driver.switchTo().defaultContent();
-		scroll();
+		TestUtils.scroll();
 		fromLibraryBtn.click();
 		wait.until(ExpectedConditions.elementToBeClickable(SelectDocPopup));
 		SelectDocPopup.click();
 		wait.until(ExpectedConditions.elementToBeClickable(clickBtnFromPopup));
 		clickBtnFromPopup.click();
 		Thread.sleep(2000);
-		scroll();
+		TestUtils.scroll();
 		lotCheckbox.click();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
 		lotName.sendKeys("Metal Scrap");
@@ -672,7 +666,7 @@ public class QuickQuotesPage extends TestBase {
 		System.out.println("questionnaire added"); // till here pass on Jenkins
 		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
 		questionnairedrp.selectByVisibleText("Text");
-//        scroll();
+//        TestUtils.scroll();
 //		Thread.sleep(2000);
 //		addParticpantManuallyArrrow.click();
 //		System.out.println("clicked arrow");
@@ -681,7 +675,7 @@ public class QuickQuotesPage extends TestBase {
 //		Thread.sleep(2000);
 //		addParticpantManually1.sendKeys(Keys.DOWN,Keys.RETURN);
 //		System.out.println("Added d1");
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
 		// Verify on create page
@@ -699,7 +693,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(lotNameVerify));
 		String LotName = lotNameVerify.getText();
 		Assert.assertEquals(LotName, "Metal Scrap");
-		scroll();
+		TestUtils.scroll();
 		// ParticpantVerify
 		particpantToggel.click();
 		// verifyEventName
@@ -721,14 +715,14 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.sendKeys("Create QuickQuote Event with Participant Answers");
 		Thread.sleep(5000);
-		scroll();
-		scroll();
+		TestUtils.scroll();
+		TestUtils.scroll();
 		questionnaireCheckbox.click();
 		wait.until(ExpectedConditions.elementToBeClickable(questionName));
 		questionName.sendKeys("Automation");
 		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
 		questionnairedrp.selectByVisibleText("Text");
-		scroll();
+		TestUtils.scroll();
 //		questionDropdown.click();
 //		wait.until(ExpectedConditions.elementToBeClickable(oneLineText));
 //		oneLineText.click();
@@ -751,7 +745,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireTab));
 		questionnaireTab.click();
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.sendKeys("This is the Automated Answer of Questionnaire");
 		System.out.println(questionnaireAnwer1.getText());
@@ -763,23 +757,23 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
 		Thread.sleep(8000);
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
 		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 		executor1.executeScript("arguments[0].click();", particpantToggel);
 		particpantToggel.click();
 		Thread.sleep(2000);
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify));
-		scroll();
+		TestUtils.scroll();
 		AllowResubmissionBtn.click();
 		Thread.sleep(2000);
 		/////////////////////////////////////// Allow Resub at Host end
 		actAsHost.click();
 		dropdownSandpitco1.click();
-//		scroll();
+//		TestUtils.scroll();
 		questionnaireTab.click();
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.clear();
 		System.out.println(reSubVal.getText());
@@ -791,7 +785,7 @@ public class QuickQuotesPage extends TestBase {
 		Assert.assertEquals(subVal.getText(), "Submitted");
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
-		scroll();
+		TestUtils.scroll();
 		Thread.sleep(7000);
 		wait.until(ExpectedConditions.visibilityOf(particpantToggel));
 //		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
@@ -800,14 +794,14 @@ public class QuickQuotesPage extends TestBase {
 //		wait.until(ExpectedConditions.visibilityOf(questionnaireAnswerVerify2));
 		particpantToggel.click();
 		Thread.sleep(4000);
-//		scroll();
-		scrollTillBottom();
+//		TestUtils.scroll();
+		TestUtils.scrollTillBottom();
 		Thread.sleep(4000);
 //		String text= questionnaireAnswerVerify.getText();
 		Assert.assertEquals(questionnaireAnswerVerify2.getText(), "2222This is the Automated Answer of Questionnaire");
 //		System.out.println("scroll up");
-		scrollUp();
-		scrollUp();
+		TestUtils.scrollUp();
+		TestUtils.scrollUp();
 		leaveSandpit.click();
 		System.out.println("Leaving sandpit");
 		Thread.sleep(2000);
@@ -850,10 +844,10 @@ public class QuickQuotesPage extends TestBase {
 //		newQuoteBtn.click();		
 //		wait.until(ExpectedConditions.elementToBeClickable(name));
 		System.out.println("create qq");
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		name.clear();
 		name.sendKeys("verify Delete quote");
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(getQuoteButton));
 		getQuoteButton.click();
 		System.out.println("Summary page TCO6");
@@ -909,7 +903,7 @@ public class QuickQuotesPage extends TestBase {
 				"Welcome to the Sandpit! Here you can learn to use Market Dojo; viewing events from both the host and participant perspective to test event configurations.");
 		System.out.println("Entering event name ");
 		name.sendKeys("Msg flow host and particpant end ");
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		wait.until(ExpectedConditions.elementToBeClickable(sandpitco1Checkbox));
 		sandpitco1Checkbox.click();
@@ -919,7 +913,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(messageToggel));
 		messageToggel.click();
 		Thread.sleep(2000);
-		scroll();
+		TestUtils.scroll();
 		Assert.assertEquals(noMessage.getText(), "No messages available");
 		sendNewMessagePopupBtn.click();
 		Thread.sleep(2000);
@@ -931,7 +925,7 @@ public class QuickQuotesPage extends TestBase {
 		sendMsgBtn.click();
 		Assert.assertEquals(msgSendToasterd.getText(), "YOUR MESSAGE HAS BEEN SENT.");
 		Assert.assertEquals(outboxTxt.getText(), "Outbox");
-		scrollUp();
+		TestUtils.scrollUp();
 		// At participants end
 		actAsHost.click();
 		dropdownSandpitco1.click();
@@ -943,11 +937,11 @@ public class QuickQuotesPage extends TestBase {
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
-		Thread.sleep(2000);// As test failing on Jenkins
+		Thread.sleep(3000);// As test failing on Jenkins
 		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
 		Thread.sleep(3000);// As test failing on Jenkins
 		messageTab.click();
-		scroll();
+		TestUtils.scroll();
 		System.out.println("Bubble count at host end");
 		Assert.assertEquals(InboxTxt.getText(), "Inbox");
 		Assert.assertEquals(messageBubbleCount.getText(), "1");
@@ -966,7 +960,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(msgSendToasterd2));
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
 		Thread.sleep(2000);
-		scrollUp();
+		TestUtils.scrollUp();
 		leaveSandpit.click();
 		System.out.println("Leaving sandpit");
 		Thread.sleep(2000);
@@ -983,15 +977,15 @@ public class QuickQuotesPage extends TestBase {
 		name.clear();
 		Thread.sleep(4000);
 		name.sendKeys("Add from Group");
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		Thread.sleep(2000);
-//		scroll();
+//		TestUtils.scroll();
 //		Thread.sleep(3000);//Adding because failed on Jenkins
-//		scroll();
+//		TestUtils.scroll();
 //		Thread.sleep(3000);//Adding because failed on Jenkins
 //		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 //		wait.until(ExpectedConditions.elementToBeClickable(addGroup));
-//		scroll();
+//		TestUtils.scroll();
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", addGroup);
 		Thread.sleep(3000);
@@ -1015,7 +1009,7 @@ public class QuickQuotesPage extends TestBase {
 		name.clear();
 		name.sendKeys("Create QQ Event");
 		System.out.println("Entering name");
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(lotCheckbox));
 		///////////////////// Adding lots
 		lotCheckbox.click();
@@ -1025,7 +1019,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(lotUom));
 		lotUom.sendKeys("tonnes");
 		lotQuantity.sendKeys("5");
-		scroll();
+		TestUtils.scroll();
 		System.out.println("lot added");
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireCheckbox));
 		//////////////////// Adding Questionnaire
@@ -1040,8 +1034,8 @@ public class QuickQuotesPage extends TestBase {
 		Select questionnairedrp = new Select(driver.findElement(By.name("qqQuestions.questionnaire[0].question_type")));
 		questionnairedrp.selectByVisibleText("Text");
 		System.out.println("Questionnaire added");
-		scroll();
-		scroll();
+		TestUtils.scroll();
+		TestUtils.scroll();
 		Thread.sleep(2000);
 //		wait.until(ExpectedConditions.elementToBeClickable(addParticpantManually));
 //		addParticpantManually.sendKeys("d1@mailinator.com");
@@ -1059,11 +1053,11 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(editModeTxt));
 		editName.clear();
 		editName.sendKeys("Edited QQ Event");
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(editSaveBtn));
 		editSaveBtn.click();
 		Thread.sleep(2000);
-		scroll();
+		TestUtils.scroll();
 		editLot.click();
 		wait.until(ExpectedConditions.elementToBeClickable(editLotName));
 		editLotName.clear();
@@ -1133,11 +1127,11 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(awardLotCheckbox));
 		awardLotCheckbox.click();
 		Thread.sleep(3000);
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		wait.until(ExpectedConditions.visibilityOf(createAwardNoticeBtn));
 		createAwardNoticeBtn.click();
 		Thread.sleep(4000);
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		wait.until(ExpectedConditions.elementToBeClickable(sendAwardNoticeBtn));
 		sendAwardNoticeBtn.click();
 		System.out.println(awardLotValidationMsg.getText());
@@ -1166,7 +1160,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		driver.switchTo().defaultContent();
 		boldText.click();
-		scrollTillBottom();
+		TestUtils.scrollTillBottom();
 		getQuoteButton.click();
 		wait.until(ExpectedConditions.elementToBeClickable(briefToggel));
 		briefToggel.click();
@@ -1180,7 +1174,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(4000);
 		name.clear();
 		name.sendKeys("currency Symbol Test");
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.visibilityOf(lotCheckbox));
 		lotCheckbox.click();
 		Thread.sleep(3000);
@@ -1191,15 +1185,15 @@ public class QuickQuotesPage extends TestBase {
 		Actions keyDown = new Actions(driver); keyDown.sendKeys(Keys.chord(Keys.ENTER)).perform();
 		Thread.sleep(2000);
 		System.out.println(keyDown);
-		scroll();
+		TestUtils.scroll();
 		wait.until(ExpectedConditions.elementToBeClickable(lotName));
 		lotName.sendKeys("Metal Scrap");
 		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(lotUom));
 		lotUom.sendKeys("tonnes");
 		lotQuantity.sendKeys("5");
-		scroll();
-		scroll();
+		TestUtils.scroll();
+		TestUtils.scroll();
 		getQuoteButton.click();
 		Thread.sleep(5000);
 /////////Using JS Excecutor instead of ThreadSleeep		

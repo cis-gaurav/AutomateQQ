@@ -6,30 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.md.testcases.QuickQuotesTest">
-        <methods>
-          <include name="qq_VerifyCreateMessageinSandpit"/>
-          <include name="qq_VerifyParticpantAddedFromGroup"/>
-          <include name="QQSetUp"/>
-          <include name="qq_VerfiyEditQQEvent"/>
-          <include name="qq_VerifyEditContent"/>
-          <include name="qq_VerifyValidationMessageOnNamefield"/>
-          <include name="qq_VerifyToasterMessage"/>
-          <include name="qq_VerifySearchQuote"/>
-          <include name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit"/>
-          <include name="qq_VerifyUserName"/>
-          <include name="qq_VerifyQuotebyName"/>
-          <include name="qq_VerifyCompanyLogo"/>
-          <include name="qq_VerfiyQQEventWithAllDetails"/>
-          <include name="qq_VerifyClosedReopenEvent"/>
-          <include name="qq_VerifyDeleteQuote"/>
-          <include name="Teardown"/>
-          <include name="qq_VerifyAwardLotPopup"/>
-          <include name="qq_VerifyTitleTest"/>
-          <include name="Test"/>
-          <include name="qq_VerifyGetQuoteButtonIsDisable"/>
-        </methods>
-      </class> <!-- com.md.testcases.QuickQuotesTest -->
       <class name="com.md.testcases.ContractTest">
         <methods>
           <include name="contract_VerifyOneMonthNoticePeriodIsSelectedByDefault"/>
@@ -41,15 +17,11 @@
           <include name="contract_VerifyAutoSuggestionForSupplierContact"/>
           <include name="contract_VerifyDisplayOfParentHeirarchyDropdown"/>
           <include name="contract_VerifySearchContractUsingStakeHolder"/>
-          <include name="contract_VerifyDisplayOfExpiryNotiticationLink"/>
           <include name="contract_VerifyAutoSuggestionForStakeHolder"/>
-          <include name="contract_VerifySelectedParentNotDisplayInChildDropdown"/>
-          <include name="contract_VerifySearchContractUsingCategory"/>
           <include name="contract_VerifyDisplayOfCustomNotiticationLink"/>
           <include name="setUp"/>
           <include name="contract_VerifySearchContractUsingStartDate"/>
           <include name="contract_VerifySupplierAndStakeHolderInRecipientPopup"/>
-          <include name="contract_VerifyAtleastOneValueInSupplierContact"/>
           <include name="contract_VerifySearchContractUsingSupplier"/>
           <include name="contract_VerifyUserIsAbleToAddContract"/>
           <include name="contract_VerifyDisplayOfSupplierContactDetails"/>
@@ -62,7 +34,6 @@
           <include name="contract_VerifyActiveHeadingsDisplayInContractListingPage"/>
           <include name="contract_VerifyAlertMsgOnSearchingContracts"/>
           <include name="contract_VerifyRemovalOfSupplierContact"/>
-          <include name="contract_VerifyDisplayOfCategoryInContractForm"/>
           <include name="contract_VerifyUserNavigationToContractForm"/>
           <include name="contract_VerifyNoticePeriodChangeAccordingToPeriodSelected"/>
           <include name="contract_VerifyUserIsAbleToEditContract"/>
@@ -70,6 +41,39 @@
           <include name="contract_VerifyActiveHeadingsDisplayInContractForm"/>
         </methods>
       </class> <!-- com.md.testcases.ContractTest -->
+      <class name="com.md.testcases.MDEventTest">
+        <methods>
+          <include name="hi"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.md.testcases.MDEventTest -->
+      <class name="com.md.testcases.QuickQuotesTest">
+        <methods>
+          <include name="qq_VerifyCreateMessageinSandpit"/>
+          <include name="qq_VerifyParticpantAddedFromGroup"/>
+          <include name="QQSetUp"/>
+          <include name="qq_VerfiyEditQQEvent"/>
+          <include name="qq_VerifyEditContent"/>
+          <include name="qq_VerifyCurrencySymbol"/>
+          <include name="qq_VerifyValidationMessageOnNamefield"/>
+          <include name="qq_VerifyToasterMessage"/>
+          <include name="qq_VerifySearchQuote"/>
+          <include name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit"/>
+          <include name="qq_VerifyUserName"/>
+          <include name="qq_VerifyQuotebyName"/>
+          <include name="qq_VerifyCKEditor"/>
+          <include name="qq_VerifyCompanyLogo"/>
+          <include name="qq_VerfiyQQEventWithAllDetails"/>
+          <include name="qq_VerifyClosedReopenEvent"/>
+          <include name="qq_VerifyDeleteQuote"/>
+          <include name="Teardown"/>
+          <include name="qq_VerifyAwardLotPopup"/>
+          <include name="qq_VerifyTitleTest"/>
+          <include name="Test"/>
+          <include name="qq_VerifyGetQuoteButtonIsDisable"/>
+        </methods>
+      </class> <!-- com.md.testcases.QuickQuotesTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

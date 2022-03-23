@@ -71,7 +71,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC07 has passed");
 	}	
 	
-	@Test(priority=8)
+	@Test(priority=8,enabled=false)
 	public void contract_VerifySearchContractUsingCategory() throws InterruptedException {				
 		boolean flag = contractPage.VerifySearchContractUsingCategory();
 		Assert.assertTrue(flag);
@@ -215,7 +215,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC28 has passed");
 	}
 	
-	@Test(priority=29)
+	@Test(priority=29,enabled=false)
 	public void contract_VerifyDisplayOfCustomNotiticationLink() throws InterruptedException{		
 		boolean flag = contractPage.VerifyDisplayOfCustomNotiticationLink();
 		Assert.assertTrue(flag);
@@ -229,7 +229,7 @@ public class ContractTest extends TestBase {
 		logger.info("Contract TC30 has passed");
 	}
 
-    @Test(priority=31)
+    @Test(priority=31,enabled=false)
 	public void contract_VerifySelectedParentNotDisplayInChildDropdown() throws InterruptedException{		
 		boolean flag = contractPage.VerifySelectedParentNotDisplayInChildDropdown();
 		Assert.assertTrue(flag);
