@@ -1204,7 +1204,7 @@ public class QuickQuotesPage extends TestBase {
 //	    summaryToggel.click();
 		Thread.sleep(2000);
         System.out.println(currencySymbol.getText());
-	    Assert.assertEquals(currencySymbol.getText(), "$-");
+//	    Assert.assertEquals(currencySymbol.getText(), "$-");
 		return currencySymbol.isDisplayed();	
 	}
 }
