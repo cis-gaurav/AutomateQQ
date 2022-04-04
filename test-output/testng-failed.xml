@@ -5,9 +5,8 @@
     <classes>
       <class name="com.md.testcases.MDEventTest">
         <methods>
-          <include name="hi"/>
+          <include name="hello"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- com.md.testcases.MDEventTest -->
     </classes>

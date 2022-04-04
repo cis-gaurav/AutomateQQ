@@ -562,7 +562,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean createNameFieldValidaions() throws InterruptedException {
-		Thread.sleep(5000);// This is execute first on Jenkins
+		Thread.sleep(8000);// This is execute first on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
 //		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -702,7 +702,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public void createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -729,20 +729,20 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(2000);
 		sandpitco1Checkbox.click();
 		getQuoteButton.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		///////////////// Create questionnaire event at Host End
 		wait.until(ExpectedConditions.elementToBeClickable(actAsHost));
 		actAsHost.click();
+		Thread.sleep(2000);
 		dropdownSandpitco1.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(eventHeader));
 		eventHeader.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(eventInvitation));
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireTab));
 		questionnaireTab.click();
 		TestUtils.scroll();
@@ -1092,9 +1092,10 @@ public class QuickQuotesPage extends TestBase {
 		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33396");
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		closeDrp1.click();
 		wait.until(ExpectedConditions.elementToBeClickable(reOpenDrop));
+		Thread.sleep(2000);
 		reOpenDrop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
 		confrimationOk.click();
@@ -1118,6 +1119,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public void awardLotPopup() throws InterruptedException {
 		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33416");
+		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(awardLotBtn));
 		awardLotBtn.click();
