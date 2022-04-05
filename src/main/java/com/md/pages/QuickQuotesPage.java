@@ -513,7 +513,7 @@ public class QuickQuotesPage extends TestBase {
 
 	// Used in BeforeMethod
 	public void quoteListingToCreate() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		quotesHeading.click();
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -746,6 +746,7 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireTab));
 		questionnaireTab.click();
 		TestUtils.scroll();
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.sendKeys("This is the Automated Answer of Questionnaire");
 		System.out.println(questionnaireAnwer1.getText());
@@ -774,6 +775,7 @@ public class QuickQuotesPage extends TestBase {
 //		TestUtils.scroll();
 		questionnaireTab.click();
 		TestUtils.scroll();
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireAnwer1));
 		questionnaireAnwer1.clear();
 		System.out.println(reSubVal.getText());
@@ -870,7 +872,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean searchQuote() throws InterruptedException {
 //		driver.get("https://next.testmd.co.uk/quick_quotes/quotes");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		quotesHeading.click();
 		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);

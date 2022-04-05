@@ -2192,7 +2192,7 @@ import com.md.base.TestBase;
 		        
 		        //Wait for Contract Form to load.
 		        wait.until(ExpectedConditions.visibilityOf(NewContractFormHeading));
-		   
+		        Thread.sleep(2000);
 		        
 		        //Verify Legal Entity Textbox is Not Displayed		     
 		        Assert.assertFalse(driver.getPageSource().contains("//label[contains(text(),'Contract Reference')]/parent::div/input"));
@@ -2291,6 +2291,7 @@ import com.md.base.TestBase;
 			}		
 					
 		    public boolean VerifyContractListingOnLanguageChange() throws InterruptedException {
+		    	    Thread.sleep(2000);
 			    	driver.navigate().to(prop.getProperty("ContractHomepage"));
 					WebDriverWait wait = new WebDriverWait(driver,60);
 								

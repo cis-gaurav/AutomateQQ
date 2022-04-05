@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import com.md.base.TestBase;
 import com.md.utils.TestUtils;
 
@@ -90,7 +92,7 @@ public class MDEventPage extends TestBase {
 	@FindBy(css = "input#questionnaire_1_deadline")
 	private WebElement questionnaireDeadline;
 
-	@FindBy(css = "input[name='questionnaire[1][pre_qualification]']")
+	@FindBy(css = "div[data-record-type='normal'] div[class='row pqq_wrapper'] label[class='css-input css-checkbox css-checkbox-default show-inline']")
 	private WebElement pqqCheckbox;
 
 	@FindBy(css = "div[data-record-type='normal'] div[class='row'] div[class='col-md-12'] label[class='css-input css-checkbox css-checkbox-default show-inline']")
@@ -130,6 +132,16 @@ public class MDEventPage extends TestBase {
 
 	@FindBy(css = "button[name='button']")
 	private WebElement saveAndGotoNextStepBtn;
+	
+	//// Documents tab element 
+	@FindBy(css="a[href$='documents']")
+	private WebElement createDocumentsTab;
+	
+	@FindBy(css="p[class='alert alert-info font-s12 p-t10']")
+	private WebElement createDocumentsTxt;
+	
+	@FindBy(css="input#participant_doc_check_box")
+	private WebElement allowPartdocuments;
 
 	///// Initialize page factory element by initElements this is pointing for
 	///// current class object
@@ -146,7 +158,8 @@ public class MDEventPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(newEventRadioBtn));
 		createEventBtn.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventName));
-		eventName.sendKeys("Automated Event"); // Enter event name
+		
+		eventName.sendKeys("PQQ Event"); // Enter event name
 		JavascriptExecutor js = (JavascriptExecutor) driver; // Scroll till create questionnaire
 		js.executeScript("arguments[0].scrollIntoView();", createQuestionnaireCheckbox);
 		Thread.sleep(2000);
@@ -154,59 +167,19 @@ public class MDEventPage extends TestBase {
 		testUtils.jsExecutor(createQuestionnaireCheckbox);// click on questionnaire check-box
 //		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(questionnaireName));
-		questionnaireName.sendKeys("Hi");
+		questionnaireName.sendKeys("PQQ");
 		Thread.sleep(2000);
+		pqqCheckbox.click();
 		JavascriptExecutor js1 = (JavascriptExecutor) driver; // Scroll till create questionnaire
-		js1.executeScript("arguments[0].scrollIntoView();", createQuestionnaire2Checkbox);
-		wait.until(ExpectedConditions.elementToBeClickable(createQuestionnaire2Checkbox));
-		createQuestionnaire2Checkbox.click();
-//		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(questionnaire2Name));
-		questionnaire2Name.sendKeys("2");
-//		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(copyDeadline));
-		copyDeadline.click();
-
-		testUtils.scroll();// scroll
-		wait.until(ExpectedConditions.elementToBeClickable(createRfqCheckbox));
-		createRfqCheckbox.click();
-		wait.until(ExpectedConditions.elementToBeClickable(selectDefaultCurrency));
-		Select cd = new Select(selectDefaultCurrency);
-		cd.selectByVisibleText("INR");
-		Thread.sleep(2000);
-//		wait.until(ExpectedConditions.elementToBeClickable(multicurrencyCheckbox));
-		multicurrencyCheckbox.click();
-//		Thread.sleep(4000);
-		wait.until(ExpectedConditions.elementToBeClickable(selectCurrency));
-		Select s = new Select(selectCurrency);
-		List<WebElement> op = s.getOptions();
-		int size = op.size();
-		for (int i = 0; i < size; i++) {
-			String option = op.get(i).getText();
-			System.out.println(option);
-		}
-
-//		s.selectByVisibleText("AUD");
-//		wait.until(ExpectedConditions.elementToBeClickable(currencyRatio));
-//		currencyRatio.sendKeys("10");
-//		wait.until(ExpectedConditions.elementToBeClickable(trashDeleteIcon));
-//		trashDeleteIcon.click();
-
-//		testUtils.scroll();
-//		wait.until(ExpectedConditions.visibilityOf(scoringCheckbox));
-//		scoringCheckbox.click();// click on Do you want scoring check-box
-//		Thread.sleep(3000);;
-//		Select wd = new Select(weightingDropdown);
-//		wd.selectByVisibleText("Per Question");
-
-//		wait.until(ExpectedConditions.visibilityOf(createRfqCheckbox));
-//		createRfqCheckbox.click();
-//		Thread.sleep(2000);
-//		testUtils.scroll();
-//		rfqDeadline.click();
-//		Thread.sleep(2000);
-//		Thread.sleep(3000);
-//		saveAndGotoNextStepBtn.click();
+		js1.executeScript("arguments[0].scrollIntoView();", saveAndGotoNextStepBtn);
+		wait.until(ExpectedConditions.elementToBeClickable(saveAndGotoNextStepBtn));
+		saveAndGotoNextStepBtn.click();//Redirect to document tab
+		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTab));
+		createDocumentsTab.click();
+		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTxt));
+		Assert.assertEquals(createDocumentsTxt.getText(), "Here you can upload any documents that will guide your participants; these may be specifications, terms and conditions, images or anything else that is important to your event.");
+		wait.until(ExpectedConditions.elementToBeClickable(allowPartdocuments));
+		allowPartdocuments.click();
 	}
 
 	public boolean logo() {
