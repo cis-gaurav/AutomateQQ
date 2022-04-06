@@ -2192,7 +2192,7 @@ import com.md.base.TestBase;
 		        
 		        //Wait for Contract Form to load.
 		        wait.until(ExpectedConditions.visibilityOf(NewContractFormHeading));
-		        Thread.sleep(2000);
+		        Thread.sleep(4000);//Adding wait as failing on Jenkins 
 		        
 		        //Verify Legal Entity Textbox is Not Displayed		     
 		        Assert.assertFalse(driver.getPageSource().contains("//label[contains(text(),'Contract Reference')]/parent::div/input"));

@@ -29,12 +29,12 @@ public class TestBase {
 	public static Logger logger = Logger.getLogger(TestBase.class);
 
 
-/////////////////// how to read data from properties file below 3 lines will do
+/////////////////// properties file key value pair 
 	public TestBase() {
 		try {
 			prop = new Properties(); // Need to create object of properties class
 			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";
-			FileInputStream ip = new FileInputStream(configPath);
+			FileInputStream ip = new FileInputStream(configPath);// create an object for Inputstream read data 
 			prop.load(ip); // loading data of property file
 
 		} catch (FileNotFoundException e) {
@@ -114,12 +114,14 @@ public class TestBase {
 		}
 	}
 	
-/////////////////////////Screenshot of failed test case 
+    /////Screenshot of failed test case 
+	//// we use an interface called TakesScreenshot, which enables the Selenium WebDriver to capture a screenshot and store it in different ways. It has a got a method "getScreenshotAs() " which captures the screenshot and store it in the specified location.
+	
 	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException{
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
+		
+		TakesScreenshot ts = (TakesScreenshot) driver; //Convert webdriver to TakeScreenshot
+		File source = ts.getScreenshotAs(OutputType.FILE); //call getScreenshotAs() method to create an image file by providing the parameter *OutputType.FILE.
 		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png";
-//		String destPath = TestCaseName+".png";
 		File file = new File(destPath);
 		FileUtils.copyFile(source, file);
 		return destPath;
