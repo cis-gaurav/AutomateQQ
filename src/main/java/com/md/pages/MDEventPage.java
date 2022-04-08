@@ -141,7 +141,7 @@ public class MDEventPage extends TestBase {
 	private WebElement createDocumentsTxt;
 	
 	@FindBy(css="input#participant_doc_check_box")
-	private WebElement allowPartdocuments;
+	private WebElement documentTabCheckBox;
 
 	///// Initialize page factory element by initElements this is pointing for
 	///// current class object
@@ -175,16 +175,16 @@ public class MDEventPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(saveAndGotoNextStepBtn));
 		saveAndGotoNextStepBtn.click();//Redirect to document tab
 		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTab));
-		createDocumentsTab.click();
+//		createDocumentsTab.click();
 		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTxt));
 		Assert.assertEquals(createDocumentsTxt.getText(), "Here you can upload any documents that will guide your participants; these may be specifications, terms and conditions, images or anything else that is important to your event.");
-		wait.until(ExpectedConditions.elementToBeClickable(allowPartdocuments));
-		allowPartdocuments.click();
-	}
-
-	public boolean logo() {
-		return logo.isDisplayed();
-
+//		Thread.sleep(3000);
+		
+		System.out.println("Return TRUE if checkbox is checked already... " + documentTabCheckBox.isSelected());
+		
+		if(!documentTabCheckBox.isSelected())
+			documentTabCheckBox.click();
+		System.out.println("Out");
 	}
 
 	public void Logout() {

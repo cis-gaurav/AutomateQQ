@@ -939,10 +939,10 @@ public class QuickQuotesPage extends TestBase {
 		eventInvitation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(eventAccept));
 		eventAccept.click();
-		Thread.sleep(3000);// As test failing on Jenkins
-		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
-		Thread.sleep(3000);// As test failing on Jenkins
+		Thread.sleep(5000);// As test failing on Jenkins
+//		wait.until(ExpectedConditions.elementToBeClickable(messageTab));
 		messageTab.click();
+		Thread.sleep(4000);// As test failing on Jenkins
 		TestUtils.scroll();
 		System.out.println("Bubble count at host end");
 		Assert.assertEquals(InboxTxt.getText(), "Inbox");
