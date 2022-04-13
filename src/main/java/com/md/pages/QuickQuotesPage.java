@@ -29,9 +29,16 @@ public class QuickQuotesPage extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Dashboard')]")
 	static private WebElement AdminDashboard;
+	
+	@FindBy(xpath = "//li[@class='menu-item more dropdown']//a[@class='menu-item-tab button-label dropdown-toggle'][normalize-space()='All Modules']")
+	static private WebElement AllModule;
+	
+	@FindBy(xpath = "//a[contains(text(),'Quick Quotes')]")
+	static private WebElement quickQuickDrp;
+	
 
-	@FindBy(xpath = "//*[@id='header-navbar']/div/div[2]/ul/li[6]/a")
-	private static WebElement quickquoteDashbaord;
+//	@FindBy(xpath = "//*[@id='header-navbar']/div/div[2]/ul/li[6]/a")
+//	private static WebElement quickquoteDashbaord;
 
 	@FindBy(xpath = "//h4[text()='YOUR QUOTES']")
 	static private WebElement yourQuoteText;
@@ -505,10 +512,13 @@ public class QuickQuotesPage extends TestBase {
 	// Used in BeforeClass
 	public void redirectFromMdDashboardToQuoteListing() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(quickquoteDashbaord));// Click on Quote from MD HomePage
+//		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(AllModule));// Click on All module 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].click();", quickquoteDashbaord);
-		wait.until(ExpectedConditions.elementToBeClickable(yourQuoteText));
+		executor.executeScript("arguments[0].click();", AllModule);
+//		wait.until(ExpectedConditions.elementToBeClickable(quickQuickDrp));// Click on Quote option which is inside all module dropdown 
+		Thread.sleep(3000);
+		executor.executeScript("arguments[0].click();", quickQuickDrp);
 	}
 
 	// Used in BeforeMethod
@@ -963,12 +973,11 @@ public class QuickQuotesPage extends TestBase {
 		Assert.assertEquals(msgSendToasterd2.getText(), "Your Message has been sent.");
 		Thread.sleep(2000);
 		TestUtils.scrollUp();
-		leaveSandpit.click();
-		System.out.println("Leaving sandpit");
+		leaveSandpit.click();// Redirect to MD Dashboard 
 		Thread.sleep(2000);
-		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
-		executor1.executeScript("arguments[0].click();", quickquoteDashbaord);
-		Assert.assertEquals(yourQuoteText.getText(), "YOUR QUOTES");
+		System.out.println("Leaving sandpit");
+		mdLogo.click();
+		Thread.sleep(2000);
 	}
 
 	public boolean particpantAddedFromGroup() throws InterruptedException {
@@ -1003,9 +1012,12 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean EditQQEvent() throws InterruptedException {
-//		Thread.sleep(3000);//Adding because failed on Jenkins
+		Thread.sleep(3000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		Thread.sleep(5000);
+		System.out.println("Inside 13");
+//		redirectFromMdDashboardToQuoteListing();
+//		driver.navigate().refresh();
+//		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
