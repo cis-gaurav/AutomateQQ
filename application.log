@@ -1,6 +1,21 @@
-2022-04-29 12:45:22,621 DEBUG [main] ResolutionCache:186 - Resolution chrome=99 in cache (valid until 13:09:10 29/04/2022 IST)
-2022-04-29 12:45:22,625 DEBUG [main] ResolutionCache:186 - Resolution chrome99=99.0.4844.51 in cache (valid until 12:09:10 30/04/2022 IST)
-2022-04-29 12:45:22,625  INFO [main] WebDriverManager:966 - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-2022-04-29 12:45:22,639 DEBUG [main] WebDriverManager:922 - Driver chromedriver 99.0.4844.51 found in cache
-2022-04-29 12:45:22,640  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
-2022-04-29 12:45:24,378  INFO [main] TestBase:104 - ******Local Driver Intilaized*****
+2022-04-29 12:50:43,644 DEBUG [main] ResolutionCache:186 - Resolution chrome=99 in cache (valid until 13:09:10 29/04/2022 IST)
+2022-04-29 12:50:43,646 DEBUG [main] ResolutionCache:186 - Resolution chrome99=99.0.4844.51 in cache (valid until 12:09:10 30/04/2022 IST)
+2022-04-29 12:50:43,647  INFO [main] WebDriverManager:966 - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+2022-04-29 12:50:43,661 DEBUG [main] WebDriverManager:922 - Driver chromedriver 99.0.4844.51 found in cache
+2022-04-29 12:50:43,662  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+2022-04-29 12:50:45,309  INFO [main] TestBase:104 - ******Local Driver Intilaized*****
+2022-04-29 12:51:07,992  INFO [main] TestBase:115 - Logged in and redirect to MD Dashbaord
+2022-04-29 12:51:11,028  INFO [main] TestBase:22 - *******Contract_test_ starts*******
+2022-04-29 12:51:23,158  INFO [main] TestBase:29 - Contract TC01 has passed
+2022-04-29 12:52:38,395  INFO [main] TestBase:36 - Contract TC02 has passed
+2022-04-29 12:53:10,522  INFO [main] TestBase:43 - Contract TC03 has passed
+2022-04-29 12:53:41,503  INFO [main] TestBase:50 - Contract TC04 has passed
+2022-04-29 12:54:10,019  INFO [main] TestBase:57 - Contract TC05 has passed
+2022-04-29 12:54:40,764  INFO [main] TestBase:64 - Contract TC06 has passed
+2022-04-29 12:55:14,927  INFO [main] TestBase:71 - Contract TC07 has passed
+2022-04-29 12:55:46,761  INFO [main] TestBase:85 - Contract TC09 has passed
+2022-04-29 12:56:23,104  INFO [main] TestBase:92 - Contract TC10 has passed
+2022-04-29 12:57:01,522  INFO [main] TestBase:98 - Contract TC11 has passed
+2022-04-29 12:57:59,119  INFO [main] TestBase:105 - Contract TC12 has passed
+2022-04-29 12:58:55,518  INFO [main] TestBase:111 - Contract TC13 has passed
+2022-04-29 13:00:07,460  INFO [main] TestBase:124 - Contract TC15 has passed
