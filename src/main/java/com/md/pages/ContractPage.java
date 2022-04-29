@@ -649,7 +649,7 @@ public class ContractPage extends TestBase {
 	public boolean VerifySearchContractUsingSupplier() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("ContractHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-
+        Thread.sleep(2000);
 		// Wait for Contract Page to Load
 		wait.until(ExpectedConditions.visibilityOf(AddNewContractButton));
 
@@ -676,7 +676,7 @@ public class ContractPage extends TestBase {
 	public boolean VerifySearchContractUsingStartDate() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("ContractHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-
+		Thread.sleep(2000);
 		// Wait for Contract Page to Load
 		wait.until(ExpectedConditions.visibilityOf(AddNewContractButton));
 
@@ -694,7 +694,7 @@ public class ContractPage extends TestBase {
 	public boolean VerifySearchContractUsingExpiryDate() throws InterruptedException {
 		driver.navigate().to(prop.getProperty("ContractHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-
+		Thread.sleep(2000);
 		// Wait for Contract Page to Load
 		wait.until(ExpectedConditions.visibilityOf(AddNewContractButton));
 
