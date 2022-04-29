@@ -984,7 +984,7 @@ public class QuickQuotesPage extends TestBase {
 //		Thread.sleep(5000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
+		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText)); //QQ Create Page 
 		name.clear();
 		Thread.sleep(4000);
 		name.sendKeys("Add from Group");
@@ -1113,7 +1113,7 @@ public class QuickQuotesPage extends TestBase {
 		reOpenDrop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(confrimationOk));
 		confrimationOk.click();
-		Thread.sleep(2000);// Adding wait as failing on Jenkins
+		Thread.sleep(3000);// Adding wait as failing on Jenkins
 		Assert.assertEquals(reOpenToaster.getText(), "YOUR EVENT HAS NOW BEEN REOPENED");
 		// Event gets re-opened
 		wait.until(ExpectedConditions.elementToBeClickable(current));
@@ -1162,7 +1162,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public void ckEditor() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
+		wait.until(ExpectedConditions.visibilityOf(whoToInviteText)); //QQ Create Page 
 		name.clear();
 		name.sendKeys("ckEditor Test");
 		Thread.sleep(2000);
@@ -1186,7 +1186,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean currencySymbol() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(AdviceText));
+		wait.until(ExpectedConditions.visibilityOf(AdviceText));  //QQ Create Page 
 		Thread.sleep(4000);
 		name.clear();
 		name.sendKeys("currency Symbol Test");

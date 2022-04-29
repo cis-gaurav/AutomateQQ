@@ -111,34 +111,34 @@ public class QuickQuotesTest extends TestBase {
 	@Test(priority=11)
 	public void qq_VerifyCKEditor() throws InterruptedException {
 		QuickQuotesPage.ckEditor();
-		logger.info("Quick Quote TC17 has passed");
+		logger.info("Quick Quote TC11 has passed");
 	}
 	
 	@Test (priority=12)
 	public void qq_VerfiyEditQQEvent() throws InterruptedException {
 		boolean flag=QuickQuotesPage.EditQQEvent();
 		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC13 has passed");
+		logger.info("Quick Quote TC12 has passed");
 	}
 	
 	@Test(priority=13)	
 	public void qq_VerifyQuestionnaireAndAllowResubmissioninSandpit() throws InterruptedException {
 		QuickQuotesPage.createSandpitEventWithQuestionnaireAndAllowResubmission();
-		logger.info("Quick Quote TC15 has passed");
+		logger.info("Quick Quote TC13 has passed");
 	}
 
 	@Test(priority=14)
 	public void qq_VerifyCurrencySymbol() throws InterruptedException {
 		boolean flag=QuickQuotesPage.currencySymbol();
 		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC19 has passed");
+		logger.info("Quick Quote TC14 has passed");
 	}
 	
 	@Test (priority=15)
 	public void qq_VerfiyQQEventWithAllDetails() throws InterruptedException {
 		boolean flag=QuickQuotesPage.createQQEventWithAllDetails();
 		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC11 has passed");
+		logger.info("Quick Quote TC15 has passed");
 	}
 	
 	@Test(priority=16)
@@ -151,14 +151,14 @@ public class QuickQuotesTest extends TestBase {
 	@Test (priority=17)
 	public void qq_VerifyAwardLotPopup() throws InterruptedException {
 		QuickQuotesPage.awardLotPopup();
-		logger.info("Quick Quote TC18 has passed");
+		logger.info("Quick Quote TC17 has passed");
 	}
 	
 	@Test(priority=18)
     public void qq_VerifySearchQuote() throws InterruptedException {
 		boolean flag=QuickQuotesPage.searchQuote();
 		Assert.assertTrue(flag);
-		logger.info("Quick Quote TC14 has passed");
+		logger.info("Quick Quote TC18 has passed");
 	}
 	
 	@AfterClass

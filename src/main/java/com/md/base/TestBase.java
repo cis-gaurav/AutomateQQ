@@ -3,7 +3,6 @@ package com.md.base;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
@@ -35,15 +34,19 @@ public class TestBase {
 			prop = new Properties(); // Need to create object of properties class
 			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";
 			FileInputStream ip = new FileInputStream(configPath);// create an object for Inputstream read data 
-			prop.load(ip); // loading data of property file
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+			prop.load(ip); // loading data of property file 
 		}
-	}
-
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
+			catch(Exception e) {
+              e.printStackTrace();				
+			}
+		}
+	
 ///////////// Define Execution Environment here i.e. Local/server for Jenkins
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
 		String ExecutionLocation = "server";
@@ -65,7 +68,7 @@ public class TestBase {
 
 			// pass chromedriver path of the server
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
-			ChromeOptions options = new ChromeOptions();
+			ChromeOptions options = new ChromeOptions(); // using chromeoption
 			options.setBinary("/usr/bin/google-chrome");
 			options.addArguments("--headless");
 			options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -110,7 +113,7 @@ public class TestBase {
 			driver.findElement(By.xpath("//input[@name ='commit']")).click();
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
-			logger.info("Logged in and redirect to MD Dashbaord");
+			logger.info("Logged in and redirect to MD Dashbaord");// Redirect to MD Dashboard 
 		}
 	}
 	
@@ -119,11 +122,11 @@ public class TestBase {
 	
 	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException{
 		
-		TakesScreenshot ts = (TakesScreenshot) driver; //Convert webdriver to TakeScreenshot
-		File source = ts.getScreenshotAs(OutputType.FILE); //call getScreenshotAs() method to create an image file by providing the parameter *OutputType.FILE.
-		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png";
+		TakesScreenshot ts = (TakesScreenshot) driver; //Convert webdriver to TakeScreenshot both are interface
+		File source = ts.getScreenshotAs(OutputType.FILE); //call getScreenshotAs() method screenshot capture on server we need to save it somewhere
+		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png"; // save in our location
 		File file = new File(destPath);
-		FileUtils.copyFile(source, file);
+		FileUtils.copyFile(source, file);//we need to copy it from memory to our location
 		return destPath;
 	}	 	
 }
