@@ -1,12 +1,6 @@
-2022-04-29 12:16:08,375 DEBUG [main] ResolutionCache:186 - Resolution chrome=99 in cache (valid until 13:09:10 29/04/2022 IST)
-2022-04-29 12:16:08,378 DEBUG [main] ResolutionCache:186 - Resolution chrome99=99.0.4844.51 in cache (valid until 12:09:10 30/04/2022 IST)
-2022-04-29 12:16:08,379  INFO [main] WebDriverManager:966 - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-2022-04-29 12:16:08,393 DEBUG [main] WebDriverManager:922 - Driver chromedriver 99.0.4844.51 found in cache
-2022-04-29 12:16:08,394  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
-2022-04-29 12:16:10,075  INFO [main] TestBase:105 - ******Local Driver Intilaized*****
-2022-04-29 12:17:24,170 DEBUG [main] ResolutionCache:186 - Resolution chrome=99 in cache (valid until 13:09:10 29/04/2022 IST)
-2022-04-29 12:17:24,171 DEBUG [main] ResolutionCache:186 - Resolution chrome99=99.0.4844.51 in cache (valid until 12:09:10 30/04/2022 IST)
-2022-04-29 12:17:24,171  INFO [main] WebDriverManager:966 - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-2022-04-29 12:17:24,177 DEBUG [main] WebDriverManager:922 - Driver chromedriver 99.0.4844.51 found in cache
-2022-04-29 12:17:24,178  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
-2022-04-29 12:17:25,333  INFO [main] TestBase:105 - ******Local Driver Intilaized*****
+2022-04-29 12:45:22,621 DEBUG [main] ResolutionCache:186 - Resolution chrome=99 in cache (valid until 13:09:10 29/04/2022 IST)
+2022-04-29 12:45:22,625 DEBUG [main] ResolutionCache:186 - Resolution chrome99=99.0.4844.51 in cache (valid until 12:09:10 30/04/2022 IST)
+2022-04-29 12:45:22,625  INFO [main] WebDriverManager:966 - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+2022-04-29 12:45:22,639 DEBUG [main] WebDriverManager:922 - Driver chromedriver 99.0.4844.51 found in cache
+2022-04-29 12:45:22,640  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+2022-04-29 12:45:24,378  INFO [main] TestBase:104 - ******Local Driver Intilaized*****

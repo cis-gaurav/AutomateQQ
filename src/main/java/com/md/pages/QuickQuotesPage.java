@@ -33,7 +33,7 @@ public class QuickQuotesPage extends TestBase {
 	@FindBy(xpath = "//li[@class='menu-item more dropdown']//a[@class='menu-item-tab button-label dropdown-toggle'][normalize-space()='All Modules']")
 	static private WebElement AllModule;
 	
-	@FindBy(xpath = "//a[contains(text(),'Quick Quotes')]")
+	@FindBy(xpath = "//a[@class='menu-item-tab'][normalize-space()='Quick Quotes']")
 	static private WebElement quickQuickDrp;
 	
 
@@ -516,7 +516,6 @@ public class QuickQuotesPage extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(AllModule));// Click on All module 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", AllModule);
-//		wait.until(ExpectedConditions.elementToBeClickable(quickQuickDrp));// Click on Quote option which is inside all module dropdown 
 		Thread.sleep(3000);
 		executor.executeScript("arguments[0].click();", quickQuickDrp);
 	}

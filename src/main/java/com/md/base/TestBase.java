@@ -101,7 +101,6 @@ public class TestBase {
 ////////////////Adding WebDriverManger 
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-//			System.out.println("Driver Intilaized");
 			logger.info("******Local Driver Intilaized*****");
 ///////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
