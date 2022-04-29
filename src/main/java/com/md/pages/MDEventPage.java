@@ -1,14 +1,10 @@
 package com.md.pages;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -25,12 +21,6 @@ public class MDEventPage extends TestBase {
 
 	@FindBy(css = "//a[normalize-space()='Dashboard']")
 	private WebElement dashboardtxt;
-
-	@FindBy(css = "a[class='menu-item-tab button-label dropdown-toggle'][href^='/users/']")
-	private WebElement userProfile;
-
-	@FindBy(css = "a.logout")
-	private WebElement userLogout;
 
 	@FindBy(css = ".btn.center-content-vertical.height-35.shadow-light.wid-auto")
 	private WebElement newEventBtn;
@@ -187,13 +177,6 @@ public class MDEventPage extends TestBase {
 		System.out.println("Out");
 	}
 
-	public void Logout() {
-//		driver.navigate().to("https://next.testmd.co.uk/");
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-//		wait.until(ExpectedConditions.elementToBeClickable(dashboardtxt));
-		userProfile.click();
-		wait.until(ExpectedConditions.elementToBeClickable(userLogout));
-		userLogout.click();
-	}
+
 
 }

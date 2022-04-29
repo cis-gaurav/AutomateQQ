@@ -36,12 +36,6 @@ public class TestBase {
 			FileInputStream ip = new FileInputStream(configPath);// create an object for Inputstream read data 
 			prop.load(ip); // loading data of property file 
 		}
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//	}
 			catch(Exception e) {
               e.printStackTrace();				
 			}

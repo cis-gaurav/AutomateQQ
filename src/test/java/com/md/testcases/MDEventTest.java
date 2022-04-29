@@ -1,6 +1,11 @@
 package com.md.testcases;
 
 import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.md.base.TestBase;
@@ -20,29 +25,33 @@ public class MDEventTest extends TestBase {
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException, InterruptedException {
-		initializationAndLogin();
-////Need to create object of class 
-		MDEventPage = new MDEventPage();
-		TestUtils = new TestUtils();
-		QuickQuotesPage = new QuickQuotesPage();
-		Thread.sleep(3000);
+		initializationAndLogin(); // Logged in and Redirect to MD Dashboard page
+		MDEventPage = new MDEventPage();// Need to create object of class if need to use
+		TestUtils = new TestUtils();// Need to create object of class if need to use
+		QuickQuotesPage = new QuickQuotesPage();// Need to create object of class if need to use
+		TestUtils.redirectToSandpitfromMDdashbaord(); // Redirect from Dashboard to Sandpit
+//		Thread.sleep(3000);
 	}
 
-//	@Test(priority = 1)
-//	public void md_VerifyLogo() throws InterruptedException {
+	@Test(priority = 1)
+	public void md_VerifyLogo() throws InterruptedException {
 //		boolean flag = MDEventPage.logo();
 //		Assert.assertTrue(flag);
-//	}
-
-	@Test(priority = 2)
-	public void hello() throws InterruptedException  {
-		MDEventPage.test1();
+		System.out.println("P0");
 	}
 
-//	@AfterMethod
-//	public void tearDown() {
-//		MDEventPage.Logout();
-//		driver.quit();
-//	}
+	@Test(priority = 2)
+	public void hello() throws InterruptedException {
+		System.out.println("Inside @test");
+//		MDEventPage.test1();
+	}
+
+	@AfterMethod
+	public void tearDown() throws InterruptedException {
+		TestUtils.leaveSandpit();
+		TestUtils.Logout();
+		driver.close();
+		driver.quit();
+	}
 
 }
