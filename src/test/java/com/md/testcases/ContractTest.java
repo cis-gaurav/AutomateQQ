@@ -242,14 +242,14 @@ public class ContractTest extends TestBase {
 		Assert.assertTrue(flag);
 		logger.info("Contract TC32 has passed");
 	}
-	@Test(priority=33)
+	@Test(priority=33, enabled= false)
 	public void contract_VerifyActiveHeadingsDisplayInContractForm() throws InterruptedException{		
 		boolean flag = contractPage.VerifyActiveHeadingsDisplayInContractForm();
 		Assert.assertTrue(flag);
 		logger.info("Contract TC33 has passed");
 	}
 	
-	@Test(priority=34)
+	@Test(priority=34, enabled= false)
 	public void contract_VerifyActiveHeadingsDisplayInContractListingPage() throws InterruptedException{		
 		boolean flag = contractPage.VerifyActiveHeadingsDisplayInContractListingPage();
 		Assert.assertTrue(flag);
