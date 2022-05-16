@@ -1,32 +1,184 @@
-2022-04-29 18:48:07,164 DEBUG [main] ResolutionCache:186 - Resolution chrome=99 in cache (valid until 19:03:53 29/04/2022 IST)
-2022-04-29 18:48:07,167 DEBUG [main] ResolutionCache:186 - Resolution chrome99=99.0.4844.51 in cache (valid until 12:09:10 30/04/2022 IST)
-2022-04-29 18:48:07,168  INFO [main] WebDriverManager:966 - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-2022-04-29 18:48:07,182 DEBUG [main] WebDriverManager:922 - Driver chromedriver 99.0.4844.51 found in cache
-2022-04-29 18:48:07,183  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
-2022-04-29 18:48:08,928  INFO [main] TestBase:98 - ******Local Driver Intilaized*****
-2022-04-29 18:48:24,575  INFO [main] TestBase:109 - Logged in and redirect to MD Dashbaord
-2022-04-29 18:48:27,611  INFO [main] TestBase:22 - *******Contract_test_ starts*******
-2022-04-29 18:48:56,658  INFO [main] TestBase:29 - Contract TC01 has passed
-2022-04-29 18:50:38,891  INFO [main] TestBase:36 - Contract TC02 has passed
-2022-04-29 18:51:07,397  INFO [main] TestBase:43 - Contract TC03 has passed
-2022-04-29 18:51:39,812  INFO [main] TestBase:50 - Contract TC04 has passed
-2022-04-29 18:52:08,075  INFO [main] TestBase:57 - Contract TC05 has passed
-2022-04-29 18:52:40,897  INFO [main] TestBase:64 - Contract TC06 has passed
-2022-04-29 18:53:14,592  INFO [main] TestBase:71 - Contract TC07 has passed
-2022-04-29 18:57:09,068  INFO [main] TestBase:105 - Contract TC12 has passed
-2022-04-29 18:58:02,212  INFO [main] TestBase:111 - Contract TC13 has passed
-2022-04-29 18:59:06,597  INFO [main] TestBase:124 - Contract TC15 has passed
-2022-04-29 19:00:02,461  INFO [main] TestBase:131 - Contract TC16 has passed
-2022-04-29 19:01:04,242  INFO [main] TestBase:145 - Contract TC18 has passed
-2022-04-29 19:02:05,726  INFO [main] TestBase:152 - Contract TC19 has passed
-2022-04-29 19:03:04,812  INFO [main] TestBase:159 - Contract TC20 has passed
-2022-04-29 19:04:03,086  INFO [main] TestBase:166 - Contract TC21 has passed
-2022-04-29 19:05:06,947  INFO [main] TestBase:173 - Contract TC22 has passed
-2022-04-29 19:06:08,531  INFO [main] TestBase:187 - Contract TC24 has passed
-2022-04-29 19:07:03,222  INFO [main] TestBase:194 - Contract TC25 has passed
-2022-04-29 19:08:15,173  INFO [main] TestBase:201 - Contract TC26 has passed
-2022-04-29 19:09:19,099  INFO [main] TestBase:215 - Contract TC28 has passed
-2022-04-29 19:10:13,325  INFO [main] TestBase:229 - Contract TC30 has passed
-2022-04-29 19:11:40,173  INFO [main] TestBase:243 - Contract TC32 has passed
-2022-04-29 19:13:08,511  INFO [main] TestBase:263 - Contract TC35 has passed
-2022-04-29 19:13:08,513  INFO [main] TestBase:289 - *******Contract_test_ ends*******
+2022-05-16 17:27:34,004 DEBUG [main] ResolutionCache:186 - Resolution chrome=99 in cache (valid until 17:46:26 16/05/2022 IST)
+2022-05-16 17:27:34,010 DEBUG [main] ResolutionCache:186 - Resolution chrome99=99.0.4844.51 in cache (valid until 16:46:26 17/05/2022 IST)
+2022-05-16 17:27:34,014  INFO [main] WebDriverManager:966 - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+2022-05-16 17:27:34,034 DEBUG [main] WebDriverManager:922 - Driver chromedriver 99.0.4844.51 found in cache
+2022-05-16 17:27:34,036  INFO [main] WebDriverManager:1021 - Exporting webdriver.chrome.driver as C:\Users\cis\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+2022-05-16 17:27:34,187 DEBUG [main] InternalLoggerFactory:63 - Using SLF4J as the default logging framework
+2022-05-16 17:27:34,204 DEBUG [main] ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
+2022-05-16 17:27:34,206 DEBUG [main] ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
+2022-05-16 17:27:34,214 DEBUG [main] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@497486b3
+2022-05-16 17:27:34,233 DEBUG [main] PlatformDependent0:460 - -Dio.netty.noUnsafe: false
+2022-05-16 17:27:34,234 DEBUG [main] PlatformDependent0:954 - Java version: 8
+2022-05-16 17:27:34,243 DEBUG [main] PlatformDependent0:135 - sun.misc.Unsafe.theUnsafe: available
+2022-05-16 17:27:34,245 DEBUG [main] PlatformDependent0:159 - sun.misc.Unsafe.copyMemory: available
+2022-05-16 17:27:34,246 DEBUG [main] PlatformDependent0:202 - java.nio.Buffer.address: available
+2022-05-16 17:27:34,248 DEBUG [main] PlatformDependent0:272 - direct buffer constructor: available
+2022-05-16 17:27:34,250 DEBUG [main] PlatformDependent0:350 - java.nio.Bits.unaligned: available, true
+2022-05-16 17:27:34,253 DEBUG [main] PlatformDependent0:424 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-05-16 17:27:34,258 DEBUG [main] PlatformDependent0:446 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-05-16 17:27:34,259 DEBUG [main] PlatformDependent:1103 - sun.misc.Unsafe: available
+2022-05-16 17:27:34,264 DEBUG [main] PlatformDependent:1224 - -Dio.netty.tmpdir: C:\Users\cis\AppData\Local\Temp (java.io.tmpdir)
+2022-05-16 17:27:34,270 DEBUG [main] PlatformDependent:1303 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-05-16 17:27:34,271 DEBUG [main] PlatformDependent:1063 - Platform: Windows
+2022-05-16 17:27:34,274 DEBUG [main] PlatformDependent:178 - -Dio.netty.maxDirectMemory: 1884815360 bytes
+2022-05-16 17:27:34,274 DEBUG [main] PlatformDependent:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-05-16 17:27:34,285 DEBUG [main] CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-05-16 17:27:34,311 DEBUG [main] PlatformDependent:205 - -Dio.netty.noPreferDirect: false
+2022-05-16 17:27:34,337 DEBUG [main] PlatformDependent:967 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-05-16 17:27:34,373 DEBUG [main] InternalThreadLocalMap:83 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-05-16 17:27:34,373 DEBUG [main] InternalThreadLocalMap:86 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-05-16 17:27:34,400 DEBUG [main] JdkSslContext:97 - Default protocols (JDK): [TLSv1.2, TLSv1.1, TLSv1] 
+2022-05-16 17:27:34,400 DEBUG [main] JdkSslContext:98 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2022-05-16 17:27:34,445 DEBUG [main] MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
+2022-05-16 17:27:34,454 DEBUG [main] NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-05-16 17:27:34,454 DEBUG [main] NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-05-16 17:27:34,537 DEBUG [main] PooledByteBufAllocator:155 - -Dio.netty.allocator.numHeapArenas: 8
+2022-05-16 17:27:34,538 DEBUG [main] PooledByteBufAllocator:156 - -Dio.netty.allocator.numDirectArenas: 8
+2022-05-16 17:27:34,539 DEBUG [main] PooledByteBufAllocator:158 - -Dio.netty.allocator.pageSize: 8192
+2022-05-16 17:27:34,540 DEBUG [main] PooledByteBufAllocator:163 - -Dio.netty.allocator.maxOrder: 11
+2022-05-16 17:27:34,543 DEBUG [main] PooledByteBufAllocator:167 - -Dio.netty.allocator.chunkSize: 16777216
+2022-05-16 17:27:34,543 DEBUG [main] PooledByteBufAllocator:168 - -Dio.netty.allocator.smallCacheSize: 256
+2022-05-16 17:27:34,545 DEBUG [main] PooledByteBufAllocator:169 - -Dio.netty.allocator.normalCacheSize: 64
+2022-05-16 17:27:34,552 DEBUG [main] PooledByteBufAllocator:170 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-05-16 17:27:34,556 DEBUG [main] PooledByteBufAllocator:171 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-05-16 17:27:34,557 DEBUG [main] PooledByteBufAllocator:172 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-05-16 17:27:34,558 DEBUG [main] PooledByteBufAllocator:173 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-05-16 17:27:34,559 DEBUG [main] PooledByteBufAllocator:174 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-05-16 17:27:34,570 DEBUG [main] ByteBufUtil:87 - -Dio.netty.allocator.type: pooled
+2022-05-16 17:27:34,571 DEBUG [main] ByteBufUtil:96 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-05-16 17:27:34,571 DEBUG [main] ByteBufUtil:99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-05-16 17:27:35,489 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:79 - -Dio.netty.processId: 21820 (auto-detected)
+2022-05-16 17:27:35,493 DEBUG [Forwarding newSession on session null to remote] NetUtil:135 - -Djava.net.preferIPv4Stack: false
+2022-05-16 17:27:35,494 DEBUG [Forwarding newSession on session null to remote] NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+2022-05-16 17:27:35,541 DEBUG [Forwarding newSession on session null to remote] NetUtilInitializations:129 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-05-16 17:27:35,543 DEBUG [Forwarding newSession on session null to remote] NetUtil:187 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-05-16 17:27:35,583 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:101 - -Dio.netty.machineId: 48:0f:cf:ff:fe:56:c4:ae (auto-detected)
+2022-05-16 17:27:35,642 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-05-16 17:27:35,642 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-05-16 17:27:35,647 DEBUG [AsyncHttpClient-1-2] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6f9ca3cd
+2022-05-16 17:27:35,677 DEBUG [AsyncHttpClient-1-2] NettyConnectListener:73 - Using new Channel '[id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]' for 'POST' to '/session'
+2022-05-16 17:27:35,692 DEBUG [AsyncHttpClient-1-2] Recycler:103 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-05-16 17:27:35,692 DEBUG [AsyncHttpClient-1-2] Recycler:104 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-05-16 17:27:35,692 DEBUG [AsyncHttpClient-1-2] Recycler:105 - -Dio.netty.recycler.linkCapacity: 16
+2022-05-16 17:27:35,693 DEBUG [AsyncHttpClient-1-2] Recycler:106 - -Dio.netty.recycler.ratio: 8
+2022-05-16 17:27:35,694 DEBUG [AsyncHttpClient-1-2] Recycler:107 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-05-16 17:27:39,818 DEBUG [AsyncHttpClient-1-2] Brotli:38 - brotli4j not in the classpath; Brotli support will be unavailable.
+2022-05-16 17:27:39,822 DEBUG [AsyncHttpClient-1-2] HttpHandler:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session HTTP/1.1
+User-Agent: selenium/4.0.0 (java windows)
+Content-Length: 365
+Content-Type: application/json; charset=utf-8
+host: localhost:53469
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 785
+
+2022-05-16 17:27:39,832 DEBUG [AsyncHttpClient-1-2] ChannelManager:270 - Adding key: http://localhost:53469 for channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]
+2022-05-16 17:27:39,853 DEBUG [AsyncHttpClient-1-1] DefaultChannelPool:348 - Entry count for : http://localhost:53469 : 1
+2022-05-16 17:27:40,026 DEBUG [AsyncHttpClient-1-3] NettyConnectListener:73 - Using new Channel '[id: 0x27cdef14, L:/127.0.0.1:55916 - R:localhost/127.0.0.1:55908]' for 'GET' to '/json/version'
+2022-05-16 17:27:40,029 DEBUG [AsyncHttpClient-1-3] HttpHandler:70 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /json/version HTTP/1.1
+User-Agent: selenium/4.0.0 (java windows)
+host: localhost:55908
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+content-length: 423
+
+2022-05-16 17:27:40,029 DEBUG [AsyncHttpClient-1-3] ChannelManager:270 - Adding key: http://localhost:55908 for channel [id: 0x27cdef14, L:/127.0.0.1:55916 - R:localhost/127.0.0.1:55908]
+2022-05-16 17:27:40,040 DEBUG [main] ThreadLocalRandom:214 - -Dio.netty.initialSeedUniquifier: 0xedb41c140ac4270a
+2022-05-16 17:27:40,045 DEBUG [AsyncHttpClient-1-4] NettyConnectListener:73 - Using new Channel '[id: 0x98f397b6, L:/127.0.0.1:55917 - R:localhost/127.0.0.1:55908]' for 'GET' to '/devtools/browser/275a67cb-0eac-48ae-8d86-20a1488fa00a'
+2022-05-16 17:27:40,048 DEBUG [AsyncHttpClient-1-4] WebSocketHandler:105 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /devtools/browser/275a67cb-0eac-48ae-8d86-20a1488fa00a HTTP/1.1
+upgrade: websocket
+connection: upgrade
+sec-websocket-key: s2WP+wNwtpDLMWZPVDH0Og==
+sec-websocket-version: 13
+origin: http://localhost:55908
+host: localhost:55908
+accept: */*
+user-agent: AHC/2.1
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 101 WebSocket Protocol Handshake
+Upgrade: WebSocket
+Connection: Upgrade
+Sec-WebSocket-Accept: ApPieeZhOh+U4ztQcZdjLw5jzy8=
+
+2022-05-16 17:27:40,091  INFO [main] TestBase:99 - ******Local Driver Intilaized*****
+2022-05-16 17:27:40,097 DEBUG [Forwarding maximizeCurrentWindow on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:593 - Using pooled Channel '[id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]' for 'POST' to 'http://localhost:53469/session/63eb5011a21992f40f01d1374f093fb2/window/maximize'
+2022-05-16 17:27:40,097 DEBUG [Forwarding maximizeCurrentWindow on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:251 - Using open Channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469] for POST '/session/63eb5011a21992f40f01d1374f093fb2/window/maximize'
+2022-05-16 17:27:40,229 DEBUG [AsyncHttpClient-1-2] HttpHandler:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/63eb5011a21992f40f01d1374f093fb2/window/maximize HTTP/1.1
+User-Agent: selenium/4.0.0 (java windows)
+Content-Length: 3
+Content-Type: application/json; charset=utf-8
+host: localhost:53469
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 51
+
+2022-05-16 17:27:40,230 DEBUG [AsyncHttpClient-1-2] ChannelManager:270 - Adding key: http://localhost:53469 for channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]
+2022-05-16 17:27:40,233 DEBUG [Forwarding deleteAllCookies on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:593 - Using pooled Channel '[id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]' for 'DELETE' to 'http://localhost:53469/session/63eb5011a21992f40f01d1374f093fb2/cookie'
+2022-05-16 17:27:40,233 DEBUG [Forwarding deleteAllCookies on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:251 - Using open Channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469] for DELETE '/session/63eb5011a21992f40f01d1374f093fb2/cookie'
+2022-05-16 17:27:40,238 DEBUG [AsyncHttpClient-1-2] HttpHandler:70 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+DELETE /session/63eb5011a21992f40f01d1374f093fb2/cookie HTTP/1.1
+User-Agent: selenium/4.0.0 (java windows)
+Content-Type: application/json; charset=utf-8
+host: localhost:53469
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+2022-05-16 17:27:40,238 DEBUG [AsyncHttpClient-1-2] ChannelManager:270 - Adding key: http://localhost:53469 for channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]
+2022-05-16 17:27:40,242 DEBUG [Forwarding setTimeout on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:593 - Using pooled Channel '[id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]' for 'POST' to 'http://localhost:53469/session/63eb5011a21992f40f01d1374f093fb2/timeouts'
+2022-05-16 17:27:40,242 DEBUG [Forwarding setTimeout on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:251 - Using open Channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469] for POST '/session/63eb5011a21992f40f01d1374f093fb2/timeouts'
+2022-05-16 17:27:40,244 DEBUG [AsyncHttpClient-1-2] HttpHandler:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/63eb5011a21992f40f01d1374f093fb2/timeouts HTTP/1.1
+User-Agent: selenium/4.0.0 (java windows)
+Content-Length: 23
+Content-Type: application/json; charset=utf-8
+host: localhost:53469
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+2022-05-16 17:27:40,245 DEBUG [AsyncHttpClient-1-2] ChannelManager:270 - Adding key: http://localhost:53469 for channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]
+2022-05-16 17:27:40,247 DEBUG [Forwarding get on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:593 - Using pooled Channel '[id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469]' for 'POST' to 'http://localhost:53469/session/63eb5011a21992f40f01d1374f093fb2/url'
+2022-05-16 17:27:40,247 DEBUG [Forwarding get on session 63eb5011a21992f40f01d1374f093fb2 to remote] NettyRequestSender:251 - Using open Channel [id: 0xb2728d0d, L:/127.0.0.1:55906 - R:localhost/127.0.0.1:53469] for POST '/session/63eb5011a21992f40f01d1374f093fb2/url'
+2022-05-16 17:27:40,954 DEBUG [AsyncHttpClient-1-1] DefaultChannelPool:348 - Entry count for : http://localhost:55908 : 1
+2022-05-16 17:27:42,053 DEBUG [AsyncHttpClient-1-1] DefaultChannelPool:348 - Entry count for : http://localhost:55908 : 1
+2022-05-16 17:27:43,154 DEBUG [AsyncHttpClient-1-1] DefaultChannelPool:348 - Entry count for : http://localhost:55908 : 1
+2022-05-16 17:27:44,253 DEBUG [AsyncHttpClient-1-1] DefaultChannelPool:348 - Entry count for : http://localhost:55908 : 1
+2022-05-16 17:27:45,353 DEBUG [AsyncHttpClient-1-1] DefaultChannelPool:348 - Entry count for : http://localhost:55908 : 1
+2022-05-16 17:27:46,454 DEBUG [AsyncHttpClient-1-1] DefaultChannelPool:348 - Entry count for : http://localhost:55908 : 1

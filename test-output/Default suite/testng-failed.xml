@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.md.testcases.ContractTest">
+      <class name="com.md.testcases.MDEventTest">
         <methods>
-          <include name="contract_VerifySearchContractUsingSupplier"/>
+          <include name="md_PQQ"/>
           <include name="setUp"/>
-          <include name="Teardown"/>
-          <include name="contract_VerifySearchContractUsingValue"/>
-          <include name="contract_VerifySearchContractUsingStakeHolder"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.md.testcases.ContractTest -->
+      </class> <!-- com.md.testcases.MDEventTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

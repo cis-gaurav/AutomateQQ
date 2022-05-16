@@ -1,10 +1,13 @@
 package com.md.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -25,11 +28,15 @@ public class MDEventPage extends TestBase {
 	@FindBy(css = ".btn.center-content-vertical.height-35.shadow-light.wid-auto")
 	private WebElement newEventBtn;
 
+    ////Page Factory of New event popup 
 	@FindBy(css = "input#new_event_chck")
 	private WebElement newEventRadioBtn;
 
 	@FindBy(css = "input#new_event_template_check")
 	private WebElement useTemplateRadioBtn;
+	
+	
+	
 
 	@FindBy(css = "input#clone_event_check")
 	private WebElement CloneRadioBtn;
@@ -140,41 +147,44 @@ public class MDEventPage extends TestBase {
 	}
 
 	///// Actions
-	public void test1() throws InterruptedException {
+	public void PQQ() throws InterruptedException {
 		newEventBtn.click();
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(newEventRadioBtn));
-		newEventRadioBtn.click();
-		wait.until(ExpectedConditions.elementToBeClickable(newEventRadioBtn));
-		createEventBtn.click();
-		wait.until(ExpectedConditions.elementToBeClickable(eventName));
+		wait.until(ExpectedConditions.elementToBeClickable(useTemplateRadioBtn));
+		useTemplateRadioBtn.click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//span[@id='select2-template_options-container']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@class='select2-search__field']")).sendKeys("Gaurav");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@class='select2-search__field']")).sendKeys(Keys.ENTER);
+
+//        Select s = new Select(driver.findElement(By.xpath("//select[@name='event_template']")));
+//        s.selectByVisibleText("50 Question +100 Part");
+//		createEventBtn.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(eventName));
 		
-		eventName.sendKeys("PQQ Event"); // Enter event name
-		JavascriptExecutor js = (JavascriptExecutor) driver; // Scroll till create questionnaire
-		js.executeScript("arguments[0].scrollIntoView();", createQuestionnaireCheckbox);
-		Thread.sleep(2000);
-//		wait.until(ExpectedConditions.elementToBeClickable(createQuestionnaireCheckbox));
-		testUtils.jsExecutor(createQuestionnaireCheckbox);// click on questionnaire check-box
+//		eventName.sendKeys("PQQ Event"); // Enter event name
+//		JavascriptExecutor js = (JavascriptExecutor) driver; // Scroll till create questionnaire
+//		js.executeScript("arguments[0].scrollIntoView();", createQuestionnaireCheckbox);
 //		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(questionnaireName));
-		questionnaireName.sendKeys("PQQ");
-		Thread.sleep(2000);
-		pqqCheckbox.click();
-		JavascriptExecutor js1 = (JavascriptExecutor) driver; // Scroll till create questionnaire
-		js1.executeScript("arguments[0].scrollIntoView();", saveAndGotoNextStepBtn);
-		wait.until(ExpectedConditions.elementToBeClickable(saveAndGotoNextStepBtn));
-		saveAndGotoNextStepBtn.click();//Redirect to document tab
-		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTab));
-//		createDocumentsTab.click();
-		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTxt));
-		Assert.assertEquals(createDocumentsTxt.getText(), "Here you can upload any documents that will guide your participants; these may be specifications, terms and conditions, images or anything else that is important to your event.");
-//		Thread.sleep(3000);
-		
-		System.out.println("Return TRUE if checkbox is checked already... " + documentTabCheckBox.isSelected());
-		
-		if(!documentTabCheckBox.isSelected())
-			documentTabCheckBox.click();
-		System.out.println("Out");
+//		testUtils.jsExecutor(createQuestionnaireCheckbox);// click on questionnaire check-box
+//		wait.until(ExpectedConditions.elementToBeClickable(questionnaireName));
+//		questionnaireName.sendKeys("PQQ");
+//		Thread.sleep(2000);
+//		pqqCheckbox.click();
+//		JavascriptExecutor js1 = (JavascriptExecutor) driver; // Scroll till create questionnaire
+//		js1.executeScript("arguments[0].scrollIntoView();", saveAndGotoNextStepBtn);
+//		wait.until(ExpectedConditions.elementToBeClickable(saveAndGotoNextStepBtn));
+//		saveAndGotoNextStepBtn.click();//Redirect to document tab
+//		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTab));
+//		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTxt));
+//		Assert.assertEquals(createDocumentsTxt.getText(), "Here you can upload any documents that will guide your participants; these may be specifications, terms and conditions, images or anything else that is important to your event.");
+//		System.out.println("Return TRUE if checkbox is checked already... " + documentTabCheckBox.isSelected());
+//		if(!documentTabCheckBox.isSelected())
+//			documentTabCheckBox.click();
+//		System.out.println("Out");
+//		return false;
 	}
 
 

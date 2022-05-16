@@ -30,21 +30,22 @@ public class MDEventTest extends TestBase {
 		TestUtils = new TestUtils();// Need to create object of class if need to use
 		QuickQuotesPage = new QuickQuotesPage();// Need to create object of class if need to use
 		TestUtils.redirectToSandpitfromMDdashbaord(); // Redirect from Dashboard to Sandpit
+		System.out.println("Done before method");
 //		Thread.sleep(3000);
 	}
 
 	@Test(priority = 1)
-	public void md_VerifyLogo() throws InterruptedException {
-//		boolean flag = MDEventPage.logo();
+	public void md_PQQ() throws InterruptedException {
+		MDEventPage.PQQ();
 //		Assert.assertTrue(flag);
 		System.out.println("P0");
 	}
 
-	@Test(priority = 2)
-	public void hello() throws InterruptedException {
-		System.out.println("Inside @test");
+//	@Test(priority = 2)
+//	public void hello() throws InterruptedException {
+//		System.out.println("Inside @test");
 //		MDEventPage.test1();
-	}
+//	}
 
 	@AfterMethod
 	public void tearDown() throws InterruptedException {
