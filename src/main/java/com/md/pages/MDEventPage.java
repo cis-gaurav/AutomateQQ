@@ -1,5 +1,7 @@
 package com.md.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -149,7 +151,7 @@ public class MDEventPage extends TestBase {
 	///// Actions
 	public void PQQ() throws InterruptedException {
 		newEventBtn.click();
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(useTemplateRadioBtn));
 		useTemplateRadioBtn.click();
 		Thread.sleep(1000);

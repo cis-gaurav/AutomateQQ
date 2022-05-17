@@ -1,6 +1,7 @@
 package com.md.utils;
 
-import org.openqa.selenium.By;
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,19 +61,19 @@ public class TestUtils extends TestBase {
 	}
 
 	public void redirectToSandpitfromMDdashbaord() {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(headerlinkSandpit));
 		headerlinkSandpit.click();
 	}
 
 	public void leaveSandpit() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(btnleaveSandpit));
 		btnleaveSandpit.click();
 	}
 
 	public void Logout() {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		userProfile.click();
 		wait.until(ExpectedConditions.elementToBeClickable(userLogout));
 		userLogout.click();

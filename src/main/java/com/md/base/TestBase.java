@@ -6,17 +6,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,7 +26,7 @@ public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	public static Logger logger = Logger.getLogger(TestBase.class);
+	public static Logger logger = LogManager.getLogger(TestBase.class); //looger to show logs on console 
 
 
 /////////////////// properties file key value pair 
@@ -80,14 +80,15 @@ public class TestBase {
 			logger.info("*******ServerDriver Intilaized*******");
 ///////////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get(prop.getProperty("url"));
 			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
 			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
 			driver.findElement(By.xpath("//input[@name ='commit']")).click();
-			WebDriverWait wait = new WebDriverWait(driver, 60);
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
-//			System.out.println("Logged in and redirect to MD Dashboard");
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".classlocator")));
 			logger.info("Logged in and redirect to MD Dashbaord");
 			
 		} else if (ExecutionLocation.equals("local")) {
@@ -100,13 +101,13 @@ public class TestBase {
 ///////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get(prop.getProperty("url"));
 			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
 			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
 			driver.findElement(By.xpath("//input[@name ='commit']")).click();
-			WebDriverWait wait = new WebDriverWait(driver, 60);
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 			logger.info("Logged in and redirect to MD Dashbaord");// Redirect to MD Dashboard 
 		}
 	}

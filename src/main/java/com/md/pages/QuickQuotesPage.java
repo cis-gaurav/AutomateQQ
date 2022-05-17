@@ -1,5 +1,7 @@
 package com.md.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -511,7 +513,7 @@ public class QuickQuotesPage extends TestBase {
 
 	// Used in BeforeClass
 	public void redirectFromMdDashboardToQuoteListing() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(AllModule));// Click on All module 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -525,8 +527,8 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(3000);
 		quotesHeading.click();
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".classlocator")));
 		newQuoteBtn.click();
 	}
 
@@ -551,7 +553,7 @@ public class QuickQuotesPage extends TestBase {
 	// Unused script of new user license check
 	public boolean verifyQQLiscence() throws InterruptedException {
 		redirectFromMdDashboardToQuoteListing();
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(alertLiscenceMsg));
 		return alertLiscenceMsg.isDisplayed();
 	}
@@ -574,7 +576,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(8000);// This is execute first on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage")); 
 //		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));// this is load at last
 		// Enter long name in quoteName field
 		wait.until(ExpectedConditions.elementToBeClickable(name));
@@ -590,7 +592,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createGetQuoteButtonIsDisable() throws InterruptedException {
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		// Scroll to bottom of page
@@ -604,7 +606,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createToasterMessage() throws InterruptedException {
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(5000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		name.sendKeys("Verify Toaster message");
@@ -620,7 +622,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean createQQByName() throws Throwable {
 //		Thread.sleep(2000);
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));// this is load at last
 		name.clear();
 		name.clear();// for test
@@ -640,7 +642,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean createQQEventWithAllDetails() throws InterruptedException {
 //		Thread.sleep(2000);//Adding because failed on Jenkins
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		name.clear();
 		name.sendKeys("Create QuickQuote Event with all Details");
@@ -712,7 +714,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public void createSandpitEventWithQuestionnaireAndAllowResubmission() throws InterruptedException {
 		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", sandpitHeader);
@@ -824,7 +826,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(3000);// Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
 //		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		// Click on edit pencil icon right panel
 		Thread.sleep(2000);
@@ -850,7 +852,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean deleteQuote() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(name));
 //		newQuoteBtn.click();		
 //		wait.until(ExpectedConditions.elementToBeClickable(name));
@@ -884,7 +886,7 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(3000);
 		quotesHeading.click();
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
 		searchForQuote.clear();
 		wait.until(ExpectedConditions.elementToBeClickable(searchForQuote));
@@ -899,7 +901,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public void createMessage() throws InterruptedException {
 		Thread.sleep(3000);// Adding because failed on Jenkins
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText));
 		Thread.sleep(4000);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -982,7 +984,7 @@ public class QuickQuotesPage extends TestBase {
 	public boolean particpantAddedFromGroup() throws InterruptedException {
 //		Thread.sleep(5000);//Adding because failed on Jenkins
 //		driver.navigate().to(prop.getProperty("QuickQuotesHomepage"));
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(whoToInviteText)); //QQ Create Page 
 		name.clear();
 		Thread.sleep(4000);
@@ -1017,7 +1019,7 @@ public class QuickQuotesPage extends TestBase {
 //		redirectFromMdDashboardToQuoteListing();
 //		driver.navigate().refresh();
 //		Thread.sleep(7000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText));
 		name.clear();
 		name.sendKeys("Create QQ Event");
@@ -1103,7 +1105,7 @@ public class QuickQuotesPage extends TestBase {
 
 	public boolean closedReopenEvent() throws InterruptedException {
 		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33396");
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(particpantToggel));
 		Thread.sleep(4000);
 		closeDrp1.click();
@@ -1133,7 +1135,7 @@ public class QuickQuotesPage extends TestBase {
 	public void awardLotPopup() throws InterruptedException {
 		driver.navigate().to("https://next.testmd.co.uk/quick_quotes/quote/33416");
 		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(awardLotBtn));
 		awardLotBtn.click();
 		Thread.sleep(2000);
@@ -1160,7 +1162,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public void ckEditor() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(whoToInviteText)); //QQ Create Page 
 		name.clear();
 		name.sendKeys("ckEditor Test");
@@ -1184,7 +1186,7 @@ public class QuickQuotesPage extends TestBase {
 	}
 
 	public boolean currencySymbol() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(AdviceText));  //QQ Create Page 
 		Thread.sleep(4000);
 		name.clear();
