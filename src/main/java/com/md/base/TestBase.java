@@ -26,7 +26,7 @@ public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	public static Logger logger = LogManager.getLogger(TestBase.class); //looger to show logs on console 
+//	public static Logger logger = LogManager.getLogger(TestBase.class); //looger to show logs on console 
 
 
 /////////////////// properties file key value pair 
@@ -44,7 +44,7 @@ public class TestBase {
 	
 ///////////// Define Execution Environment here i.e. Local/server for Jenkins
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
-		String ExecutionLocation = "server";
+		String ExecutionLocation = "local";
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;
@@ -77,7 +77,7 @@ public class TestBase {
 			driver = new ChromeDriver(options);
 			
 //			System.out.println("*******Driver Intilaized*******");
-			logger.info("*******ServerDriver Intilaized*******");
+//			//logger.info("*******ServerDriver Intilaized*******");
 ///////////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -89,7 +89,7 @@ public class TestBase {
 //			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".classlocator")));
-			logger.info("Logged in and redirect to MD Dashbaord");
+			//logger.info("Logged in and redirect to MD Dashbaord");
 			
 		} else if (ExecutionLocation.equals("local")) {
 //			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
@@ -97,7 +97,7 @@ public class TestBase {
 ////////////////Adding WebDriverManger 
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			logger.info("******Local Driver Intilaized*****");
+			//logger.info("******Local Driver Intilaized*****");
 ///////////////// Navigate to url and login to marketdojo application 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -108,7 +108,7 @@ public class TestBase {
 			driver.findElement(By.xpath("//input[@name ='commit']")).click();
 //			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 //			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
-			logger.info("Logged in and redirect to MD Dashbaord");// Redirect to MD Dashboard 
+			//logger.info("Logged in and redirect to MD Dashbaord");// Redirect to MD Dashboard 
 		}
 	}
 	
