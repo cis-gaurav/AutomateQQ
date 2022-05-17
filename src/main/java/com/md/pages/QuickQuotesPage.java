@@ -527,28 +527,11 @@ public class QuickQuotesPage extends TestBase {
 		Thread.sleep(3000);
 		quotesHeading.click();
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".classlocator")));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(newQuoteBtn));
 		newQuoteBtn.click();
 	}
 
-//	// Global things
-//	public void scroll() {
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//		jse.executeScript("window.scrollBy(0,700)");
-//	}
-//
-//	public void scrollUp() {
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//		jse.executeScript("window.scrollBy(0,-250)");
-//	}
-//
-//	// GlobalThings
-//	public void scrollTillBottom() {
-//		// Scroll to bottom of page
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-//	}
 
 	// Unused script of new user license check
 	public boolean verifyQQLiscence() throws InterruptedException {
