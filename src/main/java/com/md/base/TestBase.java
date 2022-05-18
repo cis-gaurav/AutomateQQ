@@ -64,6 +64,7 @@ public class TestBase {
 			// pass chromedriver path of the server
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			ChromeOptions options = new ChromeOptions(); // using chromeoption
+			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.setBinary("/usr/bin/google-chrome");
 			options.addArguments("--headless");
 			options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -72,7 +73,6 @@ public class TestBase {
 			options.addArguments("--disable-extensions"); // disabling extensions
 			options.addArguments("--disable-gpu"); // applicable to windows os only
 			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.addArguments("--allowed-ips");
 			driver = new ChromeDriver(options);
 			
