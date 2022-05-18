@@ -86,10 +86,8 @@ public class TestBase {
 			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
 			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
 			driver.findElement(By.xpath("//input[@name ='commit']")).click();
-//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".classlocator")));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 			//logger.info("Logged in and redirect to MD Dashbaord");
 			
 		} else if (ExecutionLocation.equals("local")) {
