@@ -44,7 +44,7 @@ public class TestBase {
 	
 ///////////// Define Execution Environment here i.e. Local/server for Jenkins
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
-		String ExecutionLocation = "server";
+		String ExecutionLocation = "local";
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;
@@ -62,8 +62,12 @@ public class TestBase {
 			}
 
 			// pass chromedriver path of the server
-			System.setProperty("webdriver.chrome.driver", chromedriverpath);
+//			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			ChromeOptions options = new ChromeOptions(); // using chromeoption
+			
+			WebDriverManager.chromedriver().setup();// this is added
+
+			
 			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.setBinary("/usr/bin/google-chrome"); // Chrome Browser Binary location through ChromeDriver
 			options.addArguments("--headless");
