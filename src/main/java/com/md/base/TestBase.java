@@ -62,14 +62,11 @@ public class TestBase {
 			}
 
 			// pass chromedriver path of the server
-//			System.setProperty("webdriver.chrome.driver", chromedriverpath);
+			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			ChromeOptions options = new ChromeOptions(); // using chromeoption
 			
-			WebDriverManager.chromedriver().setup();// this is added
-
-			
-			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.setBinary("/usr/bin/google-chrome"); // Chrome Browser Binary location through ChromeDriver
+			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.addArguments("--headless");
 			options.addArguments("start-maximized"); // open Browser in maximized mode
 			options.addArguments("--window-size=1980,1080");
