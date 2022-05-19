@@ -20,6 +20,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.md.utils.TestUtils;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -27,7 +29,7 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	public static Logger logger = LogManager.getLogger(TestBase.class); //logger to show logs on console 
-
+    
 
 /////////////////// properties file key value pair 
 	public TestBase() {
@@ -78,17 +80,18 @@ public class TestBase {
 			driver = new ChromeDriver(options);
 			
 //			System.out.println("*******Driver Intilaized*******");
-//			logger.info("*******ServerDriver Intilaized*******");
+			logger.info("*******ServerDriver Intilaized*******");
 ///////////////////// Navigate to url and login to marketdojo application 
-			driver.manage().window().maximize();
-	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			driver.get(prop.getProperty("url"));
-			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
-			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
-			driver.findElement(By.xpath("//input[@name ='commit']")).click();
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
-			logger.info("Logged in and redirect to MD Dashbaord");
+//			driver.manage().window().maximize();
+//	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//			driver.get(prop.getProperty("url"));
+//			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
+//			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
+//			driver.findElement(By.xpath("//input[@name ='commit']")).click();
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
+//			logger.info("Logged in and redirect to MD Dashbaord");
+			TestUtils.Login();
 			
 		} else if (ExecutionLocation.equals("local")) {
 //			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
@@ -98,13 +101,15 @@ public class TestBase {
 			driver = new ChromeDriver();
 			logger.info("******Local Driver Intilaized*****");
 ///////////////// Navigate to url and login to marketdojo application 
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
-	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			driver.get(prop.getProperty("url"));
-			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
-			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
-			driver.findElement(By.xpath("//input[@name ='commit']")).click();
+			TestUtils.Login();
+		
+//			driver.manage().window().maximize();
+//			driver.manage().deleteAllCookies();
+//	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//			driver.get(prop.getProperty("url"));
+//			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
+//			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
+//			driver.findElement(By.xpath("//input[@name ='commit']")).click();
 //			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 //			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 			logger.info("Logged in and redirect to MD Dashbaord");// Redirect to MD Dashboard 

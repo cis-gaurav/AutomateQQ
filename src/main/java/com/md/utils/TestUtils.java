@@ -2,6 +2,7 @@ package com.md.utils;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,6 +13,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.md.base.TestBase;
 
 public class TestUtils extends TestBase {
+	
+	// Sandpit common methods
+
+	@FindBy(partialLinkText = "Sandpit")
+	private WebElement headerlinkSandpit;
+
+	@FindBy(xpath = "//button[@name='button']")
+	private WebElement btnleaveSandpit;
+
+	@FindBy(css = "a[class='menu-item-tab button-label dropdown-toggle'][href^='/users/']")
+	private WebElement userProfile;
+
+	@FindBy(css = "a.logout")
+	private WebElement userLogout;
+	
 
 	// Global things
 	public void scroll() {
@@ -40,21 +56,6 @@ public class TestUtils extends TestBase {
 		driver.switchTo().frame(0);
 	}
 
-	// Sandpit common methods
-
-	@FindBy(partialLinkText = "Sandpit")
-	private WebElement headerlinkSandpit;
-
-	@FindBy(xpath = "//button[@name='button']")
-	private WebElement btnleaveSandpit;
-
-	@FindBy(css = "a[class='menu-item-tab button-label dropdown-toggle'][href^='/users/']")
-	private WebElement userProfile;
-
-	@FindBy(css = "a.logout")
-	private WebElement userLogout;
-
-	
 	//page factory element initElement 
 	public TestUtils() {
 		PageFactory.initElements(driver, this);
@@ -77,5 +78,17 @@ public class TestUtils extends TestBase {
 		userProfile.click();
 		wait.until(ExpectedConditions.elementToBeClickable(userLogout));
 		userLogout.click();
+	}
+	
+	public static void Login() {
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get(prop.getProperty("url"));
+		driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
+		driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
+		driver.findElement(By.xpath("//input[@name ='commit']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
 	}
 }
