@@ -15,6 +15,7 @@ import com.md.base.TestBase;
 public class TestUtils extends TestBase {
 	
 	// Sandpit common methods
+	
 
 	@FindBy(partialLinkText = "Sandpit")
 	private WebElement headerlinkSandpit;

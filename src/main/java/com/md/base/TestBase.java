@@ -6,22 +6,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
-import java.time.Duration;
 import java.util.Properties;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.md.utils.TestUtils;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -30,9 +24,9 @@ public class TestBase {
 	public static Properties prop;
 	public static Logger logger = LogManager.getLogger(TestBase.class); //logger to show logs on console 
     
+    /////////////////// properties file key value pair 
 
-/////////////////// properties file key value pair 
-	public TestBase() {
+	public TestBase() {                
 		try {
 			prop = new Properties(); // Need to create object of properties class
 			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";
@@ -45,8 +39,9 @@ public class TestBase {
 		}
 	
 ///////////// Define Execution Environment here i.e. Local/server for Jenkins
+	
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
-		String ExecutionLocation = "server";
+		String ExecutionLocation = "server";    //Change from here either local or server where you need to run code 
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;
@@ -63,10 +58,9 @@ public class TestBase {
 			} catch (Exception e) {
 			}
 
-			// pass chromedriver path of the server
+////// pass chromeDriver path of the server
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			ChromeOptions options = new ChromeOptions(); // using chromeoption
-			
 			options.setBinary("/usr/bin/google-chrome"); // Chrome Browser Binary location through ChromeDriver
 			options.addArguments("--no-sandbox"); // Bypass OS security model
 			options.addArguments("--headless");
@@ -78,42 +72,15 @@ public class TestBase {
 			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 			options.addArguments("--allowed-ips");
 			driver = new ChromeDriver(options);
-			
-//			System.out.println("*******Driver Intilaized*******");
 			logger.info("*******ServerDriver Intilaized*******");
-///////////////////// Navigate to url and login to marketdojo application 
-//			driver.manage().window().maximize();
-//	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//			driver.get(prop.getProperty("url"));
-//			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
-//			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
-//			driver.findElement(By.xpath("//input[@name ='commit']")).click();
-//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
-//			logger.info("Logged in and redirect to MD Dashbaord");
-			TestUtils.Login();
 			
-		} else if (ExecutionLocation.equals("local")) {
-//			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
-			
-////////////////Adding WebDriverManger 
+		} else if (ExecutionLocation.equals("local")) {     //If test run on local system
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			logger.info("******Local Driver Intilaized*****");
-///////////////// Navigate to url and login to marketdojo application 
-			TestUtils.Login();
-		
-//			driver.manage().window().maximize();
-//			driver.manage().deleteAllCookies();
-//	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//			driver.get(prop.getProperty("url"));
-//			driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys(prop.getProperty("username"));
-//			driver.findElement(By.xpath("//input[@id='login-password']")).sendKeys(prop.getProperty("password"));
-//			driver.findElement(By.xpath("//input[@name ='commit']")).click();
-//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dashboard')]")));
-			logger.info("Logged in and redirect to MD Dashbaord");// Redirect to MD Dashboard 
 		}
+		
+		TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
 	}
 	
     /////Screenshot of failed test case 
