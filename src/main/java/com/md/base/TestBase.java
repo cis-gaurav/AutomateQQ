@@ -22,26 +22,28 @@ public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	public static Logger logger = LogManager.getLogger(TestBase.class); //logger to show logs on console 
-    
-    /////////////////// properties file key value pair 
+	public static Logger logger = LogManager.getLogger(TestBase.class); // logger to show logs on console
 
-	public TestBase() {                
+	/////////////////// properties file key value pair
+
+	public TestBase() {
 		try {
 			prop = new Properties(); // Need to create object of properties class
-			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";// to get data from file
-			FileInputStream ip = new FileInputStream(configPath);// create an object for Inputstream read data 
-			prop.load(ip); // loading data of property file 
+			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";// to get
+																												// data
+																												// from
+																												// file
+			FileInputStream ip = new FileInputStream(configPath);// create an object for Inputstream read data
+			prop.load(ip); // loading data of property file
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-			catch(Exception e) {
-              e.printStackTrace();				
-			}
-		}
-	
+	}
+
 ///////////// Define Execution Environment here i.e. Local/server for Jenkins
-	
+
 	public void initializationAndLogin() throws MalformedURLException, InterruptedException {
-		String ExecutionLocation = "server";    //Change from here either local or server where you need to run code 
+		String ExecutionLocation = "server"; // Change from here either local or server where you need to run code
 
 		if (ExecutionLocation.equals("server")) {
 			String chromedriverpath = "", s;
@@ -73,28 +75,35 @@ public class TestBase {
 			options.addArguments("--allowed-ips");
 			driver = new ChromeDriver(options);
 			logger.info("*******ServerDriver Intilaized*******");
-			TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
-			
-		} else if (ExecutionLocation.equals("local")) {     //If test run on local system
+			TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from
+								// TestUtiles File
+
+		} else if (ExecutionLocation.equals("local")) { // If test run on local system
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			logger.info("******Local Driver Intilaized*****");
-			TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
+			TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from
+								// TestUtiles File
 		}
-		
+
 //		TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
 	}
-	
-    /////Screenshot of failed test case 
-	//// we use an interface called TakesScreenshot, which enables the Selenium WebDriver to capture a screenshot and store it in different ways. It has a got a method "getScreenshotAs() " which captures the screenshot and store it in the specified location.
-	
-	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException{
-		
-		TakesScreenshot ts = (TakesScreenshot) driver; //Convert webdriver to TakeScreenshot both are interface
-		File source = ts.getScreenshotAs(OutputType.FILE); //call getScreenshotAs() method screenshot capture on server we need to save it somewhere
-		String destPath = System.getProperty("user.dir")+"//reports//" +TestCaseName+".png"; // save in our location
+
+	///// Screenshot of failed test case
+	//// we use an interface called TakesScreenshot, which enables the Selenium
+	///// WebDriver to capture a screenshot and store it in different ways. It has a
+	///// got a method "getScreenshotAs() " which captures the screenshot and store
+	///// it in the specified location.
+
+	public String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException {
+
+		TakesScreenshot ts = (TakesScreenshot) driver; // Convert webdriver to TakeScreenshot both are interface
+		File source = ts.getScreenshotAs(OutputType.FILE); // call getScreenshotAs() method screenshot capture on server
+															// we need to save it somewhere
+		String destPath = System.getProperty("user.dir") + "//reports//" + TestCaseName + ".png"; // save in our
+																									// location
 		File file = new File(destPath);
-		FileUtils.copyFile(source, file);//we need to copy it from memory to our location
+		FileUtils.copyFile(source, file);// we need to copy it from memory to our location
 		return destPath;
-	}	 	
+	}
 }
