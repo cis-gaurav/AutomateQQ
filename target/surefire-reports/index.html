@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>D:\Selinium Workspace\md\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">44 methods, 5 failed,  1 skipped,  38 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifySearchContractUsingStakeHolder">contract_VerifySearchContractUsingStakeHolder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifySearchContractUsingSupplier">contract_VerifySearchContractUsingSupplier</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifySearchContractUsingValue">contract_VerifySearchContractUsingValue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifySupplierAndStakeHolderInRecipientPopup">contract_VerifySupplierAndStakeHolderInRecipientPopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyAwardLotPopup">qq_VerifyAwardLotPopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifySearchQuote">qq_VerifySearchQuote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyAlertMsgIfHostAddedToSupplierContact">contract_VerifyAlertMsgIfHostAddedToSupplierContact</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyAlertMsgIfParticipantAddedToStakeHolder">contract_VerifyAlertMsgIfParticipantAddedToStakeHolder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyAlertMsgOnSearchingContracts">contract_VerifyAlertMsgOnSearchingContracts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyAutoSuggestionForStakeHolder">contract_VerifyAutoSuggestionForStakeHolder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyAutoSuggestionForSupplierContact">contract_VerifyAutoSuggestionForSupplierContact</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyContractListingOnLanguageChange">contract_VerifyContractListingOnLanguageChange</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyContractValidationMsg">contract_VerifyContractValidationMsg</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyDisplayOfDropbox">contract_VerifyDisplayOfDropbox</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyDisplayOfParentHeirarchyDropdown">contract_VerifyDisplayOfParentHeirarchyDropdown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyDisplayOfSupplierContactDetails">contract_VerifyDisplayOfSupplierContactDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyHeadingOnContractListingPage">contract_VerifyHeadingOnContractListingPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyLanguageChange">contract_VerifyLanguageChange</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyNoticePeriodChangeAccordingToPeriodSelected">contract_VerifyNoticePeriodChangeAccordingToPeriodSelected</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyOneMonthNoticePeriodIsSelectedByDefault">contract_VerifyOneMonthNoticePeriodIsSelectedByDefault</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyRemovalOfSupplierContact">contract_VerifyRemovalOfSupplierContact</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifySearchContractUsingExpiryDate">contract_VerifySearchContractUsingExpiryDate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifySearchContractUsingStartDate">contract_VerifySearchContractUsingStartDate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifySearchContractUsingTitle">contract_VerifySearchContractUsingTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyUserIsAbleToAddContract">contract_VerifyUserIsAbleToAddContract</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyUserIsAbleToEditContract">contract_VerifyUserIsAbleToEditContract</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyUserIsAbleToSearchContract">contract_VerifyUserIsAbleToSearchContract</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.ContractTest" hash-for-method="contract_VerifyUserNavigationToContractForm">contract_VerifyUserNavigationToContractForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerfiyEditQQEvent">qq_VerfiyEditQQEvent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerfiyQQEventWithAllDetails">qq_VerfiyQQEventWithAllDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyCKEditor">qq_VerifyCKEditor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyClosedReopenEvent">qq_VerifyClosedReopenEvent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyCompanyLogo">qq_VerifyCompanyLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyCurrencySymbol">qq_VerifyCurrencySymbol</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyDeleteQuote">qq_VerifyDeleteQuote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyEditContent">qq_VerifyEditContent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyGetQuoteButtonIsDisable">qq_VerifyGetQuoteButtonIsDisable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyParticpantAddedFromGroup">qq_VerifyParticpantAddedFromGroup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit">qq_VerifyQuestionnaireAndAllowResubmissioninSandpit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyQuotebyName">qq_VerifyQuotebyName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyTitleTest">qq_VerifyTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyToasterMessage">qq_VerifyToasterMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyUserName">qq_VerifyUserName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.md.testcases.QuickQuotesTest" hash-for-method="qq_VerifyValidationMessageOnNamefield">qq_VerifyValidationMessageOnNamefield</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.md.testcases.ContractTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifySearchContractUsingStakeHolder">
+                  </a> <!-- contract_VerifySearchContractUsingStakeHolder -->
+                  <span class="method-name">contract_VerifySearchContractUsingStakeHolder</span>
+                  <div class="stack-trace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [877de29ccff43adfceedc8ee3c75b3ea, actions {actions=[org.openqa.selenium.interactions.Sequence@7f5f7731]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56176}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56176/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 877de29ccff43adfceedc8ee3c75b3ea
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:127)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:635)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:656)
+	at com.md.pages.ContractPage.VerifySearchContractUsingStakeHolder(ContractPage.java:748)
+	at com.md.testcases.ContractTest.contract_VerifySearchContractUsingStakeHolder(ContractTest.java:96)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
+		at org.openqa.selenium.json.Json.toJson(Json.java:40)
+		... 42 more
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
+	... 63 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[@class=&apos;search-row&apos;]/td[13]/div/div//input[@id=&apos;search_input&apos;]&quot;}
+  (Session info: chrome=99.0.4844.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [877de29ccff43adfceedc8ee3c75b3ea, findElement {using=xpath, value=//tr[@class=&apos;search-row&apos;]/td[13]/div/div//input[@id=&apos;search_input&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56176}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56176/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 877de29ccff43adfceedc8ee3c75b3ea
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy30.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:234)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:185)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
+	... 68 more
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifySearchContractUsingSupplier">
+                  </a> <!-- contract_VerifySearchContractUsingSupplier -->
+                  <span class="method-name">contract_VerifySearchContractUsingSupplier</span>
+                  <div class="stack-trace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [877de29ccff43adfceedc8ee3c75b3ea, actions {actions=[org.openqa.selenium.interactions.Sequence@c157abf]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56176}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56176/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 877de29ccff43adfceedc8ee3c75b3ea
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:127)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:635)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:656)
+	at com.md.pages.ContractPage.VerifySearchContractUsingSupplier(ContractPage.java:659)
+	at com.md.testcases.ContractTest.contract_VerifySearchContractUsingSupplier(ContractTest.java:83)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
+		at org.openqa.selenium.json.Json.toJson(Json.java:40)
+		... 42 more
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
+	... 63 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[@class=&apos;search-row&apos;]/td[7]/div/div//input[@id=&apos;search_input&apos;]&quot;}
+  (Session info: chrome=99.0.4844.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [877de29ccff43adfceedc8ee3c75b3ea, findElement {using=xpath, value=//tr[@class=&apos;search-row&apos;]/td[7]/div/div//input[@id=&apos;search_input&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56176}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56176/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 877de29ccff43adfceedc8ee3c75b3ea
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy30.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:234)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:185)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
+	... 68 more
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifySearchContractUsingValue">
+                  </a> <!-- contract_VerifySearchContractUsingValue -->
+                  <span class="method-name">contract_VerifySearchContractUsingValue</span>
+                  <div class="stack-trace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [877de29ccff43adfceedc8ee3c75b3ea, actions {actions=[org.openqa.selenium.interactions.Sequence@552fffc8]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56176}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56176/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 877de29ccff43adfceedc8ee3c75b3ea
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:127)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:635)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:656)
+	at com.md.pages.ContractPage.VerifySearchContractUsingValue(ContractPage.java:724)
+	at com.md.testcases.ContractTest.contract_VerifySearchContractUsingValue(ContractTest.java:90)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
+		at org.openqa.selenium.json.Json.toJson(Json.java:40)
+		... 42 more
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
+	... 63 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[@class=&apos;search-row&apos;]/td[13]/div/div//input[@id=&apos;search_input&apos;]&quot;}
+  (Session info: chrome=99.0.4844.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [877de29ccff43adfceedc8ee3c75b3ea, findElement {using=xpath, value=//tr[@class=&apos;search-row&apos;]/td[13]/div/div//input[@id=&apos;search_input&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:56176}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56176/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 877de29ccff43adfceedc8ee3c75b3ea
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy30.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:234)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:185)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
+	... 68 more
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifySupplierAndStakeHolderInRecipientPopup">
+                  </a> <!-- contract_VerifySupplierAndStakeHolderInRecipientPopup -->
+                  <span class="method-name">contract_VerifySupplierAndStakeHolderInRecipientPopup</span>
+                  <div class="stack-trace">java.lang.AssertionError: Stake holder name does not match expected [true] but found [false]
+	at com.md.pages.ContractPage.VerifySupplierAndStakeHolderInRecipientPopup(ContractPage.java:1769)
+	at com.md.testcases.ContractTest.contract_VerifySupplierAndStakeHolderInRecipientPopup(ContractTest.java:213)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.md.testcases.QuickQuotesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyAwardLotPopup">
+                  </a> <!-- qq_VerifyAwardLotPopup -->
+                  <span class="method-name">qq_VerifyAwardLotPopup</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [The Award Notice has been deleted.] but found [The Award Notice has been sent. Your Award details have been updated.]
+	at com.md.pages.QuickQuotesPage.awardLotPopup(QuickQuotesPage.java:1141)
+	at com.md.testcases.QuickQuotesTest.qq_VerifyAwardLotPopup(QuickQuotesTest.java:153)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.md.testcases.QuickQuotesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifySearchQuote">
+                  </a> <!-- qq_VerifySearchQuote -->
+                  <span class="method-name">qq_VerifySearchQuote</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;menu-item-tab header-main-link&quot; href=&quot;/quick_quotes/quotes&quot; style=&quot;color: rgb(255, 255, 255);&quot;&gt;...&lt;/a&gt; is not clickable at point (344, 30). Other element would receive the click: &lt;div class=&quot;alert alert-info&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=99.0.4844.82)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;CISM-I-458&apos;, ip: &apos;192.168.2.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e4daccc12d6a657d499f1d2493a9e469, clickElement {id=6aa2f0ee-3be8-4a47-a2ae-cd44f5c59eba}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\cis\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60332}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60332/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e4daccc12d6a657d499f1d2493a9e469)] -&gt; xpath: //li[@class=&apos;mobile-menu-hidden&apos;]//a[@class=&apos;menu-item-tab header-main-link&apos;][normalize-space()=&apos;Quotes&apos;]]
+Session ID: e4daccc12d6a657d499f1d2493a9e469
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy30.click(Unknown Source)
+	at com.md.pages.QuickQuotesPage.quoteListingToCreate(QuickQuotesPage.java:528)
+	at com.md.testcases.QuickQuotesTest.Test(QuickQuotesTest.java:38)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.md.testcases.ContractTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyAlertMsgIfHostAddedToSupplierContact">
+                  </a> <!-- contract_VerifyAlertMsgIfHostAddedToSupplierContact -->
+                  <span class="method-name">contract_VerifyAlertMsgIfHostAddedToSupplierContact</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyAlertMsgIfParticipantAddedToStakeHolder">
+                  </a> <!-- contract_VerifyAlertMsgIfParticipantAddedToStakeHolder -->
+                  <span class="method-name">contract_VerifyAlertMsgIfParticipantAddedToStakeHolder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyAlertMsgOnSearchingContracts">
+                  </a> <!-- contract_VerifyAlertMsgOnSearchingContracts -->
+                  <span class="method-name">contract_VerifyAlertMsgOnSearchingContracts</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyAutoSuggestionForStakeHolder">
+                  </a> <!-- contract_VerifyAutoSuggestionForStakeHolder -->
+                  <span class="method-name">contract_VerifyAutoSuggestionForStakeHolder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyAutoSuggestionForSupplierContact">
+                  </a> <!-- contract_VerifyAutoSuggestionForSupplierContact -->
+                  <span class="method-name">contract_VerifyAutoSuggestionForSupplierContact</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyContractListingOnLanguageChange">
+                  </a> <!-- contract_VerifyContractListingOnLanguageChange -->
+                  <span class="method-name">contract_VerifyContractListingOnLanguageChange</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyContractValidationMsg">
+                  </a> <!-- contract_VerifyContractValidationMsg -->
+                  <span class="method-name">contract_VerifyContractValidationMsg</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyDisplayOfDropbox">
+                  </a> <!-- contract_VerifyDisplayOfDropbox -->
+                  <span class="method-name">contract_VerifyDisplayOfDropbox</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyDisplayOfParentHeirarchyDropdown">
+                  </a> <!-- contract_VerifyDisplayOfParentHeirarchyDropdown -->
+                  <span class="method-name">contract_VerifyDisplayOfParentHeirarchyDropdown</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyDisplayOfSupplierContactDetails">
+                  </a> <!-- contract_VerifyDisplayOfSupplierContactDetails -->
+                  <span class="method-name">contract_VerifyDisplayOfSupplierContactDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyHeadingOnContractListingPage">
+                  </a> <!-- contract_VerifyHeadingOnContractListingPage -->
+                  <span class="method-name">contract_VerifyHeadingOnContractListingPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyLanguageChange">
+                  </a> <!-- contract_VerifyLanguageChange -->
+                  <span class="method-name">contract_VerifyLanguageChange</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyNoticePeriodChangeAccordingToPeriodSelected">
+                  </a> <!-- contract_VerifyNoticePeriodChangeAccordingToPeriodSelected -->
+                  <span class="method-name">contract_VerifyNoticePeriodChangeAccordingToPeriodSelected</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyOneMonthNoticePeriodIsSelectedByDefault">
+                  </a> <!-- contract_VerifyOneMonthNoticePeriodIsSelectedByDefault -->
+                  <span class="method-name">contract_VerifyOneMonthNoticePeriodIsSelectedByDefault</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyRemovalOfSupplierContact">
+                  </a> <!-- contract_VerifyRemovalOfSupplierContact -->
+                  <span class="method-name">contract_VerifyRemovalOfSupplierContact</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifySearchContractUsingExpiryDate">
+                  </a> <!-- contract_VerifySearchContractUsingExpiryDate -->
+                  <span class="method-name">contract_VerifySearchContractUsingExpiryDate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifySearchContractUsingStartDate">
+                  </a> <!-- contract_VerifySearchContractUsingStartDate -->
+                  <span class="method-name">contract_VerifySearchContractUsingStartDate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifySearchContractUsingTitle">
+                  </a> <!-- contract_VerifySearchContractUsingTitle -->
+                  <span class="method-name">contract_VerifySearchContractUsingTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyUserIsAbleToAddContract">
+                  </a> <!-- contract_VerifyUserIsAbleToAddContract -->
+                  <span class="method-name">contract_VerifyUserIsAbleToAddContract</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyUserIsAbleToEditContract">
+                  </a> <!-- contract_VerifyUserIsAbleToEditContract -->
+                  <span class="method-name">contract_VerifyUserIsAbleToEditContract</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyUserIsAbleToSearchContract">
+                  </a> <!-- contract_VerifyUserIsAbleToSearchContract -->
+                  <span class="method-name">contract_VerifyUserIsAbleToSearchContract</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contract_VerifyUserNavigationToContractForm">
+                  </a> <!-- contract_VerifyUserNavigationToContractForm -->
+                  <span class="method-name">contract_VerifyUserNavigationToContractForm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.md.testcases.QuickQuotesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerfiyEditQQEvent">
+                  </a> <!-- qq_VerfiyEditQQEvent -->
+                  <span class="method-name">qq_VerfiyEditQQEvent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerfiyQQEventWithAllDetails">
+                  </a> <!-- qq_VerfiyQQEventWithAllDetails -->
+                  <span class="method-name">qq_VerfiyQQEventWithAllDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyCKEditor">
+                  </a> <!-- qq_VerifyCKEditor -->
+                  <span class="method-name">qq_VerifyCKEditor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyClosedReopenEvent">
+                  </a> <!-- qq_VerifyClosedReopenEvent -->
+                  <span class="method-name">qq_VerifyClosedReopenEvent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyCompanyLogo">
+                  </a> <!-- qq_VerifyCompanyLogo -->
+                  <span class="method-name">qq_VerifyCompanyLogo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyCurrencySymbol">
+                  </a> <!-- qq_VerifyCurrencySymbol -->
+                  <span class="method-name">qq_VerifyCurrencySymbol</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyDeleteQuote">
+                  </a> <!-- qq_VerifyDeleteQuote -->
+                  <span class="method-name">qq_VerifyDeleteQuote</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyEditContent">
+                  </a> <!-- qq_VerifyEditContent -->
+                  <span class="method-name">qq_VerifyEditContent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyGetQuoteButtonIsDisable">
+                  </a> <!-- qq_VerifyGetQuoteButtonIsDisable -->
+                  <span class="method-name">qq_VerifyGetQuoteButtonIsDisable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyParticpantAddedFromGroup">
+                  </a> <!-- qq_VerifyParticpantAddedFromGroup -->
+                  <span class="method-name">qq_VerifyParticpantAddedFromGroup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyQuestionnaireAndAllowResubmissioninSandpit">
+                  </a> <!-- qq_VerifyQuestionnaireAndAllowResubmissioninSandpit -->
+                  <span class="method-name">qq_VerifyQuestionnaireAndAllowResubmissioninSandpit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyQuotebyName">
+                  </a> <!-- qq_VerifyQuotebyName -->
+                  <span class="method-name">qq_VerifyQuotebyName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyTitleTest">
+                  </a> <!-- qq_VerifyTitleTest -->
+                  <span class="method-name">qq_VerifyTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyToasterMessage">
+                  </a> <!-- qq_VerifyToasterMessage -->
+                  <span class="method-name">qq_VerifyToasterMessage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyUserName">
+                  </a> <!-- qq_VerifyUserName -->
+                  <span class="method-name">qq_VerifyUserName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="qq_VerifyValidationMessageOnNamefield">
+                  </a> <!-- qq_VerifyValidationMessageOnNamefield -->
+                  <span class="method-name">qq_VerifyValidationMessageOnNamefield</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\Selinium Workspace\md\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.md.ExtentReportListener.Listener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.md.testcases.QuickQuotesTest&quot;/&gt;
+      &lt;class name=&quot;com.md.testcases.ContractTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(44);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'qq_VerifyQuestionnaireAndAllowResubmissioninSandpit')
+data.setCell(0, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(0, 3, 255042);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'contract_VerifyUserIsAbleToAddContract')
+data.setCell(1, 2, 'com.md.testcases.ContractTest')
+data.setCell(1, 3, 106635);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'contract_VerifyContractListingOnLanguageChange')
+data.setCell(2, 2, 'com.md.testcases.ContractTest')
+data.setCell(2, 3, 98053);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'contract_VerifyLanguageChange')
+data.setCell(3, 2, 'com.md.testcases.ContractTest')
+data.setCell(3, 3, 95485);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'contract_VerifyNoticePeriodChangeAccordingToPeriodSelected')
+data.setCell(4, 2, 'com.md.testcases.ContractTest')
+data.setCell(4, 3, 76301);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'contract_VerifySupplierAndStakeHolderInRecipientPopup')
+data.setCell(5, 2, 'com.md.testcases.ContractTest')
+data.setCell(5, 3, 67888);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'contract_VerifyOneMonthNoticePeriodIsSelectedByDefault')
+data.setCell(6, 2, 'com.md.testcases.ContractTest')
+data.setCell(6, 3, 67732);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'contract_VerifyRemovalOfSupplierContact')
+data.setCell(7, 2, 'com.md.testcases.ContractTest')
+data.setCell(7, 3, 67608);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'contract_VerifyAutoSuggestionForStakeHolder')
+data.setCell(8, 2, 'com.md.testcases.ContractTest')
+data.setCell(8, 3, 65237);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'contract_VerifyAutoSuggestionForSupplierContact')
+data.setCell(9, 2, 'com.md.testcases.ContractTest')
+data.setCell(9, 3, 64597);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'contract_VerifyAlertMsgIfParticipantAddedToStakeHolder')
+data.setCell(10, 2, 'com.md.testcases.ContractTest')
+data.setCell(10, 3, 63400);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'contract_VerifyAlertMsgIfHostAddedToSupplierContact')
+data.setCell(11, 2, 'com.md.testcases.ContractTest')
+data.setCell(11, 3, 62572);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'contract_VerifyDisplayOfSupplierContactDetails')
+data.setCell(12, 2, 'com.md.testcases.ContractTest')
+data.setCell(12, 3, 62147);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'contract_VerifyContractValidationMsg')
+data.setCell(13, 2, 'com.md.testcases.ContractTest')
+data.setCell(13, 3, 59864);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'contract_VerifyUserIsAbleToEditContract')
+data.setCell(14, 2, 'com.md.testcases.ContractTest')
+data.setCell(14, 3, 59157);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'contract_VerifyDisplayOfDropbox')
+data.setCell(15, 2, 'com.md.testcases.ContractTest')
+data.setCell(15, 3, 58591);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'contract_VerifyDisplayOfParentHeirarchyDropdown')
+data.setCell(16, 2, 'com.md.testcases.ContractTest')
+data.setCell(16, 3, 58385);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'contract_VerifyUserNavigationToContractForm')
+data.setCell(17, 2, 'com.md.testcases.ContractTest')
+data.setCell(17, 3, 56798);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'qq_VerfiyEditQQEvent')
+data.setCell(18, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(18, 3, 51312);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'contract_VerifySearchContractUsingExpiryDate')
+data.setCell(19, 2, 'com.md.testcases.ContractTest')
+data.setCell(19, 3, 44314);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'contract_VerifySearchContractUsingSupplier')
+data.setCell(20, 2, 'com.md.testcases.ContractTest')
+data.setCell(20, 3, 43828);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'contract_VerifySearchContractUsingStakeHolder')
+data.setCell(21, 2, 'com.md.testcases.ContractTest')
+data.setCell(21, 3, 42272);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'contract_VerifySearchContractUsingValue')
+data.setCell(22, 2, 'com.md.testcases.ContractTest')
+data.setCell(22, 3, 41505);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'contract_VerifySearchContractUsingStartDate')
+data.setCell(23, 2, 'com.md.testcases.ContractTest')
+data.setCell(23, 3, 34970);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'contract_VerifySearchContractUsingTitle')
+data.setCell(24, 2, 'com.md.testcases.ContractTest')
+data.setCell(24, 3, 34863);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'contract_VerifyHeadingOnContractListingPage')
+data.setCell(25, 2, 'com.md.testcases.ContractTest')
+data.setCell(25, 3, 34054);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'contract_VerifyAlertMsgOnSearchingContracts')
+data.setCell(26, 2, 'com.md.testcases.ContractTest')
+data.setCell(26, 3, 33966);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'contract_VerifyUserIsAbleToSearchContract')
+data.setCell(27, 2, 'com.md.testcases.ContractTest')
+data.setCell(27, 3, 30993);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'qq_VerifyCurrencySymbol')
+data.setCell(28, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(28, 3, 25123);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'qq_VerifyClosedReopenEvent')
+data.setCell(29, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(29, 3, 20683);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'qq_VerifyAwardLotPopup')
+data.setCell(30, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(30, 3, 18868);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'qq_VerfiyQQEventWithAllDetails')
+data.setCell(31, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(31, 3, 17252);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'qq_VerifyValidationMessageOnNamefield')
+data.setCell(32, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(32, 3, 15217);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'qq_VerifyEditContent')
+data.setCell(33, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(33, 3, 13032);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'qq_VerifyDeleteQuote')
+data.setCell(34, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(34, 3, 12523);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'qq_VerifyParticpantAddedFromGroup')
+data.setCell(35, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(35, 3, 11994);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'qq_VerifyCKEditor')
+data.setCell(36, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(36, 3, 6636);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'qq_VerifyQuotebyName')
+data.setCell(37, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(37, 3, 5856);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'qq_VerifyToasterMessage')
+data.setCell(38, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(38, 3, 4347);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'qq_VerifyGetQuoteButtonIsDisable')
+data.setCell(39, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(39, 3, 2325);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'qq_VerifyUserName')
+data.setCell(40, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(40, 3, 38);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'qq_VerifyCompanyLogo')
+data.setCell(41, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(41, 3, 38);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'qq_VerifyTitleTest')
+data.setCell(42, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(42, 3, 37);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'qq_VerifySearchQuote')
+data.setCell(43, 2, 'com.md.testcases.QuickQuotesTest')
+data.setCell(43, 3, 0);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 33 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">12 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.md.testcases.ContractTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">contract_VerifyDisplayOfExpiryNotiticationLink</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifyAtleastOneValueInSupplierContact</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifySelectedParentNotDisplayInChildDropdown</span>
+                <br/>
+                <span class="ignored-method-name">VerifySelectedChildNotDisplayInParentDropdown</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifySearchContractUsingCategory</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifySearchContractUsingOwner</span>
+                <br/>
+                <span class="ignored-method-name">VerifyDisplayOfArchivedContracts</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifyDisplayOfCategoryInContractForm</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifyDisplayOfCustomNotiticationLink</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifyActiveHeadingsDisplayInContractListingPage</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifyCustomFieldDisplayInContractForm</span>
+                <br/>
+                <span class="ignored-method-name">contract_VerifyActiveHeadingsDisplayInContractForm</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.md.testcases.QuickQuotesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">QQSetUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">37891 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyTitleTest</span>
+                <span class="method-start">43336 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">43383 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyUserName</span>
+                <span class="method-start">48751 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">48790 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyCompanyLogo</span>
+                <span class="method-start">54154 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">54193 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyValidationMessageOnNamefield</span>
+                <span class="method-start">59550 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">74768 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyGetQuoteButtonIsDisable</span>
+                <span class="method-start">80318 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">82644 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyToasterMessage</span>
+                <span class="method-start">88097 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">92445 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyQuotebyName</span>
+                <span class="method-start">97787 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">103644 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyEditContent</span>
+                <span class="method-start">109041 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">122074 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyDeleteQuote</span>
+                <span class="method-start">127527 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">140051 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyParticpantAddedFromGroup</span>
+                <span class="method-start">145447 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">157444 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyCKEditor</span>
+                <span class="method-start">162817 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">169454 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerfiyEditQQEvent</span>
+                <span class="method-start">174811 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">226124 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyQuestionnaireAndAllowResubmissioninSandpit</span>
+                <span class="method-start">231592 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">486635 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyCurrencySymbol</span>
+                <span class="method-start">492036 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">517160 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerfiyQQEventWithAllDetails</span>
+                <span class="method-start">522554 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">539807 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifyClosedReopenEvent</span>
+                <span class="method-start">545247 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Test</span>
+                <span class="method-start">565932 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">qq_VerifyAwardLotPopup</span>
+                <span class="method-start">571338 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test</span>
+                <span class="method-start">590882 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">qq_VerifySearchQuote</span>
+                <span class="method-start">595010 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Teardown</span>
+                <span class="method-start">595016 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.md.testcases.ContractTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">595016 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyHeadingOnContractListingPage</span>
+                <span class="method-start">653031 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyUserIsAbleToAddContract</span>
+                <span class="method-start">687086 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyUserIsAbleToSearchContract</span>
+                <span class="method-start">793722 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyAlertMsgOnSearchingContracts</span>
+                <span class="method-start">824716 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifySearchContractUsingTitle</span>
+                <span class="method-start">858683 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifySearchContractUsingStartDate</span>
+                <span class="method-start">893547 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifySearchContractUsingExpiryDate</span>
+                <span class="method-start">928518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">contract_VerifySearchContractUsingSupplier</span>
+                <span class="method-start">972833 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">contract_VerifySearchContractUsingValue</span>
+                <span class="method-start">1017143 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">contract_VerifySearchContractUsingStakeHolder</span>
+                <span class="method-start">1058797 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyContractValidationMsg</span>
+                <span class="method-start">1101204 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyUserNavigationToContractForm</span>
+                <span class="method-start">1161068 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyOneMonthNoticePeriodIsSelectedByDefault</span>
+                <span class="method-start">1217868 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyUserIsAbleToEditContract</span>
+                <span class="method-start">1285601 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyAutoSuggestionForSupplierContact</span>
+                <span class="method-start">1344759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyAutoSuggestionForStakeHolder</span>
+                <span class="method-start">1409358 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyDisplayOfSupplierContactDetails</span>
+                <span class="method-start">1474597 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyAlertMsgIfHostAddedToSupplierContact</span>
+                <span class="method-start">1536745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyRemovalOfSupplierContact</span>
+                <span class="method-start">1599318 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyAlertMsgIfParticipantAddedToStakeHolder</span>
+                <span class="method-start">1666926 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyDisplayOfDropbox</span>
+                <span class="method-start">1730327 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyNoticePeriodChangeAccordingToPeriodSelected</span>
+                <span class="method-start">1788918 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">contract_VerifySupplierAndStakeHolderInRecipientPopup</span>
+                <span class="method-start">1865220 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyDisplayOfParentHeirarchyDropdown</span>
+                <span class="method-start">1933604 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyLanguageChange</span>
+                <span class="method-start">1991990 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contract_VerifyContractListingOnLanguageChange</span>
+                <span class="method-start">2087476 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Teardown</span>
+                <span class="method-start">2185529 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
