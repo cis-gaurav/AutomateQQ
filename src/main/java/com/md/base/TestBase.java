@@ -73,14 +73,16 @@ public class TestBase {
 			options.addArguments("--allowed-ips");
 			driver = new ChromeDriver(options);
 			logger.info("*******ServerDriver Intilaized*******");
+			TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
 			
 		} else if (ExecutionLocation.equals("local")) {     //If test run on local system
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			logger.info("******Local Driver Intilaized*****");
+			TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
 		}
 		
-		TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
+//		TestUtils.Login(); // Logged in and redirect to Dashbaord/HomePage of application coming from TestUtiles File 
 	}
 	
     /////Screenshot of failed test case 
