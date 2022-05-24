@@ -29,10 +29,7 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties(); // Need to create object of properties class
-			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";// to get
-																												// data
-																												// from
-																												// file
+			String configPath = System.getProperty("user.dir") + "//src//main//resources//config.properties";
 			FileInputStream ip = new FileInputStream(configPath);// create an object for Inputstream read data
 			prop.load(ip); // loading data of property file
 		} catch (Exception e) {

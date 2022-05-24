@@ -15,7 +15,7 @@ public class QuickQuotesTest extends TestBase {
 	private QuickQuotesPage QuickQuotesPage;
 	TestUtils TestUtils;
 
-	// Need to create constructor to initialize properties file
+	// it call super class constructor and intailaize propertyfile 
 	public QuickQuotesTest() {
 		super();
 	}
