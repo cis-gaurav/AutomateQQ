@@ -1,6 +1,7 @@
 package com.md.pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -29,7 +30,10 @@ public class MDEventPage extends TestBase {
 
 	@FindBy(css = ".btn.center-content-vertical.height-35.shadow-light.wid-auto")
 	private WebElement newEventBtn;
-
+	
+	@FindBy(xpath="//a[contains(@href, '/events/new_event_check')]")
+	private WebElement newEventBtnSandpit;
+	
     ////Page Factory of New event popup 
 	@FindBy(css = "input#new_event_chck")
 	private WebElement newEventRadioBtn;
@@ -129,8 +133,11 @@ public class MDEventPage extends TestBase {
 	@FindBy(xpath = "//label[normalize-space()='Do you want to have an Online Auction?']")
 	private WebElement createAuctionCheckbox;
 
-	@FindBy(css = "button[name='button']")
+	@FindBy(xpath = "//button[normalize-space()='Save & Go to Next Step']")
 	private WebElement saveAndGotoNextStepBtn;
+	
+	@FindBy(xpath = "//a[normalize-space()='Save & Go to Next Step']")
+	private WebElement saveAndGotoNextStepBtnD;
 	
 	//// Documents tab element 
 	@FindBy(css="a[href$='documents']")
@@ -141,6 +148,23 @@ public class MDEventPage extends TestBase {
 	
 	@FindBy(css="input#participant_doc_check_box")
 	private WebElement documentTabCheckBox;
+	
+	// Questionnaire Tab Element 
+	@FindBy(xpath="//a[normalize-space()='New Questionnaire']")
+	private WebElement newQuestionnaireBTn;
+	
+	@FindBy(xpath="//body[@class= 'cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']/p")
+	private WebElement questionDescriptionTxt;
+	
+	@FindBy(name="question_choice[0][killer]")
+	private WebElement yesnoOptionDropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Save Changes']")
+	private WebElement questionSaveBtn;
+	
+	@FindBy(xpath="//a[normalize-space()='Add New Participant']")
+	private WebElement addNewParticpantBtn;
+	
 
 	///// Initialize page factory element by initElements this is pointing for
 	///// current class object
@@ -150,45 +174,71 @@ public class MDEventPage extends TestBase {
 
 	///// Actions
 	public void PQQ() throws InterruptedException {
-		newEventBtn.click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(useTemplateRadioBtn));
-		useTemplateRadioBtn.click();
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//span[@id='select2-template_options-container']")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@class='select2-search__field']")).sendKeys("Gaurav");
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@class='select2-search__field']")).sendKeys(Keys.ENTER);
-
-//        Select s = new Select(driver.findElement(By.xpath("//select[@name='event_template']")));
-//        s.selectByVisibleText("50 Question +100 Part");
+//		newEventBtnSandpit.click();
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//		wait.until(ExpectedConditions.elementToBeClickable(createEventBtn));
 //		createEventBtn.click();
 //		wait.until(ExpectedConditions.elementToBeClickable(eventName));
-		
 //		eventName.sendKeys("PQQ Event"); // Enter event name
 //		JavascriptExecutor js = (JavascriptExecutor) driver; // Scroll till create questionnaire
 //		js.executeScript("arguments[0].scrollIntoView();", createQuestionnaireCheckbox);
 //		Thread.sleep(2000);
 //		testUtils.jsExecutor(createQuestionnaireCheckbox);// click on questionnaire check-box
-//		wait.until(ExpectedConditions.elementToBeClickable(questionnaireName));
 //		questionnaireName.sendKeys("PQQ");
 //		Thread.sleep(2000);
-//		pqqCheckbox.click();
+//		pqqCheckbox.click();// click on pqq chekbox 
+//		System.out.println("PQQ chekbox click ");
+//		Thread.sleep(2000);
 //		JavascriptExecutor js1 = (JavascriptExecutor) driver; // Scroll till create questionnaire
 //		js1.executeScript("arguments[0].scrollIntoView();", saveAndGotoNextStepBtn);
-//		wait.until(ExpectedConditions.elementToBeClickable(saveAndGotoNextStepBtn));
+//		Thread.sleep(2000);
 //		saveAndGotoNextStepBtn.click();//Redirect to document tab
-//		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTab));
-//		wait.until(ExpectedConditions.elementToBeClickable(createDocumentsTxt));
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		Assert.assertEquals(createDocumentsTxt.getText(), "Here you can upload any documents that will guide your participants; these may be specifications, terms and conditions, images or anything else that is important to your event.");
-//		System.out.println("Return TRUE if checkbox is checked already... " + documentTabCheckBox.isSelected());
-//		if(!documentTabCheckBox.isSelected())
-//			documentTabCheckBox.click();
-//		System.out.println("Out");
-//		return false;
+//		js1.executeScript("arguments[0].scrollIntoView();", saveAndGotoNextStepBtnD);
+//		saveAndGotoNextStepBtnD.click();//Redirect to Questionnaire tab 
+//		newQuestionnaireBTn.click();
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		Thread.sleep(2000);
+//		js1.executeScript("arguments[0].scrollIntoView();",questionSaveBtn);
+//		WebElement QuestioDesIframe= driver.findElement(By.xpath("//*[@id=\"cke_1_contents\"]/iframe"));
+//		driver.switchTo().frame(QuestioDesIframe);
+//		questionDescriptionTxt.sendKeys("Fail on Yes");
+//		driver.switchTo().defaultContent();
+//		Thread.sleep(1000);
+//		Select s = new Select(yesnoOptionDropdown);
+//		s.selectByVisibleText("Yes");
+//		questionSaveBtn.click();
+//		Thread.sleep(2000);
+//		js1.executeScript("arguments[0].scrollIntoView();", saveAndGotoNextStepBtnD);
+//		saveAndGotoNextStepBtnD.click();//Redirect to Collaborator tab 
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		js1.executeScript("arguments[0].scrollIntoView();", saveAndGotoNextStepBtnD);
+//		saveAndGotoNextStepBtnD.click();//Redirect to Add new participant tab 
+//		wait.until(ExpectedConditions.elementToBeClickable(addNewParticpantBtn));
+		
+		driver.get("https://next.testmd.co.uk/events/35956/event_participants");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		addNewParticpantBtn.click();
+		Thread.sleep(3000);
+//		Select s= new Select (driver.findElement(By.xpath("//*[@id=\"add_participant_type\"]")));
+//		s.selectByValue("Pick Group");
+//		Thread.sleep(1000);
+//		s.selectByValue("Pick From Participant Database");
+//		Thread.sleep(3000);
+//		driver.findElement(By.xpath("//*[@id='participant_add_1341']")).click();
+		
+		WebElement element = driver.findElement(By.xpath("//table[@class='table template_upload custom-responsive-table _scrolling']/tbody/tr/td/label/input"));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
+		
+//		List<WebElement>chekbox= driver.findElements(By.xpath("//table[@class='table template_upload custom-responsive-table _scrolling']/tbody/tr/td/label/input"));
+//		System.out.println(chekbox.size());
+//		for(int i=0; i<chekbox.size();i++) {
+//			chekbox.get(i).click();
+//			System.out.println("done");
+//		}
+			
+		}
 	}
 
-
-
-}
